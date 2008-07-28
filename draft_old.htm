@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>oEmbed Drafts</title>
+<style>
+
+body, input, textarea, select {
+	font-family: Arial,Helvetica,sans-serif;
+	padding: 20px 50px;
+}
+
+pre {
+	background-color: #eee;
+	border: 1px solid #999;
+	padding: 8px;
+	margin: 1em 20px;
+}
+
+code {
+	background-color: #eee;
+	border: 1px solid #999;
+	padding: 0px 2px;
+}
+
+</style>
+</head>
+<body>
+
+<h2>X. Discovery</h2>
+
+<p>OEmbed providers can choose to make their endpoints discoverable by serving a file called <code>oembed-config.xml</code> in the root of their domain. For instance, Flickr could provider a discovery file at <code>flickr.com/oembed-config.xml</code>. The contents of the file should be as follows:</p>
+
+<pre>&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;
+&lt;oembed version="1.0"&gt;
+	&lt;config ttl="24" /&gt;
+	&lt;match pattern="{URL Pattern}" endpoint="{Endpoint URL}" type="{Type}" /&gt;
+	&lt;match pattern="{URL Pattern}" endpoint="{Endpoint URL}" type="{Type}" /&gt;
+&lt;/oembed&gt;</pre>
+
+<p>The order of the different elements does not matter, except the relative position of any <code>&lt;match&gt;</code> elements. Consumers should test URLs against <code>&lt;match&gt;</code> rules from top to bottom.</p>
+
+<p>The <code>&lt;config&gt;</code> element is optional. The <code>ttl</code> (Time-To-Live) property specifies a suggested cache time for the configuration, in hours. Consumers may choose to ignore this, however, and cache the configuration for as long as they deem appropriate. A TTL of 7 days is recommended for either <code>oembed-config.xml</code> files that don't contain a TTL, or <code>oembed-config.xml</code> files that return a 404 response. That is to say, consumers should cache the non-existance of a <code>oembed-config.xml</code> file for 7 days.</p>
+
+<p>One or more <code>&lt;match&gt;</code> elements contain the URL pattern to API Endpoint mappings. The URL pattern should not include the scheme or domain - the scheme (HTTP or HTTPS) and domain are inferred from the URL to the XML file itself. The pattern and should start with a forward-slash and may only contain '*' as a wildcard (matching zero or more characters of any kind). The Endpoint URL should include the scheme, which must be HTTP. The Type specifies whether the endpoint expects to be passed a <code>format</code> argument (<code>explicit</code>) or whetherthe format is implied by the Endpoint URL itself (<code>xml</code> or <code>json</code>).</p>
+
+
+<h3>X.1. Example oembed-config.xml configuration files</h2>
+
+<p>Single rule configuration for flickr.com:</p>
+
+<pre>&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;
+&lt;oembed version="1.0"&gt;
+	&lt;match pattern="/*" endpoint="http://www.flickr.com/services/oembed/" type="explicit" /&gt;
+&lt;/oembed&gt;</pre>
+
+<p>Multi rule configuration for qik.com:</p>
+
+<pre>&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;
+&lt;oembed version="1.0"&gt;
+	&lt;match pattern="/video/*" endpoint="http://qik.com/api/oembed.xml" type="xml" /&gt;
+	&lt;match pattern="/video/*" endpoint="http://qik.com/api/oembed.json" type="json" /&gt;
+	&lt;config ttl="72" /&gt;
+&lt;/oembed&gt;</pre>
+
+
+<h3>X.2. oembed-config.xml DTD</h3>
+
+<p>The following DTD can be used to validate <code>oembed-config.xml</code> files:</p>
+
+<pre>
+&lt;!ELEMENT oembed (match+,config?)&gt;
+&lt;!ATTLIST oembed version CDATA #FIXED "1.0"&gt;
+&lt;!ELEMENT match EMPTY&gt;
+&lt;!ELEMENT config EMPTY&gt;
+&lt;!ATTLIST config ttl CDATA "168"&gt;
+&lt;!ATTLIST match pattern CDATA #REQUIRED&gt;
+&lt;!ATTLIST match endpoint CDATA #REQUIRED&gt;
+&lt;!ATTLIST match type CDATA #REQUIRED&gt;
+</pre>
+
+
+</body>
+</html>
