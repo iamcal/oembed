@@ -60,9 +60,20 @@ code {
 
 <h1>oEmbed</h1>
 
+<h2>Table Of Contents</h2>
+<ol>
+<li><a href="#section1">Quick Example<a/></li>
+<li><a href="#section2">Full Spec<a/></li>
+<li><a href="#section3">Security considerations<a/></li>
+<li><a href="#section4">Discovery<a/></li>
+<li><a href="#section5">More examples<a/></li>
+<li><a href="#section6">Authors<a/></li>
+<li><a href="#section7">Implementations<a/></li>
+</ol>
+
 <p>oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.</p>
 
-<h2>1. Quick Example</h2>
+<a name"section1" id="section1"><h2>1. Quick Example</h2></a>
 
 <p>A <i>consumer</i> (eg. <a href="http://pownce.com/">Pownce</a>) makes the following HTTP request:</p>
 
@@ -88,7 +99,7 @@ code {
 <p>This allows the consumer to turn a URL to a Flickr photo page into structured data to allow embedding of that photo in the consumer's website.</p>
 
 
-<h2>2. Full Spec</h2>
+<a name"section2" id="section2"><h2>2. Full Spec</h2></a>
 
 <p>This spec is broken into three parts - configuration, the consumer request and the provider response.</p>
 
@@ -308,14 +319,14 @@ code {
 </dl>
 
 
-<h2>3. Security considerations</h2>
+<a name"section3" id="section3"><h2>3. Security considerations</h2></a>
 
 <p>When a consumer displays any URLs, they will probably want to filter the URL scheme to be one of <code>http</code>, <code>https</code> or <code>mailto</code>, although providers are free to specify any valid URL. Without filtering, <code>Javascript:...</code> style URLs could be used for XSS attacks.</p>
 
 <p>When a consumer displays HTML (as with video embeds), there's a vector for XSS attacks from the provider. To avoid this, it is recommended that consumers display the HTML in an <code>iframe</code>, hosted from another domain. This ensures that the HTML cannot access cookies from the consumer domain.</p>
 
 
-<h2>4. Discovery</h2>
+<a name"section4" id="section4"><h2>4. Discovery</h2></a>
 
 <p>oEmbed providers can choose to make their oEmbed support discoverable by adding elements to the head of their existing (X)HTML documents.</p>
 
@@ -336,7 +347,7 @@ code {
 
 
 
-<h2>5. More examples</h2>
+<a name"section5" id="section5"><h2>5. More examples</h2></a>
 
 <h3>5.1. Video example</h3>
 
@@ -387,7 +398,7 @@ code {
 &lt;/oembed&gt;</pre>
 
 
-<h2>6. Authors</h2>
+<a name"section6" id="section6"><h2>6. Authors</h2></a>
 
 <ul>
     <li>Cal Henderson (cal [at] iamcal.com)</li>
@@ -397,7 +408,7 @@ code {
 </ul>
 
 
-<h2>7. Implementations</h2>
+<a name"section7" id="section7"><h2>7. Implementations</h2></a>
 
 <h3>7.1. Providers</h3>
 
