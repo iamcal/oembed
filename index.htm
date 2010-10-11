@@ -60,18 +60,19 @@ code {
 
 <h1>oEmbed</h1>
 
-<h2>Table Of Contents</h2>
-<ol>
-<li><a href="#section1">Quick Example<a/></li>
-<li><a href="#section2">Full Spec<a/></li>
-<li><a href="#section3">Security considerations<a/></li>
-<li><a href="#section4">Discovery<a/></li>
-<li><a href="#section5">More examples<a/></li>
-<li><a href="#section6">Authors<a/></li>
-<li><a href="#section7">Implementations<a/></li>
-</ol>
-
 <p>oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.</p>
+
+<h2>Table Of Contents</h2>
+
+<ol>
+	<li><a href="#section1">Quick Example<a/></li>
+	<li><a href="#section2">Full Spec<a/></li>
+	<li><a href="#section3">Security considerations<a/></li>
+	<li><a href="#section4">Discovery<a/></li>
+	<li><a href="#section5">More examples<a/></li>
+	<li><a href="#section6">Authors<a/></li>
+	<li><a href="#section7">Implementations<a/></li>
+</ol>
 
 <a name="section1" id="section1"><h2>1. Quick Example</h2></a>
 
@@ -105,7 +106,7 @@ code {
 
 <p>An oEmbed exchange occurs between a <i>consumer</i> and a <i>provider</i>. A <i>consumer</i> wishes to show an embedded representation of a third party resource on their own web site, such as a photo or an embedded video. A <i>provider</i> implements the oEmbed API to allow <i>consumers</i> to fetch that representation.</p>
 
-<h3>2.1. Configuration</h3>
+<a name="section2.1" id="section2.1"><h3>2.1. Configuration</h3></a>
 
 <p>Configuration for oEmbed is very simple. Providers must specify one or more URL scheme and API endpoint pairs. The URL scheme describes which URLs provided by the service may have an embedded representation. The API endpoint describes where the consumer may request representations for those URLs.</p>
 
@@ -131,7 +132,7 @@ code {
 <p>The API endpoint must point to an HTTP endpoint URL (not HTTPS) which implements the API described below.</p>
 
 
-<h3>2.2. Consumer Request</h3>
+<a name="section2.2" id="section2.2"><h3>2.2. Consumer Request</h3></a>
 
 <p>Requests sent to the API endpoint must be HTTP GET requests, with all arguments sent as query parameters. All arguments must be urlencoded (as per RFC 1738).</p>
 
@@ -172,7 +173,7 @@ code {
 
 <p>In this case, the format parameter is not needed and will be ignored. When a provider publishes a URL scheme and API endpoint pair, they should clearly state whether the format is implicit in the endpoint or if it needs to be passed as an argument.</p>
 
-<h3>2.3. Provider Response</h3>
+<a name="section2.3" id="section2.3"><h3>2.3. Provider Response</h3></a>
 
 <p>The response returned by the provider can be in either JSON or XML. Each format specifies a way of encoding name-value pairs which comprise the response data. Each format has an associated mime-type which must be returned in the <code>Content-type</code> header along with the response.</p>
 
@@ -349,7 +350,7 @@ code {
 
 <a name="section5" id="section5"><h2>5. More examples</h2></a>
 
-<h3>5.1. Video example</h3>
+<a name="section5.1" id="section5.1"><h3>5.1. Video example</h3></a>
 
 <p>Request:</p>
 
@@ -378,7 +379,7 @@ code {
 		&lt;/object&gt;",
 }</pre>
 
-<h3>5.2. Link example</h3>
+<a name="section5.2" id="section5.2"><h3>5.2. Link example</h3></a>
 
 <p>Request:</p>
 
@@ -410,7 +411,7 @@ code {
 
 <a name="section7" id="section7"><h2>7. Implementations</h2></a>
 
-<h3>7.1. Providers</h3>
+<a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
 <p>YouTube (<a href="http://www.youtube.com/">http://www.youtube.com/</a>)</p>
 <ul>
@@ -500,7 +501,7 @@ code {
 </ul>
 
 
-<h3>7.2. Consumers</h3>
+<a name="section7.2" id="section7.2"><h3>7.2. Consumers</h3></a>
 
 <p>To have a particular consumer display your OEmbed, please contact the consumer with your provider's URL scheme and API endpoint.</p>
 
@@ -520,7 +521,7 @@ code {
 </ul>
 
 
-<h3>7.3. Libraries</h3>
+<a name="section7.3" id="section7.3"><h3>7.3. Libraries</h3></a>
 
 <p>PHP</p>
 <ul>
@@ -546,7 +547,7 @@ code {
 
 <hr />
 
-<h3>Press and Links</h3>
+<a name="links" id="links"><h3>Press and Links</h3></a>
 
 <ul>
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
