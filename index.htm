@@ -89,13 +89,13 @@ code {
 
 <a name="section1" id="section1"><h2>1. Quick Example</h2></a>
 
-<p>A <i>consumer</i> (eg. <a href="http://pownce.com/">Pownce</a>) makes the following HTTP request:</p>
+<p>A <i>consumer</i> (e.g. <a href="http://pownce.com/">Pownce</a>) makes the following HTTP request:</p>
 
 <ul>
 	<li> <code>http://www.flickr.com/services/oembed/?url=http%3A//www.flickr.com/photos/bees/2341623661/</code> </li>
 </ul>
 
-<p>The <i>provider</i> (eg. <a href="http://www.flickr.com/">Flickr</a>) then responds with an oEmbed response:</p>
+<p>The <i>provider</i> (e.g. <a href="http://www.flickr.com/">Flickr</a>) then responds with an oEmbed response:</p>
 
 <pre>{
 	"version": "1.0",
@@ -251,13 +251,13 @@ code {
 	<dd>The <i>suggested</i> cache lifetime for this resource, in seconds. Consumers may choose to use this value or not.</dd>
 
 	<dt><b><code>thumbnail_url</code></b> (optional)</dt>
-	<dd>A URL to a thumbnail image representing the resource. The thumbnail must respect any <code>maxwidth</code> and <code>maxheight</code> parameters. If this paramater is present, <code>thumbnail_width</code> and <code>thumbnail_height</code> must also be present.</dd>
+	<dd>A URL to a thumbnail image representing the resource. The thumbnail must respect any <code>maxwidth</code> and <code>maxheight</code> parameters. If this parameter is present, <code>thumbnail_width</code> and <code>thumbnail_height</code> must also be present.</dd>
 
-	<dt><b><code>thumbnail_width</code></b> (optional)</dt>
-	<dd>The width of the optional thumbnail. If this paramater is present, <code>thumbnail_url</code> and <code>thumbnail_height</code> must also be present.</dd>
+	<dt><b><code>thumbnail width</code></b> (optional)</dt>
+	<dd>The width of the optional thumbnail. If this parameter is present, <code>thumbnail_url</code> and <code>thumbnail_height</code> must also be present.</dd>
 
 	<dt><b><code>thumbnail_height</code></b> (optional)</dt>
-	<dd>The height of the optional thumbnail. If this paramater is present, <code>thumbnail_url</code> and <code>thumbnail_width</code> must also be present.</dd>
+	<dd>The height of the optional thumbnail. If this parameter is present, <code>thumbnail_url</code> and <code>thumbnail_width</code> must also be present.</dd>
 </dl>
 
 <p>Providers may optionally include any parameters not specified in this document (so long as they use the same key-value format) and consumers may choose to ignore these. Consumers must ignore parameters they do not understand.</p>
