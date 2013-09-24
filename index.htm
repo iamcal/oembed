@@ -675,6 +675,109 @@ code {
 	<li> Example: <a href="http://coub.com/api/oembed.json?url=http://coub.com/embed/um0um0">http://coub.com/api/oembed.json?url=http://coub.com/embed/um0um0</a></li>
 </ul>
 
+<p>SpeakerDeck (<a href="https://speakerdeck.com">https://speakerdeck.com</a>)</p>
+<ul>
+	<li>URL Scheme: <code>http://speakerdeck.com/*/*</code> </li>
+	<li>URL Scheme: <code>https://speakerdeck.com/*/*</code> </li>
+	<li>Endpoint: <code>https://speakerdeck.com/oembed.json (only supports json)</code> </li>
+	<li>Example: <a href="https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/wallat/why-backbone">https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/wallat/why-backbone</a> </li>
+	<li>Supports discovery via &lt;link&gt; tags </li>
+</ul>
+
+<p>Alpha App Net (<a href="https://alpha.app.net/browse/posts/">https://alpha.app.net</a>)</p>
+<ul>
+	<li>URL Scheme: <code>https://alpha.app.net/*/post/*</code> </li>
+	<li>URL Scheme: <code>https://photos.app.net/*/*</code> </li>
+	<li>Endpoint: <code>https://alpha-api.app.net/oembed (only supports json)</code> </li>
+	<li>Documentation: <a href="http://developers.app.net/docs/other/oembed/">http://developers.app.net/docs/other/oembed/</a></li>
+	<li>Example: <a href="https://alpha-api.app.net/oembed?url=https://alpha.app.net/breakingnews/post/9153521">https://alpha-api.app.net/oembed?url=https://alpha.app.net/breakingnews/post/9153521</a> </li>
+</ul>
+
+<p>BlipTV (<a href="http://blip.tv/">http://blip.tv/</a>)</p>
+<ul>
+	<li>URL Scheme: <code>http://*.blip.tv/*/*</code> </li>
+	<li>Endpoint: <code>http://blip.tv/oembed/ (only supports json)</code> </li>
+	<li>Example: <a href="http://blip.tv/oembed/?url=http://blip.tv/nostalgiacritic/nostalgia-critic-sailor-moon-6625851">http://blip.tv/oembed/?url=http://blip.tv/nostalgiacritic/nostalgia-critic-sailor-moon-6625851</a> </li>
+</ul>
+
+<p>YFrog (<a href="http://yfrog.com/">http://yfrog.com/</a>)</p>
+<ul>
+	<li>URL Scheme: <code>http://*.yfrog.com/*</code> </li>
+	<li>URL Scheme: <code>http://yfrog.us/*</code> </li>
+	<li>Endpoint: <code> http://www.yfrog.com/api/oembed(only supports json)</code> </li>
+	<li>Documentation: <a href="http://twitter.yfrog.com/page/api#a8">http://twitter.yfrog.com/page/api#a8</a> </li>
+	<li>Example: <a href="http://www.yfrog.com/api/oembed?url=http://yfrog.com/jukynnj">http://www.yfrog.com/api/oembed?url=http://yfrog.com/jukynnj</a> </li>
+</ul>
+
+<p>Instagram (<a href="http://instagram.com">https://instagram.com</a>)</p>
+<ul>
+	<li>URL Scheme: <code>http://instagram.com/p/*</code> </li>
+	<li>URL Scheme: <code>http://instagr.am/p/*</code> </li>
+	<li>Endpoint: <code>http://api.instagram.com/oembed (only supports json)</code> </li>
+	<li>Documentation: <a href="http://instagram.com/developer/embedding/#oembed">http://instagram.com/developer/embedding/#oembed</a> </li>
+    <li>Example: <a href="http://api.instagram.com/oembed?url=http://instagram.com/p/V8UMy0LjpX/">http://api.instagram.com/oembed?url=http://instagram.com/p/V8UMy0LjpX/</a> </li>
+</ul>
+
+<p>SoundCloud (<a href="http://soundcloud.com/">http://soundcloud.com/</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://soundcloud.com/*</code></li>
+    <li>Endpoint: <code>https://soundcloud.com/oembed</code></li>
+    <li>Example: <a href="https://soundcloud.com/oembed?url=https://www.soundcloud.com/comedy-central/the-unf-kables-dave-attell/&format=xml">https://soundcloud.com/oembed?url=https://www.soundcloud.com/comedy-central/the-unf-kables-dave-attell/&format=xml</a></li>
+</ul>
+
+<p>On Aol (<a href="http://on.aol.com/">http://on.aol.com/</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://on.aol.com/video/*</code></li>
+    <li>Endpoint: <code>http://on.aol.com/api</code></li>
+    <li>Example: <a href="http://on.aol.com/api?url=http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689">http://on.aol.com/api?url=http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689</a></li>
+</ul>
+
+<p>Kickstarter (<a href="http://www.kickstarter.com">http://www.kickstarter.com</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://www.kickstarter.com/projects/*</code></li>
+    <li>Endpoint: <code>http://www.kickstarter.com/services/oembed</code></li>
+    <li>Example: <a href="http://www.kickstarter.com/services/oembed?url=http%3A%2F%2Fwww.kickstarter.com%2Fprojects%2F1115015686%2Fhelp-support-the-kiggins-theatre-to-go-digital">http://www.kickstarter.com/services/oembed?url=http%3A%2F%2Fwww.kickstarter.com%2Fprojects%2F1115015686%2Fhelp-support-the-kiggins-theatre-to-go-digital</a></li>
+</ul>
+
+<p>Ustream (<a href="http://www.ustream.tv">http://www.ustream.tv</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://*.ustream.tv/*</code> </li>
+	<li>URL scheme: <code>http://*.ustream.com/*</code> </li>
+    <li>API endpoint: <code>http://www.ustream.tv/oembed (only supports json)</code> </li>
+	<li>Example: <a href="http://www.ustream.tv/oembed?url=http://www.ustream.tv/channel/americatv2oficial">http://www.ustream.tv/oembed?url=http://www.ustream.tv/channel/americatv2oficial</a></li>
+</ul>
+
+<p>GMEP (<a href="https://gmep.org">https://gmep.org</a>)</p>
+<ul>
+	<li>URL scheme: <code>https://gmep.org/media/*</code> </li>
+    <li>API endpoint: <code>https://gmep.org/oembed.{format}</code> </li>
+	<li>Example: <a href="https://gmep.org/oembed.xml?url=https://gmep.org/media/14769">https://gmep.org/oembed.xml?url=https://gmep.org/media/14769</a></li>
+</ul>
+
+<p>Daily Mile (<a href="http://www.dailymile.com">http://www.dailymile.com</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://www.dailymile.com/people/*/entries/*</code> </li>
+    <li>API endpoint: <code>http://api.dailymile.com/oembed?format=json (only supports json)</code> </li>
+	<li>Example: <a href="http://api.dailymile.com/oembed?format=json&url=http://www.dailymile.com/people/EddieJ3/entries/24776213">http://api.dailymile.com/oembed?format=json&url=http://www.dailymile.com/people/EddieJ3/entries/24776213</a></li>
+</ul>
+
+<p>Sketchfab (<a href="http://sketchfab..com">http://sketchfab..com</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://sketchfab..com/show/*</code> </li>
+    <li>API endpoint: <code>https://sketchfab.com/oembed (only supports json)</code> </li>
+	<li>Example: <a href="https://sketchfab.com/oembed?url=https://sketchfab.com/show/b7LzIm8JrnPw4GBDOMBNGYc39qM">https://sketchfab.com/oembed?url=https://sketchfab.com/show/b7LzIm8JrnPw4GBDOMBNGYc39qM</a></li>
+</ul>
+
+<p>Meetup (<a href="http://www.meetup.com">http://www.meetup.com</a>)</p>
+<ul>
+	<li>URL scheme: <code>http://meetup.com/*</code> </li>
+	<li>URL scheme: <code>http://meetu.ps/*</code> </li>
+    <li>API endpoint: <code>https://api.meetup.com/oembed (only supports json)</code> </li>
+	<li>Documentation: <a href="http://www.meetup.com/meetup_api/docs/oembed/">http://www.meetup.com/meetup_api/docs/oembed/</a></li>
+	<li>Example: <a href="https://api.meetup.com/oembed?format=json&url=http://www.meetup.com/PHPColMeetup/photos/">https://api.meetup.com/oembed?format=json&url=http://www.meetup.com/PHPColMeetup/photos/</a></li>
+</ul>
+
+
 <a name="section7.2" id="section7.2"><h3>7.2. Consumers</h3></a>
 
 <p>To have a particular consumer display your OEmbed, please contact the consumer with your provider's URL scheme and API endpoint.</p>
