@@ -1,9 +1,9 @@
 <!--
-                         __                 __     
-                        /\ \               /\ \    
-  ___      __    ___ ___\ \ \____     __   \_\ \   
- / __`\  /'__`\/' __` __`\ \ '__`\  /'__`\ /'_` \  
-/\ \L\ \/\  __//\ \/\ \/\ \ \ \L\ \/\  __//\ \L\ \ 
+                         __                 __
+                        /\ \               /\ \
+  ___      __    ___ ___\ \ \____     __   \_\ \
+ / __`\  /'__`\/' __` __`\ \ '__`\  /'__`\ /'_` \
+/\ \L\ \/\  __//\ \/\ \/\ \ \ \L\ \/\  __//\ \L\ \
 \ \____/\ \____\ \_\ \_\ \_\ \_,__/\ \____\ \___,_\
  \/___/  \/____/\/_/\/_/\/_/\/___/  \/____/\/__,_ /
 
@@ -163,6 +163,9 @@ code {
 
 	<dt><b><code>format</code></b> (optional)</dt>
 	<dd>The required response format. When not specified, the provider can return any valid response format. When specified, the provider <i>must</i> return data in the request format, else return an error (see below for error codes).</dd>
+
+	<dt><b><code>callback</code></b> (optional)</dt>
+	<dd>The name of the function to wrap the response in. This parameter <i>must</i> be respected by providers. If the response format is not JSON, the provider <i>must</i> ignore this parameter.</dd>
 </dl>
 
 <p>Providers should ignore all other arguments it doesn't expect. Providers are welcome to support custom additional parameters.</p>
@@ -243,7 +246,7 @@ code {
 
 	<dt><b><code>provider_name</code></b> (optional)</dt>
 	<dd>The name of the resource provider.</dd>
-	
+
 	<dt><b><code>provider_url</code></b> (optional)</dt>
 	<dd>The url of the resource provider.</dd>
 
@@ -527,7 +530,7 @@ code {
 	<li>Java: java-oembed (<a href="https://github.com/michael-simons/java-oembed">https://github.com/michael-simons/java-oembed</a>)</li>
 	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
-	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>	
+	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>
 	<li>Any: oEmbed API proxy endpoint for open-source projects (<a href="http://oembedapi.com">http://oembedapi.com</a>)</li>
 </ul>
 
