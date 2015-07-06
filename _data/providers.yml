@@ -143,12 +143,13 @@
   endpoints:
     - schemes:
         - 'http://*.smugmug.com/*'
-        - 'http://*.example.com/*'
       url: 'http://api.smugmug.com/services/oembed/'
       docs_url: 'http://wiki.smugmug.net/display/API/oEmbed'
       example_urls:
         - 'http://api.smugmug.com/services/oembed/?url=http%3A%2F%2Fwww.smugmug.com%2Fpopular%2Fall%23125787395_hQSj9'
       discovery: true
+      notes:
+        - 'URL Scheme: `http://*.example.com/*` (where example.com = SmugMug customer domain)'
 
 - provider_name: Deviantart.com
   provider_url: 'http://www.deviantart.com'
