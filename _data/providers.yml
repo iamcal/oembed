@@ -14,7 +14,7 @@
     - url: 'http://www.youtube.com/oembed'
       discovery: true
       example_urls:
-        - 'http://www.youtube.com/oembed?url=http%3A//www.youtube.com/watch?v%3D-UUx10KOWIE&format=xml'
+        - 'http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch?v%3D-UUx10KOWIE&format=xml'
 
 - provider_name: Flickr
   provider_url: 'http://www.flickr.com/'
@@ -24,7 +24,7 @@
         - 'http://flic.kr/p/*'
       url: 'http://www.flickr.com/services/oembed/'
       example_urls:
-        - 'http://flickr.com/services/oembed?url=http%3A//flickr.com/photos/bees/2362225867/'
+        - 'http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos%2Fbees%2F2362225867%2F'
       discovery: true
 
 - provider_name: Viddler
@@ -44,7 +44,7 @@
         - 'http://*.revision3.com/*'
       url: 'http://revision3.com/api/oembed/'
       example_urls:
-        - 'http://revision3.com/api/oembed/?url=http%3A//revision3.com/diggnation/2008-04-17xsanned/&format=xml'
+        - 'http://revision3.com/api/oembed/?url=http%3A%2F%2Frevision3.com%2Fdiggnation%2F2008-04-17xsanned%2F&format=xml'
 
 - provider_name: Hulu
   provider_url: 'http://www.hulu.com/'
@@ -53,7 +53,7 @@
         - 'http://www.hulu.com/watch/*'
       url: 'http://www.hulu.com/api/oembed.{format}'
       example_urls:
-        - 'http://www.hulu.com/api/oembed.xml?url=http%3A//www.hulu.com/watch/20807/late-night-with-conan-obrien-wed-may-21-2008'
+        - 'http://www.hulu.com/api/oembed.xml?url=http%3A%2F%2Fwww.hulu.com%2Fwatch%2F20807%2Flate-night-with-conan-obrien-wed-may-21-2008'
 
 - provider_name: Vimeo
   provider_url: 'http://vimeo.com/'
@@ -64,7 +64,7 @@
         - 'http://vimeo.com/groups/*/videos/*'
       url: 'http://vimeo.com/api/oembed.{format}'
       example_urls:
-        - 'http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/7100569'
+        - 'http://vimeo.com/api/oembed.xml?url=http%3A%2F%2Fvimeo.com%2F7100569'
 
 - provider_name: CollegeHumor
   provider_url: 'http://www.collegehumor.com/'
@@ -104,7 +104,7 @@
       url: 'http://www.polleverywhere.com/services/oembed/'
       docs_url: 'http://api.polleverywhere.com/index.php?title=OEmbed'
       example_urls:
-        - 'http://polleverywhere.com/services/oembed?url=http://www.polleverywhere.com/multiple_choice_polls/LTIwNzM1NTczNTE&format=xml'
+        - 'http://polleverywhere.com/services/oembed?url=http%3A%2F%2Fwww.polleverywhere.com%2Fmultiple_choice_polls%2FLTIwNzM1NTczNTE&format=xml'
 
 - provider_name: Embedly
   provider_url: 'http://api.embed.ly/'
@@ -112,7 +112,7 @@
     - url: 'http://api.embed.ly/1/oembed'
       docs_url: 'http://api.embed.ly/documentation'
       example_urls:
-        - 'http://api.embed.ly/1/oembed?url=http://www.youtube.com/watch%3Fv%3DB-m6JDYRFvk'
+        - 'http://api.embed.ly/1/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DB-m6JDYRFvk'
       notes:
         - 'URL scheme: Various (see docs)'
         - 'Incorporating oohEmbed (<a href="http://oohembed.com/">http://oohembed.com/</a>)'
@@ -125,8 +125,8 @@
       url: 'https://api.portfolium.com/oembed'
       docs_url: 'https://api.portfolium.com/#!/oembed/oembed_index_get'
       example_urls:
-        - 'https://api.portfolium.com/oembed?url=https://portfolium.com/entry/american-ninja-warrior-2011'
-        - 'https://api.portfolium.com/oembed?url=https://portfolium.com/entry/american-ninja-warrior-2011&format=xml'
+        - 'https://api.portfolium.com/oembed?url=https%3A%2F%2Fportfolium.com%2Fentry%2Famerican-ninja-warrior-2011'
+        - 'https://api.portfolium.com/oembed?url=https%3A%2F%2Fportfolium.com%2Fentry%2Famerican-ninja-warrior-2011&format=xml'
 
 - provider_name: iFixit
   provider_url: 'http://www.iFixit.com'
@@ -147,7 +147,7 @@
       url: 'http://api.smugmug.com/services/oembed/'
       docs_url: 'http://wiki.smugmug.net/display/API/oEmbed'
       example_urls:
-        - 'http://api.smugmug.com/services/oembed/?url=http://www.smugmug.com/popular/all%23125787395_hQSj9'
+        - 'http://api.smugmug.com/services/oembed/?url=http%3A%2F%2Fwww.smugmug.com%2Fpopular%2Fall%23125787395_hQSj9'
       discovery: true
 
 - provider_name: Deviantart.com
@@ -171,7 +171,7 @@
       url: 'http://www.slideshare.net/api/oembed/2'
       docs_url: 'http://www.slideshare.net/developers/oembed'
       example_urls:
-        - 'http://www.slideshare.net/api/oembed/2?url=http://www.slideshare.net/haraldf/business-quotes-for-2011&format=json'
+        - 'http://www.slideshare.net/api/oembed/2?url=http%3A%2F%2Fwww.slideshare.net%2Fharaldf%2Fbusiness-quotes-for-2011&format=json'
       discovery: true
 
 - provider_name: WordPress.com
@@ -190,7 +190,7 @@
         - 'http://chirb.it/*'
       url: 'http://chirb.it/oembed.json'
       example_urls:
-        - 'http://chirb.it/oembed.json?url=http%3A//chirb.it/OBnAr1'
+        - 'http://chirb.it/oembed.json?url=http%3A%2F%2Fchirb.it%2FOBnAr1'
       discovery: true
 
 - provider_name: nfb.ca
@@ -200,7 +200,7 @@
         - 'http://*.nfb.ca/film/*'
       url: 'http://www.nfb.ca/remote/services/oembed/'
       example_urls:
-        - 'http://www.nfb.ca/remote/services/oembed/?url=http://www.nfb.ca/film/aboriginality&format=xml'
+        - 'http://www.nfb.ca/remote/services/oembed/?url=http%3A%2F%2Fwww.nfb.ca%2Ffilm%2Faboriginality&format=xml'
       discovery: true
 
 - provider_name: Scribd
@@ -210,7 +210,7 @@
         - 'http://www.scribd.com/doc/*'
       url: 'http://www.scribd.com/services/oembed/'
       example_urls:
-        - 'http://www.scribd.com/services/oembed/?format=xml&url=http://www.scribd.com/doc/110799637/Synthesis-of-Knowledge-Effects-of-Fire-and-Thinning-Treatments-on-Understory-Vegetation-in-Dry-U-S-Forests'
+        - 'http://www.scribd.com/services/oembed/?format=xml&url=http%3A%2F%2Fwww.scribd.com%2Fdoc%2F110799637%2FSynthesis-of-Knowledge-Effects-of-Fire-and-Thinning-Treatments-on-Understory-Vegetation-in-Dry-U-S-Forests'
 
 - provider_name: Dotsub
   provider_url: 'http://dotsub.com/'
@@ -220,7 +220,7 @@
       docs_url: 'http://dotsub.com/solutions/oEmbed'
       url: 'http://dotsub.com/services/oembed'
       example_urls:
-        - 'http://dotsub.com/services/oembed?url=http://dotsub.com/view/665bd0d5-a9f4-4a07-9d9e-b31ba926ca78&format=xml'
+        - 'http://dotsub.com/services/oembed?url=http%3A%2F%2Fdotsub.com%2Fview%2F665bd0d5-a9f4-4a07-9d9e-b31ba926ca78&format=xml'
 
 - provider_name: Animoto
   provider_url: 'http://animoto.com/'
@@ -241,7 +241,7 @@
       url: 'http://www.rdio.com/api/oembed/'
       docs_url: 'http://developer.rdio.com/docs/oEmbed'
       example_urls:
-        - 'http://www.rdio.com/api/oembed/?format=json&url=http://www.rdio.com/artist/The_Black_Keys/album/Brothers/'
+        - 'http://www.rdio.com/api/oembed/?format=json&url=http%3A%2F%2Fwww.rdio.com%2Fartist%2FThe_Black_Keys%2Falbum%2FBrothers%2F'
 
 - provider_name: MixCloud
   provider_url: 'http://mixcloud.com/'
@@ -251,7 +251,7 @@
       url: 'http://www.mixcloud.com/oembed/'
       docs_url: 'http://www.mixcloud.com/developers/documentation/'
       example_urls:
-        - 'http://www.mixcloud.com/oembed/?url=http%3A//www.mixcloud.com/TechnoLiveSets/jon_rundell-live-electrobeach-festival-benidorm-16-08-2013/&format=xml'
+        - 'http://www.mixcloud.com/oembed/?url=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fjon_rundell-live-electrobeach-festival-benidorm-16-08-2013%2F&format=xml'
 
 - provider_name: Clyp
   provider_url: 'http://clyp.it/'
@@ -261,8 +261,8 @@
         - 'http://clyp.it/playlist/*'
       url: 'http://api.clyp.it/oembed/'
       example_urls:
-        - 'http://api.clyp.it/oembed?url=http://clyp.it/zhwuptos&maxwidth=720'
-        - 'http://api.clyp.it/oembed?url=http://clyp.it/playlist/1kmfioze'
+        - 'http://api.clyp.it/oembed?url=http%3A%2F%2Fclyp.it%2Fzhwuptos&maxwidth=720'
+        - 'http://api.clyp.it/oembed?url=http%3A%2F%2Fclyp.it%2Fplaylist%2F1kmfioze'
       discovery: true
 
 - provider_name: Screenr
@@ -272,7 +272,7 @@
         - 'http://www.screenr.com/*/'
       url: 'http://www.screenr.com/api/oembed.{format}'
       example_urls:
-        - 'http://www.screenr.com/api/oembed.xml?url=http://screenr.com/3jns'
+        - 'http://www.screenr.com/api/oembed.xml?url=http%3A%2F%2Fscreenr.com%2F3jns'
 
 - provider_name: FunnyOrDie
   provider_url: 'http://www.funnyordie.com/'
@@ -281,7 +281,7 @@
         - 'http://www.funnyordie.com/videos/*'
       url: 'http://www.funnyordie.com/oembed.{format}'
       example_urls:
-        - 'http://www.funnyordie.com/oembed.xml?url=http://www.funnyordie.com/videos/a7311134ac/patton-oswalt-in-heavy-metal'
+        - 'http://www.funnyordie.com/oembed.xml?url=http%3A%2F%2Fwww.funnyordie.com%2Fvideos%2Fa7311134ac%2Fpatton-oswalt-in-heavy-metal'
 
 - provider_name: 'Poll Daddy'
   provider_url: 'http://polldaddy.com'
@@ -293,7 +293,7 @@
       url: 'http://polldaddy.com/oembed/'
       docs_url: 'http://support.polldaddy.com/oembed/'
       example_urls:
-        - 'http://polldaddy.com/oembed/?url=http://polldaddy.com/ratings/39/&format=xml'
+        - 'http://polldaddy.com/oembed/?url=http%3A%2F%2Fpolldaddy.com%2Fratings%2F39%2F&format=xml'
 
 - provider_name: Ted
   provider_url: 'http://ted.com'
@@ -301,7 +301,7 @@
     - schemes:
         - 'http://ted.com/talks/*'
       example_urls:
-        - 'http://www.ted.com/talks/oembed.xml?url=http://www.ted.com/talks/jill_bolte_taylor_s_powerful_stroke_of_insight.html'
+        - 'http://www.ted.com/talks/oembed.xml?url=http%3A%2F%2Fwww.ted.com%2Ftalks%2Fjill_bolte_taylor_s_powerful_stroke_of_insight.html'
 
 - provider_name: VideoJug
   provider_url: 'http://www.videojug.com'
@@ -311,7 +311,7 @@
         - 'http://www.videojug.com/interview/*'
       url: 'http://www.videojug.com/oembed.{format}'
       example_urls:
-        - 'http://www.videojug.com/oembed.xml?url=http://www.videojug.com/film/how-to-tie-a-knot-braid'
+        - 'http://www.videojug.com/oembed.xml?url=http%3A%2F%2Fwww.videojug.com%2Ffilm%2Fhow-to-tie-a-knot-braid'
 
 - provider_name: 'Sapo Videos'
   provider_url: 'http://videos.sapo.pt'
@@ -320,7 +320,7 @@
         - 'http://videos.sapo.pt/*'
       url: 'http://videos.sapo.pt/oembed'
       example_urls:
-        - 'http://videos.sapo.pt/oembed?url=http://videos.sapo.pt/dNbiosGa9YZHfLrhkA88&format=xml'
+        - 'http://videos.sapo.pt/oembed?url=http%3A%2F%2Fvideos.sapo.pt%2FdNbiosGa9YZHfLrhkA88&format=xml'
 
 - provider_name: 'Official FM'
   provider_url: 'http://official.fm'
@@ -331,7 +331,7 @@
       url: 'http://official.fm/services/oembed.{format}'
       docs_url: 'https://github.com/officialfm/api/blob/master/sections/oembed.md'
       example_urls:
-        - 'http://official.fm/services/oembed.json?url=http://official.fm/tracks/npTR'
+        - 'http://official.fm/services/oembed.json?url=http%3A%2F%2Fofficial.fm%2Ftracks%2FnpTR'
 
 - provider_name: HuffDuffer
   provider_url: 'http://huffduffer.com'
@@ -340,7 +340,7 @@
         - 'http://huffduffer.com/*/*'
       url: 'http://huffduffer.com/oembed'
       example_urls:
-        - 'http://huffduffer.com/oembed?url=http://huffduffer.com/jxpx777/125342&format=xml'
+        - 'http://huffduffer.com/oembed?url=http%3A%2F%2Fhuffduffer.com%2Fjxpx777%2F125342&format=xml'
 
 - provider_name: Shoudio
   provider_url: 'http://shoudio.com'
@@ -350,7 +350,7 @@
         - 'http://shoud.io/*'
       url: 'http://shoudio.com/api/oembed'
       example_urls:
-        - 'http://shoudio.com/api/oembed?format=xml&url=http://shoudio.com/user/shoister/status/8122'
+        - 'http://shoudio.com/api/oembed?format=xml&url=http%3A%2F%2Fshoudio.com%2Fuser%2Fshoister%2Fstatus%2F8122'
 
 - provider_name: 'Moby Picture'
   provider_url: 'http://www.mobypicture.com'
@@ -360,7 +360,7 @@
         - 'http://moby.to/*'
       url: 'http://api.mobypicture.com/oEmbed'
       example_urls:
-        - 'http://api.mobypicture.com/oEmbed?format=xml&url=http://mobypicture.com/user/Henk_Voermans/view/15880044'
+        - 'http://api.mobypicture.com/oEmbed?format=xml&url=http%3A%2F%2Fmobypicture.com%2Fuser%2FHenk_Voermans%2Fview%2F15880044'
 
 - provider_name: 23HQ
   provider_url: 'http://www.23hq.com'
@@ -369,7 +369,7 @@
         - 'http://www.23hq.com/*/photo/*'
       url: 'http://www.23hq.com/23/oembed'
       example_urls:
-        - 'http://www.23hq.com/23/oembed?url=http://www.23hq.com/mprove/photo/13297717'
+        - 'http://www.23hq.com/23/oembed?url=http%3A%2F%2Fwww.23hq.com%2Fmprove%2Fphoto%2F13297717'
 
 - provider_name: Cacoo
   provider_url: 'https://cacoo.com'
@@ -379,7 +379,7 @@
       url: 'http://cacoo.com/oembed.{format}'
       docs_url: 'https://cacoo.com/lang/en/api_oembed'
       example_urls:
-        - 'http://cacoo.com/oembed.xml?url=http://cacoo.com/diagrams/m9uZtizE5I2GkFR6'
+        - 'http://cacoo.com/oembed.xml?url=http%3A%2F%2Fcacoo.com%2Fdiagrams%2Fm9uZtizE5I2GkFR6'
 
 - provider_name: Dipity
   provider_url: 'http://www.dipity.com'
@@ -388,7 +388,7 @@
         - 'http://www.dipity.com/*/*/'
       url: 'http://www.dipity.com/oembed/timeline/'
       example_urls:
-        - 'http://www.dipity.com/oembed/timeline/?format=xml&url=http://www.dipity.com/ragutier/Historia_de_la_Web/'
+        - 'http://www.dipity.com/oembed/timeline/?format=xml&url=http%3A%2F%2Fwww.dipity.com%2Fragutier%2FHistoria_de_la_Web%2F'
 
 - provider_name: Roomshare
   provider_url: 'http://roomshare.jp'
@@ -398,7 +398,7 @@
         - 'http://roomshare.jp/en/post/*'
       url: 'http://roomshare.jp/en/oembed.{format}'
       example_urls:
-        - 'http://roomshare.jp/en/oembed.xml?url=http://roomshare.jp/en/post/137167'
+        - 'http://roomshare.jp/en/oembed.xml?url=http%3A%2F%2Froomshare.jp%2Fen%2Fpost%2F137167'
 
 - provider_name: Dailymotion
   provider_url: 'http://www.dailymotion.com'
@@ -408,7 +408,7 @@
       url: 'http://www.dailymotion.com/services/oembed'
       docs_url: 'https://developer.dailymotion.com/player#player-oembed'
       example_urls:
-        - 'http://www.dailymotion.com/services/oembed?format=xml&url=http://www.dailymotion.com/video/xoxulz_babysitter_animals'
+        - 'http://www.dailymotion.com/services/oembed?format=xml&url=http%3A%2F%2Fwww.dailymotion.com%2Fvideo%2Fxoxulz_babysitter_animals'
 
 - provider_name: 'Crowd Ranking'
   provider_url: 'http://crowdranking.com'
@@ -417,7 +417,7 @@
         - 'http://crowdranking.com/*/*'
       url: 'http://crowdranking.com/api/oembed.{format}'
       example_urls:
-        - 'http://crowdranking.com/api/oembed.xml?url=http://crowdranking.com/rankings/t470g0--best-tea'
+        - 'http://crowdranking.com/api/oembed.xml?url=http%3A%2F%2Fcrowdranking.com%2Frankings%2Ft470g0--best-tea'
 
 - provider_name: CircuitLab
   provider_url: 'https://www.circuitlab.com/'
@@ -426,7 +426,7 @@
         - 'https://www.circuitlab.com/circuit/*'
       url: 'https://www.circuitlab.com/circuit/oembed/'
       example_urls:
-        - 'https://www.circuitlab.com/circuit/oembed/?format=json&url=https://www.circuitlab.com/circuit/e38756/555-timer-as-astable-multivibrator-oscillator/'
+        - 'https://www.circuitlab.com/circuit/oembed/?format=json&url=https%3A%2F%2Fwww.circuitlab.com%2Fcircuit%2Fe38756%2F555-timer-as-astable-multivibrator-oscillator%2F'
       discovery: true
 
 - provider_name: 'Geograph Britain and Ireland'
@@ -441,8 +441,8 @@
         - 'File scheme: <code>geograph-\d+-*.jpg</code> (files saved from Geograph may look like this)'
       url: 'http://api.geograph.org.uk/api/oembed'
       example_urls:
-        - 'http://api.geograph.org.uk/api/oembed?url=http://www.geograph.org.uk/photo/2928776&format=json'
-        - 'http://api.geograph.org.uk/api/oembed?url=http://s0.geograph.org.uk/geophotos/02/92/87/2928776_72cdbeab.jpg'
+        - 'http://api.geograph.org.uk/api/oembed?url=http%3A%2F%2Fwww.geograph.org.uk%2Fphoto%2F2928776&format=json'
+        - 'http://api.geograph.org.uk/api/oembed?url=http%3A%2F%2Fs0.geograph.org.uk%2Fgeophotos%2F02%2F92%2F87%2F2928776_72cdbeab.jpg'
 
 - provider_name: 'Geograph Germany'
   provider_url: 'http://geo-en.hlipp.de/'
@@ -453,8 +453,8 @@
         - 'http://germany.geograph.org/*'
       url: 'http://geo.hlipp.de/restapi.php/api/oembed'
       example_urls:
-        - 'http://geo.hlipp.de/restapi.php/api/oembed?url=http://geo.hlipp.de/photo/20260&format=json'
-        - 'http://geo.hlipp.de/restapi.php/api/oembed?url=http://geo.hlipp.de/photos/02/02/020260_dcfdbf8e.jpg'
+        - 'http://geo.hlipp.de/restapi.php/api/oembed?url=http%3A%2F%2Fgeo.hlipp.de%2Fphoto%2F20260&format=json'
+        - 'http://geo.hlipp.de/restapi.php/api/oembed?url=http%3A%2F%2Fgeo.hlipp.de%2Fphotos%2F02%2F02%2F020260_dcfdbf8e.jpg'
 
 - provider_name: 'Geograph Channel Islands'
   provider_url: 'http://channel-islands.geograph.org/'
@@ -467,8 +467,8 @@
         - 'http://*.channel.geographs.org/*'
       url: 'http://www.geograph.org.gg/api/oembed'
       example_urls:
-        - 'http://www.geograph.org.gg/api/oembed?url=http://www.geograph.org.gg/photo/773'
-        - 'http://www.geograph.org.gg/api/oembed?url=http://s1.channel.geographs.org/photos/00/07/000773_e1e23765_120x120.jpg&format=json'
+        - 'http://www.geograph.org.gg/api/oembed?url=http%3A%2F%2Fwww.geograph.org.gg%2Fphoto%2F773'
+        - 'http://www.geograph.org.gg/api/oembed?url=http%3A%2F%2Fs1.channel.geographs.org%2Fphotos%2F00%2F07%2F000773_e1e23765_120x120.jpg&format=json'
 
 - provider_name: Quiz.biz
   provider_url: 'http://www.quiz.biz/'
@@ -478,7 +478,7 @@
       url: 'http://www.quiz.biz/api/oembed'
       docs_url: 'http://www.quiz.biz/aide-oembed.php'
       example_urls:
-        - 'http://www.quiz.biz/api/oembed?url=http://www.quiz.biz/quizz-182015.html&format=json'
+        - 'http://www.quiz.biz/api/oembed?url=http%3A%2F%2Fwww.quiz.biz%2Fquizz-182015.html&format=json'
       discovery: true
 
 - provider_name: Quizz.biz
@@ -489,7 +489,7 @@
       url: 'http://www.quizz.biz/api/oembed'
       docs_url: 'http://www.quizz.biz/aide-oembed.php'
       example_urls:
-        - 'http://www.quizz.biz/api/oembed?url=http://www.quizz.biz/quizz-339842.html&format=json'
+        - 'http://www.quizz.biz/api/oembed?url=http%3A%2F%2Fwww.quizz.biz%2Fquizz-339842.html&format=json'
       discovery: true
 
 - provider_name: Coub
@@ -500,10 +500,10 @@
         - 'http://coub.com/embed/*'
       url: 'http://coub.com/api/oembed.{format}'
       example_urls:
-        - 'http://coub.com/api/oembed.xml?url=http://coub.com/view/um0um0'
-        - 'http://coub.com/api/oembed.json?url=http://coub.com/view/um0um0'
-        - 'http://coub.com/api/oembed.xml?url=http://coub.com/embed/um0um0'
-        - 'http://coub.com/api/oembed.json?url=http://coub.com/embed/um0um0'
+        - 'http://coub.com/api/oembed.xml?url=http%3A%2F%2Fcoub.com%2Fview%2Fum0um0'
+        - 'http://coub.com/api/oembed.json?url=http%3A%2F%2Fcoub.com%2Fview%2Fum0um0'
+        - 'http://coub.com/api/oembed.xml?url=http%3A%2F%2Fcoub.com%2Fembed%2Fum0um0'
+        - 'http://coub.com/api/oembed.json?url=http%3A%2F%2Fcoub.com%2Fembed%2Fum0um0'
 
 - provider_name: SpeakerDeck
   provider_url: 'https://speakerdeck.com'
@@ -513,7 +513,7 @@
         - 'https://speakerdeck.com/*/*'
       url: 'https://speakerdeck.com/oembed.json'
       example_urls:
-        - 'https://speakerdeck.com/oembed.json?url=https://speakerdeck.com/wallat/why-backbone'
+        - 'https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fspeakerdeck.com%2Fwallat%2Fwhy-backbone'
       discovery: true
       formats:
         - json
@@ -527,7 +527,7 @@
       url: 'https://alpha-api.app.net/oembed'
       docs_url: 'http://developers.app.net/docs/other/oembed/'
       example_urls:
-        - 'https://alpha-api.app.net/oembed?url=https://alpha.app.net/breakingnews/post/9153521'
+        - 'https://alpha-api.app.net/oembed?url=https%3A%2F%2Falpha.app.net%2Fbreakingnews%2Fpost%2F9153521'
       formats:
         - json
 
@@ -538,7 +538,7 @@
         - 'http://*.blip.tv/*/*'
       url: 'http://blip.tv/oembed/'
       example_urls:
-        - 'http://blip.tv/oembed/?url=http://blip.tv/nostalgiacritic/nostalgia-critic-sailor-moon-6625851'
+        - 'http://blip.tv/oembed/?url=http%3A%2F%2Fblip.tv%2Fnostalgiacritic%2Fnostalgia-critic-sailor-moon-6625851'
       formats:
         - json
 
@@ -551,7 +551,7 @@
       url: 'http://www.yfrog.com/api/oembed'
       docs_url: 'http://twitter.yfrog.com/page/api#a8'
       example_urls:
-        - 'http://www.yfrog.com/api/oembed?url=http://yfrog.com/jukynnj'
+        - 'http://www.yfrog.com/api/oembed?url=http%3A%2F%2Fyfrog.com%2Fjukynnj'
       formats:
         - json
 
@@ -564,7 +564,7 @@
       url: 'http://api.instagram.com/oembed'
       docs_url: 'http://instagram.com/developer/embedding/#oembed'
       example_urls:
-        - 'http://api.instagram.com/oembed?url=http://instagram.com/p/V8UMy0LjpX/'
+        - 'http://api.instagram.com/oembed?url=http%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F'
       formats:
         - json
 
@@ -575,7 +575,7 @@
         - 'http://soundcloud.com/*'
       url: 'https://soundcloud.com/oembed'
       example_urls:
-        - 'https://soundcloud.com/oembed?url=https://www.soundcloud.com/comedy-central/the-unf-kables-dave-attell/&format=xml'
+        - 'https://soundcloud.com/oembed?url=https%3A%2F%2Fwww.soundcloud.com%2Fcomedy-central%2Fthe-unf-kables-dave-attell%2F&format=xml'
 
 - provider_name: 'On Aol'
   provider_url: 'http://on.aol.com/'
@@ -584,7 +584,7 @@
         - 'http://on.aol.com/video/*'
       url: 'http://on.aol.com/api'
       example_urls:
-        - 'http://on.aol.com/api?url=http://on.aol.com/video/plans-to-clone-john-lennon-using-one-of-his-teeth-517906689'
+        - 'http://on.aol.com/api?url=http%3A%2F%2Fon.aol.com%2Fvideo%2Fplans-to-clone-john-lennon-using-one-of-his-teeth-517906689'
 
 - provider_name: Kickstarter
   provider_url: 'http://www.kickstarter.com'
@@ -603,7 +603,7 @@
         - 'http://*.ustream.com/*'
       url: 'http://www.ustream.tv/oembed'
       example_urls:
-        - 'http://www.ustream.tv/oembed?url=http://www.ustream.tv/channel/americatv2oficial'
+        - 'http://www.ustream.tv/oembed?url=http%3A%2F%2Fwww.ustream.tv%2Fchannel%2Famericatv2oficial'
       formats:
         - json
 
@@ -614,7 +614,7 @@
         - 'https://gmep.org/media/*'
       url: 'https://gmep.org/oembed.{format}'
       example_urls:
-        - 'https://gmep.org/oembed.xml?url=https://gmep.org/media/14769'
+        - 'https://gmep.org/oembed.xml?url=https%3A%2F%2Fgmep.org%2Fmedia%2F14769'
 
 - provider_name: 'Daily Mile'
   provider_url: 'http://www.dailymile.com'
@@ -623,7 +623,7 @@
         - 'http://www.dailymile.com/people/*/entries/*'
       url: 'http://api.dailymile.com/oembed?format=json'
       example_urls:
-        - 'http://api.dailymile.com/oembed?format=json&url=http://www.dailymile.com/people/EddieJ3/entries/24776213'
+        - 'http://api.dailymile.com/oembed?format=json&url=http%3A%2F%2Fwww.dailymile.com%2Fpeople%2FEddieJ3%2Fentries%2F24776213'
       formats:
         - json
 
@@ -636,8 +636,8 @@
         - 'https://sketchfab.com/*/folders/*'
       url: 'http://sketchfab.com/oembed'
       example_urls:
-        - 'http://sketchfab.com/oembed?url=https://sketchfab.com/models/e7995659092c4d8c92031b0a03887cfa'
-        - 'http://sketchfab.com/oembed?url=https://sketchfab.com/sketchfab/folders/5ae73138e4a1477fb87b6f48d2bfccbe'
+        - 'http://sketchfab.com/oembed?url=https%3A%2F%2Fsketchfab.com%2Fmodels%2Fe7995659092c4d8c92031b0a03887cfa'
+        - 'http://sketchfab.com/oembed?url=https%3A%2F%2Fsketchfab.com%2Fsketchfab%2Ffolders%2F5ae73138e4a1477fb87b6f48d2bfccbe'
       formats:
         - json
 
@@ -650,7 +650,7 @@
       url: 'https://api.meetup.com/oembed'
       docs_url: 'http://www.meetup.com/meetup_api/docs/oembed/'
       example_urls:
-        - 'https://api.meetup.com/oembed?format=json&url=http://www.meetup.com/PHPColMeetup/photos/'
+        - 'https://api.meetup.com/oembed?format=json&url=http%3A%2F%2Fwww.meetup.com%2FPHPColMeetup%2Fphotos%2F'
       formats:
         - json
 
@@ -672,8 +672,8 @@
         - 'http://audiosnaps.com/k/*'
       url: 'http://audiosnaps.com/service/oembed'
       example_urls:
-        - 'http://audiosnaps.com/service/oembed?url=http://audiosnaps.com/k/d8wi/&format=json'
-        - 'http://audiosnaps.com/service/oembed?url=http://audiosnaps.com/k/d8wi/&maxwidth=400&format=xml'
+        - 'http://audiosnaps.com/service/oembed?url=http%3A%2F%2Faudiosnaps.com%2Fk%2Fd8wi%2F&format=json'
+        - 'http://audiosnaps.com/service/oembed?url=http%3A%2F%2Faudiosnaps.com%2Fk%2Fd8wi%2F&maxwidth=400&format=xml'
       discovery: true
 
 - provider_name: edocr
@@ -684,7 +684,7 @@
       url: 'http://edocr.com/api/oembed'
       docs_url: 'http://www.edocr.com/oembed-documentation'
       example_urls:
-        - 'http://www.edocr.com/api/oembed/?format=json&url=http://www.edocr.com/doc/144677/capillary-technologies-corporate-brochure'
+        - 'http://www.edocr.com/api/oembed/?format=json&url=http%3A%2F%2Fwww.edocr.com%2Fdoc%2F144677%2Fcapillary-technologies-corporate-brochure'
 
 - provider_name: RapidEngage
   provider_url: 'https://rapidengage.com'
@@ -694,8 +694,8 @@
       url: 'https://rapidengage.com/api/oembed'
       docs_url: 'https://rapidengage.com/developer/docs#oembed'
       example_urls:
-        - 'https://rapidengage.com/api/oembed?url=https://rapidengage.com/s/6b1faa05'
-        - 'https://rapidengage.com/api/oembed?url=https://rapidengage.com/s/6b1faa05&format=xml'
+        - 'https://rapidengage.com/api/oembed?url=https%3A%2F%2Frapidengage.com%2Fs%2F6b1faa05'
+        - 'https://rapidengage.com/api/oembed?url=https%3A%2F%2Frapidengage.com%2Fs%2F6b1faa05&format=xml'
 
 - provider_name: 'Ora TV'
   provider_url: 'http://www.ora.tv/'
@@ -725,8 +725,8 @@
         - 'http://live.amcharts.com/*'
       url: 'http://live.amcharts.com/oembed'
       example_urls:
-        - 'http://live.amcharts.com/oembed/?url=http://live.amcharts.com/czNjJ/&format=json'
-        - 'http://live.amcharts.com/oembed/?url=http://live.amcharts.com/czNjJ/&format=xml'
+        - 'http://live.amcharts.com/oembed/?url=http%3A%2F%2Flive.amcharts.com%2FczNjJ%2F&format=json'
+        - 'http://live.amcharts.com/oembed/?url=http%3A%2F%2Flive.amcharts.com%2FczNjJ%2F&format=xml'
 
 - provider_name: 'iSnare Articles'
   provider_url: 'http://www.isnare.com/'
@@ -774,7 +774,7 @@
         - 'https://theysaidso.com/image/*'
       url: 'https://theysaidso.com/extensions/oembed/'
       example_urls:
-        - 'https://theysaidso.com/extensions/oembed?url=https://theysaidso.com/i/13IGilhK08STqiDI5xGk_geF&format=json'
+        - 'https://theysaidso.com/extensions/oembed?url=https%3A%2F%2Ftheysaidso.com%2Fi%2F13IGilhK08STqiDI5xGk_geF&format=json'
       discovery: true
 
 - provider_name: LearningApps.org
@@ -784,5 +784,5 @@
         - 'http://learningapps.org/*'
       url: 'http://learningapps.org/oembed.php'
       example_urls:
-        - 'http://learningapps.org/oembed.php?format=json&url=http://LearningApps.org/259'
+        - 'http://learningapps.org/oembed.php?format=json&url=http%3A%2F%2FLearningApps.org%2F259'
       discovery: true

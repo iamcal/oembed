@@ -429,21 +429,23 @@ code {
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
 {% for provider in site.data.providers %}
-<p>{{ provider.provider_name }} (<a href="{{ provider.provider_url }}">{{ provider.provider_url }}</a>)</p>
+<p>{{ provider.provider_name | escape }} (<a href="{{ provider.provider_url | escape }}">{{ provider.provider_url | escape }}</a>)</p>
 {% for endpoint in provider.endpoints %}
 <ul>
 {% for scheme in endpoint.schemes %}
-	<li> URL scheme: <code>{{ scheme }}</code> </li>
+	<li> URL scheme: <code>{{ scheme | escape }}</code> </li>
 {% endfor %}
-	<li> API endpoint: <code>{{ endpoint.url }} {% for format in endpoint.formats %}(only supports {{ format | downcase }}){% endfor %}</code> </li>
+{% if endpoint.url %}
+	<li> API endpoint: <code>{{ endpoint.url | escape }} {% for format in endpoint.formats %}(only supports {{ format | downcase | escape }}){% endfor %}</code> </li>
+{% endif %}
 {% if endpoint.docs_url %}
-	<li> Documentation: <a href="{{ endpoint.docs_url | escape }}">{{ endpoint.docs_url }}</a> </li>
+	<li> Documentation: <a href="{{ endpoint.docs_url | escape }}">{{ endpoint.docs_url | escape }}</a> </li>
 {% endif %}
 {% for example_url in endpoint.example_urls %}
 	<li> Example: <a href="{{ example_url | escape }}">{{ example_url | escape }}</a> </li>
 {% endfor %}
 {% for note in endpoint.notes %}
-	<li>{{ note }}</code>
+	<li>{{ note | escape }}</code>
 {% endfor %}
 {% if endpoint.discovery %}
 	<li> Supports discovery via <code>&lt;link&gt;</code> tags </li>
