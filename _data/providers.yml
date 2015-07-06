@@ -666,6 +666,8 @@
         - 'http://videofork.com/oembed/33536'
       formats:
         - json
+      notes:
+        - 'Example: [http://videofork.com/oembed/33536](http://videofork.com/oembed/33536) where 33536 is id of the video.'
 
 - provider_name: AudioSnaps
   provider_url: 'http://audiosnaps.com'
