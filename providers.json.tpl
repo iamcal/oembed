@@ -1,0 +1,4 @@
+---
+permalink: providers.json
+---
+{"providers":[{% for provider in site.data.providers %}{"provider_name":{{ provider.provider_name | jsonify }},"provider_url":{{ provider.provider_url | jsonify }},"endpoints":[{% for endpoint in provider.endpoints %}{"url":{{ endpoint.url | jsonify }}{% if endpoint.schemes %},"schemes":{{ endpoint.schemes | jsonify }}{% endif %}{% if endpoint.formats %},"formats":{{ endpoint.formats | jsonify }}{% endif %}{% if endpoint.discovery %},"discovery":{{ endpoint.discovery | jsonify }}{% endif %}}{% if forloop.last == false %},{% endif %}{% endfor %}]}{% if forloop.last == false %},{% endif %}{% endfor %}]}
