@@ -37,15 +37,6 @@
       example_urls:
         - 'http://www.viddler.com/oembed/?format=xml&url=http%3A%2F%2Fwww.viddler.com%2Fv%2F1646c55'
 
-- provider_name: Revision3
-  provider_url: 'http://revision3.com/'
-  endpoints:
-    - schemes:
-        - 'http://*.revision3.com/*'
-      url: 'http://revision3.com/api/oembed/'
-      example_urls:
-        - 'http://revision3.com/api/oembed/?url=http%3A%2F%2Frevision3.com%2Fdiggnation%2F2008-04-17xsanned%2F&format=xml'
-
 - provider_name: Hulu
   provider_url: 'http://www.hulu.com/'
   endpoints:
