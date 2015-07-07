@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^providers.json$ json.php [L]
