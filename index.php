@@ -30,7 +30,7 @@
             - added providers
             - added a libraries section
             - updated video example (youtube has real support)
- 2010-10-03 - history is now tracked on github
+ 2010-10-03 - history is now tracked on GitHub
             - http://github.com/iamcal/oembed
 
 -->
@@ -73,7 +73,7 @@ code {
 
 <p>oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.</p>
 
-<p>This document is stored on <a href="https://github.com/iamcal/oembed">github</a>.</p>
+<p>This document is stored on <a href="https://github.com/iamcal/oembed">GitHub</a>.</p>
 
 <h2>Table Of Contents</h2>
 
@@ -426,6 +426,9 @@ code {
 
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
+<p>Providers are available programatically as a json file: <a href="http://oembed.com/providers.json">http://oembed.com/providers.json</a>.</p>
+<p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and modify <code>providers.yml</code>.</p>
+
 <?php
 	$data = yaml_parse_file('providers.yml');
 
@@ -532,7 +535,7 @@ code {
 	<li><a href="http://qik.com/blog/124/qik-embraces-oembed-for-embedding-videos">Qik blog</a></li>
 </ul>
 
-<p>This document is stored on <a href="https://github.com/iamcal/oembed">github</a>.
+<p>This document is stored on <a href="https://github.com/iamcal/oembed">GitHub</a>.
 	Please check the <a href="http://groups.google.com/group/oembed/">mailing list</a>, fork and contribute.</p>
 
 </div>
