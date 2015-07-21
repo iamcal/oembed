@@ -67,24 +67,6 @@
         - 'http://www.collegehumor.com/oembed.xml?url=http%3A%2F%2Fwww.collegehumor.com%2Fvideo%2F3922232%2Fprank-war-7-the-half-million-dollar-shot'
       discovery: true
 
-- provider_name: Jest
-  provider_url: 'http://www.jest.com/'
-  endpoints:
-    - schemes:
-        - 'http://www.jest.com/video/*'
-      url: 'http://www.jest.com/oembed.{format}'
-      example_urls:
-        - 'http://www.jest.com/oembed.xml?url=http%3A%2F%2Fwww.jest.com%2Fvideo%2F197394%2Fpaul-ryan-rap'
-        - 'http://www.jest.com/oembed.json?url=http%3A%2F%2Fwww.jest.com%2Fvideo%2F197394%2Fpaul-ryan-rap'
-      discovery: true
-    - schemes:
-        - 'http://www.jest.com/embed/*'
-      url: 'http://www.jest.com/oembed.{format}'
-      example_urls:
-        - 'http://www.jest.com/oembed.xml?url=http%3A%2F%2Fwww.jest.com%2Fembed%2F199639%2Fengineering-students-go-berserk-for-dancers'
-        - 'http://www.jest.com/oembed.json?url=http%3A%2F%2Fwww.jest.com%2Fembed%2F199639%2Fengineering-students-go-berserk-for-dancers'
-      discovery: true
-
 - provider_name: 'Poll Everywhere'
   provider_url: 'http://www.polleverywhere.com/'
   endpoints:
