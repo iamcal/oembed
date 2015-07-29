@@ -792,3 +792,15 @@
       example_urls:
         - 'https://topy.se/oembed/?url=http%3A%2F%2Ftopy.se%2Fimage%2FX9%26format%3Djson'
       discovery: true
+
+- provider_name: ReverbNation
+  provider_url: 'https://www.reverbnation.com/'
+  endpoints:
+    - schemes:
+        - 'https://www.reverbnation.com/*'
+        - 'https://www.reverbnation.com/*/songs/*'
+      url: 'https://www.reverbnation.com/oembed'
+      example_urls:
+        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones&format=xml'
+        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones%2Fsong%2F18668300-rising-sand&format=xml'
+      discovery: true
