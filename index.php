@@ -509,7 +509,7 @@ code {
 	<li>Python: pyoembed (<a href="http://github.com/rafaelmartins/pyoembed/">http://github.com/rafaelmartins/pyoembed/</a>)</li>
 	<li>Python: PyEmbed (<a href="http://pyembed.github.io">http://pyembed.github.io</a>)</li>
 	<li>Python oEmbed (<a href="http://code.google.com/p/python-oembed/">http://code.google.com/p/python-oembed/</a>)</li>
-	<li>Django: djangoembed (<a href="http://github.com/worldcompany/djangoembed">http://github.com/worldcompany/djangoembed</a>)</li>
+	<li>Django: micawber (<a href="https://github.com/coleifer/micawber">https://github.com/coleifer/micawber</a>)</li>
 	<li>Java: java-oembed (<a href="https://github.com/michael-simons/java-oembed">https://github.com/michael-simons/java-oembed</a>)</li>
 	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
