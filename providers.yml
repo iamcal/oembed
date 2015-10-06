@@ -14,7 +14,8 @@
     - url: 'http://www.youtube.com/oembed'
       discovery: true
       example_urls:
-        - 'http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch?v%3D-UUx10KOWIE&format=xml'
+        - 'http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiwGFalTRHDA'
+        - 'http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiwGFalTRHDA&format=xml'
 
 - provider_name: Flickr
   provider_url: 'http://www.flickr.com/'
@@ -67,18 +68,6 @@
         - 'http://www.collegehumor.com/oembed.xml?url=http%3A%2F%2Fwww.collegehumor.com%2Fvideo%2F3922232%2Fprank-war-7-the-half-million-dollar-shot'
       discovery: true
 
-- provider_name: 'Poll Everywhere'
-  provider_url: 'http://www.polleverywhere.com/'
-  endpoints:
-    - schemes:
-        - 'http://www.polleverywhere.com/polls/*'
-        - 'http://www.polleverywhere.com/multiple_choice_polls/*'
-        - 'http://www.polleverywhere.com/free_text_polls/*'
-      url: 'http://www.polleverywhere.com/services/oembed/'
-      docs_url: 'http://api.polleverywhere.com/index.php?title=OEmbed'
-      example_urls:
-        - 'http://polleverywhere.com/services/oembed?url=http%3A%2F%2Fwww.polleverywhere.com%2Fmultiple_choice_polls%2FLTIwNzM1NTczNTE&format=xml'
-
 - provider_name: Embedly
   provider_url: 'http://api.embed.ly/'
   endpoints:
@@ -119,7 +108,7 @@
       url: 'http://api.smugmug.com/services/oembed/'
       docs_url: 'http://wiki.smugmug.net/display/API/oEmbed'
       example_urls:
-        - 'http://api.smugmug.com/services/oembed/?url=http%3A%2F%2Fwww.smugmug.com%2Fpopular%2Fall%23125787395_hQSj9'
+        - 'https://api.smugmug.com/services/oembed/?url=https%3A%2F%2Fwww.smugmug.com%2Fpopular%2Fall%23125787395_hQSj9'
       discovery: true
       notes:
         - 'URL Scheme: `http://*.example.com/*` (where example.com = SmugMug customer domain)'
@@ -539,7 +528,8 @@
         - 'http://soundcloud.com/*'
       url: 'https://soundcloud.com/oembed'
       example_urls:
-        - 'https://soundcloud.com/oembed?url=https%3A%2F%2Fwww.soundcloud.com%2Fcomedy-central%2Fthe-unf-kables-dave-attell%2F&format=xml'
+        - 'https://soundcloud.com/oembed?url=https%3A%2F%2Fsoundcloud.com%2Fforss%2Fflickermood'
+        - 'https://soundcloud.com/oembed?url=https%3A%2F%2Fsoundcloud.com%2Fforss%2Fflickermood&format=json'
 
 - provider_name: 'On Aol'
   provider_url: 'http://on.aol.com/'
@@ -548,7 +538,7 @@
         - 'http://on.aol.com/video/*'
       url: 'http://on.aol.com/api'
       example_urls:
-        - 'http://on.aol.com/api?url=http%3A%2F%2Fon.aol.com%2Fvideo%2Fplans-to-clone-john-lennon-using-one-of-his-teeth-517906689'
+        - 'http://api.embed.ly/1/oembed?url=http%3A%2F%2Fon.aol.com%2Fvideo%2Fplans-to-clone-john-lennon-using-one-of-his-teeth-517906689'
 
 - provider_name: Kickstarter
   provider_url: 'http://www.kickstarter.com'
@@ -570,15 +560,6 @@
         - 'http://www.ustream.tv/oembed?url=http%3A%2F%2Fwww.ustream.tv%2Fchannel%2Famericatv2oficial'
       formats:
         - json
-
-- provider_name: GMEP
-  provider_url: 'https://gmep.org'
-  endpoints:
-    - schemes:
-        - 'https://gmep.org/media/*'
-      url: 'https://gmep.org/oembed.{format}'
-      example_urls:
-        - 'https://gmep.org/oembed.xml?url=https%3A%2F%2Fgmep.org%2Fmedia%2F14769'
 
 - provider_name: 'Daily Mile'
   provider_url: 'http://www.dailymile.com'
@@ -617,19 +598,6 @@
         - 'https://api.meetup.com/oembed?format=json&url=http%3A%2F%2Fwww.meetup.com%2FPHPColMeetup%2Fphotos%2F'
       formats:
         - json
-
-- provider_name: VideoFork
-  provider_url: 'http://videofork.com/'
-  endpoints:
-    - schemes:
-        - 'http://videofork.com/oembed/([0-9]+)'
-      url: 'http://videofork.com/oembed'
-      example_urls:
-        - 'http://videofork.com/oembed/33536'
-      formats:
-        - json
-      notes:
-        - 'Example: [http://videofork.com/oembed/33536](http://videofork.com/oembed/33536) where 33536 is id of the video.'
 
 - provider_name: AudioSnaps
   provider_url: 'http://audiosnaps.com'
@@ -790,8 +758,10 @@
         - 'https://www.reverbnation.com/*/songs/*'
       url: 'https://www.reverbnation.com/oembed'
       example_urls:
-        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones&format=xml'
-        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones%2Fsong%2F18668300-rising-sand&format=xml'
+        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones'
+        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones&format=json'
+        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones%2Fsong%2F4290057-rising-sand'
+        - 'https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones%2Fsong%2F4290057-rising-sand&format=json'
       discovery: true
 
 - provider_name: 'Blackfire.io'
