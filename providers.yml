@@ -506,17 +506,6 @@
       formats:
         - json
 
-- provider_name: BlipTV
-  provider_url: 'http://blip.tv/'
-  endpoints:
-    - schemes:
-        - 'http://*.blip.tv/*/*'
-      url: 'http://blip.tv/oembed/'
-      example_urls:
-        - 'http://blip.tv/oembed/?url=http%3A%2F%2Fblip.tv%2Fnostalgiacritic%2Fnostalgia-critic-sailor-moon-6625851'
-      formats:
-        - json
-
 - provider_name: YFrog
   provider_url: 'http://yfrog.com/'
   endpoints:
