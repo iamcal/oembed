@@ -131,6 +131,10 @@
   endpoints:
     - schemes:
         - 'http://www.slideshare.net/*/*'
+        - 'http://fr.slideshare.net/*/*'
+        - 'http://de.slideshare.net/*/*'
+        - 'http://es.slideshare.net/*/*'
+        - 'http://pt.slideshare.net/*/*'
       url: 'http://www.slideshare.net/api/oembed/2'
       docs_url: 'http://www.slideshare.net/developers/oembed'
       example_urls:
