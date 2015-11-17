@@ -812,3 +812,17 @@
       example_urls:
         - 'http://repubhub.icopyright.net/oembed.act?url=http%3A%2F%2Frepubhub.icopyright.net%2FfreePost.act%3Ftag%3D3.11150%3Ficx_id%3D918814&format=json'
       discovery: true
+
+- provider_name: Silk
+  provider_url: 'http://www.silk.co/'
+  endpoints:
+    - schemes:
+        - 'http://*.silk.co/explore/*'
+        - 'https://*.silk.co/explore/*'
+        - 'http://*.silk.co/s/embed/*'
+        - 'https://*.silk.co/s/embed/*'
+      url:'http://www.silk.co/oembed/'
+      example-urls:
+        - 'http://world.silk.co/explore/map/collection/country/numeric/total%20life%20expectancy/location/title/on/silk.co/pin/filter/matches/region/Africa'
+        - 'https://women-in-film.silk.co/s/embed/stackchart/collection/bechdel-test-results-through-time/numeric/less-than-two-named-women-in-it/numeric/two-or-more-women-but-who-don't-talk-to-each-other/numeric/the-two-or-more-women-who-talk-to-each-other-but-only-discuss-men/numeric/passed'
+      discovery: true
