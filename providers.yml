@@ -812,3 +812,10 @@
       example_urls:
         - 'http://repubhub.icopyright.net/oembed.act?url=http%3A%2F%2Frepubhub.icopyright.net%2FfreePost.act%3Ftag%3D3.11150%3Ficx_id%3D918814&format=json'
       discovery: true
+- provider_name: Verse
+  provider_url: 'http://verse.media/'
+  endpoints:
+    - url: 'http://verse.media/services/oembed/'
+      example_urls:
+        - 'http://verse.media/services/oembed/?url=http%3A%2F%2Fverse.media%2Fembed%2F%23%2Fstories%2F112-connected-to-the-top'
+        - 'http://verse.media/services/oembed/?url=http%3A%2F%2Fverse.media%2Fembed%2F%23%2Fstories%2F112-connected-to-the-top&format=xml'
