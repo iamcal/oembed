@@ -793,6 +793,7 @@
       example_urls:
         - 'https://www.oumy.com/oembed?url=https%3A%2F%2Fwww.oumy.com%2Fv%2F0NmY0agdvcA7wlvIXbJaBzA&format=json'
       discovery: true
+
 - provider_name: EgliseInfo
   provider_url: 'http://egliseinfo.catholique.fr/'
   endpoints:
@@ -803,6 +804,7 @@
         - 'http://egliseinfo.catholique.fr/api/oembed?url=http%3A%2F%2Fegliseinfo.catholique.fr%2Fhoraires%2Fparis&format=json'
         - 'http://egliseinfo.catholique.fr/api/oembed?url=http%3A%2F%2Fegliseinfo.catholique.fr%2Fhoraires%2Fparis&format=xml'
       discovery: true
+
 - provider_name: RepubHub
   provider_url: 'http://repubhub.icopyright.net/'
   endpoints:
@@ -812,6 +814,7 @@
       example_urls:
         - 'http://repubhub.icopyright.net/oembed.act?url=http%3A%2F%2Frepubhub.icopyright.net%2FfreePost.act%3Ftag%3D3.11150%3Ficx_id%3D918814&format=json'
       discovery: true
+
 - provider_name: CatBoat
   provider_url: 'http://img.catbo.at/'
   endpoints:
@@ -829,3 +832,17 @@
       example_urls:
         - 'http://verse.media/services/oembed/?url=http%3A%2F%2Fverse.media%2Fembed%2F%23%2Fstories%2F112-connected-to-the-top'
         - 'http://verse.media/services/oembed/?url=http%3A%2F%2Fverse.media%2Fembed%2F%23%2Fstories%2F112-connected-to-the-top&format=xml'
+
+- provider_name: Silk
+  provider_url: 'http://www.silk.co/'
+  endpoints:
+    - schemes:
+        - 'http://*.silk.co/explore/*'
+        - 'https://*.silk.co/explore/*'
+        - 'http://*.silk.co/s/embed/*'
+        - 'https://*.silk.co/s/embed/*'
+      url:'http://www.silk.co/oembed/'
+      example-urls:
+        - 'http://world.silk.co/explore/map/collection/country/numeric/total%20life%20expectancy/location/title/on/silk.co/pin/filter/matches/region/Africa'
+        - 'https://women-in-film.silk.co/s/embed/stackchart/collection/bechdel-test-results-through-time/numeric/less-than-two-named-women-in-it/numeric/two-or-more-women-but-who-don't-talk-to-each-other/numeric/the-two-or-more-women-who-talk-to-each-other-but-only-discuss-men/numeric/passed'
+      discovery: true
