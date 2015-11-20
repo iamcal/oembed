@@ -846,3 +846,15 @@
         - 'http://world.silk.co/explore/map/collection/country/numeric/total%20life%20expectancy/location/title/on/silk.co/pin/filter/matches/region/Africa'
         - 'https://women-in-film.silk.co/s/embed/stackchart/collection/bechdel-test-results-through-time/numeric/less-than-two-named-women-in-it/numeric/two-or-more-women-but-who-dont-talk-to-each-other/numeric/the-two-or-more-women-who-talk-to-each-other-but-only-discuss-men/numeric/passed'
       discovery: true
+
+- provider_name: Animatron
+  provider_url: 'https://www.animatron.com/'
+  endpoints:
+    - schemes:
+        - 'https://www.animatron.com/project/*'
+      url: 'https://www.animatron.com/oembed'
+      example_urls:
+        - 'https://www.animatron.com/oembed/json?url=https%3A%2F%2Fwww.animatron.com%2Fproject%2F48212b56cb6eab301201fee4'
+        - 'https://www.animatron.com/oembed/xml?url=https%3A%2F%2Fwww.animatron.com%2Fproject%2F48212b56cb6eab301201fee4'
+      discovery: true
+
