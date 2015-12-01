@@ -142,7 +142,7 @@ code {
 	<li> <code>*://www.flickr.com/photos/*</code> NOT OK </li>
 </ul>
 
-<p>The API endpoint must point to an HTTP endpoint URL (not HTTPS) which implements the API described below.</p>
+<p>The API endpoint must point to a URL with either HTTP or HTTPS scheme which implements the API described below.</p>
 
 
 <a name="section2.2" id="section2.2"><h3>2.2. Consumer Request</h3></a>
