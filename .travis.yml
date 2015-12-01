@@ -1,5 +1,7 @@
 language: php
 
+sudo: false
+
 script: php test.php
 
 before_script:
