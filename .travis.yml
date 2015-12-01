@@ -1,0 +1,13 @@
+language: php
+
+script: php test.php
+
+before_script:
+  - pecl channel-update pecl.php.net
+  - printf "\n" | pecl install yaml
+  - echo "extension=yaml.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+
+addons:
+  apt:
+    packages:
+      - libyaml-dev
