@@ -873,3 +873,17 @@
         - 'https://codepoints.net/api/v1/oembed?url=https%3A%2F%2Fcodepoints.net%2FA&format=xml&maxwidth=64'
         - 'https://codepoints.net/U+2665'
       discovery: true
+
+- provider_name: Pastery
+  provider_url: 'https://www.pastery.net'
+  endpoints:
+    - schemes:
+        - 'http://pastery.net/*'
+        - 'https://pastery.net/*'
+        - 'http://www.pastery.net/*'
+        - 'https://www.pastery.net/*'
+      url: 'https://www.pastery.net/oembed'
+      example_urls:
+        - 'https://www.pastery.net/oembed/?format=json&url=https%3A%2F%2Fwww.pastery.net%2Fabout%2F'
+        - 'https://www.pastery.net/oembed/?format=json&url=https%3A%2F%2Fwww.pastery.net%2Fapi%2F'
+      discovery: true
