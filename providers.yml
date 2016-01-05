@@ -891,7 +891,10 @@
 - provider_name: Office Mix
   provider_url: 'http://mix.office.com/'
   endpoints:
-    - url: 'https://mix.office.com/oembed'
+    - schemes:
+        - 'https://mix.office.com/watch/*' 
+        - 'https://mix.office.com/embed/*'     
+      url: 'https://mix.office.com/oembed'
       discovery: true
       example_urls:
         - 'https://mix.office.com/oembed?url=https://mix.office.com/watch/7o6kt118pguk'
