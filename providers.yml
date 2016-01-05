@@ -911,3 +911,12 @@
         - 'https://showtheway.io/oembed?format=json&url=https%3A%2F%2Fshowtheway.io%2Fto%2F48.85837%2C2.294481%3Fname%3DEiffel%2520Tower'
         - 'https://showtheway.io/oembed?format=xml&url=https%3A%2F%2Fshowtheway.io%2Fto%2F48.85837%2C2.294481%3Fname%3DEiffel%2520Tower'
       discovery: true
+
+- provider_name: Office Mix
+  provider_url: 'http://mix.office.com/'
+  endpoints:
+    - url: 'https://mix.office.com/oembed'
+      discovery: true
+      example_urls:
+        - 'https://mix.office.com/oembed?url=https://mix.office.com/watch/7o6kt118pguk'
+        - 'https://mix.office.com/oembed?url=https://mix.office.com/watch/7o6kt118pguk&format=xml'
