@@ -887,3 +887,14 @@
         - 'https://www.pastery.net/oembed/?format=json&url=https%3A%2F%2Fwww.pastery.net%2Fabout%2F'
         - 'https://www.pastery.net/oembed/?format=json&url=https%3A%2F%2Fwww.pastery.net%2Fapi%2F'
       discovery: true
+
+- provider_name: Vine
+  provider_url: 'https://vine.co/'
+  endpoints:
+    - schemes:
+        - 'http://vine.co/v/*'
+        - 'https://vine.co/v/*'
+      url: 'https://vine.co/oembed.json'
+      discovery: true
+      example_urls:
+        - 'https://vine.co/oembed.json?url=https%3A%2F%2Fvine.co%2Fv%2FMl16lZVTTxe'
