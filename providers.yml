@@ -921,5 +921,5 @@
       url: 'https://mix.office.com/oembed'
       discovery: true
       example_urls:
-        - 'https://mix.office.com/oembed?url=https://mix.office.com/watch/7o6kt118pguk'
-        - 'https://mix.office.com/oembed?url=https://mix.office.com/watch/7o6kt118pguk&format=xml'
+        - 'https://mix.office.com/oembed?url=https%3A%2F%2Fmix.office.com%2Fwatch%2F7o6kt118pguk'
+        - 'https://mix.office.com/oembed?url=https%3A%2F%2Fmix.office.com%2Fwatch%2F7o6kt118pguk&format=xml'
