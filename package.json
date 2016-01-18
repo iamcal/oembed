@@ -1,0 +1,28 @@
+{
+  "name": "oembed",
+  "version": "1.0.20160118",
+  "description": "oEmbed providers",
+  "main": "providers.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "ryaml2json -p -s providers.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kapouer/oembed.git"
+  },
+  "keywords": [
+    "oembed",
+    "json",
+    "providers",
+    "list"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kapouer/oembed/issues"
+  },
+  "devDependencies": {
+    "ryaml": "^0.2.6"
+  }
+}
