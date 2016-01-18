@@ -1,5 +1,5 @@
 {
-  "name": "oembed",
+  "name": "oembed-providers",
   "version": "1.0.20160118",
   "description": "oEmbed providers",
   "main": "providers.json",
