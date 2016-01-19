@@ -1,6 +1,6 @@
 {
   "name": "oembed-providers-unofficial",
-  "version": "1.0.20160119",
+  "version": "1.0.20160120",
   "description": "oEmbed providers",
   "main": "providers.json",
   "files": ["providers.*"],
@@ -18,8 +18,7 @@
     "providers",
     "list"
   ],
-  "author": "",
-  "license": "MIT",
+  "author": "Jérémy Lal <kapouer@melix.org>",
   "bugs": {
     "url": "https://github.com/kapouer/oembed/issues"
   },
