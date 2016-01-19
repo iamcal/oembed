@@ -3,6 +3,7 @@
   "version": "1.0.20160119",
   "description": "oEmbed providers",
   "main": "providers.json",
+  "files": ["providers.*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "ryaml2json -p -s providers.yml"
