@@ -59,6 +59,7 @@
       url: 'http://vimeo.com/api/oembed.{format}'
       example_urls:
         - 'http://vimeo.com/api/oembed.xml?url=http%3A%2F%2Fvimeo.com%2F7100569'
+      discovery: true
 
 - provider_name: CollegeHumor
   provider_url: 'http://www.collegehumor.com/'
