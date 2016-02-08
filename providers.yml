@@ -380,6 +380,7 @@
       docs_url: 'https://developer.dailymotion.com/player#player-oembed'
       example_urls:
         - 'http://www.dailymotion.com/services/oembed?format=xml&url=http%3A%2F%2Fwww.dailymotion.com%2Fvideo%2Fxoxulz_babysitter_animals'
+      discovery: true
 
 - provider_name: 'Crowd Ranking'
   provider_url: 'http://crowdranking.com'
