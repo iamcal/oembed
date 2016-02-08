@@ -1,6 +1,6 @@
 {
   "name": "oembed-providers-unofficial",
-  "version": "1.0.20160120",
+  "version": "1.0.20160208",
   "description": "oEmbed providers",
   "main": "providers.json",
   "files": ["providers.*"],
