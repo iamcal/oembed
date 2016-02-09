@@ -1,16 +1,18 @@
 {
-  "name": "oembed-providers-unofficial",
-  "version": "1.0.20160208",
+  "name": "oembed-providers",
+  "version": "1.0.20160209",
+  "license": "MIT",
   "description": "oEmbed providers",
   "main": "providers.json",
   "files": ["providers.*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "ryaml2json -p -s providers.yml"
+    "prepublish": "php json.php > providers.json",
+    "postpublish": "rm -f providers.json"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kapouer/oembed.git"
+    "url": "https://github.com/iamcal/oembed.git"
   },
   "keywords": [
     "oembed",
@@ -18,11 +20,8 @@
     "providers",
     "list"
   ],
-  "author": "Jérémy Lal <kapouer@melix.org>",
+  "author": "Cal Henderson <cal@iamcal.com>",
   "bugs": {
-    "url": "https://github.com/kapouer/oembed/issues"
-  },
-  "devDependencies": {
-    "ryaml": "^0.2.6"
+    "url": "https://github.com/iamcal/oembed/issues"
   }
 }
