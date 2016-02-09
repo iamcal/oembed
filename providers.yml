@@ -887,3 +887,18 @@
         - 'https://www.pastery.net/oembed/?format=json&url=https%3A%2F%2Fwww.pastery.net%2Fabout%2F'
         - 'https://www.pastery.net/oembed/?format=json&url=https%3A%2F%2Fwww.pastery.net%2Fapi%2F'
       discovery: true
+
+- provider_name: 'Office Mix'
+  provider_url: 'https://mix.office.com'
+  endpoints:
+    - schemes:
+        - 'http://mix.office.com/*'
+        - 'https://mix.office.com/*'
+        - 'http://www.mix.office.com/*'
+        - 'https://www.mix.office.com/*'
+      url: 'https://mix.office.com/oembed'
+      example_urls:
+        - 'https://mix.office.com/oembed/?url=https%3A%2F%2Fmix.office.com%2Fwatch%2F1otxpj7hz6kbx'
+        - 'https://mix.office.com/oembed/?format=json&url=https%3A%2F%2Fmix.office.com%2Fwatch%2F1otxpj7hz6kbx'
+        - 'https://mix.office.com/oembed/?format=xml&url=https%3A%2F%2Fmix.office.com%2Fwatch%2F1otxpj7hz6kbx'
+      discovery: true
