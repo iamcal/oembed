@@ -946,3 +946,14 @@
         - 'https://sway.com/api/v1.0/oembed?url=https%3a%2f%2fsway.com%2fmaking_of_wildcat_sculpture&amp;format=json'
         - 'https://sway.com/api/v1.0/oembed?url=https%3a%2f%2fsway.com%2fnLa7rrYhdCmzRyQd&amp;format=json'
       discovery: true
+
+- provider_name: Uttles
+  provider_url: 'http://uttles.com'
+  endpoints:
+    - schemes:
+        - 'http://uttles.com/uttle/*'
+      url: 'http://uttles.com/api/reply/oembed'
+      example_urls:
+        - 'http://uttles.com/api/reply/oembed?url=http%3A%2F%2Futtles.com%2Futtle%2F56b760264daebfd94ef293a2&format=json'
+        - 'http://uttles.com/api/reply/oembed?url=http%3A%2F%2Futtles.com%2Futtle%2F56b760264daebfd94ef293a2&format=xml'
+      discovery: true
