@@ -442,7 +442,7 @@ code {
 	<?php foreach ($provider['endpoints'] as $endpoint){ ?>
 		<ul>
 
-		<?php foreach ($endpoint['schemes'] as $scheme){ ?>
+		<?php if (is_array($endpoint['schemes'])) foreach ($endpoint['schemes'] as $scheme){ ?>
 			<li> URL scheme: <code><?php echo HtmlSpecialChars($scheme); ?></code> </li>
 		<?php } ?>
 
@@ -458,11 +458,11 @@ code {
 			<li> Documentation: <a href="<?php echo HtmlSpecialChars($endpoint['docs_url']); ?>"><?php echo HtmlSpecialChars($endpoint['docs_url']); ?></a> </li>
 		<?php } ?>
 
-		<?php foreach ($endpoint['example_urls'] as $example_url){ ?>
+		<?php if (is_array($endpoint['example_urls'])) foreach ($endpoint['example_urls'] as $example_url){ ?>
 			<li> Example: <a href="<?php echo HtmlSpecialChars($example_url); ?>"><?php echo HtmlSpecialChars($example_url); ?></a> </li>
 		<?php } ?>
 
-		<?php foreach ($endpoint['notes'] as $note){ ?>
+		<?php if (is_array($endpoint['notes'])) foreach ($endpoint['notes'] as $note){ ?>
 			<li><?php echo format_html($note); ?></li>
 		<?php } ?>
 
