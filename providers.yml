@@ -971,3 +971,13 @@
         - 'https://docs.com/api/oembed?url=https%3A%2F%2Fdocs.com%2Fconstance%2F6216%2Fsilver-week&format=xml'
         - 'https://docs.com/api/oembed?url=https%3A%2F%2Fdocs.com%2Fconstance%2F6216%2Fsilver-week&format=json'
       discovery: true
+
+- provider_name: Kitchenbowl
+  provider_url: 'http://www.kitchenbowl.com'
+  endpoints:
+    - schemes:
+        - 'http://www.kitchenbowl.com/recipe/*'
+      url: 'http://www.kitchenbowl.com/oembed'
+      example_urls:
+        - 'http://www.kitchenbowl.com/oembed?url=http%3A%2F%2Fwww.kitchenbowl.com%2Frecipe%2FNVsYg1R8ql%2Fpork-and-shiitake-mushroom-dumplings'
+      discovery: true
