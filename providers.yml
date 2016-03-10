@@ -981,3 +981,13 @@
       example_urls:
         - 'http://www.kitchenbowl.com/oembed?url=http%3A%2F%2Fwww.kitchenbowl.com%2Frecipe%2FNVsYg1R8ql%2Fpork-and-shiitake-mushroom-dumplings'
       discovery: true
+
+- provider_name: StreamOneCloud
+  provider_url: 'https://www.streamone.nl'
+  endpoints:
+    - schemes:
+        - 'https://content.streamonecloud.net/embed/*'
+      url: 'https://content.streamonecloud.net/oembed'
+      example_urls:
+        - 'https://content.streamonecloud.net/oembed?format=json&url=https%3a%2f%2fcontent.streamonecloud.net%2fembed%2faccount%3d2zhpQ4DUe5oB%2fitem%3dOB5psqlNP0MR%2ftears-of-steel.html'
+      discovery: true
