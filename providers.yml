@@ -6,7 +6,7 @@
         - 'http://www.gfycat.com/*'
         - 'https://gfycat.com/*'
         - 'https://www.hgfycat.com/*'
-    - url: 'https://api.gfycat.com/v1/oembed'
+      url: 'https://api.gfycat.com/v1/oembed'
       discovery: true
       example_urls:
         - 'https://api.gfycat.com/v1/oembed?url=http%3A%2F%2Fwww.gfycat.com%2FRichPepperyFerret'
