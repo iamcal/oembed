@@ -1,26 +1,3 @@
-- provider_name: Gfycat
-  provider_url: 'https://gfycat.com/'
-  endpoints:
-    - schemes:
-        - 'http://gfycat.com/*'
-        - 'http://www.gfycat.com/*'
-        - 'https://gfycat.com/*'
-        - 'https://www.gfycat.com/*'
-      url: 'https://api.gfycat.com/v1/oembed'
-      discovery: true
-      example_urls:
-        - 'https://api.gfycat.com/v1/oembed?url=http%3A%2F%2Fwww.gfycat.com%2FRichPepperyFerret'
-        
-- provider_name: IFTTT
-  provider_url: 'http://www.ifttt.com/'
-  endpoints:
-    - schemes:
-        - 'http://ifttt.com/recipes/*'
-      url: 'http://www.ifttt.com/oembed/'
-      example_urls:
-        - 'https://ifttt.com/oembed?url=https%3A%2F%2Fifttt.com%2Frecipes%2F107745'
-      discovery: true
-
 - provider_name: YouTube
   provider_url: 'http://www.youtube.com/'
   endpoints:
@@ -66,13 +43,38 @@
     - docs_url: 'http://vimeo.com/api/docs/oembed'
       schemes:
         - 'http://vimeo.com/*'
+        - 'http://vimeo.com/channels/*/*'
         - 'http://vimeo.com/groups/*/videos/*'
         - 'https://vimeo.com/*'
+        - 'https://vimeo.com/channels/*/*'
         - 'https://vimeo.com/groups/*/videos/*'
-      url: 'http://vimeo.com/api/oembed.{format}'
+      url: 'https://vimeo.com/api/oembed.{format}'
       example_urls:
         - 'http://vimeo.com/api/oembed.xml?url=http%3A%2F%2Fvimeo.com%2F7100569'
       discovery: true
+
+- provider_name: Clipland
+  provider_url: 'http://www.clipland.com/'
+  endpoints:
+    - schemes:
+        - 'http://www.clipland.com/v/*'
+        - 'https://www.clipland.com/v/*'
+      url: 'https://www.clipland.com/api/oembed'
+      example_urls:
+        - 'https://www.clipland.com/api/oembed?url=http%3A%2F%2Fwww.clipland.com%2Fv%2F1010&format=json'
+        - 'https://www.clipland.com/api/oembed?url=http%3A%2F%2Fwww.clipland.com%2Fv%2F1010&format=xml'
+      discovery: true
+
+- provider_name: VEVO
+  provider_url: 'http://www.vevo.com/'
+  endpoints:
+    - schemes:
+        - 'http://www.vevo.com/*'
+        - 'https://www.vevo.com/*'
+      url: 'https://www.vevo.com/oembed'
+      example_urls:
+        - 'https://www.vevo.com/oembed?url=http%3A%2F%2Fwww.vevo.com%2Fwatch%2Fkaty-perry%2FFirework%2FUSCA31000112'
+      discovery: false
 
 - provider_name: CollegeHumor
   provider_url: 'http://www.collegehumor.com/'
@@ -82,6 +84,29 @@
       url: 'http://www.collegehumor.com/oembed.{format}'
       example_urls:
         - 'http://www.collegehumor.com/oembed.xml?url=http%3A%2F%2Fwww.collegehumor.com%2Fvideo%2F3922232%2Fprank-war-7-the-half-million-dollar-shot'
+      discovery: true
+
+- provider_name: Gfycat
+  provider_url: 'https://gfycat.com/'
+  endpoints:
+    - schemes:
+        - 'http://gfycat.com/*'
+        - 'http://www.gfycat.com/*'
+        - 'https://gfycat.com/*'
+        - 'https://www.gfycat.com/*'
+      url: 'https://api.gfycat.com/v1/oembed'
+      discovery: true
+      example_urls:
+        - 'https://api.gfycat.com/v1/oembed?url=http%3A%2F%2Fwww.gfycat.com%2FRichPepperyFerret'
+        
+- provider_name: IFTTT
+  provider_url: 'http://www.ifttt.com/'
+  endpoints:
+    - schemes:
+        - 'http://ifttt.com/recipes/*'
+      url: 'http://www.ifttt.com/oembed/'
+      example_urls:
+        - 'https://ifttt.com/oembed?url=https%3A%2F%2Fifttt.com%2Frecipes%2F107745'
       discovery: true
 
 - provider_name: Embedly
