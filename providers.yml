@@ -991,3 +991,14 @@
       example_urls:
         - 'https://content.streamonecloud.net/oembed?format=json&url=https%3a%2f%2fcontent.streamonecloud.net%2fembed%2faccount%3d2zhpQ4DUe5oB%2fitem%3dOB5psqlNP0MR%2ftears-of-steel.html'
       discovery: true
+
+- provider_name: The New York Times
+  provider_url: 'https://www.nytimes.com'
+  endpoints:
+    - schemes:
+        - 'https://www.nytimes.com/svc/oembed'
+      url: 'https://www.nytimes.com/svc/oembed'
+      example_urls:
+        - 'https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwww.nytimes.com%2F2016%2F03%2F10%2Fus%2Fpolitics%2Fhow-to-watch-democratic-debate.html'
+        - 'https://www.nytimes.com/svc/oembed/html/?url=http%3A%2F%2Fwww.nytimes.com%2F2016%2F03%2F10%2Fus%2Fpolitics%2Fhow-to-watch-democratic-debate.html'
+      discovery: true
