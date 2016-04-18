@@ -1,0 +1,12 @@
+---
+- provider_name: Uttles
+  provider_url: http://uttles.com
+  endpoints:
+  - schemes:
+    - http://uttles.com/uttle/*
+    url: http://uttles.com/api/reply/oembed
+    example_urls:
+    - http://uttles.com/api/reply/oembed?url=http%3A%2F%2Futtles.com%2Futtle%2F56b760264daebfd94ef293a2&format=json
+    - http://uttles.com/api/reply/oembed?url=http%3A%2F%2Futtles.com%2Futtle%2F56b760264daebfd94ef293a2&format=xml
+    discovery: true
+...

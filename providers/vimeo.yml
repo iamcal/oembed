@@ -1,0 +1,15 @@
+---
+- provider_name: Vimeo
+  provider_url: http://vimeo.com/
+  endpoints:
+  - docs_url: http://vimeo.com/api/docs/oembed
+    schemes:
+    - http://vimeo.com/*
+    - http://vimeo.com/groups/*/videos/*
+    - https://vimeo.com/*
+    - https://vimeo.com/groups/*/videos/*
+    url: http://vimeo.com/api/oembed.{format}
+    example_urls:
+    - http://vimeo.com/api/oembed.xml?url=http%3A%2F%2Fvimeo.com%2F7100569
+    discovery: true
+...

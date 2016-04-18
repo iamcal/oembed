@@ -1,0 +1,12 @@
+---
+- provider_name: Portfolium
+  provider_url: https://portfolium.com
+  endpoints:
+  - schemes:
+    - https://portfolium.com/entry/*
+    url: https://api.portfolium.com/oembed
+    docs_url: https://api.portfolium.com/#!/oembed/oembed_index_get
+    example_urls:
+    - https://api.portfolium.com/oembed?url=https%3A%2F%2Fportfolium.com%2Fentry%2Famerican-ninja-warrior-2011
+    - https://api.portfolium.com/oembed?url=https%3A%2F%2Fportfolium.com%2Fentry%2Famerican-ninja-warrior-2011&format=xml
+...

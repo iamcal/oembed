@@ -1,0 +1,12 @@
+---
+- provider_name: CatBoat
+  provider_url: http://img.catbo.at/
+  endpoints:
+  - schemes:
+    - http://img.catbo.at/*
+    url: http://img.catbo.at/oembed.json
+    example_urls:
+    - http://img.catbo.at/oembed.json?url=http://img.catbo.at/3fb93c1b7891aedb18aa41fb325cbc92e82e58a1.jpg&maxwidth=200&maxheight=45&format=json
+    formats:
+    - json
+...

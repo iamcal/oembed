@@ -1,0 +1,10 @@
+---
+- provider_name: iSnare Articles
+  provider_url: https://www.isnare.com/
+  endpoints:
+  - schemes:
+    - https://www.isnare.com/*
+    url: https://www.isnare.com/oembed/
+    example_urls:
+    - https://www.isnare.com/oembed/?url=http%3A%2F%2Fwww.isnare.com%2F%3Faid%3D1897753%26ca%3DMarketing
+...

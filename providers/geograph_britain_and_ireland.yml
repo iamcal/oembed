@@ -1,0 +1,19 @@
+---
+- provider_name: Geograph Britain and Ireland
+  provider_url: https://www.geograph.org.uk/
+  endpoints:
+  - schemes:
+    - http://*.geograph.org.uk/*
+    - http://*.geograph.co.uk/*
+    - http://*.geograph.ie/*
+    - http://*.wikimedia.org/*_geograph.org.uk_*
+    notes:
+    - 'File scheme: <code>geograph-\d+-*.jpg</code> (files saved from Geograph may
+      look like this)'
+    - Scheme `http://*.wikimedia.org/*_geograph.org.uk_*` can also help with Geograph
+      images crossloaded to Wikimedia Commons
+    url: http://api.geograph.org.uk/api/oembed
+    example_urls:
+    - http://api.geograph.org.uk/api/oembed?url=http%3A%2F%2Fwww.geograph.org.uk%2Fphoto%2F2928776&format=json
+    - http://api.geograph.org.uk/api/oembed?url=http%3A%2F%2Fs0.geograph.org.uk%2Fgeophotos%2F02%2F92%2F87%2F2928776_72cdbeab.jpg
+...

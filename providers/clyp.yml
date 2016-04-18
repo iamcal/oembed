@@ -1,0 +1,13 @@
+---
+- provider_name: Clyp
+  provider_url: http://clyp.it/
+  endpoints:
+  - schemes:
+    - http://clyp.it/*
+    - http://clyp.it/playlist/*
+    url: http://api.clyp.it/oembed/
+    example_urls:
+    - http://api.clyp.it/oembed?url=http%3A%2F%2Fclyp.it%2Fzhwuptos&maxwidth=720
+    - http://api.clyp.it/oembed?url=http%3A%2F%2Fclyp.it%2Fplaylist%2F1kmfioze
+    discovery: true
+...

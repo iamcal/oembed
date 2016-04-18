@@ -1,0 +1,13 @@
+---
+- provider_name: Docs
+  provider_url: https://www.docs.com
+  endpoints:
+  - schemes:
+    - https://docs.com/*
+    - https://www.docs.com/*
+    url: https://docs.com/api/oembed
+    example_urls:
+    - https://docs.com/api/oembed?url=https%3A%2F%2Fdocs.com%2Fconstance%2F6216%2Fsilver-week&format=xml
+    - https://docs.com/api/oembed?url=https%3A%2F%2Fdocs.com%2Fconstance%2F6216%2Fsilver-week&format=json
+    discovery: true
+...

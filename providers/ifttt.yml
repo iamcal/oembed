@@ -1,0 +1,11 @@
+---
+- provider_name: IFTTT
+  provider_url: http://www.ifttt.com/
+  endpoints:
+  - schemes:
+    - http://ifttt.com/recipes/*
+    url: http://www.ifttt.com/oembed/
+    example_urls:
+    - https://ifttt.com/oembed?url=https%3A%2F%2Fifttt.com%2Frecipes%2F107745
+    discovery: true
+...

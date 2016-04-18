@@ -1,0 +1,12 @@
+---
+- provider_name: FOX SPORTS Australia
+  provider_url: http://www.foxsports.com.au
+  endpoints:
+  - schemes:
+    - http://fiso.foxsports.com.au/isomorphic-widget/*
+    - https://fiso.foxsports.com.au/isomorphic-widget/*
+    url: https://fiso.foxsports.com.au/oembed
+    example_urls:
+    - http://fiso.foxsports.com.au/oembed/?url=http%3A%2F%2Ffiso.foxsports.com.au%2Fisomorphic-widget%2Fscoreboard%2F1.4.5%2Fscoreboard.html%3FfilterName%3Dfoxsports%26selectedProfile%3Dfoxsports%26masthead%3Dfoxsports%26statsApiKey%3D63c38ca7-01a9-4515-a332-2e5798b030b3
+    - http://fiso.foxsports.com.au/oembed/?url=http%3A%2F%2Ffiso.foxsports.com.au%2Fisomorphic-widget%2Fscoreboard%2F1.4.5%2Fscoreboard.html%3FfilterName%3Dfoxsports%26selectedProfile%3Dfoxsports%26masthead%3Dfoxsports%26statsApiKey%3D63c38ca7-01a9-4515-a332-2e5798b030b3&maxwidth=700
+...

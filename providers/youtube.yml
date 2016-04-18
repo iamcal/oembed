@@ -1,0 +1,10 @@
+---
+- provider_name: YouTube
+  provider_url: http://www.youtube.com/
+  endpoints:
+  - url: http://www.youtube.com/oembed
+    discovery: true
+    example_urls:
+    - http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiwGFalTRHDA
+    - http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiwGFalTRHDA&format=xml
+...

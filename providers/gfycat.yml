@@ -1,0 +1,14 @@
+---
+- provider_name: Gfycat
+  provider_url: https://gfycat.com/
+  endpoints:
+  - schemes:
+    - http://gfycat.com/*
+    - http://www.gfycat.com/*
+    - https://gfycat.com/*
+    - https://www.gfycat.com/*
+    url: https://api.gfycat.com/v1/oembed
+    discovery: true
+    example_urls:
+    - https://api.gfycat.com/v1/oembed?url=http%3A%2F%2Fwww.gfycat.com%2FRichPepperyFerret
+...

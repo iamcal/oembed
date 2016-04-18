@@ -1,0 +1,13 @@
+---
+- provider_name: Geograph Germany
+  provider_url: http://geo-en.hlipp.de/
+  endpoints:
+  - schemes:
+    - http://geo-en.hlipp.de/*
+    - http://geo.hlipp.de/*
+    - http://germany.geograph.org/*
+    url: http://geo.hlipp.de/restapi.php/api/oembed
+    example_urls:
+    - http://geo.hlipp.de/restapi.php/api/oembed?url=http%3A%2F%2Fgeo.hlipp.de%2Fphoto%2F20260&format=json
+    - http://geo.hlipp.de/restapi.php/api/oembed?url=http%3A%2F%2Fgeo.hlipp.de%2Fphotos%2F02%2F02%2F020260_dcfdbf8e.jpg
+...

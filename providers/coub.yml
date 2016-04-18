@@ -1,0 +1,14 @@
+---
+- provider_name: Coub
+  provider_url: http://coub.com/
+  endpoints:
+  - schemes:
+    - http://coub.com/view/*
+    - http://coub.com/embed/*
+    url: http://coub.com/api/oembed.{format}
+    example_urls:
+    - http://coub.com/api/oembed.xml?url=http%3A%2F%2Fcoub.com%2Fview%2Fum0um0
+    - http://coub.com/api/oembed.json?url=http%3A%2F%2Fcoub.com%2Fview%2Fum0um0
+    - http://coub.com/api/oembed.xml?url=http%3A%2F%2Fcoub.com%2Fembed%2Fum0um0
+    - http://coub.com/api/oembed.json?url=http%3A%2F%2Fcoub.com%2Fembed%2Fum0um0
+...

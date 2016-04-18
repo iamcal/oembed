@@ -1,0 +1,12 @@
+---
+- provider_name: Daily Mile
+  provider_url: http://www.dailymile.com
+  endpoints:
+  - schemes:
+    - http://www.dailymile.com/people/*/entries/*
+    url: http://api.dailymile.com/oembed?format=json
+    example_urls:
+    - http://api.dailymile.com/oembed?format=json&url=http%3A%2F%2Fwww.dailymile.com%2Fpeople%2FEddieJ3%2Fentries%2F24776213
+    formats:
+    - json
+...

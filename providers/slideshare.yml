@@ -1,0 +1,16 @@
+---
+- provider_name: SlideShare
+  provider_url: http://www.slideshare.net/
+  endpoints:
+  - schemes:
+    - http://www.slideshare.net/*/*
+    - http://fr.slideshare.net/*/*
+    - http://de.slideshare.net/*/*
+    - http://es.slideshare.net/*/*
+    - http://pt.slideshare.net/*/*
+    url: http://www.slideshare.net/api/oembed/2
+    docs_url: http://www.slideshare.net/developers/oembed
+    example_urls:
+    - http://www.slideshare.net/api/oembed/2?url=http%3A%2F%2Fwww.slideshare.net%2Fharaldf%2Fbusiness-quotes-for-2011&format=json
+    discovery: true
+...

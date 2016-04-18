@@ -1,0 +1,13 @@
+---
+- provider_name: Ustream
+  provider_url: http://www.ustream.tv
+  endpoints:
+  - schemes:
+    - http://*.ustream.tv/*
+    - http://*.ustream.com/*
+    url: http://www.ustream.tv/oembed
+    example_urls:
+    - http://www.ustream.tv/oembed?url=http%3A%2F%2Fwww.ustream.tv%2Fchannel%2Famericatv2oficial
+    formats:
+    - json
+...

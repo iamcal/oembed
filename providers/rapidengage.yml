@@ -1,0 +1,12 @@
+---
+- provider_name: RapidEngage
+  provider_url: https://rapidengage.com
+  endpoints:
+  - schemes:
+    - https://rapidengage.com/s/*
+    url: https://rapidengage.com/api/oembed
+    docs_url: https://rapidengage.com/developer/docs#oembed
+    example_urls:
+    - https://rapidengage.com/api/oembed?url=https%3A%2F%2Frapidengage.com%2Fs%2F6b1faa05
+    - https://rapidengage.com/api/oembed?url=https%3A%2F%2Frapidengage.com%2Fs%2F6b1faa05&format=xml
+...

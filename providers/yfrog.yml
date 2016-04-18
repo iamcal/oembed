@@ -1,0 +1,14 @@
+---
+- provider_name: YFrog
+  provider_url: http://yfrog.com/
+  endpoints:
+  - schemes:
+    - http://*.yfrog.com/*
+    - http://yfrog.us/*
+    url: http://www.yfrog.com/api/oembed
+    docs_url: http://twitter.yfrog.com/page/api#a8
+    example_urls:
+    - http://www.yfrog.com/api/oembed?url=http%3A%2F%2Fyfrog.com%2Fjukynnj
+    formats:
+    - json
+...

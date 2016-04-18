@@ -1,0 +1,16 @@
+---
+- provider_name: Instagram
+  provider_url: https://instagram.com
+  endpoints:
+  - schemes:
+    - http://instagram.com/p/*
+    - http://instagr.am/p/*
+    - https://instagram.com/p/*
+    - https://instagr.am/p/*
+    url: http://api.instagram.com/oembed
+    docs_url: http://instagram.com/developer/embedding/#oembed
+    example_urls:
+    - http://api.instagram.com/oembed?url=http%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
+    formats:
+    - json
+...
