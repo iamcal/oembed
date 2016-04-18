@@ -427,10 +427,24 @@ code {
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
 <p>Providers are available programatically as a json file: <a href="http://oembed.com/providers.json">http://oembed.com/providers.json</a>.</p>
-<p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and modify <code>providers.yml</code>.</p>
+<p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and add/modify <code>providers/*.yml</code>.</p>
 
 <?php
-	$data = yaml_parse_file('providers.yml');
+	$data = array();
+
+	$dh = opendir('providers');
+	while (($file = readdir($dh)) !== false){
+		if (preg_match('!\.yml$!', $file)){
+			$partial = yaml_parse_file("providers/$file");
+			foreach ($partial as $row) $data[] = $row;
+		}
+	}
+
+	usort($data, 'local_sort');
+
+	function local_sort($a, $b){
+		return strcasecmp($a['provider_name'], $b['provider_name']);
+	}
 
 	function format_html($html){
 		return preg_replace('!`(.*?)`!', '<code>$1</code>', $html);
