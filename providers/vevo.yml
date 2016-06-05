@@ -1,0 +1,12 @@
+---
+- provider_name: VEVO
+  provider_url: 'http://www.vevo.com/'
+  endpoints:
+  - schemes:
+    - 'http://www.vevo.com/*'
+    - 'https://www.vevo.com/*'
+    url: 'https://www.vevo.com/oembed'
+    example_urls:
+    - 'https://www.vevo.com/oembed?url=http%3A%2F%2Fwww.vevo.com%2Fwatch%2Fkaty-perry%2FFirework%2FUSCA31000112'
+    discovery: false
+...
