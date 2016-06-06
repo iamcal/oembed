@@ -1,0 +1,13 @@
+---
+- provider_name: Clipland
+  provider_url: 'http://www.clipland.com/'
+  endpoints:
+  - schemes:
+    - 'http://www.clipland.com/v/*'
+    - 'https://www.clipland.com/v/*'
+    url: 'https://www.clipland.com/api/oembed'
+    example_urls:
+    - 'https://www.clipland.com/api/oembed?url=http%3A%2F%2Fwww.clipland.com%2Fv%2F1010&format=json'
+    - 'https://www.clipland.com/api/oembed?url=http%3A%2F%2Fwww.clipland.com%2Fv%2F1010&format=xml'
+    discovery: true
+...
