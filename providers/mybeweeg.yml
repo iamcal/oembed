@@ -4,7 +4,7 @@
   endpoints:
   - schemes:
     - https://mybeweeg.com/w/*
-    url: http://mybeweeg.com/services/oembed
+    url: https://mybeweeg.com/services/oembed
     example_urls:
-    - http://mybeweeg.com/services/oembed=https://mybeweeg.com/w/NyWxXR7tb
+    - https://mybeweeg.com/services/oembed=https://mybeweeg.com/w/NyWxXR7tb
 ...
