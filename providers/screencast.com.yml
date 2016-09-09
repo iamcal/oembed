@@ -1,0 +1,10 @@
+---
+- provider_name: Screencast.com
+  provider_url: http://www.screencast.com/
+  endpoints:
+  - url: https://api.screencast.com/external/oembed
+    discovery: true
+    example_urls:
+    - https://api.screencast.com/external/oembed?url=http%3A%2F%2Fwww.screencast.com%2Fusers%2FTechSmith_Media%2Ffolders%2FCamtasia%2Fmedia%2Fd89af74a-3a32-4c9f-8a85-ef83fdb5c39c
+    - https://api.screencast.com/external/oembed?url=http%3A%2F%2Fwww.screencast.com%2Ft%2FJR3TiP5Dds&format=xml
+...
