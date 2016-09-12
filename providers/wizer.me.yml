@@ -1,0 +1,15 @@
+---
+- provider_name: wizer.me
+  provider_url: http://www.wizer.me/
+  endpoints:
+  - schemes:
+    - http://*.wizer.me/learn/*
+    - https://*.wizer.me/learn/*
+    - http://*.wizer.me/preview/*
+    - https://*.wizer.me/preview/*
+    url: http://app.wizer.me/api/oembed.{format}
+    example_urls:
+    - http://app.wizer.me/api/oembed.json?url=https%3A%2F%2Fapp.wizer.me%2Fpreview%2FK6EKW
+    - http://app.wizer.me/api/oembed.xml?url=https%3A%2F%2Fapp.wizer.me%2Fpreview%2FK6EKW
+    discovery: true
+...
