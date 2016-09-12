@@ -1,5 +1,5 @@
 ---
-- provider_name: Codepen
+- provider_name: myBeweeg
   provider_url: https://mybeweeg.com
   endpoints:
   - schemes:
