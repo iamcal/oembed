@@ -1,0 +1,15 @@
+---
+- provider_name: Twitch
+  provider_url: //www.twitch.tv
+  endpoints:
+  - schemes:
+    - //clips.twitch.tv/*
+    - //www.twitch.tv/*
+    - //twitch.tv/*
+    url: //api.twitch.tv/v4/oembed
+    docs_url: https://github.com/justintv/Twitch-API/blob/master/embed-video.md
+    example_urls:
+    - https://api.twitch.tv/v4/oembed?url=https%3A%2F%2Fwww.twitch.tv%2Friotgames%2Fv%2F72749628
+    formats:
+    - json
+...
