@@ -6,5 +6,5 @@
     discovery: true
     example_urls:
     - http://boxofficebuz.com/oembed?url=http://movies.boxofficebuz.com/video/jack-reacher-never-go-back-tv-spot-hunting
-    - http://boxofficedev.com/oembed?url=http://movies.boxofficebuz.com/video/ghost-in-the-shell-trailer-teaser-5
+    - http://boxofficebuz.com/oembed?url=http://movies.boxofficebuz.com/video/ghost-in-the-shell-trailer-teaser-5
 ...
