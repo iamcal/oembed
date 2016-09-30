@@ -92,7 +92,7 @@ code {
 <p>A <i>consumer</i> (e.g. <a href="http://codex.wordpress.org/Embeds/">WordPress</a>) makes the following HTTP request:</p>
 
 <ul>
-	<li> <code>http://www.flickr.com/services/oembed/?url=http%3A//www.flickr.com/photos/bees/2341623661/</code> </li>
+	<li> <code>http://www.flickr.com/services/oembed/?type=json&url=http%3A//www.flickr.com/photos/bees/2341623661/</code> </li>
 </ul>
 
 <p>The <i>provider</i> (e.g. <a href="http://www.flickr.com/">Flickr</a>) then responds with an oEmbed response:</p>
