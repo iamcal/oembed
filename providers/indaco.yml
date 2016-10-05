@@ -4,7 +4,7 @@
   endpoints:
   - schemes:
     - https://player.indacolive.com/player/jwp/clients/
-  - url: https://player.indacolive.com/oembed/
+  - url: https://player.indacolive.com/services/oembed/
     example_urls:
     - https://player.indacolive.com/oembed?url=http%3A%2F%2Fplayer.indacolive.com%2fplayer%2fjwp%2fclients%2ftest%2f2016%2f9%2fpallacanestro_reggiana%2f
     formats: json
