@@ -1,0 +1,15 @@
+---
+- provider_name: eduMedia
+  provider_url: https://www.edumedia-sciences.com/
+  endpoints:
+  - url: https://www.edumedia-sciences.com/oembed.json
+    discovery: true
+    example_urls:
+    - https://www.edumedia-sciences.com/oembed.json?url=https%3A//www.edumedia-sciences.com/en/media/834-9-months-to-create-life
+    - https://www.edumedia-sciences.com/oembed.json?url=https%3A//www.edumedia-sciences.com/fr/media/836
+  - url: https://www.edumedia-sciences.com/oembed.xml
+    discovery: true
+    example_urls:
+    - https://www.edumedia-sciences.com/oembed.xml?url=https%3A//www.edumedia-sciences.com/en/media/834-9-months-to-create-life
+    - https://www.edumedia-sciences.com/oembed.xml?url=https%3A//www.edumedia-sciences.com/fr/media/836
+...
