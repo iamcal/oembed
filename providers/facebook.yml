@@ -1,0 +1,13 @@
+---
+- provider_name: Facebook (Video)
+  provider_url: https://www.facebook.com/
+  endpoints:
+  - docs_url: https://developers.facebook.com/docs/plugins/oembed-endpoints
+    schemes:
+    - https://www.facebook.com/*/videos/*
+    - https://www.facebook.com/video.php
+    url: https://www.facebook.com/plugins/video/oembed.json
+    discovery: true
+    example_urls:
+    - https://www.facebook.com/plugins/video/oembed.json/?url=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F
+...
