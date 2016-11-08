@@ -1,0 +1,12 @@
+---
+- provider_name: Sizzle
+  provider_url: https://onsizzle.com/
+  endpoints:
+  - schemes:
+    - https://onsizzle.com/i/*
+    url: https://onsizzle.com/oembed
+    example_urls:
+    - https://onsizzle.com/oembed?format=json&url=https%3A%2F%2Fonsizzle.com%2Fi%2Ften-kingiames-last-night-lebron-james-finally-got-that-ring-3174471
+    - https://onsizzle.com/oembed?format=xml&url=https%3A%2F%2Fonsizzle.com%2Fi%2Ften-kingiames-last-night-lebron-james-finally-got-that-ring-3174471
+    discovery: true
+...
