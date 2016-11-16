@@ -1,0 +1,11 @@
+---
+- provider_name: Punters
+  provider_url: https://www.punters.com.au
+  endpoints:
+  - schemes:
+    - https://www.punters.com.au/*
+    - https://punters.com.au/*
+    url: https://www.punters.com.au/api/oembed/
+    example_urls:
+    - https://www.punters.com.au/api/oembed/?format=json&url=https://www.punters.com.au/horses/Sons-of-John_300143/
+...
