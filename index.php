@@ -456,31 +456,31 @@ code {
 	<?php foreach ($provider['endpoints'] as $endpoint){ ?>
 		<ul>
 
-		<?php if (is_array($endpoint['schemes'])) foreach ($endpoint['schemes'] as $scheme){ ?>
+		<?php if (isset($endpoint['schemes']) && is_array($endpoint['schemes'])) foreach ($endpoint['schemes'] as $scheme){ ?>
 			<li> URL scheme: <code><?php echo HtmlSpecialChars($scheme); ?></code> </li>
 		<?php } ?>
 
-		<?php if ($endpoint['url']){ ?>
+		<?php if (isset($endpoint['url'])){ ?>
 			<li> API endpoint: <code><?php echo HtmlSpecialChars($endpoint['url']); ?></code>
-			<?php if (count($endpoint['formats'])){ ?>
+			<?php if (isset($endpoint['formats']) && count($endpoint['formats'])){ ?>
 				(only supports <code><?php echo HtmlSpecialChars(StrToLower(implode(', ', $endpoint['formats']))); ?></code>)
 			<?php } ?>
 			</li>
 		<?php } ?>
 
-		<?php if ($endpoint['docs_url']){ ?>
+		<?php if (isset($endpoint['docs_url'])){ ?>
 			<li> Documentation: <a href="<?php echo HtmlSpecialChars($endpoint['docs_url']); ?>"><?php echo HtmlSpecialChars($endpoint['docs_url']); ?></a> </li>
 		<?php } ?>
 
-		<?php if (is_array($endpoint['example_urls'])) foreach ($endpoint['example_urls'] as $example_url){ ?>
+		<?php if (isset($endpoint['example_urls']) && is_array($endpoint['example_urls'])) foreach ($endpoint['example_urls'] as $example_url){ ?>
 			<li> Example: <a href="<?php echo HtmlSpecialChars($example_url); ?>"><?php echo HtmlSpecialChars($example_url); ?></a> </li>
 		<?php } ?>
 
-		<?php if (is_array($endpoint['notes'])) foreach ($endpoint['notes'] as $note){ ?>
+		<?php if (isset($endpoint['notes']) && is_array($endpoint['notes'])) foreach ($endpoint['notes'] as $note){ ?>
 			<li><?php echo format_html($note); ?></li>
 		<?php } ?>
 
-		<?php if ($endpoint['discovery']){ ?>
+		<?php if (isset($endpoint['discovery'])){ ?>
 		 	<li> Supports discovery via <code>&lt;link&gt;</code> tags </li>
 		<?php } ?>
 	</ul>
