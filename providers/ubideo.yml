@@ -1,0 +1,12 @@
+---
+- provider_name: Ubideo
+  provider_url: https://player.ubideo.com/
+  endpoints:
+  - schemes:
+    - https://player.ubideo.com/*
+    url: https://player.ubideo.com/api/oembed.json
+    example_urls:
+    - https://player.ubideo.com/api/oembed.json?url=https://player.ubideo.com/myownusername
+    formats:
+    - json
+...
