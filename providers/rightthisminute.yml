@@ -1,0 +1,19 @@
+---
+- provider_name: RightThisMinute
+  provider_url: http://www.rightthisminute.com
+  endpoints:
+  - schemes:
+    - http://www.rightthisminute.com/tv/episode/*
+    - http://www.rightthisminute.com/post/*
+    - http://www.rightthisminute.com/slideshow/*
+    - http://www.rightthisminute.com/video/*
+    url: https://www.rightthisminute.com/oembed
+    example_urls:
+    - https://www.rightthisminute.com/oembed?url=http%3A//www.rightthisminute.com/tv/episode/2016-12-23
+    - https://www.rightthisminute.com/oembed?url=http%3A//www.rightthisminute.com/post/dyeing-your-hair-nutella-too-weird
+    - https://www.rightthisminute.com/oembed?url=http%3A//www.rightthisminute.com/slideshow/10-national-sandwich-day-recipes-get-your-taste-buds-going
+    - https://www.rightthisminute.com/oembed?url=http%3A//www.rightthisminute.com/video/rtmtv-mickey-and-his-pals-photobomb-family-photos
+    discovery: true
+    formats:
+    - json
+...
