@@ -1,0 +1,12 @@
+---
+- provider_name: GIPHY
+  provider_url: https://giphy.com
+  endpoints:
+  - schemes:
+    - http://giphy.com/*
+    - https://giphy.com/*
+    url: http://giphy.com/services/oembed
+    example_urls:
+    - http://giphy.com/services/oembed?url=https://media.giphy.com/media/kW8mnYSNkUYKc/giphy.gif
+    discovery: true
+...
