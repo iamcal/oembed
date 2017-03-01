@@ -2,7 +2,8 @@
 - provider_name: FrameBuzz
   provider_url: https://framebuzz.com/
   endpoints:
-    schemes:
+  - schemes:
+    - http://framebuzz.com/v/*
     - https://framebuzz.com/v/*
     url: https://framebuzz.com/oembed/
     example_urls:
