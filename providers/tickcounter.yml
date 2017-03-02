@@ -1,0 +1,19 @@
+---
+- provider_name: TickCounter
+  provider_url: https://www.tickcounter.com
+  endpoints:
+  - schemes:
+    - http://www.tickcounter.com/countdown/*
+    - http://www.tickcounter.com/countup/*
+    - http://www.tickcounter.com/ticker/*
+    - http://www.tickcounter.com/worldclock/*
+    - https://www.tickcounter.com/countdown/*
+    - https://www.tickcounter.com/countup/*
+    - https://www.tickcounter.com/ticker/*
+    - https://www.tickcounter.com/worldclock/*
+    url: https://www.tickcounter.com/oembed
+    example_urls:
+    - https://www.tickcounter.com/oembed?url=https%3A//www.tickcounter.com/countdown/1/my-countdown&format=json
+    - https://www.tickcounter.com/oembed?url=https%3A//www.tickcounter.com/countdown/1/my-countdown&format=xml&maxwidth=650&maxheight=125
+    discovery: true
+...
