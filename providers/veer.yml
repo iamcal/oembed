@@ -5,15 +5,15 @@
   - schemes:
       - http://veer.tv/videos/*
       url: https://api.veer.tv/oembed
-        discovery: true
-        example_urls:
-        - https://api.veer.tv/oembed?url=http%3A%2F%2Fveer.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=json
-        - https://api.veer.tv/oembed?url=http%3A%2F%2Fveer.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=xml
+      example_urls:
+      - https://api.veer.tv/oembed?url=http%3A%2F%2Fveer.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=json
+      - https://api.veer.tv/oembed?url=http%3A%2F%2Fveer.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=xml
+      discovery: true
   - schemes:
       - http://veervr.tv/videos/*
       url: https://api.veervr.tv/oembed
-        discovery: true
-        example_urls:
-        - https://api.veervr.tv/oembed?url=http%3A%2F%2Fveervr.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=json
-        - https://api.veervr.tv/oembed?url=http%3A%2F%2Fveervr.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=xml
+      example_urls:
+      - https://api.veervr.tv/oembed?url=http%3A%2F%2Fveer.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=json
+      - https://api.veervr.tv/oembed?url=http%3A%2F%2Fveer.tv%2Fvideos%2Ffuzzy-beard-360-7514&format=xml
+      discovery: true
 ...
