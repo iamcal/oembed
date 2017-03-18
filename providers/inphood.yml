@@ -1,0 +1,12 @@
+---
+- provider_name: inphood
+  provider_url: http://inphood.com/
+  endpoints:
+  - schemes:
+    - http://*.inphood.com/*
+    url: http://api.inphood.com/oembed
+    example_urls:
+    - http://api.inphood.com/oembed/?url=http%3A%2F%2Fwww.label.inphood.com%2F%3Fquery%26user%3Dtest%26label%3D-KeuRz0ubjnQVkJCmGDH
+    formats:
+    - json
+...
