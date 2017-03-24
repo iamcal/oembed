@@ -1,0 +1,14 @@
+---
+- provider_name: UOL
+  provider_url: https://mais.uol.com.br/
+  endpoints:
+  - schemes:
+    - https://*.uol.com.br/view/*
+    - https://*.uol.com.br/video/*
+    url: https://mais.uol.com.br/apiuol/v3/oembed/view
+    example_urls:
+    - https://mais.uol.com.br/apiuol/v3/oembed/view?format=json&url=https://mais.uol.com.br/view/qf3ks0vlifm7/15697800?types=A&
+    - https://mais.uol.com.br/apiuol/v3/oembed/view?format=xml&url=https://tvuol.uol.com.br/video/whatsapp-dos-astros-valdivia-messi-e-neymar-na-resenha-das-eliminatorias-04024E1A3762DC896326
+    - https://mais.uol.com.br/apiuol/v3/oembed/view?format=json&url=https://videos.bol.uol.com.br/video/filha-do-datena-na-playboy-e-silvio-platinado-veja-quem-deu-o-que-falar-0402CD1B3064DC896326
+    discovery: true
+...
