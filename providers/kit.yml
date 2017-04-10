@@ -5,7 +5,7 @@
   - schemes:
     - http://kit.com/*/*
     - https://kit.com/*/*
-  - url: https://embed.kit.com/oembed
+    url: https://embed.kit.com/oembed
     discovery: true
     example_urls:
     - https://embed.kit.com/oembed?url=https://kit.com/MKBHD/video-gear
