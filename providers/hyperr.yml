@@ -1,0 +1,11 @@
+---
+- provider_name: Hyperr
+  provider_url: http://gethyperr.com/
+  endpoints:
+  - schemes:
+    - https://polls.gethyperr.com/*
+    url: https://polls.gethyperr.com/services/oembed
+    example_urls:
+    - https://polls.gethyperr.com/services/oembed?url=https%3A%2F%2Fpolls.gethyperr.com%2FMPx74SjbDl
+    discovery: true
+...
