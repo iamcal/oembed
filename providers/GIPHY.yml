@@ -7,6 +7,6 @@
     - https://giphy.com/*
     url: http://giphy.com/services/oembed
     example_urls:
-    - http://giphy.com/services/oembed?url=https://media.giphy.com/media/kW8mnYSNkUYKc/giphy.gif
+    - http://giphy.com/services/oembed?url=https%3A%2F%2Fgiphy.com%2Fgifs%2Fcant-hardly-wait-kW8mnYSNkUYKc
     discovery: true
 ...
