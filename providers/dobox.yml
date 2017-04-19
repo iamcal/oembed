@@ -1,0 +1,9 @@
+---
+- provider_name: Dobox
+  provider_url: http://www.dobox.io/
+  endpoints:
+  - url: http://www.dobox.com/oembed
+    discovery: true
+    example_urls:
+    - https://dobox.io/oembed?url=https%3A%2F%2Fdobox.io%2Fthedoboxapp%2Fs%2Feqxd9Dvihh6ttCkGC&format=json
+...
