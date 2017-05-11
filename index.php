@@ -329,7 +329,7 @@ code {
 	<dd>The provider cannot return a response in the requested format. This should be sent when (for example) the request includes <code>format=xml</code> and the provider doesn't support XML responses. However, providers are encouraged to support both JSON and XML.</dd>
 
 	<dt><b><code>401 Unauthorized</code></b></dt>
-	<dd>The specified URL contains a private (non-public) resource. The consumer should provide a link directly to the resource instead of any embedding any extra information, and rely on the provider to provide access control.</dd>
+	<dd>The specified URL contains a private (non-public) resource. The consumer should provide a link directly to the resource instead of embedding any extra information, and rely on the provider to provide access control.</dd>
 </dl>
 
 
