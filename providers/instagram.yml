@@ -5,12 +5,16 @@
   - schemes:
     - http://instagram.com/p/*
     - http://instagr.am/p/*
+    - http://www.instagram.com/p/*
+    - http://www.instagr.am/p/*
     - https://instagram.com/p/*
     - https://instagr.am/p/*
-    url: http://api.instagram.com/oembed
-    docs_url: http://instagram.com/developer/embedding/#oembed
+    - https://www.instagram.com/p/*
+    - https://www.instagr.am/p/*
+    url: https://api.instagram.com/oembed
+    docs_url: https://www.instagram.com/developer/embedding/#oembed
     example_urls:
-    - http://api.instagram.com/oembed?url=http%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
+    - https://api.instagram.com/oembed?url=http%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
     formats:
     - json
 ...
