@@ -1,0 +1,13 @@
+---
+- provider_name: ZProvider
+  provider_url: https://reports.zoho.com/
+  endpoints:
+  - schemes:
+    - https://reports.zoho.com/ZDBDataSheetView.cc?OBJID=1432535000000003002&STANDALONE=true&INTERVAL=120&DATATYPESYMBOL=false&REMTOOLBAR=false&SEARCHBOX=true&INCLUDETITLE=true&INCLUDEDESC=true&SHOWHIDEOPT=true
+    url: http://api.provider.com/oembed.json
+    docs_url: http://dev.provider.com/api/oembed/
+    example_urls:
+    - http://api.provider.com/oembed.json?url=https://reports.zoho.com/ZDBDataSheetView.cc?OBJID=1432535000000003002&STANDALONE=true&INTERVAL=120&DATATYPESYMBOL=false&REMTOOLBAR=false&SEARCHBOX=true&INCLUDETITLE=true&INCLUDEDESC=true&SHOWHIDEOPT=true
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
