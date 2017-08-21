@@ -5,7 +5,7 @@
   endpoints:
   - schemes:
     - https://carbonhealth.com/practice/*
-    url: https://vine.co/oembed.json
+    url: http://carbonhealth.com/oembed
     discovery: true
     example_urls:
     - http://carbonhealth.com/practice/carbon-primary-care/financial-district
