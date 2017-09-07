@@ -5,7 +5,7 @@
   - schemes:
     - http://gty.im/*
     url: http://embed.gettyimages.com/oembed
-    docs_url: http://github.com/gettyimages/gettyimages-api#oembed
+    docs_url: http://developers.gettyimages.com/api/docs/v2/endpoints/oembed/
     example_urls:
     - http://embed.gettyimages.com/oembed?url=http%3a%2f%2fgty.im%2f74917285&caller=oembed.com
     formats:
