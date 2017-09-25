@@ -34,7 +34,7 @@
             - http://github.com/iamcal/oembed
 
 -->
-<html>
+<html lang="en">
 <head>
 <title>oEmbed</title>
 <style>
@@ -78,13 +78,13 @@ code {
 <h2>Table Of Contents</h2>
 
 <ol>
-	<li><a href="#section1">Quick Example<a/></li>
-	<li><a href="#section2">Full Spec<a/></li>
-	<li><a href="#section3">Security considerations<a/></li>
-	<li><a href="#section4">Discovery<a/></li>
-	<li><a href="#section5">More examples<a/></li>
-	<li><a href="#section6">Authors<a/></li>
-	<li><a href="#section7">Implementations<a/></li>
+	<li><a href="#section1">Quick Example</a></li>
+	<li><a href="#section2">Full Spec</a></li>
+	<li><a href="#section3">Security considerations</a></li>
+	<li><a href="#section4">Discovery</a></li>
+	<li><a href="#section5">More examples</a></li>
+	<li><a href="#section6">Authors</a></li>
+	<li><a href="#section7">Implementations</a></li>
 </ol>
 
 <a name="section1" id="section1"><h2>1. Quick Example</h2></a>
@@ -543,10 +543,10 @@ code {
 <ul>
 	<li><a href="http://www.webmonkey.com/tutorial/Get_Started_With_OEmbed">Webmonkey tutorial</a></li>
 	<li><a href="http://leahculver.com/2008/05/29/announcing-oembed-an-open-standard-for-embedded-content/">Leah's blog</a></li>
-	<li><a href="http://www.readwriteweb.com/archives/oembed_open_format.php" target="_blank">ReadWriteWeb</a></li>
+	<li><a href="http://www.readwriteweb.com/archives/oembed_open_format.php">ReadWriteWeb</a></li>
 	<li><a href="http://developer.yahoo.com/blogs/ydn/oembed-embedding-third-party-media-made-easy-7355.html">Yahoo! Developer Network</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
-	<li><a href="http://blog.hulu.com/2008/5/27/sharing-is-easy" target="_blank">Hulu blog</a></li>
+	<li><a href="http://blog.hulu.com/2008/5/27/sharing-is-easy">Hulu blog</a></li>
 	<li><a href="http://qik.com/blog/124/qik-embraces-oembed-for-embedding-videos">Qik blog</a></li>
 </ul>
 
