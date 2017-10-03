@@ -1,0 +1,10 @@
+---
+- provider_name: Down Under Sports
+  provider_url: https://downundersports.com
+  endpoints:
+  - schemes:
+    - https://downundersports.com/payment/*
+    url: https://downundersports.com/oembed.json
+    example_urls:
+    - https://downundersports.com/oembed.json?url=http://downundersports.com/payment/ED37-7E93-61BE
+...
