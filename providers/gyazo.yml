@@ -1,0 +1,13 @@
+---
+- provider_name: Gyazo
+  provider_url: https://gyazo.com
+  endpoints:
+  - schemes:
+    - https://gyazo.com/*
+    url: https://api.gyazo.com/api/oembed
+    docs_url: https://gyazo.com/api/docs/image#oembed
+    example_urls:
+    - https://api.gyazo.com/api/oembed?url=https://gyazo.com/71e107d77e8495f0e54d2e5b6dc5d326
+    formats:
+    - json
+...

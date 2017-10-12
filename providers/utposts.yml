@@ -1,0 +1,15 @@
+---
+- provider_name: Utposts
+  provider_url: https://www.utposts.com/
+  endpoints:
+  - schemes:
+    - https://www.utposts.com/products/*
+    - http://www.utposts.com/products/*
+    - https://utposts.com/products/*
+    - http://utposts.com/products/*
+    url: https://www.utposts.com/api/oembed
+    example_urls:
+    - https://www.utposts.com/api/oembed?url=https%3A%2F%2Futposts.com%2Fproducts%2F1
+    formats:
+    - json
+...

@@ -1,0 +1,10 @@
+---
+- provider_name: Sapo Videos
+  provider_url: http://videos.sapo.pt
+  endpoints:
+  - schemes:
+    - http://videos.sapo.pt/*
+    url: http://videos.sapo.pt/oembed
+    example_urls:
+    - http://videos.sapo.pt/oembed?url=http%3A%2F%2Fvideos.sapo.pt%2FdNbiosGa9YZHfLrhkA88&format=xml
+...

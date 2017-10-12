@@ -1,0 +1,16 @@
+---
+- provider_name: Codepoints
+  provider_url: https://codepoints.net
+  endpoints:
+  - schemes:
+    - http://codepoints.net/*
+    - https://codepoints.net/*
+    - http://www.codepoints.net/*
+    - https://www.codepoints.net/*
+    url: https://codepoints.net/api/v1/oembed
+    example_urls:
+    - https://codepoints.net/api/v1/oembed?url=https%3A%2F%2Fcodepoints.net%2FU%2B00E4&format=json
+    - https://codepoints.net/api/v1/oembed?url=https%3A%2F%2Fcodepoints.net%2FA&format=xml&maxwidth=64
+    - https://codepoints.net/U+2665
+    discovery: true
+...

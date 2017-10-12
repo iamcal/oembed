@@ -1,0 +1,12 @@
+
+---
+- provider_name: Carbon Health
+  provider_url: https://carbonhealth.com
+  endpoints:
+  - schemes:
+    - https://carbonhealth.com/practice/*
+    url: http://carbonhealth.com/oembed
+    discovery: true
+    example_urls:
+    - http://carbonhealth.com/practice/carbon-primary-care/financial-district
+...

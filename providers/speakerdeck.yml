@@ -1,0 +1,14 @@
+---
+- provider_name: SpeakerDeck
+  provider_url: https://speakerdeck.com
+  endpoints:
+  - schemes:
+    - http://speakerdeck.com/*/*
+    - https://speakerdeck.com/*/*
+    url: https://speakerdeck.com/oembed.json
+    example_urls:
+    - https://speakerdeck.com/oembed.json?url=https%3A%2F%2Fspeakerdeck.com%2Fwallat%2Fwhy-backbone
+    discovery: true
+    formats:
+    - json
+...

@@ -1,0 +1,17 @@
+---
+- provider_name: FOX SPORTS Australia
+  provider_url: http://www.foxsports.com.au
+  endpoints:
+  - schemes:
+    - http://fiso.foxsports.com.au/isomorphic-widget/*
+    - https://fiso.foxsports.com.au/isomorphic-widget/*
+    url: https://fiso.foxsports.com.au/oembed
+    docs_url: 'https://fiso.foxsports.com.au'
+    example_urls:
+    - http://fiso.foxsports.com.au/oembed/?url=http%3A%2F%2Ffiso.foxsports.com.au%2Fisomorphic-widget%2Fscoreboard%2F1.0.0%2Fscoreboard.html
+    - http://fiso.foxsports.com.au/oembed/?url=http%3A%2F%2Ffiso.foxsports.com.au%2Fisomorphic-widget%2Fscoreboard%2F1.0.0%2Fscoreboard.html&maxwidth=700
+    notes:
+    - 'URL Scheme: You must pass your api key as the "statsApiKey" parameter.'
+    - 'Example URLs: You will need a valid version, project, and fragment name.'
+    - 'See docs url for more information'
+...

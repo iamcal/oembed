@@ -1,0 +1,10 @@
+---
+- provider_name: Hulu
+  provider_url: http://www.hulu.com/
+  endpoints:
+  - schemes:
+    - http://www.hulu.com/watch/*
+    url: http://www.hulu.com/api/oembed.{format}
+    example_urls:
+    - http://www.hulu.com/api/oembed.xml?url=http%3A%2F%2Fwww.hulu.com%2Fwatch%2F20807%2Flate-night-with-conan-obrien-wed-may-21-2008
+...

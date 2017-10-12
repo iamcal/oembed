@@ -1,0 +1,10 @@
+---
+- provider_name: WordPress.com
+  provider_url: http://wordpress.com/
+  endpoints:
+  - url: http://public-api.wordpress.com/oembed/
+    docs_url: http://develop.wordpress.com/oembed-provider-api/
+    example_urls:
+    - http://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fmatt.wordpress.com%2F2011%2F07%2F14%2Fclouds-over-new-york%2F&for=oembed.com
+    discovery: true
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: AudioSnaps
+  provider_url: http://audiosnaps.com
+  endpoints:
+  - schemes:
+    - http://audiosnaps.com/k/*
+    url: http://audiosnaps.com/service/oembed
+    example_urls:
+    - http://audiosnaps.com/service/oembed?url=http%3A%2F%2Faudiosnaps.com%2Fk%2Fd8wi%2F&format=json
+    - http://audiosnaps.com/service/oembed?url=http%3A%2F%2Faudiosnaps.com%2Fk%2Fd8wi%2F&maxwidth=400&format=xml
+    discovery: true
+...

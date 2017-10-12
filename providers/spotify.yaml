@@ -1,0 +1,12 @@
+---
+- provider_name: Spotify
+  provider_url: https://spotify.com/
+  endpoints:
+  - schemes:
+    - https://*.spotify.com/*
+    - spotify:*
+    url: https://embed.spotify.com/oembed/
+    example_urls:
+    - https://embed.spotify.com/oembed/?url=https://open.spotify.com/track/2qToAcex0ruZfbEbAy9OhW
+    - https://embed.spotify.com/oembed/?url=spotify%3Aartist:7ae4vgLLhir2MCjyhgbGOQ
+...

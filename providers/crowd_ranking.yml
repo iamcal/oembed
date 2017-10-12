@@ -1,0 +1,10 @@
+---
+- provider_name: Crowd Ranking
+  provider_url: http://crowdranking.com
+  endpoints:
+  - schemes:
+    - http://crowdranking.com/*/*
+    url: http://crowdranking.com/api/oembed.{format}
+    example_urls:
+    - http://crowdranking.com/api/oembed.xml?url=http%3A%2F%2Fcrowdranking.com%2Frankings%2Ft470g0--best-tea
+...

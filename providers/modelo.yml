@@ -1,0 +1,12 @@
+---
+- provider_name: Modelo
+  provider_url: 'http://modelo.io/'
+  endpoints:
+  - schemes:
+    - 'https://beta.modelo.io/embedded/*'
+    url: 'https://portal.modelo.io/oembed'
+    example_urls:
+    - 'https://portal.modelo.io/oembed?url=https%3A%2F%2Fbeta.modelo.io%2Fembedded%2FCM89QBlZtp%3Fviewport%3Dfalse%26autoplay%3Dfalse&modelName=3901_MBucks_Scheme09%20(1)&authorName=Tian%20Deng&width=640&height=360'
+    - 'https://portal.modelo.io/oembed?url=https%3A%2F%2Fbeta.modelo.io%2Fembedded%2FPB4PgLTHJq%3Fviewport%3Dfalse%26autoplay%3Dfalse&modelName=JASPER%20ARCHITECTS%20-%20161012_LISBOA_TODO_CON%20TERRENO_67_unix&authorName=Tian%20Deng&width=640&height=360'
+    discovery: false
+...

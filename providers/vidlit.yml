@@ -1,0 +1,12 @@
+---
+- provider_name: Vidlit
+  provider_url: https://vidl.it/
+  endpoints:
+  - schemes:
+    - https://vidl.it/*
+    url: https://api.vidl.it/oembed
+    discovery: true
+    example_urls:
+    - https://api.vidl.it/oembed?url=https%3A%2F%2Fvidl.it%2FmBPb4A&format=json
+    - https://api.vidl.it/oembed?url=https%3A%2F%2Fvidl.it%2FmBPb4A&format=xml
+...

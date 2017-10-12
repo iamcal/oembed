@@ -1,0 +1,10 @@
+---
+- provider_name: Ted
+  provider_url: http://ted.com
+  endpoints:
+  - schemes:
+    - http://ted.com/talks/*
+    url: http://www.ted.com/talks/oembed.{format}
+    example_urls:
+    - http://www.ted.com/talks/oembed.xml?url=http%3A%2F%2Fwww.ted.com%2Ftalks%2Fjill_bolte_taylor_s_powerful_stroke_of_insight.html
+...

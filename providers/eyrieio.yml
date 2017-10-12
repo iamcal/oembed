@@ -1,0 +1,12 @@
+---
+- provider_name: Eyrie
+  provider_url: https://eyrie.io/
+  endpoints:
+  - schemes:
+    - https://eyrie.io/board/*
+    - https://eyrie.io/sparkfun/*
+    url: https://eyrie.io/v1/oembed
+    example_urls:
+    - https://eyrie.io/v1/oembed?url=https%3A%2F%2Feyrie.io%2Fboard%2F747d351c00bc4f91ae7b95635942e685&format=json
+    discovery: true
+...

@@ -1,0 +1,15 @@
+---
+- provider_name: Wiredrive
+  provider_url: https://www.wiredrive.com/
+  endpoints:
+  - schemes:
+    - https://*.wiredrive.com/*
+    url: http://*.wiredrive.com/present-oembed/
+    example_urls:
+    - deckers.wiredrive.com/present-oembed?url=deckers.wiredrive.com/363254/851732644105a5a8b3fa14fe164452df
+    formats:
+    - json
+    discovery: true
+    notes:
+    - 'URL Scheme: `http://*.wiredrive.com/*` (where wiredrive.com = Wiredrive customer domain)'
+...

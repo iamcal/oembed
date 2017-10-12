@@ -1,0 +1,12 @@
+---
+- provider_name: Vlipsy
+  provider_url: https://vlipsy.com/
+  endpoints:
+  - schemes:
+    - https://vlipsy.com/*
+    url: https://vlipsy.com/oembed
+    discovery: true
+    example_urls:
+    - https://vlipsy.com/oembed?url=https%3A%2F%2Fvlipsy.com%2Fvlip%2Felf-i-love-you-i1ZZELDO&format=json
+    - https://vlipsy.com/oembed?url=https%3A%2F%2Fvlipsy.com%2Fvlip%2Felf-i-love-you-i1ZZELDO&format=xml
+...

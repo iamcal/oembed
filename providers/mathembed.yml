@@ -1,0 +1,11 @@
+---
+- provider_name: MathEmbed
+  provider_url: http://mathembed.com
+  endpoints:
+  - schemes:
+    - http://mathembed.com/latex?inputText=*
+    - http://mathembed.com/latex?inputText=*
+    url: http://mathembed.com/oembed
+    example_urls:
+    - http://mathembed.com/oembed?url=http%3A%2F%2Fmathembed.com%2Flatex?inputText=f(x)
+...

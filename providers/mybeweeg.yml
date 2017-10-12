@@ -1,0 +1,10 @@
+---
+- provider_name: myBeweeg
+  provider_url: https://mybeweeg.com
+  endpoints:
+  - schemes:
+    - https://mybeweeg.com/w/*
+    url: https://mybeweeg.com/services/oembed
+    example_urls:
+    - https://mybeweeg.com/services/oembed?url=https://mybeweeg.com/w/NyWxXR7tb
+...

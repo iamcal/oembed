@@ -1,0 +1,9 @@
+---
+- provider_name: Ora TV
+  provider_url: http://www.ora.tv/
+  endpoints:
+  - discovery: true
+    url: https://www.ora.tv/oembed/*?format={format}
+    example_urls:
+    - https://www.ora.tv/oembed/0_6e6tvou17xau?format=json
+...

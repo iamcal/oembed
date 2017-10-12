@@ -1,0 +1,11 @@
+---
+- provider_name: amCharts Live Editor
+  provider_url: http://live.amcharts.com/
+  endpoints:
+  - schemes:
+    - http://live.amcharts.com/*
+    url: http://live.amcharts.com/oembed
+    example_urls:
+    - http://live.amcharts.com/oembed/?url=http%3A%2F%2Flive.amcharts.com%2FczNjJ%2F&format=json
+    - http://live.amcharts.com/oembed/?url=http%3A%2F%2Flive.amcharts.com%2FczNjJ%2F&format=xml
+...

@@ -1,0 +1,11 @@
+---
+- provider_name: Port
+  provider_url: http://www.sellwithport.com/
+  endpoints:
+  - schemes:
+    - https://app.sellwithport.com/#/buyer/*
+    url: https://api.sellwithport.com/v1.0/buyer/oembed
+    example_urls:
+    - https://app.sellwithport.com/#/buyer/select?tId=5797c86abff35f00070175fc&pId=e52f9a54f6fe4a668d460c22f72902c0%2C2674a399f0d74ad892912af4b936116c%2Cffdf159994c74e908e4cb871f00fd02e
+    - https://app.sellwithport.com/#/buyer/select?tId=581387a5cc80040013b0d166&pId=e35742d639b24b4a9a2246028d92b15d
+...

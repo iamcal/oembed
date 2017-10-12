@@ -1,0 +1,10 @@
+---
+- provider_name: Box Office Buz
+  provider_url: http://boxofficebuz.com
+  endpoints:
+  - url: http://boxofficebuz.com/oembed
+    discovery: true
+    example_urls:
+    - http://boxofficebuz.com/oembed?url=http://movies.boxofficebuz.com/video/jack-reacher-never-go-back-tv-spot-hunting
+    - http://boxofficebuz.com/oembed?url=http://movies.boxofficebuz.com/video/ghost-in-the-shell-trailer-teaser-5
+...

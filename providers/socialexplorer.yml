@@ -1,0 +1,14 @@
+---
+- provider_name: SocialExplorer
+  provider_url: https://www.socialexplorer.com/
+  endpoints:
+  - schemes:
+    - https://www.socialexplorer.com/*/explore
+    - https://www.socialexplorer.com/*/view
+    - https://www.socialexplorer.com/*/edit
+    - https://www.socialexplorer.com/*/embed
+    url: https://www.socialexplorer.com/services/oembed/
+    example_urls:
+    - https://www.socialexplorer.com/services/oembed/?format=json&url=https%3A%2F%2Fwww.socialexplorer.com%2Fa9676d974c%2Fexplore
+    discovery: true
+...

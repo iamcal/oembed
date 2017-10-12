@@ -1,0 +1,10 @@
+---
+- provider_name: 23HQ
+  provider_url: http://www.23hq.com
+  endpoints:
+  - schemes:
+    - http://www.23hq.com/*/photo/*
+    url: http://www.23hq.com/23/oembed
+    example_urls:
+    - http://www.23hq.com/23/oembed?url=http%3A%2F%2Fwww.23hq.com%2Fmprove%2Fphoto%2F13297717
+...

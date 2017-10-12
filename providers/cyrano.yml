@@ -1,0 +1,14 @@
+---
+- provider_name: Cyrano Systems
+  provider_url: http://www.cyranosystems.com/
+  endpoints:
+  - schemes:
+    - https://staging.cyranosystems.com/msg/*
+    - https://app.cyranosystems.com/msg/*    
+    url: https://staging.cyranosystems.com/oembed
+    example_urls:
+    - https://staging.cyranosystems.com/oembed?url=https%3A%2F%2Fstaging.cyranosystems.com%2Fmsg%2F%23%2FguestPlayProgram%2F000181d4-2b11-8702-0035-45f0449eb025
+    formats:
+    - json
+    discovery: true
+...

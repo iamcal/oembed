@@ -1,0 +1,11 @@
+---
+- provider_name: VideoJug
+  provider_url: http://www.videojug.com
+  endpoints:
+  - schemes:
+    - http://www.videojug.com/film/*
+    - http://www.videojug.com/interview/*
+    url: http://www.videojug.com/oembed.{format}
+    example_urls:
+    - http://www.videojug.com/oembed.xml?url=http%3A%2F%2Fwww.videojug.com%2Ffilm%2Fhow-to-tie-a-knot-braid
+...

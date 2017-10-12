@@ -1,0 +1,12 @@
+---
+- provider_name: Embedly
+  provider_url: http://api.embed.ly/
+  endpoints:
+  - url: http://api.embed.ly/1/oembed
+    docs_url: http://api.embed.ly/documentation
+    example_urls:
+    - http://api.embed.ly/1/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DB-m6JDYRFvk
+    notes:
+    - 'URL scheme: Various (see docs)'
+    - Incorporating oohEmbed (<a href="http://oohembed.com/">http://oohembed.com/</a>)
+...

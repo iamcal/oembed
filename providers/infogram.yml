@@ -1,0 +1,10 @@
+---
+- provider_name: Infogram
+  provider_url: https://infogr.am/
+  endpoints:
+  - schemes:
+    - https://infogr.am/*
+    url: https://infogr.am/oembed
+    example_urls:
+    - https://infogr.am/oembed/?url=https%3A%2F%2Finfogr.am%2Famazon-and-the-book-market
+...
