@@ -8,6 +8,6 @@
     - https://www.audiomack.com/playlist/*
     url: https://www.audiomack.com/oembed
     example_urls:
-    - https://www.audiomack.com/oembed?url=https%3A%2F%2Fwww.audiomack.com%2Foembed%2Fplaylist%2Faudiomack%2Fjust-chillin&format=json
+    - https://www.audiomack.com/oembed?url=https%3A%2F%2Fwww.audiomack.com%2Fplaylist%2Faudiomack%2Fjust-chillin&format=json
     discovery: true
 ...
