@@ -1,0 +1,10 @@
+---
+- provider_name: ivlismusic
+  provider_url: https://music.ivlis.kr/
+  endpoints:
+  - url: https://music.ivlis.kr/oembed
+    discovery: true
+    example_urls:
+    - https://music.ivlis.kr/oembed/?format=xml&url=https://music.ivlis.kr/?artist=Justin%20Bieber&track=Sorry
+    - https://music.ivlis.kr/oembed/?format=json&url=https://music.ivlis.kr/?artist=Justin%20Bieber&track=Sorry
+...
