@@ -5,6 +5,6 @@
   - url: https://music.ivlis.kr/oembed
     discovery: true
     example_urls:
-    - https://music.ivlis.kr/oembed/?format=xml&url=https://music.ivlis.kr/?artist=Justin%20Bieber&track=Sorry
-    - https://music.ivlis.kr/oembed/?format=json&url=https://music.ivlis.kr/?artist=Justin%20Bieber&track=Sorry
+    - https://music.ivlis.kr/oembed/?format=xml&url=https%3A%2F%2Fmusic.ivlis.kr%2F%3Fartist%3DJustin%2520Bieber%26track%3DSorry
+    - https://music.ivlis.kr/oembed/?format=json&url=https%3A%2F%2Fmusic.ivlis.kr%2F%3Fartist%3DJustin%2520Bieber%26track%3DSorry
 ...
