@@ -4,9 +4,7 @@
   endpoints:
   - schemes:
     - http://play.bespotful.com/*
-    url: 
-    - https://api.bespotful.com/oembed
-    - https://play.bespotful.com/{project_id}/oembed.{format}
+    url: https://api.bespotful.com/oembed
     example_urls:
     - https://api.bespotful.com/oembed?url=https://play.bespotful.com/3457
     - https://api.bespotful.com/oembed?url=https://play.bespotful.com/3457&format=json
