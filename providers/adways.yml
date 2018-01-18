@@ -1,0 +1,10 @@
+---
+- provider_name: Adways
+  provider_url: http://www.adways.com
+  endpoints:
+  - schemes:
+    - http://play.adpaths.com/experience/*
+    url: http://play.adpaths.com/oembed/*
+    example_urls:
+    - http://play.adpaths.com/experience/2Hnd8S8
+...
