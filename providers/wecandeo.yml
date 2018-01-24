@@ -1,0 +1,10 @@
+---
+- provider_name: wecandeo
+  provider_url: http://www.wecandeo.com/
+  endpoints:
+  - url: http://play.wecandeo.com/oembed
+    discovery: true
+    example_urls:
+    - http://play.wecandeo.com/oembed/?key=BOKNS9AQWrEipL6smD7If4QwjosQWTPOSuHCLNqtWy0bppPwUpLpL9iiho4pqLKNis4ZCy4IG7kZTQ431147TteoAieie
+    - http://play.wecandeo.com/oembed/?key=BOKNS9AQWrEipL6smD7If4QwjosQWTPOSuHCLNqtWy0bppPwUpLpL9iiho4pqLKNis4ZCy4IG7kZTQ431147TteoAieie&format=xml
+...
