@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://twitter.com/*/status/*
+    - https://*.twitter.com/*/status/*
     url: https://publish.twitter.com/oembed
     docs_url: https://dev.twitter.com/rest/reference/get/statuses/oembed
     example_urls:
