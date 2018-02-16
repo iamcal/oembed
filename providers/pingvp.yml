@@ -1,0 +1,9 @@
+---
+- provider_name: PingVP
+  provider_url: https://www.pingvp.com/
+  endpoints:
+  - url: https://beta.pingvp.com.kpnis.nl/p/oembed.php
+    discovery: true
+    example_urls:
+    - https://beta.pingvp.com.kpnis.nl/p/oembed.php?url=https%3A%2F%2Fbeta.pingvp.com.kpnis.nl%2Fv%2Findex.php%3Fv%3DanxXNrIi31
+...
