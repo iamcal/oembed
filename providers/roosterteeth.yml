@@ -3,7 +3,7 @@
   provider_url: https://roosterteeth.com
   endpoints:
   - schemes:
-    - https://roosterteeth.com/episode*
+    - https://roosterteeth.com/*
     url: https://roosterteeth.com/oembed
     formats:
       - json
