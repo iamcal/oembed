@@ -36,7 +36,7 @@
 -->
 <html lang="en">
 <head>
-<title>oEmbed</title>
+<title>oEmbed!</title>
 <style>
 
 body, input, textarea, select {
@@ -432,10 +432,10 @@ code {
 <?php
 	$data = array();
 
-	$dh = opendir('providers');
+	$dh = opendir(__DIR__.'/../providers');
 	while (($file = readdir($dh)) !== false){
 		if (preg_match('!\.yml$!', $file)){
-			$partial = yaml_parse_file("providers/$file");
+			$partial = yaml_parse_file(__DIR__."/../providers/$file");
 			foreach ($partial as $row) $data[] = $row;
 		}
 	}
