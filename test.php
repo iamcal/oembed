@@ -21,10 +21,10 @@
 		'#/endpoints/#/docs_url'	=> 1,
 	);
 
-	$dh = opendir('providers');
+	$dh = opendir('www/providers');
 	while (($file = readdir($dh)) !== false){
 		if (preg_match('!\.yml$!', $file)){
-			$partial = yaml_parse_file("providers/$file");
+			$partial = yaml_parse_file("www/providers/$file");
 			if (!$partial || !is_array($partial)){
 				echo "Unable to parse provider file providers/$file\n";
 				exit(1);
