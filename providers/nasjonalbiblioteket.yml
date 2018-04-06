@@ -1,0 +1,10 @@
+---
+- provider_name: Nasjonalbiblioteket
+  provider_url: https://www.nb.no/
+  endpoints:
+  - url: https://api.nb.no/catalog/v1/oembed
+    discovery: true
+    example_urls:
+    - https://api.nb.no/catalog/v1/oembed?url=https://www.nb.no/items/68d7a0e64760706052519cc1c900c975
+    - https://api.nb.no/catalog/v1/oembed?url=https://www.nb.no/items/512fe10f3e2fae3c6dd08338e47535f6
+...
