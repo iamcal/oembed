@@ -36,7 +36,7 @@
 -->
 <html lang="en">
 <head>
-<title>oEmbed!</title>
+<title>oEmbed</title>
 <style>
 
 body, input, textarea, select {
