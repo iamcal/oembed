@@ -1,0 +1,12 @@
+---
+- provider_name: Ceros
+  provider_url: http://www.ceros.com/
+  endpoints:
+  - schemes:
+    - http://view.ceros.com/*
+    url: http://view.ceros.com/oembed
+    example_urls:
+    - http://view.ceros.com/oembed?url=https%3A%2F%2Fview.ceros.com%2Fceros%2Fnew-experience-3
+    - http://view.ceros.com/oembed?url=https%3A%2F%2Fview.ceros.com%2Fceros-inspire%2Ffendi-desktop-4
+    discovery: true
+...
