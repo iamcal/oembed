@@ -313,6 +313,9 @@ code {
 
 	<dt><b><code>height</code></b> (required)</dt>
 	<dd>The height in pixels required to display the HTML.</dd>
+
+	<dt><b><code>fixed_height</code></b> (optional)</dt>
+	<dd>The absolute height in pixels required to display the HTML. Consumers must respect this value and not apply any adjustments to keep an aspect ratio.</dd>
 </dl>
 
 <p>Responses of this type must obey the <code>maxwidth</code> and <code>maxheight</code> request parameters.</p>
