@@ -4,6 +4,8 @@
   endpoints:
   - schemes:
     - http://meetup.com/*
+    - https://www.meetup.com/*
+    - https://meetup.com/*
     - http://meetu.ps/*
     url: https://api.meetup.com/oembed
     docs_url: http://www.meetup.com/meetup_api/docs/oembed/
