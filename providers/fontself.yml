@@ -1,0 +1,11 @@
+---
+- provider_name: Fontself
+  provider_url: https://www.fontself.com
+  endpoints:
+  - schemes:
+    - https://catapult.fontself.com/*
+    url: https://oembed.fontself.com/
+    example_urls:
+    - https://oembed.fontself.com/?url=https://catapult.fontself.com/MEdLOEq/gilbert-color-bold-preview4
+    - https://oembed.fontself.com/?url=https://catapult.fontself.com/gj8eJaq/welcome-regular
+...
