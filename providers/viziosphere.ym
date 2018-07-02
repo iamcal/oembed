@@ -1,0 +1,11 @@
+---
+- provider_name: viziosphere
+  provider_url: http://www.viziosphere.com
+  endpoints:
+  - schemes:
+    - http://viziosphere.com/3dphoto*
+    url: https://viziosphere.com/services/oembed
+    example_urls:
+    - https://viziosphere.com/services/oembed/?url=http://viziosphere.com/3dphoto?ref=VZP0001&maxwidth=530&maxheight=315&format=xml
+    notes: Provider only supports the 'rich' type
+...
