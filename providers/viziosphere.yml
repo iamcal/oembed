@@ -5,6 +5,7 @@
 -  - schemes:
 -    - http://viziosphere.com/3dphoto*
 -    url: http://viziosphere.com/services/oembed
+-    discovery: true
 -    example_urls:
 -    - http://viziosphere.com/services/oembed/?url=http%3A%2F%2Fviziosphere.com%2F3dphoto%3Fref%3DVZP0002&format=json
 -    notes: Provider only supports the 'rich' type
