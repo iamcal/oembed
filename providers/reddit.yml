@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://reddit.com/r/*/comments/*/*
+    - https://www.reddit.com/r/*/comments/*/*
     url: https://www.reddit.com/oembed
     notes: The endpoint works with comments and posts. To fetch a comment use the Permalink (The comment page with the comment id appended to the url).
     example_urls:

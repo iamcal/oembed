@@ -1,0 +1,12 @@
+---
+- provider_name: me.me
+  provider_url: https://me.me/
+  endpoints:
+  - schemes:
+    - https://me.me/i/*
+    url: https://me.me/oembed
+    example_urls:
+    - https://me.me/oembed/?format=json&url=https%3A%2F%2Fme.me%2Fi%2F3174471
+    - https://me.me/oembed/?format=xml&url=https%3A%2F%2Fme.me%2Fi%2F3174471
+    discovery: true
+...

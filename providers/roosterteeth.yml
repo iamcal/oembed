@@ -1,0 +1,13 @@
+---
+- provider_name: RoosterTeeth
+  provider_url: https://roosterteeth.com
+  endpoints:
+  - schemes:
+    - https://roosterteeth.com/*
+    url: https://roosterteeth.com/oembed
+    formats:
+      - json
+    discovery: true
+    example_urls:
+    - https://roosterteeth.com/oembed?url=https%3A%2F%2Froosterteeth.com%2Fembed%2Fred-vs-blue-season-15-5-a84jh9&amp;format=json
+    notes: Provider only supports the 'video' type

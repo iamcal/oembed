@@ -1,0 +1,15 @@
+---
+- provider_name: Yes, I Know IT!
+  provider_url: http://yesik.it
+  endpoints:
+  - schemes:
+    - http://yesik.it/*
+    - http://www.yesik.it/*
+    url: http://yesik.it/s/oembed
+    example_urls:
+    - http://yesik.it/s/oembed?url=http%3A%2F%2Fyesik.it%2FEP15
+    formats:
+        - json
+    discovery: true
+    notes: Use the 'photo' type for video thumbnails
+...

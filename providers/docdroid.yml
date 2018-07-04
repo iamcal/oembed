@@ -1,0 +1,16 @@
+---
+- provider_name: DocDroid
+  provider_url: https://www.docdroid.net/
+  endpoints:
+  - schemes:
+    - https://*.docdroid.net/*
+    - http://*.docdroid.net/*
+    - https://docdro.id/*
+    - http://docdro.id/*
+    url: https://www.docdroid.net/api/oembed
+    example_urls:
+    - https://www.docdroid.net/api/oembed?url=https%3A%2F%2Fwww.docdroid.net%2FhptvUCe%2Fexample-document.docx.html
+    formats:
+    - json
+    discovery: true
+...

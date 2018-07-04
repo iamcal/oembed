@@ -4,8 +4,10 @@
   endpoints:
   - schemes:
     - https://twitter.com/*/status/*
+    - https://*.twitter.com/*/status/*
     url: https://publish.twitter.com/oembed
     docs_url: https://dev.twitter.com/rest/reference/get/statuses/oembed
     example_urls:
-    - https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%Interior%2Fstatus%2F507185938620219395&maxwidth=325&hide_media=true&hide_thread=true&omit_script=true&align=right&related=twitterapi,twitter&lang=fr&theme=dark&link_color=%2355acee&widget_type=video
+    - https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F507185938620219395
+
 ...

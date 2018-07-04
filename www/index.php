@@ -34,7 +34,7 @@
             - http://github.com/iamcal/oembed
 
 -->
-<html>
+<html lang="en">
 <head>
 <title>oEmbed</title>
 <style>
@@ -78,13 +78,13 @@ code {
 <h2>Table Of Contents</h2>
 
 <ol>
-	<li><a href="#section1">Quick Example<a/></li>
-	<li><a href="#section2">Full Spec<a/></li>
-	<li><a href="#section3">Security considerations<a/></li>
-	<li><a href="#section4">Discovery<a/></li>
-	<li><a href="#section5">More examples<a/></li>
-	<li><a href="#section6">Authors<a/></li>
-	<li><a href="#section7">Implementations<a/></li>
+	<li><a href="#section1">Quick Example</a></li>
+	<li><a href="#section2">Full Spec</a></li>
+	<li><a href="#section3">Security considerations</a></li>
+	<li><a href="#section4">Discovery</a></li>
+	<li><a href="#section5">More examples</a></li>
+	<li><a href="#section6">Authors</a></li>
+	<li><a href="#section7">Implementations</a></li>
 </ol>
 
 <a name="section1" id="section1"><h2>1. Quick Example</h2></a>
@@ -329,7 +329,7 @@ code {
 	<dd>The provider cannot return a response in the requested format. This should be sent when (for example) the request includes <code>format=xml</code> and the provider doesn't support XML responses. However, providers are encouraged to support both JSON and XML.</dd>
 
 	<dt><b><code>401 Unauthorized</code></b></dt>
-	<dd>The specified URL contains a private (non-public) resource. The consumer should provide a link directly to the resource instead of any embedding any extra information, and rely on the provider to provide access control.</dd>
+	<dd>The specified URL contains a private (non-public) resource. The consumer should provide a link directly to the resource instead of embedding any extra information, and rely on the provider to provide access control.</dd>
 </dl>
 
 
@@ -432,10 +432,10 @@ code {
 <?php
 	$data = array();
 
-	$dh = opendir('providers');
+	$dh = opendir(__DIR__.'/../providers');
 	while (($file = readdir($dh)) !== false){
 		if (preg_match('!\.yml$!', $file)){
-			$partial = yaml_parse_file("providers/$file");
+			$partial = yaml_parse_file(__DIR__."/../providers/$file");
 			foreach ($partial as $row) $data[] = $row;
 		}
 	}
@@ -528,6 +528,8 @@ code {
 	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
 	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>	
+	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
+	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
 	<li>Any: oEmbed API proxy endpoint for open-source projects (<a href="http://oembedapi.com">http://oembedapi.com</a>)</li>
 </ul>
 
@@ -542,10 +544,10 @@ code {
 <ul>
 	<li><a href="http://www.webmonkey.com/tutorial/Get_Started_With_OEmbed">Webmonkey tutorial</a></li>
 	<li><a href="http://leahculver.com/2008/05/29/announcing-oembed-an-open-standard-for-embedded-content/">Leah's blog</a></li>
-	<li><a href="http://www.readwriteweb.com/archives/oembed_open_format.php" target="_blank">ReadWriteWeb</a></li>
+	<li><a href="http://www.readwriteweb.com/archives/oembed_open_format.php">ReadWriteWeb</a></li>
 	<li><a href="http://developer.yahoo.com/blogs/ydn/oembed-embedding-third-party-media-made-easy-7355.html">Yahoo! Developer Network</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
-	<li><a href="http://blog.hulu.com/2008/5/27/sharing-is-easy" target="_blank">Hulu blog</a></li>
+	<li><a href="http://blog.hulu.com/2008/5/27/sharing-is-easy">Hulu blog</a></li>
 	<li><a href="http://qik.com/blog/124/qik-embraces-oembed-for-embedding-videos">Qik blog</a></li>
 </ul>
 

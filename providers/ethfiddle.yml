@@ -1,0 +1,11 @@
+---
+- provider_name: Ethfiddle
+  provider_url: https://www.ethfiddle.com/
+  endpoints:
+  - schemes:
+    - https://ethfiddle.com/*
+    url: https://ethfiddle.com/services/oembed/
+    example_urls:
+    - https://ethfiddle.com/services/oembed?url=https%3A%2F%2Fethfiddle.com%2FY8Iy49zDJ0&format=json
+    discovery: true
+...
