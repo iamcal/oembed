@@ -11,6 +11,10 @@
     - https://nanoo.tv/link/*
     - https://*.nanoo.pro/link/*
     - https://nanoo.pro/link/* 
+    - http://media.zhdk.ch/signatur/*
+    - http://new.media.zhdk.ch/signatur/*
+    - https://media.zhdk.ch/signatur/*
+    - https://new.media.zhdk.ch/signatur/*
     url: https://www.nanoo.tv/services/oembed 
     example_urls:
     - http://www.nanoo.tv/services/oembed?url=https%3A%2F%2Fnanoo.tv%2Flink%2Fv%2FzBNqdjLG
