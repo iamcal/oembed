@@ -1,0 +1,13 @@
+---
+- provider_name: Medienarchiv der Künste - Zürcher Hochschule der Künste
+  provider_url: https://medienarchiv.zhdk.ch/
+  endpoints:
+  - docs_url: http://madek.readthedocs.io/en/latest/development/embeds/
+    schemes:
+    - https://medienarchiv.zhdk.ch/entries/*
+    url: https://medienarchiv.zhdk.ch/oembed.{format}
+    example_urls:
+    - https://medienarchiv.zhdk.ch/oembed.json?url=https%3A%2F%2Fmedienarchiv.zhdk.ch%2Fentries%2Fda88e9e6-6b53-447b-8113-637d885f8ab2
+    - https://medienarchiv.zhdk.ch/oembed.xml?url=https%3A%2F%2Fmedienarchiv.zhdk.ch%2Fentries%2Fda88e9e6-6b53-447b-8113-637d885f8ab2
+    discovery: true
+...
