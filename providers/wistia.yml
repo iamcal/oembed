@@ -1,0 +1,11 @@
+---
+- provider_name: Wistia
+  provider_url: https://wistia.com/
+  endpoints:
+  - url: https://fast.wistia.com/oembed
+    discovery: true
+    example_urls:
+    - https://fast.wistia.com/oembed.json?url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fiframe%2Fb0767e8ebb%3Fversion%3Dv1%26controlsVisibleOnLoad%3Dtrue%26playerColor%3Daae3d8
+    - https://fast.wistia.com/oembed.json?url=http%3A%2F%2Fhome.wistia.com%2Fmedias%2Fe4a27b971d
+    - https://fast.wistia.com/oembed.xml?url=https%3A%2F%2Ffast.wistia.com%2Fembed%2Fplaylists%2Ffbe3880a4e%3Ftheme%3Dtrime%26version%3Dv1%26videoOptions%255BvideoHeight%255D%3D360%26videoOptions%255BvideoWidth%255D%3D640
+...
