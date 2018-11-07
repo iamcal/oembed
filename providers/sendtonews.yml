@@ -1,0 +1,15 @@
+---
+- provider_name: SendtoNews
+  provider_url: http://www.sendtonews.com/
+  endpoints:
+  - schemes:
+    - https://embed.sendtonews.com/oembed/*
+    url: https://embed.sendtonews.com/services/oembed
+    discovery: true
+    example_urls:
+    - https://embed.sendtonews.com/services/oembed?url=http://embed.sendtonews.com/oembed/?SC=IuQTVUQ5ro-133019-5892&format=json
+    - https://embed.sendtonews.com/services/oembed?url=http://embed.sendtonews.com/oembed/?SC=IuQTVUQ5ro-133019-5892&format=xml
+    formats:
+    - json
+    - xml
+...
