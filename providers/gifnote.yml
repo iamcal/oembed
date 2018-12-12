@@ -3,6 +3,8 @@
   provider_url: https://www.gifnote.com/
   endpoints:
   - url: https://www.gifnote/services/oembed/
+    schemes:
+    - https://www.gifnote.com/play/*
     discovery: true
     example_urls:
     - https://gifnote.com/services/oembed?url=http%3A%2F%2Fwww.gifnote.com%2Fplay%2F237672132731995400
