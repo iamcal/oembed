@@ -2,7 +2,7 @@
 - provider_name: Gifnote
   provider_url: https://www.gifnote.com/
   endpoints:
-  - url: https://www.gifnote/services/oembed/
+  - url: https://www.gifnote.com/services/oembed/
     schemes:
     - https://www.gifnote.com/play/*
     discovery: true
