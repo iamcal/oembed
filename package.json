@@ -7,6 +7,7 @@
   "files": ["providers.*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "php json.php > providers.json",
     "postpublish": "rm -f providers.json"
   },
   "repository": {
