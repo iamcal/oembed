@@ -1,0 +1,12 @@
+---
+- provider_name: Vlurb
+  provider_url: https://www.vlurb.co/
+  endpoints:
+  - schemes:
+    - http://vlurb.co/video/*
+    - https://vlurb.co/video/*
+    url: https://vlurb.co/oembed.json
+    example_urls:
+    - https://vlurb.co/oembed.json?url=https%3A%2F%2Fvlurb.co%2Fvideo%2Fc0xphu
+    discovery: true
+...
