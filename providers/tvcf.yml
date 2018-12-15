@@ -1,0 +1,10 @@
+---
+- provider_name: tvcf
+  provider_url: http://tvcf.co.kr
+  endpoints:
+  - schemes:
+    - http://www.tvcf.co.kr/v/*
+    url: http://www.tvcf.co.kr/services/oembed
+    example_urls:
+    - http://www.tvcf.co.kr/services/oembed?url=http%3A%2F%2Fwww.tvcf.co.kr%2Fv%2F%3Fidx%3D723215&format=json
+...
