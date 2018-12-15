@@ -1,0 +1,15 @@
+---
+- provider_name: Stanford Digital Repository
+  provider_url: https://purl.stanford.edu/
+  endpoints:
+  - schemes:
+    - https://purl.stanford.edu/*
+    url: https://purl.stanford.edu/embed.{format}
+    example_urls:
+    - https://purl.stanford.edu/embed.json?url=https%3A%2F%2Fpurl.stanford.edu%2Ffx361mt5433
+    - https://purl.stanford.edu/embed.json?url=https%3A%2F%2Fpurl.stanford.edu%2Ffw090jw3474
+    - https://purl.stanford.edu/embed.json?url=https%3A%2F%2Fpurl.stanford.edu%2Fky226pt1201
+    - https://purl.stanford.edu/embed.json?url=https%3A%2F%2Fpurl.stanford.edu%2Fkd948pq9705
+    - https://purl.stanford.edu/embed.json?url=https%3A%2F%2Fpurl.stanford.edu%2Fcz128vq0535
+    discovery: true
+...
