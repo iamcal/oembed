@@ -4,7 +4,9 @@
   endpoints:
   - schemes:
     - https://app.altrulabs.com/*/*?answer_id=*
-    url: https://api.altrulabs.com/social/oembed (only supports json)
+    url: https://api.altrulabs.com/social/oembed
     example_urls:
     - https://api.altrulabs.com/api/v1/social/oembed?url=https%3A%2F%2Fapp.altrulabs.com%2Ftalentbrand%2Ffeed%3Fanswer_id%3D2059
+    formats:
+    - json
 ...
