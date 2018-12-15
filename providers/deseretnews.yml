@@ -1,0 +1,10 @@
+---
+- provider_name: Deseretnews.com
+  provider_url: https://www.deseretnews.com
+  endpoints:
+    - schemes:
+        - https://*.deseretnews.com/*
+      url: https://embed.deseretnews.com/
+      example_urls:
+        - https://embed.deseretnews.com/?url=https://graphics.deseretnews.com/american-family-survey/becoming-an-adult&format=json
+...
