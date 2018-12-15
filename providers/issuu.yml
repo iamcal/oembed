@@ -1,0 +1,12 @@
+---
+- provider_name: Issuu
+  provider_url: https://issuu.com/
+  endpoints:
+  - schemes:
+    - https://issuu.com/*/docs/*
+    url: https://issuu.com/oembed
+    docs_url: https://developer.issuu.com/oembed/
+    example_urls:
+    - https://issuu.com/oembed?url=https%3A%2F%2Fissuu.com%2Fiscience%2Fdocs%2Fissue23&format=json
+    discovery: true
+...
