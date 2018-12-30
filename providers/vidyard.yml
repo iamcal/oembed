@@ -1,0 +1,15 @@
+---
+- provider_name: Vidyard
+  provider_url: http://www.vidyard.com
+  endpoints:
+  - schemes:
+    - http://embed.vidyard.com/*
+    - http://play.vidyard.com/*
+    - http://share.vidyard.com/*
+    - http://*.hubs.vidyard.com/*
+    url: https://api.vidyard.com/dashboard/v1.1/oembed
+    docs_url: https://developer.vidyard.com/apidoc/oembed/show_v1_1.html
+    example_urls:
+    - https://api.vidyard.com/dashboard/v1.1/oembed?url=http://play.vidyard.com/watch/3DiwGFalTRHDA
+    discovery: true
+...
