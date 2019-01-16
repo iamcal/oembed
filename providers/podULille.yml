@@ -2,7 +2,9 @@
 - provider_name: Lille.Pod
   provider_url: hhttps://pod-test.univ-lille.fr/
   endpoints:
-  - url: https://pod-test.univ-lille.fr/oembed
+  - schemes:
+    - https://pod-test.univ-lille.fr/video/*
+    url: https://pod-test.univ-lille.fr/oembed
     discovery: true
     example_urls:
     - https://pod-test.univ-lille.fr/oembed/?url=https%3A//pod-test.univ-lille.fr/video/5493-test-clip-discipline/
