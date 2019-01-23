@@ -8,6 +8,8 @@
     example_urls:
     - https://omniscope.me/_global_/oembed/json?url=https://omniscope.me/internal/Pollution/TarantAir.iox/r/Report/
     - https://omniscope.me/_global_/oembed/json?maxWidth=1024&maxHeight=768&url=https://omniscope.me/Demos/Brexit/Brexit+Tweets.iox/r/Report/
-    - https://omniscope.me/_global_/oembed/json?url=https://omniscope.me/Demos/Quality+of+Life/Italy+Sole24Ore.iox/	
+    - https://omniscope.me/_global_/oembed/json?url=https://omniscope.me/Demos/Quality+of+Life/Italy+Sole24Ore.iox/
+    formats:
+    - json
     notes: Provider only supports the 'rich' type
 ...
