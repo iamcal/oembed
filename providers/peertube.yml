@@ -1,0 +1,12 @@
+---
+- provider_name: Peertube
+  provider_url: https://joinpeertube.org/en/
+  endpoints:
+  - schemes:
+    - {{peertube instance URL}}/services/oembed?url={{peertube video URL on the instance}}
+    url: {{peertube instance URL}}/services/oembed
+    docs_url: https://developer.vidyard.com/apidoc/oembed/show_v1_1.html
+    example_urls:
+    - https://framatube.org/services/oembed?url=https%3A%2F%2Fframatube.org%2Fvideos%2Fwatch%2F217eefeb-883d-45be-b7fc-a788ad8507d3
+    discovery: true
+...
