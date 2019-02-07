@@ -3,7 +3,7 @@
   provider_url: https://joinpeertube.org/en/
   endpoints:
   - schemes:
-    - {{peertube instance URL}}/services/oembed?url={{peertube video URL on the instance}}
+    - "{{peertube instance URL}}"/services/oembed?url="{{peertube video URL on the instance}}"
     url: {{peertube instance URL}}/services/oembed
     docs_url: https://developer.vidyard.com/apidoc/oembed/show_v1_1.html
     example_urls:
