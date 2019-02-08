@@ -1,0 +1,17 @@
+---
+- provider_name: Livestream
+  provider_url: https://livestream.com/
+  endpoints:
+  - schemes:
+    - https://livestream.com/accounts/*/events/*
+    - https://livestream.com/accounts/*/events/*/videos/*
+    - https://livestream.com/*/events/*
+    - https://livestream.com/*/events/*/videos/*
+    - https://livestream.com/*/*
+    - https://livestream.com/*/*/videos/*
+    url: https://livestream.com/oembed
+    example_urls:
+    - https://livestream.com/oembed?url=https%3A%2F%2Flivestream.com%2Flivestream%2F3camkit
+    - https://livestream.com/oembed?url=https%3A%2F%2Flivestream.com%2Flivestream%2F3camkit%2Fvideos%2F150060311
+    discovery: true
+...
