@@ -10,4 +10,5 @@
     example_urls:
     - https://www.ultimedia.com/api/search/oembed?url=https%3A%2F%2Fwww.ultimedia.com%2Fdefault%2Findex%2Fvideogeneric%2Fid%2Fsmxuxm&format=json
     - https://www.ultimedia.com/api/search/oembed?url=https%3A%2F%2Fwww.ultimedia.com%2Fdefault%2Findex%2Fvideogeneric%2Fid%2Fsmxuxm&format=xml
+    - discovery: true
 ...  
