@@ -1,0 +1,12 @@
+---
+- provider_name: Apester
+  provider_url: https://www.apester.com
+  endpoints:
+  - schemes:
+    - https://renderer.apester.com/v2/*?preview=true&iframe_preview=true
+    url: https://display.apester.com/oembed
+    example_urls:
+    - https://renderer.apester.com/v2/5c601ebe34b4f4440ba7aa00?preview=true&iframe_preview=true
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
