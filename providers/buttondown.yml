@@ -8,3 +8,4 @@
     - https://buttondown.email/jmduke
     formats:
     - json
+    discovery: true
