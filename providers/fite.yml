@@ -1,0 +1,11 @@
+---
+- provider_name: FITE
+  provider_url: https://www.fite.tv/
+  endpoints:
+  - schemes:
+    - https://www.fite.tv/watch/*
+    url: https://www.fite.tv/oembed
+    example_urls:
+    - https://www.fite.tv/oembed?url=https%3A//www.fite.tv/watch/fite-tv-test-stream/2kmfd/&format=json
+    discovery: true
+...
