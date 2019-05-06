@@ -1,0 +1,11 @@
+---
+- provider_name: Matterport
+  provider_url: https://matterport.com/
+  endpoints:
+  - url: https://my.matterport.com/api/v1/models/oembed/
+    discovery: true
+    example_urls:
+    - https://my.matterport.com/api/v1/models/oembed/?url=https%3A//my.matterport.com/show/%3Fm%3DFmDYedjofjo
+    formats:
+    - json
+...
