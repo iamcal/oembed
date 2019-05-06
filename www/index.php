@@ -542,13 +542,9 @@ code {
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
 </ul>
 <ul>
-	<li><a href="http://www.webmonkey.com/tutorial/Get_Started_With_OEmbed">Webmonkey tutorial</a></li>
-	<li><a href="http://leahculver.com/2008/05/29/announcing-oembed-an-open-standard-for-embedded-content/">Leah's blog</a></li>
-	<li><a href="http://www.readwriteweb.com/archives/oembed_open_format.php">ReadWriteWeb</a></li>
-	<li><a href="http://developer.yahoo.com/blogs/ydn/oembed-embedding-third-party-media-made-easy-7355.html">Yahoo! Developer Network</a></li>
+	<li><a href="https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
+	<li><a href="https://blog.leahculver.com/2008/05/announcing-oembed-an-open-standard-for-embedded-content.html">Leah's blog</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
-	<li><a href="http://blog.hulu.com/2008/5/27/sharing-is-easy">Hulu blog</a></li>
-	<li><a href="http://qik.com/blog/124/qik-embraces-oembed-for-embedding-videos">Qik blog</a></li>
 </ul>
 
 <p>This document is stored on <a href="https://github.com/iamcal/oembed">GitHub</a>.
