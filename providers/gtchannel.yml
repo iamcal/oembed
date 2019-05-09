@@ -1,5 +1,5 @@
 ---
-- provider_name: GTChannel
+- provider_name: GT Channel
   provider_url: https://gtchannel.com
   endpoints:
   - schemes:
