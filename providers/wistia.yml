@@ -1,6 +1,6 @@
 
 ---
-- provider_name: Wistia
+- provider_name: Wistia, Inc.
   provider_url: https://wistia.com/
   endpoints:
   - docs_url: https://wistia.com/support/developers/oembed
