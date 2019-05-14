@@ -1,0 +1,11 @@
+---
+- provider_name: Outplayed.tv
+  provider_url: https://outplayed.tv/
+  endpoints:
+  - schemes:
+    - https://outplayed.tv/media/*
+    url: https://outplayed.tv/oembed
+    discovery: true
+    example_urls:
+    - https://outplayed.tv/oembed?url=https%3A%2F%2Foutplayed.tv%2Fmedia%2FKwjQG
+...
