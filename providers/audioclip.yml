@@ -1,0 +1,15 @@
+---
+- provider_name: AudioClip
+  provider_url: https://audioclip.naver.com
+  endpoints:
+  - schemes:
+    - https://audioclip.naver.com/channels/*/clips/*
+    - https://audioclip.naver.com/audiobooks/*
+    url: https://audioclip.naver.com/oembed
+    example_urls:
+    - https://audioclip.naver.com/oembed?url=https%3A%2F%2Faudioclip.naver.com%2Fchannels%2F70%2Fclips%2F25
+    - https://audioclip.naver.com/oembed?url=https%3A%2F%2Faudioclip.naver.com%2Faudiobooks%2FFE8C3FCBB6
+    - https://audioclip.naver.com/oembed?url=https%3A%2F%2Faudioclip.naver.com%2Fchannels%2F70%2Fclips%2F25&format=xml
+    - https://audioclip.naver.com/oembed?url=https%3A%2F%2Faudioclip.naver.com%2Faudiobooks%2FFE8C3FCBB6&format=xml
+    discovery: true
+...
