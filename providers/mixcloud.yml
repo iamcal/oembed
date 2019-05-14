@@ -1,11 +1,12 @@
 ---
 - provider_name: MixCloud
-  provider_url: http://mixcloud.com/
+  provider_url: https://mixcloud.com/
   endpoints:
   - schemes:
     - http://www.mixcloud.com/*/*/
-    url: http://www.mixcloud.com/oembed/
-    docs_url: http://www.mixcloud.com/developers/documentation/
+    - https://www.mixcloud.com/*/*/
+    url: https://www.mixcloud.com/oembed/
+    docs_url: https://www.mixcloud.com/developers/
     example_urls:
-    - http://www.mixcloud.com/oembed/?url=http%3A%2F%2Fwww.mixcloud.com%2FTechnoLiveSets%2Fjon_rundell-live-electrobeach-festival-benidorm-16-08-2013%2F&format=xml
+    - https://www.mixcloud.com/oembed/?url=http://www.mixcloud.com/TechnoLiveSets/jon_rundell-live-electrobeach-festival-benidorm-16-08-2013/&format=xml
 ...
