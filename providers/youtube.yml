@@ -4,7 +4,7 @@
   endpoints:
   - schemes:
     - https://*.youtube.com/watch*
-    - https://*.youtube.com/v/*"
+    - https://*.youtube.com/v/*
     - https://youtu.be/*
     url: https://www.youtube.com/oembed
     discovery: true
