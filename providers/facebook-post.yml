@@ -6,6 +6,8 @@
     schemes:
     - https://www.facebook.com/*/posts/*
     - https://www.facebook.com/photos/*
+    - https://www.facebook.com/*/photos/*
+    - https://www.facebook.com/photo.php*
     - https://www.facebook.com/photo.php
     - https://www.facebook.com/*/activity/*
     - https://www.facebook.com/permalink.php
