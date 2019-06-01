@@ -5,6 +5,7 @@
   - schemes:
     - https://codesandbox.io/s/*
     - https://codesandbox.io/embed/*
+    - https://*.codesandbox.io/
     url: https://codesandbox.io/oembed
     example_urls:
     - https://codesandbox.io/oembed?url=https://codesandbox.io/s/new&format=json
