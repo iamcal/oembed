@@ -1,0 +1,13 @@
+---
+- provider_name: SmashNotes
+  provider_url: https://smashnotes.com
+  endpoints:
+  - schemes:
+    - https://smashnotes.com/p/*
+    - https://smashnotes.com/p/*/e/*
+        - https://smashnotes.com/p/*/e/*/s/*
+    url: https://smashnotes.com/services/oembed
+    example_urls:
+    - https://smashnotes.com/services/oembed?format=json&url=https://smashnotes.com/p/below-the-line-with-james-beshara/e/1-justin-kan
+    discovery: true
+...
