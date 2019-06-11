@@ -7,8 +7,12 @@
     - http://*.deviantart.com/*#/d*
     - http://fav.me/*
     - http://sta.sh/*
+    - https://*.deviantart.com/art/*
+    - https://*.deviantart.com/*/art/*
+    - https://sta.sh/*",
+    - https://*.deviantart.com/*#/d*"
     url: http://backend.deviantart.com/oembed
-    docs_url: http://www.deviantart.com/developers/oembed
+    docs_url: https://www.deviantart.com/developers/oembed
     example_urls:
     - http://backend.deviantart.com/oembed?format=xml&url=http%3A%2F%2Fbrowse.deviantart.com%2Fart%2FVita-Brevis-379998342
 ...
