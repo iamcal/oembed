@@ -1,5 +1,5 @@
 ---
-- provider_name: Deseretnews.com
+- provider_name: DeseretNews
   provider_url: https://www.deseretnews.com
   endpoints:
     - schemes:
