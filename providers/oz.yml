@@ -11,5 +11,4 @@
     formats:
     - json
     - xml
-    discovery: true
 ...
