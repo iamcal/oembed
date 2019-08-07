@@ -1,0 +1,14 @@
+---
+- provider_name: Malama
+  provider_url: https://malama.cc/
+  endpoints:
+  - schemes:
+    - https://malama.cc/cleanup/*
+    url: https://app.malama.cc/api/oembed
+    example_urls:
+    - https://app.malama.cc/api/oembed?url=https://malama.cc/cleanup/5d4a08ffc7975a54e8ec470a
+    - https://app.malama.cc/api/oembed?url=https://malama.cc/cleanup/5d4743930c758bc1730bc5ee
+    discovery: true
+    formats:
+    - json
+...
