@@ -1,0 +1,13 @@
+---
+- provider_name: ZingSoft
+  provider_url: https://app.zingsoft.com/
+  endpoints:
+  - schemes:
+    - https://*.zingsoft.com/embed/*
+    - https://*.zingsoft.com/view/*
+    - https://*.zingsoft.com/create/*
+    url: https://*.zingsoft.com/oembed
+    discovery: true
+    example_urls:
+    - https://app.zingsoft.com/oembed?url=https%3A%2F%2Fapp.zingsoft.com%2Fdemos%2Fview%2FML6T0HWY
+...
