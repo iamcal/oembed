@@ -11,6 +11,14 @@
     - https://instagr.am/p/*
     - https://www.instagram.com/p/*
     - https://www.instagr.am/p/*
+    - http://instagram.com/tv/*
+    - http://instagr.am/tv/*
+    - http://www.instagram.com/tv/*
+    - http://www.instagr.am/tv/*
+    - https://instagram.com/tv/*
+    - https://instagr.am/tv/*
+    - https://www.instagram.com/tv/*
+    - https://www.instagr.am/tv/*
     url: https://api.instagram.com/oembed
     docs_url: https://www.instagram.com/developer/embedding/#oembed
     example_urls:
