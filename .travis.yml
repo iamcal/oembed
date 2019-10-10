@@ -1,5 +1,6 @@
 language: php
 php: 5.5
+dist: trusty
 
 sudo: false
 
