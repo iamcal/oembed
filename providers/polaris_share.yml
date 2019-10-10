@@ -1,0 +1,13 @@
+---
+- provider_name: Polaris Share
+  provider_url: https://www.polarishare.com/
+  endpoints:
+    - schemes:
+        - https://www.polarishare.com/*/*
+      url: https://api.polarishare.com/rest/api/oembed
+      example_urls:
+        - https://api.polarishare.com/rest/api/oembed?url=https://www.polarishare.com/deandean/decompany-1-0-whitepaper-4usqr4
+        - https://api.polarishare.com/rest/api/oembed?url=https://www.polarishare.com/Chris%20Lee/dive-into-icon-iq2ovh
+        - https://api.polarishare.com/rest/api/oembed?url=https://www.polarishare.com/Chris%20Lee/stress-at-work-tips-to-reduce-and-manage-job-and-workplace-stress-qwv0b3
+      discovery: true
+...
