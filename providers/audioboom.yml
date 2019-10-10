@@ -1,0 +1,17 @@
+---
+- provider_name: Audioboom
+  provider_url: https://audioboom.com
+  endpoints:
+  - schemes:
+    - https://audioboom.com/channel/*
+    - https://audioboom.com/posts/*
+    url: https://audioboom.com/publishing/oembed/v4.{format}
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://audioboom.com/publishing/oembed/v4.json?url=https%3A%2F%2Faudioboom.com%2Fchannels%2F4971939
+    - https://audioboom.com/publishing/oembed/v4.xml?url=https%3A%2F%2Faudioboom.com%2Fchannels%2F4971939
+    - https://audioboom.com/publishing/oembed/v4.json?url=https%3A%2F%2Faudioboom.com%2Fposts%2F7193185-stephen-merchant
+    - https://audioboom.com/publishing/oembed/v4.xml?url=https%3A%2F%2Faudioboom.com%2Fposts%2F7193185-stephen-merchant
+...
