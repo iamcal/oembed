@@ -1,0 +1,13 @@
+---
+- provider_name: Blogcast
+  provider_url: https://blogcast.host/
+  endpoints:
+  - schemes:
+    - https://blogcast.host/embed/*
+    - https://blogcast.host/embedly/*
+    url: https://blogcast.host/oembed
+    discovery: true
+    example_urls:
+    - https://blogcast.host/oembed?url=https%3A%2F%2Fblogcast.host%2Fembed%2F1
+    - https://blogcast.host/oembed?url=https%3A%2F%2Fblogcast.host%2Fembed%2F300
+...
