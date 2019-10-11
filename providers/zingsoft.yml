@@ -5,7 +5,6 @@
   - schemes:
     - https://app.zingsoft.com/embed/*
     - https://app.zingsoft.com/view/*
-    - https://app.zingsoft.com/create/*
     url: https://app.zingsoft.com/oembed
     example_urls:
     - https://app.zingsoft.com/oembed?url=https://app.zingsoft.com/oembed?url=https://app.zingsoft.com/demos/view/1PFW8TP3
