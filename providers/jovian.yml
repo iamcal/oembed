@@ -1,0 +1,14 @@
+---
+- provider_name: YouTube
+  provider_url: https://jovian.ml/
+  endpoints:
+  - schemes:
+    - http://jovian.ml/embed*
+    - http://*.jovian.ml/embed*
+    url: https://c9e24eaa.ngrok.io/oembed.json
+    docs_url: http://dev.provider.com/api/oembed/
+    example_urls:
+    - https://c9e24eaa.ngrok.io/oembed.json?url=https://staging.jovian.ml/viewer?url=https%3A%2F%2Fgist.github.com%2Fsonakshs%2F1823aeb060d3eda4d4ac89a1fec8e93a%2F
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
