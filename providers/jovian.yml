@@ -1,5 +1,5 @@
 ---
-- provider_name: YouTube
+- provider_name: Jovian
   provider_url: https://jovian.ml/
   endpoints:
   - schemes:
