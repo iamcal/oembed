@@ -1,0 +1,10 @@
+---
+- provider_name: Vizydrop
+  provider_url: https://vizydrop.com
+  endpoints:
+    - schemes:
+        - https://vizydrop.com/shared/*
+      url: https://vizydrop.com/oembed
+      example_urls:
+        - https://vizydrop.com/oembed?url=https://vizydrop.com/shared/drop/5ca750de3ce84f0016033c19?authkey=b60edc7affeb3a046e50
+...
