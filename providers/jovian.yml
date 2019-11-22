@@ -6,7 +6,7 @@
     - http://jovian.ml/embed*
     - http://*.jovian.ml/embed*
     url: https://api.jovian.ai/oembed.json
-    docs_url: http://dev.provider.com/api/oembed/
+    docs_url: https://jovian-py.readthedocs.io/en/latest/jvn/oembed.html
     example_urls:
     - https://api.jovian.ai/oembed.json?url=https://jovian.ml/viewer?url=https%3A%2F%2Fbitbucket.org%2Faakashns%2Fjupyter-notebook-test%2Fraw%2F6f3bc24f89c673a7acdc013bc1970055d35c6273%2F00_mnist_basic.ipynb&width=600
     discovery: true
