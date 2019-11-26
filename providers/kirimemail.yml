@@ -1,0 +1,12 @@
+- provider_name: Kirim.Email
+  provider_url: https://kirim.email/
+  endpoints:
+  - schemes:
+    - https://halaman.email/form/*
+    - https://aplikasi.kirim.email/form/*
+    url: https://halaman.email/service/oembed
+    example_urls:
+    - https://halaman.email/service/oembed?format=json&url=https://halaman.email/form/205c01c4-88d9-4036-a326-20d87a996513
+    - https://halaman.email/service/oembed?format=xml&url=https://halaman.email/form/205c01c4-88d9-4036-a326-20d87a996513
+    discovery: true
+...
