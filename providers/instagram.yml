@@ -3,6 +3,10 @@
   provider_url: https://instagram.com
   endpoints:
   - schemes:
+    - http://instagram.com/*/p/*,
+    - http://www.instagram.com/*/p/*,
+    - https://instagram.com/*/p/*,
+    - https://www.instagram.com/*/p/*, 
     - http://instagram.com/p/*
     - http://instagr.am/p/*
     - http://www.instagram.com/p/*
