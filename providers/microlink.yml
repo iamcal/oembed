@@ -1,0 +1,8 @@
+---
+- provider_name: Microlink
+  provider_url: http://api.microlink.io
+  endpoints:
+    - url: https://api.microlink.io
+      docs_url: https://microlink.io/docs/api/parameters/iframe
+      example_urls:
+        - https://api.microlink.io?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DB-m6JDYRFvk&iframe
