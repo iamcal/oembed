@@ -6,7 +6,8 @@
         - https://storymaps.arcgis.com/stories/*
       url: https://storymaps.arcgis.com/oembed
       example_urls:
-        - https://storymaps.arcgis.com/oembed?url=https://storymaps.arcgis.com/stories/73a4b40120b44a3fb9d6935d53d49330&format=json
-        - https://storymaps.arcgis.com/oembed?url=https://storymaps.arcgis.com/stories/73a4b40120b44a3fb9d6935d53d49330&format=xml
+        - https://storymaps.arcgis.com/oembed?url=https://storymaps.arcgis.com/stories/ffdd1f0589434e8c8cf0dddbb1edd364&format=json
+        - https://storymaps.arcgis.com/oembed?url=https://storymaps.arcgis.com/stories/ffdd1f0589434e8c8cf0dddbb1edd364&format=xml
       discovery: true
 ---
+
