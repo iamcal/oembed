@@ -1,0 +1,14 @@
+---
+- provider_name: Avocode
+  provider_url: https://avocode.com/
+  endpoints:
+  - schemes:
+    - https://app.avocode.com/view/*/
+    - https://app.avocode.com/view/*/*/comments/
+    - https://app.avocode.com/view/*/_/comments/
+    url: https://stage-embed.avocode.com/api/oembed
+    example_urls:
+    - https://stage-embed.avocode.com/api/oembed?url=https://app.avocode.com/view/a851fc49602446be8c1ef6e5dc3845d8/33250729/comments/&format=json
+    formats:
+    - json
+...
