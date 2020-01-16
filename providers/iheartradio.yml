@@ -3,7 +3,7 @@
   provider_url: https://www.iheart.com
   endpoints:
   - schemes:
-    - https://www.iheart.com/podcast/*
+    - https://www.iheart.com/podcast/*/*
     url: https://www.iheart.com/oembed
     example_urls:
     - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2F&format=json
