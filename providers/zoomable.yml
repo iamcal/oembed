@@ -1,0 +1,11 @@
+---
+- provider_name: Zoomable
+  provider_url: https://zoomable.ca/
+  endpoints:
+  - schemes:
+    - https://srv2.zoomable.ca/viewer.php*
+    url: https://srv2.zoomable.ca/oembed
+    discovery: true
+    example_urls:
+    - https://srv2.zoomable.ca/oembed?url=https://srv2.zoomable.ca/viewer.php?i=img3665da501a53181f_lucas-benjamin-wQLAGv4_OYs-unsplash
+...
