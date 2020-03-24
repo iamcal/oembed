@@ -1,0 +1,18 @@
+---
+- provider_name: RadioPublic
+  provider_url: https://radiopublic.com
+  endpoints:
+  - schemes:
+    - https://play.radiopublic.com/*
+    - https://radiopublic.com/*
+    - https://www.radiopublic.com/*
+    - http://play.radiopublic.com/*
+    - http://radiopublic.com/*
+    - http://www.radiopublic.com/*
+    - https://*.radiopublic.com/*'
+    url: https://embed.radiopublic.com/e
+    example_urls:
+    - https://embed.radiopublic.com/e?if=PodSaveAmerica:dHJlbmRpbmctaW4tc2VhcmNo&ge=s1!302868e76664335e75283bbbdf14ddd80aab79f5
+    - https://embed.radiopublic.com/e?if=MyFavMurder:dHJlbmRpbmctaW4tc2VhcmNo&ge=s1!c00869db7a2583f334e2519a355cd051dcaa4c48
+    discovery: true
+...
