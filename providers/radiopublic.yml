@@ -10,9 +10,9 @@
     - http://radiopublic.com/*
     - http://www.radiopublic.com/*
     - https://*.radiopublic.com/*'
-    url: https://embed.radiopublic.com/e
+    url: https://oembed.radiopublic.com/oembed
     example_urls:
-    - https://embed.radiopublic.com/e?if=PodSaveAmerica:dHJlbmRpbmctaW4tc2VhcmNo&ge=s1!302868e76664335e75283bbbdf14ddd80aab79f5
-    - https://embed.radiopublic.com/e?if=MyFavMurder:dHJlbmRpbmctaW4tc2VhcmNo&ge=s1!c00869db7a2583f334e2519a355cd051dcaa4c48
+    - https://oembed.radiopublic.com/oembed?url=https%3A%2F%2Fradiopublic.com%2Fthe-bucket-podcast-WD03oE%3ARXhwbG9yZQ&format=json
+    - https://oembed.radiopublic.com/oembed?url=https%3A%2F%2Fradiopublic.com%2FPodSaveAmerica%3AdHJlbmRpbmctaW4tc2VhcmNo&format=json
     discovery: true
 ...
