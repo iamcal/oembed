@@ -1,0 +1,10 @@
+---
+- provider_name: AxiomNinja
+  provider_url: http://axiom.ninja
+  endpoints:
+  - schemes:
+    - http://axiom.ninja/*
+    url: http://axiom.ninja/oembed/
+    example_urls:
+    discovery: true
+...
