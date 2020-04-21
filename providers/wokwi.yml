@@ -1,0 +1,13 @@
+---
+- provider_name: Wokwi
+  provider_url: https://wokwi.com
+  endpoints:
+  - schemes:
+    - https://wokwi.com/share/*
+    url: https://wokwi.com/api/oembed
+    example_urls:
+    - https://wokwi.com/api/oembed?url=https%3A%2F%2Fwokwi.com%2Fshare%2Fiq7UORC5aVcFKNdwy9sF&format=json
+    discovery: true
+    formats:
+    - json
+...
