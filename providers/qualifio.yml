@@ -1,0 +1,11 @@
+---
+- provider_name: Qualifio
+  provider_url: https://qualifio.com/
+  endpoints:
+  - url: https://oembed.qualifio.com/
+    example_urls:
+    - https://oembed.qualifio.com/?format=json&url=https://subdomain.domain.com/20/ws/load.cfm?id=c71a303a-760b-46e2-8f31-bfd169f7fb23
+    - https://oembed.qualifio.com/?format=json&url=https://subdomain.domain.com/20/load.cfm?id=c71a303a-760b-46e2-8f31-bfd169f7fb23
+    - https://oembed.qualifio.com/?format=json&url=https://subdomain.domain.com/20/c71a303a-760b-46e2-8f31-bfd169f7fb23/v1.cfm?id=c71a303a-760b-46e2-8f31-bfd169f7fb23
+    discovery: true
+...
