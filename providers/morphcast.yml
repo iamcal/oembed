@@ -1,0 +1,13 @@
+---
+- provider_name: MorphCast
+  provider_url: https://www.morphcast.com
+  endpoints:
+  - schemes:
+    - https://m-roll.morphcast.com/mroll/*
+    url: https://m-roll.morphcast.com/service/oembed
+    discovery: true
+    example_urls:
+    - https://m-roll.morphcast.com/service/oembed?url=https%3A%2F%2Fm-roll.morphcast.com%2Fmroll%2F%3Fcameraon%3Dtrue%26hidecontrols%3Dtrue%26m%3Dhonda_2%23%2Fq%3D
+    formats:
+    - json
+...

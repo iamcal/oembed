@@ -1,0 +1,16 @@
+---
+- provider_name: Faithlife TV
+  provider_url: https://faithlifetv.com
+  endpoints:
+  - schemes:
+    - https://faithlifetv.com/items/*
+    - https://faithlifetv.com/items/resource/*/*
+    - https://faithlifetv.com/media/*
+    - https://faithlifetv.com/media/assets/*
+    - https://faithlifetv.com/media/resource/*/*
+    url: https://faithlifetv.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://faithlifetv.com/api/oembed?url=https%3A%2F%2Ffaithlifetv.com%2Fitems%2F300027&format=json
+    - https://faithlifetv.com/api/oembed?url=https%3A%2F%2Ffaithlifetv.com%2Fmedia%2F300027&format=json
+...

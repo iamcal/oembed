@@ -1,0 +1,10 @@
+---
+- provider_name: Rumble
+  provider_url: https://rumble.com/
+  endpoints:
+  - url: https://rumble.com/api/Media/oembed.{format}
+    example_urls:
+    - https://rumble.com/api/Media/oembed.xml?url=https%3A%2F%2Frumble.com%2Fv30jzs-dog-dont-know-where-to-hide-her-bone.html
+    - https://rumble.com/api/Media/oembed.json?url=https%3A%2F%2Frumble.com%2Fv30jzs-dog-dont-know-where-to-hide-her-bone.html
+    discovery: true
+...

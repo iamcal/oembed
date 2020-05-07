@@ -1,0 +1,18 @@
+---
+- provider_name: MediaLab
+  provider_url: https://www.medialab.co/
+  endpoints:
+  - docs_url: https://www.medialab.app/docs/api/oembed
+    schemes:
+    - https://*.medialab.app/share/watch/*
+    - https://*.medialab.co/share/watch/*
+    - https://*.medialab.app/share/social/*
+    - https://*.medialab.co/share/social/*
+    - https://*.medialab.app/share/embed/*
+    - https://*.medialab.co/share/embed/*
+    url: https://*.medialab.(co|app)/api/oembed/
+    example_urls:
+    - https://demo.medialab.co/api/oembed/?url=https%3A%2F%2Fdemo.medialab.co%2Fshare%2Fwatch%2FveE0Y%2F7274437b1142fb4a64c80fac2ad895195339665397b26e17a769e2faad27c13c%2F
+    - https://demo.medialab.co/api/oembed/?format=xml&url=https%3A%2F%2Fdemo.medialab.co%2Fshare%2Fsocial%2FveE0Y%2F7274437b1142fb4a64c80fac2ad895195339665397b26e17a769e2faad27c13c%2Fmedialab_1080.mp4.html
+    discovery: true
+...

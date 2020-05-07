@@ -1,0 +1,10 @@
+---
+- provider_name: Dipity
+  provider_url: http://www.dipity.com
+  endpoints:
+  - schemes:
+    - http://www.dipity.com/*/*/
+    url: http://www.dipity.com/oembed/timeline/
+    example_urls:
+    - http://www.dipity.com/oembed/timeline/?format=xml&url=http%3A%2F%2Fwww.dipity.com%2Fragutier%2FHistoria_de_la_Web%2F
+...

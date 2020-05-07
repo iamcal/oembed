@@ -1,0 +1,14 @@
+---
+- provider_name: Xpression
+  provider_url: https://web.xpression.jp
+  endpoints:
+  - schemes:
+    - https://web.xpression.jp/video/*
+    url: https://web.xpression.jp/api/oembed
+    example_urls:
+    - https://web.xpression.jp/api/oembed?url=https%3A%2F%2Fweb.xpression.jp%2Fvideo%2Fpr-12-12&format=json
+    - https://web.xpression.jp/api/oembed?url=https%3A%2F%2Fweb.xpression.jp%2Fvideo%2Fpr-12-12&format=xml
+    formats:
+    - json
+    - xml
+...

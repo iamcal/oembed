@@ -1,0 +1,8 @@
+---
+- provider_name: Wootled
+  provider_url: http://www.wootled.com/
+  endpoints:
+  - url: http://www.wootled.com/oembed
+    example_urls:
+    - http://www.wootled.com/oembed?url=http%3A%2F%2Fwww.wootled.com%2Fwg%2F0SbDvPCAzpWEstt
+...

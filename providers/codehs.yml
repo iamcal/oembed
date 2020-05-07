@@ -1,0 +1,13 @@
+---
+- provider_name: CodeHS
+  provider_url: http://www.codehs.com
+  endpoints:
+  - schemes:
+    - https://codehs.com/editor/share_abacus/*
+    url: https://codehs.com/api/sharedprogram/*/oembed/
+    docs_url: http://www.codehs.com
+    example_urls:
+    - https://codehs.com/api/sharedprogram/1/oembed/?url=https://codehs.com/editor/share_abacus/xtOPDik2wNFjSDUoyl2T
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

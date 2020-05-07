@@ -1,0 +1,16 @@
+---
+- provider_name: SmugMug
+  provider_url: https://www.smugmug.com/
+  endpoints:
+  - schemes:
+    - http://*.smugmug.com/*
+    - https://*.smugmug.com/*
+    url: https://api.smugmug.com/services/oembed/
+    docs_url: https://api.smugmug.com/services/oembed
+    example_urls:
+    - https://api.smugmug.com/services/oembed/?url=https%3A%2F%2Fwww.smugmug.com%2Fpopular%2Fall%23125787395_hQSj9
+    discovery: true
+    notes:
+    - 'URL Scheme: `http://*.example.com/*` (where example.com = SmugMug customer
+      domain)'
+...

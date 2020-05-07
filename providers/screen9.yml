@@ -1,0 +1,12 @@
+---
+- provider_name: Screen9
+  provider_url: http://www.screen9.com/
+  endpoints:
+  - docs_url: https://screen9.zendesk.com/hc/en-us/articles/216335038-Publish-with-oEmbed
+    schemes:
+    - https://console.screen9.com/*
+    - https://*.screen9.tv/*
+    url: https://api.screen9.com/oembed
+    example_urls:
+    - http://api.screen9.com/oembed?url=https%3A%2F%2Fvideosite.screen9.tv%2Fmedia%2Fu6txqFxdedOXiyg2lOUmTQ%2Fcrane
+...

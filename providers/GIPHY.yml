@@ -1,0 +1,13 @@
+---
+- provider_name: GIPHY
+  provider_url: https://giphy.com
+  endpoints:
+  - schemes:
+    - https://giphy.com/gifs/*
+    - http://gph.is/*
+    - https://media.giphy.com/media/*/giphy.gif
+    url: https://giphy.com/services/oembed
+    example_urls:
+    - https://giphy.com/services/oembed?url=https%3A%2F%2Fgiphy.com%2Fgifs%2Fcant-hardly-wait-kW8mnYSNkUYKc
+    discovery: true
+...

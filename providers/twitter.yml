@@ -1,0 +1,13 @@
+---
+- provider_name: Twitter
+  provider_url: http://www.twitter.com/
+  endpoints:
+  - schemes:
+    - https://twitter.com/*/status/*
+    - https://*.twitter.com/*/status/*
+    url: https://publish.twitter.com/oembed
+    docs_url: https://dev.twitter.com/rest/reference/get/statuses/oembed
+    example_urls:
+    - https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F507185938620219395
+
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: Official FM
+  provider_url: http://official.fm
+  endpoints:
+  - schemes:
+    - http://official.fm/tracks/*
+    - http://official.fm/playlists/*
+    url: http://official.fm/services/oembed.{format}
+    docs_url: https://github.com/officialfm/api/blob/master/sections/oembed.md
+    example_urls:
+    - http://official.fm/services/oembed.json?url=http%3A%2F%2Fofficial.fm%2Ftracks%2FnpTR
+...

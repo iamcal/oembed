@@ -1,0 +1,11 @@
+---
+- provider_name: CollegeHumor
+  provider_url: http://www.collegehumor.com/
+  endpoints:
+  - schemes:
+    - http://www.collegehumor.com/video/*
+    url: http://www.collegehumor.com/oembed.{format}
+    example_urls:
+    - http://www.collegehumor.com/oembed.xml?url=http%3A%2F%2Fwww.collegehumor.com%2Fvideo%2F3922232%2Fprank-war-7-the-half-million-dollar-shot
+    discovery: true
+...

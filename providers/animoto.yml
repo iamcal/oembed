@@ -1,0 +1,11 @@
+---
+- provider_name: Animoto
+  provider_url: http://animoto.com/
+  endpoints:
+  - schemes:
+    - http://animoto.com/play/*
+    url: http://animoto.com/oembeds/create
+    docs_url: http://help.animoto.com/entries/109992-oEmbed-API
+    example_urls:
+    - http://animoto.com/oembeds/create/?format=xml&url=http%3A%2F%2Fanimoto.com%2Fplay%2FJzwsBn5FRVxS0qoqcBP5zA
+...

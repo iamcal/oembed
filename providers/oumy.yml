@@ -1,0 +1,11 @@
+---
+- provider_name: Oumy
+  provider_url: https://www.oumy.com/
+  endpoints:
+  - schemes:
+    - https://www.oumy.com/v/*
+    url: https://www.oumy.com/oembed
+    example_urls:
+    - https://www.oumy.com/oembed?url=https%3A%2F%2Fwww.oumy.com%2Fv%2F0NmY0agdvcA7wlvIXbJaBzA&format=json
+    discovery: true
+...

@@ -1,0 +1,10 @@
+---
+- provider_name: Beautiful.AI
+  provider_url: https://www.beautiful.ai/
+  endpoints:
+  - url: https://www.beautiful.ai/api/oembed
+    discovery: true
+    example_urls:
+    - https://www.beautiful.ai/api/oembed?url=https%3A%2F%2Fwww.beautiful.ai%2Fdeck%2F-L7QETWHKx_3vn8eIswg
+    - https://www.beautiful.ai/api/oembed?url=https%3A%2F%2Fwww.beautiful.ai%2Fplayer%2F-L7QHgT26tkTPnqtB84U
+...

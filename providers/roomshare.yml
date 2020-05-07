@@ -1,0 +1,11 @@
+---
+- provider_name: Roomshare
+  provider_url: http://roomshare.jp
+  endpoints:
+  - schemes:
+    - http://roomshare.jp/post/*
+    - http://roomshare.jp/en/post/*
+    url: http://roomshare.jp/en/oembed.{format}
+    example_urls:
+    - http://roomshare.jp/en/oembed.xml?url=http%3A%2F%2Froomshare.jp%2Fen%2Fpost%2F137167
+...

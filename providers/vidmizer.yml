@@ -1,0 +1,11 @@
+---
+- provider_name: Vidmizer
+  provider_url: https://www.vidmizer.com/
+  endpoints:
+  - schemes:
+    - https://players.vidmizer.com/*
+    url: https://app-v2.vidmizer.com/api/oembed
+    example_urls:
+    - 'https://app-v2.vidmizer.com/api/oembed?url=https%3A%2F%2Fplayers.vidmizer.com/8582f97e-7c4f-49c7-be85-d61a95f4d8b3'
+    discovery: true
+...

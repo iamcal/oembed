@@ -1,0 +1,12 @@
+---
+- provider_name: SoundCloud
+  provider_url: http://soundcloud.com/
+  endpoints:
+  - schemes:
+    - http://soundcloud.com/*
+    - https://soundcloud.com/*
+    url: https://soundcloud.com/oembed
+    example_urls:
+    - https://soundcloud.com/oembed?url=https%3A%2F%2Fsoundcloud.com%2Fforss%2Fflickermood
+    - https://soundcloud.com/oembed?url=https%3A%2F%2Fsoundcloud.com%2Fforss%2Fflickermood&format=json
+...

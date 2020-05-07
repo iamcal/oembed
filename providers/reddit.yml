@@ -1,0 +1,13 @@
+---
+- provider_name: Reddit
+  provider_url: https://reddit.com/
+  endpoints:
+  - schemes:
+    - https://reddit.com/r/*/comments/*/*
+    - https://www.reddit.com/r/*/comments/*/*
+    url: https://www.reddit.com/oembed
+    notes: The endpoint works with comments and posts. To fetch a comment use the Permalink (The comment page with the comment id appended to the url).
+    example_urls:
+    - https://www.reddit.com/oembed?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Faww%2Fcomments%2F4lwccv%2Fsomeone_came_to_visit_woodchips_for_scale%2F
+    - https://www.reddit.com/oembed?url=https%3A%2F%2Fwww.reddit.com%2Fr%2Faww%2Fcomments%2F4lwccv%2Fsomeone_came_to_visit_woodchips_for_scale%2Fd3qol9a
+...

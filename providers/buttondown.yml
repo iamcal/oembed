@@ -1,0 +1,11 @@
+- provider_name: Buttondown
+  provider_url: https://buttondown.email/
+  endpoints:
+  - schemes:
+    - https://buttondown.email/*
+    url: https://buttondown.email/embed
+    example_urls:
+    - https://buttondown.email/jmduke
+    formats:
+    - json
+    discovery: true

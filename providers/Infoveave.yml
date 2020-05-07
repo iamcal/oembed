@@ -1,0 +1,14 @@
+---
+- provider_name: Infoveave
+  provider_url: https://infoveave.net/
+  endpoints:
+  - schemes:
+    - https://*.infoveave.net/E/*
+    - https://*.infoveave.net/P/*
+    url: https://infoveave.net/services/oembed/
+    example_urls:
+    - https://infoveave.net/services/oembed?url=https://demo.infoveave.net/E/ZGVtb3wxfENIfDU2OTR8MjAxfHRydWV8dHJ1ZQ==%7CAP25RKrQl0t&format=json
+    - https://infoveave.net/services/oembed?url=https://demo.infoveave.net/E/ZGVtb3wxfElCfDI1Mjh8MjAxfHRydWV8dHJ1ZQ==%7CfUCXVFSUrLe&format=json
+    - https://infoveave.net/services/oembed?url=https://demo.infoveave.net/E/ZGVtb3wxfENIfDQ5MjV8MjAxfHRydWV8dHJ1ZQ==%7C3x0P5uN99p3&format=json
+    discovery: true
+...

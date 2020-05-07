@@ -1,0 +1,13 @@
+---
+- provider_name: ZingSoft
+  provider_url: https://app.zingsoft.com
+  endpoints:
+  - schemes:
+    - https://app.zingsoft.com/embed/*
+    - https://app.zingsoft.com/view/*
+    url: https://app.zingsoft.com/oembed
+    example_urls:
+    - https://app.zingsoft.com/oembed?url=https://app.zingsoft.com/oembed?url=https://app.zingsoft.com/demos/view/1PFW8TP3
+    discovery: true
+    notes: Provider only supports the 'rich' type and 'json' format
+...

@@ -1,0 +1,15 @@
+---
+- provider_name: hearthis.at
+  provider_url: https://hearthis.at/
+  endpoints:
+  - schemes:
+    - https://hearthis.at/*/*/
+    - https://hearthis.at/*/set/*/
+    url: https://hearthis.at/oembed/?format=json
+    docs_url: TBD
+    example_urls:
+    - https://hearthis.at/oembed/?url=https://hearthis.at/gdsfm/20180922-motherland-soundsystem-im-sender/&format=json
+    - https://hearthis.at/oembed/?url=https://hearthis.at/gdsfm/20180922-motherland-soundsystem-im-sender/&format=xml
+    discovery: true
+    notes: hearthis.at currently only supports single tracks, so not all URLs work.
+...

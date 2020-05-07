@@ -1,0 +1,14 @@
+---
+- provider_name: OZ
+  provider_url: https://www.oz.com/
+  endpoints:
+  - schemes:
+    - https://www.oz.com/*/video/*
+    url: https://core.oz.com/oembed
+    example_urls:
+    - https://core.oz.com/oembed?url=https%3A%2F%2Fwww.oz.com%2Fgnarr%2Fvideo%2Ffc9a8540-6fd5-4dd8-a0d9-daca43bbfb2e&format=json
+    - https://core.oz.com/oembed?url=https%3A%2F%2Fwww.oz.com%2Fgnarr%2Fvideo%2Ffc9a8540-6fd5-4dd8-a0d9-daca43bbfb2e&format=xml
+    formats:
+    - json
+    - xml
+...

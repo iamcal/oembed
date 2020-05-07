@@ -1,0 +1,12 @@
+---
+- provider_name: posiXion
+  provider_url: https://posixion.com/
+  endpoints:
+  - schemes:
+    - https://posixion.com/question/*
+    - https://posixion.com/*/question/*
+    url: http://posixion.com/services/oembed/
+    notes: The endpoint works with questions and arguments - use the sharing function for optional settings.
+    example_urls:
+    - http://posixion.com/services/oembed/?url=https://posixion.com/question/Is-There-Anything-I-Should-Do-About-Climate-Change
+...

@@ -1,0 +1,14 @@
+---
+- provider_name: Alpha App Net
+  provider_url: https://alpha.app.net/browse/posts/
+  endpoints:
+  - schemes:
+    - https://alpha.app.net/*/post/*
+    - https://photos.app.net/*/*
+    url: https://alpha-api.app.net/oembed
+    docs_url: http://developers.app.net/docs/other/oembed/
+    example_urls:
+    - https://alpha-api.app.net/oembed?url=https%3A%2F%2Falpha.app.net%2Fbreakingnews%2Fpost%2F9153521
+    formats:
+    - json
+...

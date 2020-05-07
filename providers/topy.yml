@@ -1,0 +1,11 @@
+---
+- provider_name: Topy
+  provider_url: http://www.topy.se/
+  endpoints:
+  - schemes:
+    - http://www.topy.se/image/*
+    url: http://www.topy.se/oembed/
+    example_urls:
+    - https://topy.se/oembed/?url=http%3A%2F%2Ftopy.se%2Fimage%2FX9%26format%3Djson
+    discovery: true
+...

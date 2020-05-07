@@ -1,0 +1,10 @@
+---
+- provider_name: Embed Articles
+  provider_url: http://embedarticles.com/
+  endpoints:
+  - schemes:
+    - http://embedarticles.com/*
+    url: http://embedarticles.com/oembed/
+    example_urls:
+    - http://embedarticles.com/oembed/?url=http://embedarticles.com/article/101887/yemi~alade~ft.~selebobo~~na~gode/
+...

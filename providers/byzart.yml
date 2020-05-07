@@ -1,0 +1,12 @@
+---
+- provider_name: Byzart Project
+  provider_url: https://cmc.byzart.eu
+  endpoints:
+  - schemes:
+    - https://cmc.byzart.eu/files/*
+    url: https://cmc.byzart.eu/oembed/
+    example_urls:
+    - https://cmc.byzart.eu/oembed/?format=json&url=https%3A%2F%2Fcmc.byzart.eu%2Ffiles%2Foriginal%2Fouc%2Fouc_cyprus_broadcasting_corporation%2F006_014_006448_01.mp4
+    discovery: false
+    notes: Provider only supports the 'rich' and 'video' types
+...

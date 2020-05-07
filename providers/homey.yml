@@ -1,0 +1,12 @@
+---
+- provider_name: Homey
+  provider_url: https://homey.app
+  endpoints:
+  - schemes:
+    - https://homey.app/f/*
+    - https://homey.app/*/flow/*
+    url: https://homey.app/api/oembed/flow
+    example_urls:
+    - https://homey.app/api/oembed/flow?url=https%3A%2F%2Fhomey.app%2Ff%2Fabcdef%2F
+    discovery: true
+...

@@ -34,7 +34,7 @@
             - http://github.com/iamcal/oembed
 
 -->
-<html>
+<html lang="en">
 <head>
 <title>oEmbed</title>
 <style>
@@ -78,13 +78,13 @@ code {
 <h2>Table Of Contents</h2>
 
 <ol>
-	<li><a href="#section1">Quick Example<a/></li>
-	<li><a href="#section2">Full Spec<a/></li>
-	<li><a href="#section3">Security considerations<a/></li>
-	<li><a href="#section4">Discovery<a/></li>
-	<li><a href="#section5">More examples<a/></li>
-	<li><a href="#section6">Authors<a/></li>
-	<li><a href="#section7">Implementations<a/></li>
+	<li><a href="#section1">Quick Example</a></li>
+	<li><a href="#section2">Full Spec</a></li>
+	<li><a href="#section3">Security considerations</a></li>
+	<li><a href="#section4">Discovery</a></li>
+	<li><a href="#section5">More examples</a></li>
+	<li><a href="#section6">Authors</a></li>
+	<li><a href="#section7">Implementations</a></li>
 </ol>
 
 <a name="section1" id="section1"><h2>1. Quick Example</h2></a>
@@ -92,7 +92,7 @@ code {
 <p>A <i>consumer</i> (e.g. <a href="http://codex.wordpress.org/Embeds/">WordPress</a>) makes the following HTTP request:</p>
 
 <ul>
-	<li> <code>http://www.flickr.com/services/oembed/?url=http%3A//www.flickr.com/photos/bees/2341623661/</code> </li>
+	<li> <code>http://www.flickr.com/services/oembed/?format=json&url=http%3A//www.flickr.com/photos/bees/2341623661/</code> </li>
 </ul>
 
 <p>The <i>provider</i> (e.g. <a href="http://www.flickr.com/">Flickr</a>) then responds with an oEmbed response:</p>
@@ -142,7 +142,7 @@ code {
 	<li> <code>*://www.flickr.com/photos/*</code> NOT OK </li>
 </ul>
 
-<p>The API endpoint must point to an HTTP endpoint URL (not HTTPS) which implements the API described below.</p>
+<p>The API endpoint must point to a URL with either HTTP or HTTPS scheme which implements the API described below.</p>
 
 
 <a name="section2.2" id="section2.2"><h3>2.2. Consumer Request</h3></a>
@@ -329,7 +329,7 @@ code {
 	<dd>The provider cannot return a response in the requested format. This should be sent when (for example) the request includes <code>format=xml</code> and the provider doesn't support XML responses. However, providers are encouraged to support both JSON and XML.</dd>
 
 	<dt><b><code>401 Unauthorized</code></b></dt>
-	<dd>The specified URL contains a private (non-public) resource. The consumer should provide a link directly to the resource instead of any embedding any extra information, and rely on the provider to provide access control.</dd>
+	<dd>The specified URL contains a private (non-public) resource. The consumer should provide a link directly to the resource instead of embedding any extra information, and rely on the provider to provide access control.</dd>
 </dl>
 
 
@@ -427,10 +427,24 @@ code {
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
 <p>Providers are available programatically as a json file: <a href="http://oembed.com/providers.json">http://oembed.com/providers.json</a>.</p>
-<p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and modify <code>providers.yml</code>.</p>
+<p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and add/modify <code>providers/*.yml</code>.</p>
 
 <?php
-	$data = yaml_parse_file('providers.yml');
+	$data = array();
+
+	$dh = opendir(__DIR__.'/../providers');
+	while (($file = readdir($dh)) !== false){
+		if (preg_match('!\.yml$!', $file)){
+			$partial = yaml_parse_file(__DIR__."/../providers/$file");
+			foreach ($partial as $row) $data[] = $row;
+		}
+	}
+
+	usort($data, 'local_sort');
+
+	function local_sort($a, $b){
+		return strcasecmp($a['provider_name'], $b['provider_name']);
+	}
 
 	function format_html($html){
 		return preg_replace('!`(.*?)`!', '<code>$1</code>', $html);
@@ -442,31 +456,31 @@ code {
 	<?php foreach ($provider['endpoints'] as $endpoint){ ?>
 		<ul>
 
-		<?php foreach ($endpoint['schemes'] as $scheme){ ?>
+		<?php if (isset($endpoint['schemes']) && is_array($endpoint['schemes'])) foreach ($endpoint['schemes'] as $scheme){ ?>
 			<li> URL scheme: <code><?php echo HtmlSpecialChars($scheme); ?></code> </li>
 		<?php } ?>
 
-		<?php if ($endpoint['url']){ ?>
+		<?php if (isset($endpoint['url'])){ ?>
 			<li> API endpoint: <code><?php echo HtmlSpecialChars($endpoint['url']); ?></code>
-			<?php if (count($endpoint['formats'])){ ?>
+			<?php if (isset($endpoint['formats']) && count($endpoint['formats'])){ ?>
 				(only supports <code><?php echo HtmlSpecialChars(StrToLower(implode(', ', $endpoint['formats']))); ?></code>)
 			<?php } ?>
 			</li>
 		<?php } ?>
 
-		<?php if ($endpoint['docs_url']){ ?>
+		<?php if (isset($endpoint['docs_url'])){ ?>
 			<li> Documentation: <a href="<?php echo HtmlSpecialChars($endpoint['docs_url']); ?>"><?php echo HtmlSpecialChars($endpoint['docs_url']); ?></a> </li>
 		<?php } ?>
 
-		<?php foreach ($endpoint['example_urls'] as $example_url){ ?>
+		<?php if (isset($endpoint['example_urls']) && is_array($endpoint['example_urls'])) foreach ($endpoint['example_urls'] as $example_url){ ?>
 			<li> Example: <a href="<?php echo HtmlSpecialChars($example_url); ?>"><?php echo HtmlSpecialChars($example_url); ?></a> </li>
 		<?php } ?>
 
-		<?php foreach ($endpoint['notes'] as $note){ ?>
+		<?php if (isset($endpoint['notes']) && is_array($endpoint['notes'])) foreach ($endpoint['notes'] as $note){ ?>
 			<li><?php echo format_html($note); ?></li>
 		<?php } ?>
 
-		<?php if ($endpoint['discovery']){ ?>
+		<?php if (isset($endpoint['discovery'])){ ?>
 		 	<li> Supports discovery via <code>&lt;link&gt;</code> tags </li>
 		<?php } ?>
 	</ul>
@@ -514,6 +528,8 @@ code {
 	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
 	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>	
+	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
+	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
 	<li>Any: oEmbed API proxy endpoint for open-source projects (<a href="http://oembedapi.com">http://oembedapi.com</a>)</li>
 </ul>
 
@@ -526,13 +542,9 @@ code {
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
 </ul>
 <ul>
-	<li><a href="http://www.webmonkey.com/tutorial/Get_Started_With_OEmbed">Webmonkey tutorial</a></li>
-	<li><a href="http://leahculver.com/2008/05/29/announcing-oembed-an-open-standard-for-embedded-content/">Leah's blog</a></li>
-	<li><a href="http://www.readwriteweb.com/archives/oembed_open_format.php" target="_blank">ReadWriteWeb</a></li>
-	<li><a href="http://developer.yahoo.com/blogs/ydn/oembed-embedding-third-party-media-made-easy-7355.html">Yahoo! Developer Network</a></li>
+	<li><a href="https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
+	<li><a href="https://blog.leahculver.com/2008/05/announcing-oembed-an-open-standard-for-embedded-content.html">Leah's blog</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
-	<li><a href="http://blog.hulu.com/2008/5/27/sharing-is-easy" target="_blank">Hulu blog</a></li>
-	<li><a href="http://qik.com/blog/124/qik-embraces-oembed-for-embedding-videos">Qik blog</a></li>
 </ul>
 
 <p>This document is stored on <a href="https://github.com/iamcal/oembed">GitHub</a>.

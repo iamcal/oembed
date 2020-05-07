@@ -1,0 +1,16 @@
+---
+- provider_name: Meetup
+  provider_url: http://www.meetup.com
+  endpoints:
+  - schemes:
+    - http://meetup.com/*
+    - https://www.meetup.com/*
+    - https://meetup.com/*
+    - http://meetu.ps/*
+    url: https://api.meetup.com/oembed
+    docs_url: http://www.meetup.com/meetup_api/docs/oembed/
+    example_urls:
+    - https://api.meetup.com/oembed?format=json&url=http%3A%2F%2Fwww.meetup.com%2FPHPColMeetup%2Fphotos%2F
+    formats:
+    - json
+...

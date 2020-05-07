@@ -1,0 +1,17 @@
+---
+- provider_name: Soundsgood
+  provider_url: https://soundsgood.co
+  endpoints:
+  - schemes:
+    - https://play.soundsgood.co/playlist/*
+    - https://soundsgood.co/playlist/*
+    url: https://play.soundsgood.co/oembed
+    discovery: true
+    example_urls:
+    - https://play.soundsgood.co/oembed?url=https%3A%2F%2Fplay.soundsgood.co%2Fplaylist%2F24h-avec-nuits-fauves&format=json
+    - https://play.soundsgood.co/oembed?url=https%3A%2F%2Fplay.soundsgood.co%2Fplaylist%2Fpour-siffloter-sur-les-routes&format=xml
+    - https://play.soundsgood.co/oembed?url=https%3A%2F%2Fplay.soundsgood.co%2Fplaylist%2Fnova-soundclash-or-septembre-2016&format=json
+    formats:
+    - json
+    - xml
+...

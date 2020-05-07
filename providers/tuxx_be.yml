@@ -1,0 +1,11 @@
+---
+- provider_name: Tuxx
+  provider_url: https://www.tuxx.be/
+  endpoints:
+  - schemes:
+    - https://www.tuxx.be/*
+    url: https://www.tuxx.be/services/oembed
+    example_urls:
+    - https://www.tuxx.be/services/oembed?url=http%3A%2F%2Fwww.tuxx.be%2Fnl%2Ffeestdagen_en_gedenkdagen%2F&format=json
+    discovery: true
+...

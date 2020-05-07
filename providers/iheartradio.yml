@@ -1,0 +1,14 @@
+---
+- provider_name: iHeartRadio
+  provider_url: https://www.iheart.com
+  endpoints:
+  - schemes:
+    - https://www.iheart.com/podcast/*/*
+    url: https://www.iheart.com/oembed
+    example_urls:
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2F&format=json
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2F&format=xml
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2Fepisode%2Fshort-stuff-why-does-time-speed-54953593%2F&format=json
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2Fepisode%2Fshort-stuff-why-does-time-speed-54953593%2F&format=xml
+    discovery: true
+...

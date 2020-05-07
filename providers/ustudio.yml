@@ -1,0 +1,25 @@
+---
+- provider_name: uStudio, Inc.
+  provider_url: https://www.ustudio.com
+  endpoints:
+  - schemes:
+    - https://*.ustudio.com/embed/*
+    - https://*.ustudio.com/embed/*/*
+    url: https://app.ustudio.com/api/v2/oembed
+    example_urls:
+    - https://app.ustudio.com/api/v2/oembed?url=https%3A%2F%2Fembed.ustudio.com%2Fembed%2FDhExfAxGHFYz%2FU8X71S93cklU&maxwidth=426&maxheight=240&autoplay=false&share=false
+    - https://app.ustudio.com/api/v2/oembed?url=https%3A%2F%2Fembed.ustudio.com%2Fembed%2FDgOC4s9QYIag
+    - http://app.ustudio.com/api/v2/oembed?url=https%3A%2F%2Fauthorized-embed.ustudio.com%2Fembed%2FDgwP33zqbPXD%2FU8X71S93cklU
+    - https://app.ustudio.com/api/v2/oembed?url=https%3A%2F%2Fauthorized-embed.ustudio.com%2Fembed%2FDWe7KApmMXBZ
+    discovery: true
+    formats:
+    - json
+    notes: |
+      In addition to all required and optional OEmbed parameters for
+      video content, uStudio supports "autoplay" and "share"
+      parameters, which may be set to "true" to enable autoplay or
+      share links. If "ignore_aspect_ratio" parameter is set to "true"
+      and "maxwidth" and "maxheight" are both provided, the embed code
+      will exactly fill the max width and height, ignoring the aspect
+      ratio of the video being embedded.
+...

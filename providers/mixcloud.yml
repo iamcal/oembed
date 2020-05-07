@@ -1,0 +1,12 @@
+---
+- provider_name: MixCloud
+  provider_url: https://mixcloud.com/
+  endpoints:
+  - schemes:
+    - http://www.mixcloud.com/*/*/
+    - https://www.mixcloud.com/*/*/
+    url: https://www.mixcloud.com/oembed/
+    docs_url: https://www.mixcloud.com/developers/
+    example_urls:
+    - https://www.mixcloud.com/oembed/?url=http://www.mixcloud.com/TechnoLiveSets/jon_rundell-live-electrobeach-festival-benidorm-16-08-2013/&format=xml
+...

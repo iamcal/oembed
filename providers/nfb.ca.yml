@@ -1,0 +1,11 @@
+---
+- provider_name: nfb.ca
+  provider_url: http://www.nfb.ca/
+  endpoints:
+  - schemes:
+    - http://*.nfb.ca/film/*
+    url: http://www.nfb.ca/remote/services/oembed/
+    example_urls:
+    - http://www.nfb.ca/remote/services/oembed/?url=http%3A%2F%2Fwww.nfb.ca%2Ffilm%2Faboriginality&format=xml
+    discovery: true
+...

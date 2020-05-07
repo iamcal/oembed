@@ -1,0 +1,11 @@
+---
+- provider_name: ChartBlocks
+  provider_url: http://www.chartblocks.com/
+  endpoints:
+  - schemes:
+    - http://public.chartblocks.com/c/*
+    url: http://embed.chartblocks.com/1.0/oembed
+    example_urls:
+    - http://embed.chartblocks.com/1.0/oembed?url=http%3A%2F%2Fpublic.chartblocks.com%2Fc%2F53f7702dc9a61d7935942613%2F&format=json
+    - http://embed.chartblocks.com/1.0/oembed?url=http%3A%2F%2Fpublic.chartblocks.com%2Fc%2F53f7702dc9a61d7935942613%2F&format=xml
+...

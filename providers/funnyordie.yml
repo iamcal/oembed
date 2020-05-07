@@ -1,0 +1,10 @@
+---
+- provider_name: FunnyOrDie
+  provider_url: http://www.funnyordie.com/
+  endpoints:
+  - schemes:
+    - http://www.funnyordie.com/videos/*
+    url: http://www.funnyordie.com/oembed.{format}
+    example_urls:
+    - http://www.funnyordie.com/oembed.xml?url=http%3A%2F%2Fwww.funnyordie.com%2Fvideos%2Fa7311134ac%2Fpatton-oswalt-in-heavy-metal
+...

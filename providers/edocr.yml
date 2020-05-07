@@ -1,0 +1,11 @@
+---
+- provider_name: edocr
+  provider_url: http://www.edocr.com
+  endpoints:
+  - schemes:
+    - http://edocr.com/docs/*
+    url: http://edocr.com/api/oembed
+    docs_url: http://www.edocr.com/oembed-documentation
+    example_urls:
+    - http://www.edocr.com/api/oembed/?format=json&url=http%3A%2F%2Fwww.edocr.com%2Fdoc%2F144677%2Fcapillary-technologies-corporate-brochure
+...

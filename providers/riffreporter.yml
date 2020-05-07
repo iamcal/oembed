@@ -1,0 +1,13 @@
+---
+- provider_name: RiffReporter
+  provider_url: https://www.riffreporter.de/
+  endpoints:
+  - url: https://www.riffreporter.de/service/oembed
+    discovery: true
+    example_urls:
+    - https://www.riffreporter.de/service/oembed?url=https://www.riffreporter.de/was-ist-riffreporter/
+    - https://www.riffreporter.de/service/oembed/json/?url=https://www.riffreporter.de/was-ist-riffreporter/
+    - https://www.riffreporter.de/service/oembed?url=https://www.riffreporter.de/was-ist-riffreporter/&service=json
+    - https://www.riffreporter.de/service/oembed?url=https://www.riffreporter.de/was-ist-riffreporter/&service=xml
+    - https://www.riffreporter.de/service/oembed/xml/?url=https://www.riffreporter.de/was-ist-riffreporter/
+...

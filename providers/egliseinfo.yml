@@ -1,0 +1,12 @@
+---
+- provider_name: EgliseInfo
+  provider_url: http://egliseinfo.catholique.fr/
+  endpoints:
+  - schemes:
+    - http://egliseinfo.catholique.fr/*
+    url: http://egliseinfo.catholique.fr/api/oembed
+    example_urls:
+    - http://egliseinfo.catholique.fr/api/oembed?url=http%3A%2F%2Fegliseinfo.catholique.fr%2Fhoraires%2Fparis&format=json
+    - http://egliseinfo.catholique.fr/api/oembed?url=http%3A%2F%2Fegliseinfo.catholique.fr%2Fhoraires%2Fparis&format=xml
+    discovery: true
+...

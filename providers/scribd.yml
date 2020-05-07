@@ -1,0 +1,10 @@
+---
+- provider_name: Scribd
+  provider_url: http://www.scribd.com/
+  endpoints:
+  - schemes:
+    - http://www.scribd.com/doc/*
+    url: http://www.scribd.com/services/oembed/
+    example_urls:
+    - http://www.scribd.com/services/oembed/?format=xml&url=http%3A%2F%2Fwww.scribd.com%2Fdoc%2F110799637%2FSynthesis-of-Knowledge-Effects-of-Fire-and-Thinning-Treatments-on-Understory-Vegetation-in-Dry-U-S-Forests
+...

@@ -1,0 +1,10 @@
+---
+- provider_name: On Aol
+  provider_url: http://on.aol.com/
+  endpoints:
+  - schemes:
+    - http://on.aol.com/video/*
+    url: http://on.aol.com/api
+    example_urls:
+    - http://api.embed.ly/1/oembed?url=http%3A%2F%2Fon.aol.com%2Fvideo%2Fplans-to-clone-john-lennon-using-one-of-his-teeth-517906689
+...

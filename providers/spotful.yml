@@ -1,0 +1,15 @@
+---
+- provider_name: Spotful
+  provider_url: https://bespotful.com
+  endpoints:
+  - schemes:
+    - http://play.bespotful.com/*
+    url: https://api.bespotful.com/oembed
+    example_urls:
+    - https://api.bespotful.com/oembed?url=https://play.bespotful.com/3457
+    - https://api.bespotful.com/oembed?url=https://play.bespotful.com/3457&format=json
+    - https://api.bespotful.com/oembed?url=https://play.bespotful.com/3457&format=xml
+    - https://play.bespotful.com/3457/oembed.json
+    discovery: true
+    notes: There is a statically generated oembed file for both xml and json available via https://play.bespotful.com/{project_id}/oembed.{format} as well as the API endpoint.
+...

@@ -1,0 +1,22 @@
+---
+- provider_name: Orbitvu
+  provider_url: https://orbitvu.co
+  endpoints:
+  - schemes:
+    - https://orbitvu.co/001/*/ov3601/view
+    - https://orbitvu.co/001/*/ov3601/*/view
+    - https://orbitvu.co/001/*/ov3602/*/view
+    - https://orbitvu.co/001/*/2/orbittour/*/view
+    - https://orbitvu.co/001/*/1/2/orbittour/*/view
+    - http://orbitvu.co/001/*/ov3601/view
+    - http://orbitvu.co/001/*/ov3601/*/view
+    - http://orbitvu.co/001/*/ov3602/*/view
+    - http://orbitvu.co/001/*/2/orbittour/*/view
+    - http://orbitvu.co/001/*/1/2/orbittour/*/view
+
+    url: http://orbitvu.co/service/oembed
+    example_urls:
+    - https://orbitvu.co/service/oembed?url=https%3A//orbitvu.co/001/JJXNutMRq8DvjEQ8Sbv8WH/ov3601/3/view&format=json
+    - https://orbitvu.co/service/oembed?url=https%3A//orbitvu.co/001/JJXNutMRq8DvjEQ8Sbv8WH/2/orbittour/61/view&format=json
+    discovery: true
+...

@@ -1,0 +1,11 @@
+---
+- provider_name: Moby Picture
+  provider_url: http://www.mobypicture.com
+  endpoints:
+  - schemes:
+    - http://www.mobypicture.com/user/*/view/*
+    - http://moby.to/*
+    url: http://api.mobypicture.com/oEmbed
+    example_urls:
+    - http://api.mobypicture.com/oEmbed?format=xml&url=http%3A%2F%2Fmobypicture.com%2Fuser%2FHenk_Voermans%2Fview%2F15880044
+...

@@ -1,0 +1,13 @@
+---
+- provider_name: Spreaker
+  provider_url: https://www.spreaker.com/
+  endpoints:
+  - schemes:
+    - http://*.spreaker.com/*
+    - https://*.spreaker.com/*
+    url: https://api.spreaker.com/oembed
+    example_urls:
+    - https://api.spreaker.com/oembed?url=https%3A%2F%2Fwww.spreaker.com%2Fuser%2F9234049%2Fworld-of-warcraft-arthas-rise-of-the-lic
+    - https://api.spreaker.com/oembed?url=https%3A%2F%2Fwww.spreaker.com%2Fuser%2F9234049%2Fworld-of-warcraft-arthas-rise-of-the-lic&format=xml
+    discovery: true
+...

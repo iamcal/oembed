@@ -1,0 +1,45 @@
+---
+- provider_name: Geograph Britain and Ireland
+  provider_url: https://www.geograph.org.uk/
+  endpoints:
+  - schemes:
+    - http://*.geograph.org.uk/*
+    - http://*.geograph.co.uk/*
+    - http://*.geograph.ie/*
+    - http://*.wikimedia.org/*_geograph.org.uk_*
+    notes:
+    - 'File scheme: <code>geograph-\d+-*.jpg</code> (files saved from Geograph may
+      look like this)'
+    - Scheme `http://*.wikimedia.org/*_geograph.org.uk_*` can also help with Geograph
+      images crossloaded to Wikimedia Commons
+    url: http://api.geograph.org.uk/api/oembed
+    example_urls:
+    - http://api.geograph.org.uk/api/oembed?url=http%3A%2F%2Fwww.geograph.org.uk%2Fphoto%2F2928776&format=json
+    - http://api.geograph.org.uk/api/oembed?url=http%3A%2F%2Fs0.geograph.org.uk%2Fgeophotos%2F02%2F92%2F87%2F2928776_72cdbeab.jpg
+
+- provider_name: Geograph Channel Islands
+  provider_url: http://channel-islands.geograph.org/
+  endpoints:
+  - schemes:
+    - http://*.geograph.org.gg/*
+    - http://*.geograph.org.je/*
+    - http://channel-islands.geograph.org/*
+    - http://channel-islands.geographs.org/*
+    - http://*.channel.geographs.org/*
+    url: http://www.geograph.org.gg/api/oembed
+    example_urls:
+    - http://www.geograph.org.gg/api/oembed?url=http%3A%2F%2Fwww.geograph.org.gg%2Fphoto%2F773
+    - http://www.geograph.org.gg/api/oembed?url=http%3A%2F%2Fs1.channel.geographs.org%2Fphotos%2F00%2F07%2F000773_e1e23765_120x120.jpg&format=json
+
+- provider_name: Geograph Germany
+  provider_url: http://geo-en.hlipp.de/
+  endpoints:
+  - schemes:
+    - http://geo-en.hlipp.de/*
+    - http://geo.hlipp.de/*
+    - http://germany.geograph.org/*
+    url: http://geo.hlipp.de/restapi.php/api/oembed
+    example_urls:
+    - http://geo.hlipp.de/restapi.php/api/oembed?url=http%3A%2F%2Fgeo.hlipp.de%2Fphoto%2F20260&format=json
+    - http://geo.hlipp.de/restapi.php/api/oembed?url=http%3A%2F%2Fgeo.hlipp.de%2Fphotos%2F02%2F02%2F020260_dcfdbf8e.jpg
+...

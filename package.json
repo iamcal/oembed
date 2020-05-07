@@ -1,0 +1,27 @@
+{
+  "name": "oembed-providers",
+  "version": "1.0.20181214",
+  "license": "MIT",
+  "description": "oEmbed providers",
+  "main": "providers.json",
+  "files": ["providers.*"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "php json.php > providers.json",
+    "postpublish": "rm -f providers.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamcal/oembed.git"
+  },
+  "keywords": [
+    "oembed",
+    "json",
+    "providers",
+    "list"
+  ],
+  "author": "Cal Henderson <cal@iamcal.com>",
+  "bugs": {
+    "url": "https://github.com/iamcal/oembed/issues"
+  }
+}
