@@ -866,7 +866,7 @@
         - 'https://embed.wave.video/*'
       url: 'https://embed.wave.video/oembed'
       example_urls:
-        - 'https://embed.wave.video/oembed?format=json&url=https%3A%2F%2Fembed.wave.video%2F48212b56cb6eab301201fee4'
+        - 'https://embed.wave.video/oembed?format=json&url=https%3A%2F%2Fembed.wave.video%2F382c2d5bbb3949858a0c3f2f'
       discovery: true
 
 
