@@ -342,9 +342,9 @@ code {
 
 <a name="section4" id="section4"><h2>4. Discovery</h2></a>
 
-<p>oEmbed providers can choose to make their oEmbed support discoverable by adding elements to the head of their existing (X)HTML documents.</p>
+<p>oEmbed providers can choose to make their oEmbed support discoverable by adding <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> elements to the head of their existing (X)HTML documents or by setting <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">Link headers</a>.</p>
 
-<p>For example:</p>
+<p>Element example:</p>
 
 <pre>
 &lt;link rel="alternate" type="application/json+oembed"
@@ -355,7 +355,14 @@ code {
   title="Bacon Lollys oEmbed Profile" /&gt;
 </pre>
 
-<p>The URLs contained within the <code>href</code> attribute should be the full oEmbed endpoint plus URL and any needed format parameter. No other request parameters should be included in this URL.</p>
+<p>Header example:</p>
+
+<pre>
+Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=json&gt;; rel="alternate"; type="application/json+oembed"; title="Bacon Lollys oEmbed Profile"
+Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=xml&gt;; rel="alternate"; type="text/xml+oembed"; title="Bacon Lollys oEmbed Profile"
+</pre>
+
+<p>The URLs contained within the <code>href</code> attribute or <code>uri-reference</code> within angle brackets should be the full oEmbed endpoint plus URL and any needed format parameter. No other request parameters should be included in this URL.</p>
 
 <p>The <code>type</code> attribute must contain either <code>application/json+oembed</code> for JSON responses, or <code>text/xml+oembed</code> for XML.</p>
 
