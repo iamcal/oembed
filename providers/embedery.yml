@@ -1,0 +1,11 @@
+---
+- provider_name: Embedery
+  provider_url: https://embedery.com/
+  endpoints:
+  - schemes:
+    - https://embedery.com/widget/*
+    url: https://embedery.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://embedery.com/api/oembed?url=https%3A%2F%2Fembedery.com%2Fwidget%2FSzjWkZdPCPYb9iQ0FfwA
+...
