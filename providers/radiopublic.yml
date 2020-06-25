@@ -1,0 +1,18 @@
+---
+- provider_name: RadioPublic
+  provider_url: https://radiopublic.com
+  endpoints:
+  - schemes:
+    - https://play.radiopublic.com/*
+    - https://radiopublic.com/*
+    - https://www.radiopublic.com/*
+    - http://play.radiopublic.com/*
+    - http://radiopublic.com/*
+    - http://www.radiopublic.com/*
+    - https://*.radiopublic.com/*'
+    url: https://oembed.radiopublic.com/oembed
+    example_urls:
+    - https://oembed.radiopublic.com/oembed?url=https%3A%2F%2Fradiopublic.com%2Fthe-bucket-podcast-WD03oE%3ARXhwbG9yZQ&format=json
+    - https://oembed.radiopublic.com/oembed?url=https%3A%2F%2Fradiopublic.com%2FPodSaveAmerica%3AdHJlbmRpbmctaW4tc2VhcmNo&format=json
+    discovery: true
+...
