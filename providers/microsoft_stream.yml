@@ -1,0 +1,13 @@
+---
+- provider_name: Microsoft Stream
+  provider_url: https://stream.microsoft.com
+  endpoints:
+  - schemes:
+    - https://*.microsoftstream.com/video/*
+    - https://*.microsoftstream.com/channel/*
+    url: https://web.microsoftstream.com/oembed
+    docs_url: https://docs.microsoft.com/en-us/stream/embed-video-oembed
+    example_urls:
+    - https://web.microsoftstream.com/oembed?url=https%3A%2F%2Fweb.microsoftstream.com%2Fvideo%2Ff6df81b2-9438-4154-b32c-c023ebb2a4e3&preload=none&autoplay=false&width=1280&height=720
+    discovery: true
+...
