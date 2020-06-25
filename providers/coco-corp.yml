@@ -1,0 +1,12 @@
+---
+- provider_name: CoCo Corp
+  provider_url: https://ilovecoco.video
+  endpoints:
+  - schemes:
+    - https://app.ilovecoco.video/*/embed
+    url: https://app.ilovecoco.video/api/oembed.{format}
+    discovery: true
+    example_urls:
+    - https://app.ilovecoco.video/api/oembed.xml?url=https://app.ilovecoco.video/m4p4YNGyKR9fmNpgwozX/embed
+    - https://app.ilovecoco.video/api/oembed.json?url=https://app.ilovecoco.video/m4p4YNGyKR9fmNpgwozX/embed
+...
