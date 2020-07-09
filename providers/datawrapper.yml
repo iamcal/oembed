@@ -1,0 +1,13 @@
+---
+- provider_name: Datawrapper
+  provider_url: http://www.datawrapper.de
+  endpoints:
+  - schemes:
+    - https://datawrapper.dwcdn.net/*
+    url: https://api.datawrapper.de/v3/oembed/
+    docs_url: https://developer.datawrapper.de/reference#oembed
+    example_urls:
+    - https://api.datawrapper.de/v3/oembed/?url=https://datawrapper.dwcdn.net/RnWgL/9/
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

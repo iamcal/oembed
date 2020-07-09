@@ -1,0 +1,11 @@
+---
+- provider_name: Padlet
+  provider_url: https://padlet.com/
+  endpoints:
+  - schemes:
+    - https://padlet.com/*
+    url: https://padlet.com/oembed/
+    example_urls:
+    - https://padlet.com/oembed?url=https%3A//padlet.com/cogdogblog/aos9fosbbwk4&format=json
+    discovery: true
+...
