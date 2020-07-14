@@ -5,9 +5,12 @@
   - schemes:
     - https://twitter.com/*/status/*
     - https://*.twitter.com/*/status/*
+    - https://twitter.com/*/moments/*
+    - https://*.twitter.com/*/moments/*
     url: https://publish.twitter.com/oembed
     docs_url: https://dev.twitter.com/rest/reference/get/statuses/oembed
     example_urls:
     - https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F507185938620219395
+    - https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2Fi%2Fmoments%2F650667182356082688
 
 ...
