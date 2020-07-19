@@ -5,7 +5,7 @@
   - schemes:
     - http://codepen.io/*
     - https://codepen.io/*
-    url: http://codepen.io/api/oembed
+    url: https://codepen.io/api/oembed
     example_urls:
     - http://codepen.io/api/oembed?url=https://codepen.io/gingerdude/pen/JXwgdK&format=json
 ...
