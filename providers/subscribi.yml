@@ -5,7 +5,7 @@
   - schemes:
     - https://subscribi.io/*
     - https://subscribi.io/api/oembed*
-    url: https://codesandbox.io/oembed
+    url: https://subscribi.io/api/oembed
     discovery: true
     example_urls:
     - https://subscribi.io/api/oembed?url=https://subscribi.io/list/dsfds34543
