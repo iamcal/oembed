@@ -1,0 +1,13 @@
+---
+- provider_name: Wolfram Cloud
+  provider_url: https://www.wolframcloud.com
+  endpoints:
+    - schemes:
+        - https://*.wolframcloud.com/*
+      url: https://www.wolframcloud.com/oembed
+      example_urls:
+        - https://www.wolframcloud.com/oembed?url=https%3A%2F%2Fwww.wolframcloud.com%2Fobj%2Fb9e9ecd9-b523-4da8-a7da-948ecfc228a9
+        - https://www.wolframcloud.com/oembed?url=https%3A%2F%2Fwww.wolframcloud.com%2Fobj%2Fb9e9ecd9-b523-4da8-a7da-948ecfc228a9&format=json
+        - https://www.wolframcloud.com/oembed?url=https%3A%2F%2Fwww.wolframcloud.com%2Fobj%2Fb9e9ecd9-b523-4da8-a7da-948ecfc228a9&format=xml
+      discovery: true
+...
