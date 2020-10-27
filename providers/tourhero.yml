@@ -1,0 +1,15 @@
+---
+- provider_name: TourHero
+  provider_url: http://www.tourhero.com
+  endpoints:
+  - schemes:
+    - https://www.tourhero.com/*
+    url: https://oembed.tourhero.com/
+    example_urls:
+    - https://oembed.tourhero.com/?url=https%3A%2F%2Fwww.tourhero.com%2Fen%2Fultimate-guide-covid19-travel-restrictions-reopening%2Fukraine.html
+    - https://oembed.tourhero.com/?url=https%3A%2F%2Fwww.tourhero.com%2Fen%2Fultimate-guide-covid19-travel-restrictions-reopening%2Fjapan.html
+    - https://oembed.tourhero.com/?url=https%3A%2F%2Fwww.tourhero.com%2Fen%2Fultimate-guide-covid19-travel-restrictions-reopening%2Fsingapore.html
+    discovery: true
+    formats:
+    - json
+...

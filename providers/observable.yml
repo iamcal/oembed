@@ -1,0 +1,16 @@
+---
+- provider_name: Observable
+  provider_url: https://observablehq.com
+  endpoints:
+  - schemes:
+    - https://observablehq.com/@*/*
+    - https://observablehq.com/d/*
+    - https://observablehq.com/embed/*
+    url: https://api.observablehq.com/oembed
+    docs_url: https://observablehq.com/@observablehq/introduction-to-embedding
+    example_urls:
+    - https://api.observablehq.com/oembed?url=https://observablehq.com/@d3/stacked-to-grouped-bars&format=json
+    formats:
+    - json
+    notes: Provider only supports the 'rich' type
+...
