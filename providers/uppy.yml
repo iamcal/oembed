@@ -1,0 +1,12 @@
+---
+- provider_name: uppy
+  provider_url: https://uppy.jp
+  endpoints:
+  - schemes:
+    - https://app.uppy.jp/_shares/video/*
+    url: https://api.uppy.jp/v1/oembed
+    example_urls:
+    - https://api.uppy.jp/v1/oembed?url=https%3A%2F%2Fapp.uppy.jp%2Fshares%2Fvideo?pid=234679d3-3a4d-4d59-9036-4c926f8b901f%26share_id=c4856a10-dd3c-4b82-946e-50dc065bf829
+    discovery: true
+    notes: Provider only supports the 'video' type
+...
