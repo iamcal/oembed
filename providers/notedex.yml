@@ -7,5 +7,5 @@
     url: https://indexcardssample.azurewebsites.net/Stack/oembed
     discovery: true
     example_urls:
-    https://indexcardssample.azurewebsites.net/Stack/oembed?url=https://indexcardssample.azurewebsites.net/Stack/Index/297eb397-bec2-453e-a6f3-ed13c49506f2
+    https://indexcardssample.azurewebsites.net/Stack/oembed?url=https%3A%2F%2Findexcardssample.azurewebsites.net%2FStack%2FIndex%2F297eb397-bec2-453e-a6f3-ed13c49506f2
 ...
