@@ -1,0 +1,11 @@
+---
+- provider_name: NoteDex
+  provider_url: https://notedex.app/
+  endpoints:
+  - schemes:
+    - https://indexcardssample.azurewebsites.net/Stack/Index/*
+    url: https://indexcardssample.azurewebsites.net/Stack/oembed
+    discovery: true
+    example_urls:
+    http://indexcardssample.azurewebsites.net/Stack/oembed?url=http://indexcardssample.azurewebsites.net/Stack/Index/297eb397-bec2-453e-a6f3-ed13c49506f2
+...
