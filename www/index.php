@@ -374,7 +374,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 <p>Request:</p>
 
-<pre>http://www.youtube.com/oembed?url=http%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&amp;format=json</pre>
+<pre>https://www.youtube.com/oembed?url=https%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&amp;format=json</pre>
 
 <p>Response:</p>
 
@@ -382,18 +382,18 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 	"version": "1.0",
 	"type": "video",
 	"provider_name": "YouTube",
-	"provider_url": "http://youtube.com/",
+	"provider_url": "https://youtube.com/",
 	"width": 425,
 	"height": 344,
 	"title": "Amazing Nintendo Facts",
 	"author_name": "ZackScott",
-	"author_url": "http://www.youtube.com/user/ZackScott",
+	"author_url": "https://www.youtube.com/user/ZackScott",
 	"html":
 		"&lt;object width=\"425\" height=\"344\"&gt;
-			&lt;param name=\"movie\" value=\"http://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"&gt;&lt;/param&gt;
+			&lt;param name=\"movie\" value=\"https://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"&gt;&lt;/param&gt;
 			&lt;param name=\"allowFullScreen\" value=\"true\"&gt;&lt;/param&gt;
 			&lt;param name=\"allowscriptaccess\" value=\"always\"&gt;&lt;/param&gt;
-			&lt;embed src=\"http://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"
+			&lt;embed src=\"https://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"
 				type=\"application/x-shockwave-flash\" width=\"425\" height=\"344\"
 				allowscriptaccess=\"always\" allowfullscreen=\"true\"&gt;&lt;/embed&gt;
 		&lt;/object&gt;",
