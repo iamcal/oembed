@@ -1,0 +1,13 @@
+---
+- provider_name: Hosted by You
+  provider_url: https://hostedbyyou.com
+  endpoints:
+  - schemes:
+    - https://hostedbyyou.com/event/*
+    url: https://hostedbyyou.com/api/oembed
+    example_urls:
+    - https://hostedbyyou.com/oembed?url=https%3A%2F%2Fhostedbyyou.com%2Fevent%2F8255b3cd-88ca-4374-8616-8e7d8177a5e4
+    - https://hostedbyyou.com/oembed?url=https%3A%2F%2Fhostedbyyou.com%2Fevent%2Fd2818291-f395-4040-83b6-beaedeefd7ba
+    formats:
+    - json
+...
