@@ -1,0 +1,11 @@
+---
+- provider_name: CustomerDB
+  provider_url: http://customerdb.com/
+  endpoints:
+  - schemes:
+    - https://app.customerdb.com/share/*
+    url: https://app.customerdb.com/embed
+    example_urls:
+    - https://app.customerdb.com/embed?url=https%3A%2F%2Fapp.customerdb.com%2Fshare%2Fe7f70c84a1f64557
+
+...
