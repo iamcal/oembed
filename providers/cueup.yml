@@ -1,0 +1,11 @@
+---
+- provider_name: Cueup DJ Booking
+  provider_url: https://cueup.io
+  endpoints:
+  - schemes:
+    - https://cueup.io/user/*/sounds/*
+    url: https://gql.cueup.io/oembed
+    example_urls:
+    - https://gql.cueup.io/oembed?url=https%3A%2F%2Fcueup.io%2Fuser%2Fspinso%2Fsounds%2F111_housie-bousie&format=json
+    - https://gql.cueup.io/oembed?url=https%3A%2F%2Fcueup.io%2Fuser%2Fspinso%2Fsounds%2Fsoundcloud-215863477_house-mixtape
+...
