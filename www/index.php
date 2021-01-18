@@ -243,7 +243,7 @@ code {
 
 	<dt><b><code>provider_name</code></b> (optional)</dt>
 	<dd>The name of the resource provider.</dd>
-	
+
 	<dt><b><code>provider_url</code></b> (optional)</dt>
 	<dd>The url of the resource provider.</dd>
 
@@ -433,7 +433,8 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
-<p>Providers are available programatically as a json file: <a href="http://oembed.com/providers.json">http://oembed.com/providers.json</a>.</p>
+<p>Providers are available programatically as a json file: <a href="https://oembed.com/providers.json">https://oembed.com/providers.json</a>.</p>
+
 <p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and add/modify <code>providers/*.yml</code>.</p>
 
 <?php
@@ -447,75 +448,22 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 		}
 	}
 
-	usort($data, 'local_sort');
-
-	function local_sort($a, $b){
-		return strcasecmp($a['provider_name'], $b['provider_name']);
-	}
-
-	function format_html($html){
-		return preg_replace('!`(.*?)`!', '<code>$1</code>', $html);
-	}
-
-	foreach ($data as $provider){
+	$count = count($data);
 ?>
-	<p><?php echo HtmlSpecialChars($provider['provider_name']); ?> (<a href="<?php echo HtmlSpecialChars($provider['provider_url']); ?>"><?php echo HtmlSpecialChars($provider['provider_url']); ?></a>)</p>
-	<?php foreach ($provider['endpoints'] as $endpoint){ ?>
-		<ul>
 
-		<?php if (isset($endpoint['schemes']) && is_array($endpoint['schemes'])) foreach ($endpoint['schemes'] as $scheme){ ?>
-			<li> URL scheme: <code><?php echo HtmlSpecialChars($scheme); ?></code> </li>
-		<?php } ?>
+<p>There are currently <i><?php echo number_format($count); ?> providers</i> in the registry.
+	Providers and consumers are <b>strongly encouraged</b> to use the <a href="#section4">discovery mechanism</a>, rather than thne registery.</p>
 
-		<?php if (isset($endpoint['url'])){ ?>
-			<li> API endpoint: <code><?php echo HtmlSpecialChars($endpoint['url']); ?></code>
-			<?php if (isset($endpoint['formats']) && count($endpoint['formats'])){ ?>
-				(only supports <code><?php echo HtmlSpecialChars(StrToLower(implode(', ', $endpoint['formats']))); ?></code>)
-			<?php } ?>
-			</li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['docs_url'])){ ?>
-			<li> Documentation: <a href="<?php echo HtmlSpecialChars($endpoint['docs_url']); ?>"><?php echo HtmlSpecialChars($endpoint['docs_url']); ?></a> </li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['example_urls']) && is_array($endpoint['example_urls'])) foreach ($endpoint['example_urls'] as $example_url){ ?>
-			<li> Example: <a href="<?php echo HtmlSpecialChars($example_url); ?>"><?php echo HtmlSpecialChars($example_url); ?></a> </li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['notes']) && is_array($endpoint['notes'])) foreach ($endpoint['notes'] as $note){ ?>
-			<li><?php echo format_html($note); ?></li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['discovery'])){ ?>
-		 	<li> Supports discovery via <code>&lt;link&gt;</code> tags </li>
-		<?php } ?>
-	</ul>
-	<?php } ?>
-<?php } ?>
 
 <a name="section7.2" id="section7.2"><h3>7.2. Consumers</h3></a>
 
-<p>To have a particular consumer display your OEmbed, please contact the consumer with your provider's URL scheme and API endpoint.</p>
+<p>Many services consume oEmbed information to display link information, including WordPress and Slack.</p>
 
-<p>Buckybase (<a href="http://buckybase.appspot.com/">http://buckybase.appspot.com/</a>)</p>
-<ul>
-	<li> Contact: Manuel Simoni (msimoni [at] gmail.com)</li>
-</ul>
+<p>There are also some tools specifically built around managing URL embeds:</p>
 
-<p>280 Slides (<a href="http://280slides.com/">http://280slides.com/</a>)</p>
 <ul>
-	<li> Contact: Ross Boucher (rboucher [at] gmail.com)</li>
-</ul>
-
-<p>Dumble (<a href="http://oohembed.com/dumble/">http://oohembed.com/dumble/</a>)</p>
-<ul>
-	<li> Contact: Deepak Sarda (deepak.sarda [at] gmail.com)</li>
-</ul>
-
-<p>Iframely (<a href="http://iframely.com/">http://iframely.com/</a>)</p>
-<ul>
-	<li> Contact: Ivan Paramonau (i.paramonau [at] gmail.com)</li>
+	<li>Iframely (<a href="http://iframely.com/">http://iframely.com/</a>)</li>
+	<li>OEmbed Link Viewer (<a href="https://oembed.link/">https://oembed.link/</a>)</li>
 </ul>
 
 <a name="section7.3" id="section7.3"><h3>7.3. Libraries</h3></a>
@@ -534,7 +482,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 	<li>Java: java-oembed (<a href="https://github.com/michael-simons/java-oembed">https://github.com/michael-simons/java-oembed</a>)</li>
 	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
-	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>	
+	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>
 	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
 	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
 	<li>Any: oEmbed API proxy endpoint for open-source projects (<a href="http://oembedapi.com">http://oembedapi.com</a>)</li>
