@@ -1,0 +1,11 @@
+---
+- provider_name: AnnieMusic
+  provider_url: https://anniemusic.app
+  endpoints:
+  - schemes:
+    - https://anniemusic.app/t/*
+    - https://anniemusic.app/p/*
+    url: https://api.anniemusic.app/api/v1/oembed
+    example_urls:
+    - https://api.anniemusic.app/api/v1/oembed?url=https%3A%2F%2Fanniemusic.app%2Ft%2FXDSOYMAnVG
+...
