@@ -23,14 +23,14 @@
       - https://instagr.am/tv/*
       - https://www.instagram.com/tv/*
       - https://www.instagr.am/tv/*
-      url: https://graph.facebook.com/v9.0/instagram_oembed
-      docs_url: https://developers.facebook.com/docs/instagram/oembed
-      example_urls:
-        - https://graph.facebook.com/v9.0/instagram_oembed?url=https%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
-      formats:
-        - json
-      notes:
-        - 'This endpoint requires a facebook app with the oEmbed Product attached'
+    url: https://graph.facebook.com/v9.0/instagram_oembed
+    docs_url: https://developers.facebook.com/docs/instagram/oembed
+    example_urls:
+      - https://graph.facebook.com/v9.0/instagram_oembed?url=https%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
+    formats:
+      - json
+    notes:
+      - 'This endpoint requires a facebook app with the oEmbed Product attached'
   - schemes:
     - http://instagram.com/*/p/*,
     - http://www.instagram.com/*/p/*,
