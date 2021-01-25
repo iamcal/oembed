@@ -1,0 +1,19 @@
+---
+- provider_name: Ex.Co
+  provider_url: https://ex.co
+  endpoints:
+  - schemes:
+    - https://app.ex.co/stories/*
+    - https://www.playbuzz.com/*
+    url: https://oembed.ex.co/item
+    example_urls:
+    - https://oembed.ex.co/item?id=8fb2343f-fa5d-48d4-8723-f8b5d51cc1a9
+    - https://oembed.ex.co/item?url=https://app.ex.co/stories/item/8fb2343f-fa5d-48d4-8723-f8b5d51cc1a9
+    - https://oembed.ex.co/item?url=https://app.ex.co/stories/paolagarcia10/remembering-september-11th-flash-back-to-images-we-will-never-forget
+    - https://oembed.ex.co/item?url=https://www.playbuzz.com/paolagarcia10/remembering-september-11th-flash-back-to-images-we-will-never-forget
+    discovery: false
+    docs_url: https://developer.ex.co/#/items/oembed
+    notes: 
+    - Playbuzz.com was renamed to Ex.Co in 2019.
+    - The oembed endpoint supports both domains. 
+...
