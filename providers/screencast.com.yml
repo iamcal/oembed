@@ -2,6 +2,8 @@
 - provider_name: Screencast.com
   provider_url: http://www.screencast.com/
   endpoints:
+  - schemes:
+    - http://www.screncast.com/*
   - url: https://api.screencast.com/external/oembed
     discovery: true
     example_urls:
