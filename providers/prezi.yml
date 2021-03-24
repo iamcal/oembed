@@ -1,0 +1,13 @@
+---
+- provider_name: Prezi Video
+  provider_url: https://prezi.com/
+  endpoints:
+  - schemes:
+    - https://prezi.com/v/*
+    - https://*.prezi.com/v/*
+    url: https://prezi.com/v/oembed
+    discovery: true
+    example_urls:
+    - https://prezi.com/v/oembed?url=https%3A%2F%2Fpreprod.prezi.com%2Fv%2Fzrmitn0impxx%2Fcheck-out-prezi-video%2F&format=json
+    - https://prezi.com/v/oembed?url=https%3A%2F%2Fpreprod.prezi.com%2Fv%2Fzrmitn0impxx%2Fcheck-out-prezi-video%2F&format=xml
+...
