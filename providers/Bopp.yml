@@ -1,0 +1,13 @@
+---
+- provider_name: Bopp
+  provider_url: http://www.bopp.tk
+  endpoints:
+  - schemes:
+    - http://i.bopp.tk/*
+    url: http://api.bopp.tk/v1/oembed
+    docs_url: N/A
+    example_urls:
+    - http://api.bopp.tk/v1/oembed?url=https://i.bopp.tk/c08c1b1i8qk&format=json
+    discovery: true
+    notes: Provider only supports json
+...
