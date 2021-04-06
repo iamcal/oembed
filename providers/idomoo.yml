@@ -9,6 +9,5 @@
     - json
     example_urls:
     - https://oembed.idomoo.com/oembed?url=http%3A%2F%2Fliv.idomoo.com%2F1234%2F0000%2Fabcdef.mp4&maxwidth=1280&maxheight=720&autoplay=true
-    discovery: false
     notes: Provider only supports the 'json' format
 ...
