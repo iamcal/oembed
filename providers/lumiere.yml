@@ -8,5 +8,4 @@
       discovery: true
       example_urls:
         - https://admin.lumiere.is/api/services/oembed?url=https://p.lumiere.is/v/TQ41w_jVk2&format=json
-        - https://admin.lumiere.is/api/services/oembed?url=https://p.lumiere.is/v/TQ41w_jVk2&format=xml
 ...
