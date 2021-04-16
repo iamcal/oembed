@@ -1,0 +1,14 @@
+---
+- provider_name: LottieFiles
+  provider_url: https://lottiefiles.com/
+  endpoints:
+  - schemes:
+    - https://lottiefiles.com/*
+    - https://*.lottiefiles.com/*
+    url: https://embed.lottiefiles.com/oembed
+    discovery: true
+    example_urls:
+    - https://embed.lottiefiles.com/oembed?url=https://lottiefiles.com/860-maldives-flag
+    formats:
+    - json
+...
