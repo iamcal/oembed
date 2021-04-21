@@ -7,6 +7,5 @@
       url: https://admin.lumiere.is/api/services/oembed
       discovery: true
       example_urls:
-        - https://dev.admin.lumiere.is/api/services/oembed?url=https://dev.p.lumiere.is/v/9qcQHJEf-o
-        - https://dev.admin.lumiere.is/api/services/oembed?url=https://dev.p.lumiere.is/v/9qcQHJEf-o&format=xml
+        - https://admin.lumiere.is/api/services/oembed?url=https://p.lumiere.is/v/TQ41w_jVk2&format=json
 ...
