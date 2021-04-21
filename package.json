@@ -1,14 +1,16 @@
 {
   "name": "oembed-providers",
-  "version": "1.0.20181214",
+  "version": "1.0.20210407",
   "license": "MIT",
   "description": "oEmbed providers",
   "main": "providers.json",
-  "files": ["providers.*"],
+  "files": [
+    "providers.*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "php json.php > providers.json",
-    "postpublish": "rm -f providers.json"
+    "build": "node ./build.js providers/*.yml > providers.json",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,8 @@
   "author": "Cal Henderson <cal@iamcal.com>",
   "bugs": {
     "url": "https://github.com/iamcal/oembed/issues"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.0.0"
   }
 }
