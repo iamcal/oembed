@@ -1,0 +1,18 @@
+---
+- provider_name: SproutVideo
+  provider_url: https://sproutvideo.com
+  endpoints:
+  - schemes:
+    - https://sproutvideo.com/videos/*
+    - https://*.vids.io/videos/*
+    url: http://sproutvideo.com/oembed.{format}
+    formats:
+      - json
+      - xml
+    example_urls:
+    - https://sproutvideo.com/oembed.json?url=http%3A%2F%2Fsproutvideo.com%2Fvideos%2F709adcb31f19e5c6f8
+    - https://sproutvideo.com/oembed.xml?url=http%3A%2F%2Fsproutvideo.com%2Fvideos%2F709adcb31f19e5c6f8
+    - https://sproutvideo.com/oembed.json?url=https%3A%2F%2Fsproutvideo-example.vids.io%2Fvideos%2F709adcb31f19e5c6f8%2Fsproutvideo-superheroes
+    - https://sproutvideo.com/oembed.xml?url=https%3A%2F%2Fsproutvideo-example.vids.io%2Fvideos%2F709adcb31f19e5c6f8%2Fsproutvideo-superheroes
+    discovery: true
+...
