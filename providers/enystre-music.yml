@@ -1,0 +1,14 @@
+---
+- provider_name: Enystre Music
+  provider_url: https://music.enystre.com
+  endpoints:
+  - schemes:
+    - https://music.enystre.com/lyrics/*
+    url: https://music.enystre.com/oembed
+    example_urls:
+    - https://music.enystre.com/oembed?url=https://music.enystre.com/lyrics/164586
+    formats:
+    - json
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
