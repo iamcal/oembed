@@ -452,7 +452,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 ?>
 
 <p>There are currently <i><?php echo number_format($count); ?> providers</i> in the registry.
-	Providers and consumers are <b>strongly encouraged</b> to use the <a href="#section4">discovery mechanism</a>, rather than the registery.</p>
+	Providers and consumers are <b>strongly encouraged</b> to use the <a href="#section4">discovery mechanism</a>, rather than the registry.</p>
 
 
 <a name="section7.2" id="section7.2"><h3>7.2. Consumers</h3></a>
