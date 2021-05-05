@@ -18,5 +18,7 @@ jobs:
         php-version: '8.0'
         extensions: yaml
 
+    - uses: actions/checkout@v2
+
     - name: Run tests
       run: php test.php
