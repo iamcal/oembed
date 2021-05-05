@@ -1,0 +1,11 @@
+---
+- provider_name: Opsomai
+  provider_url: http://www.opsomai.com
+  endpoints:
+  - schemes:
+    - https://*.opsismedia.com/*
+    url: https://test-bysa.opsismedia.com/oembed.php
+    example_urls:
+    - https://test-bysa.opsismedia.com/oembed.php?url=https%3A%2F%2Ftest-bysa.opsismedia.com%2Fb28RynsE
+    discovery: true
+...
