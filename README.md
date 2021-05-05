@@ -1,7 +1,7 @@
 oEmbed Spec
 ===========
 
-[![Build Status](https://travis-ci.org/iamcal/oembed.svg?branch=master)](https://travis-ci.org/iamcal/oembed)
+[![Build Status](https://github.com/iamcal/oembed/actions/workflows/build.yml/badge.svg)](https://github.com/iamcal/oembed/actions)
 
 This repo represents the current oEmbed spec as seen at 
 <a href="http://oembed.com">http://oembed.com</a> and any drafts, in the `www` directory.
