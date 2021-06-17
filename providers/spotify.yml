@@ -6,6 +6,7 @@
     - https://open.spotify.com/*
     - spotify:*
     url: https://open.spotify.com/oembed/
+    discovery: true
     example_urls:
     - https://open.spotify.com/oembed/?url=https://open.spotify.com/track/2qToAcex0ruZfbEbAy9OhW
     - https://open.spotify.com/oembed/?url=spotify%3Aartist%3A7ae4vgLLhir2MCjyhgbGOQ
