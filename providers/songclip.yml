@@ -1,0 +1,12 @@
+---
+- provider_name: Songclip
+  provider_url: https://www.songclip.com/
+  endpoints:
+  - url: https://www.songclip.com/services/oembed
+    schemes:
+    - https://www.songclip.com/play/*
+    discovery: true
+    example_urls:
+    - https://www.songclip.com/services/oembed?url=http%3A%2F%2Fwww.songclip.com%2Fplay%2F237672132731995400
+    - https://www.songclip.com/services/oembed?url=http%3A%2F%2Fwww.songclip.com%2Fplay%2F237672132731995400&format=xml
+...
