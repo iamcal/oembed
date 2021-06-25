@@ -311,8 +311,21 @@ code {
 	<dt><b><code>width</code></b> (required)</dt>
 	<dd>The width in pixels required to display the HTML.</dd>
 
+	<dt><b><code>min_width</code></b> (optional)</dt>
+	<dd>The minimum width in pixels required to display the HTML, if it's any lower the content will be cut off and not render properly.</dd>
+
+	<dt><b><code>max_width</code></b> (optional)</dt>
+	<dd>The maximum width in pixels to display the HTML without blank whitespace occuring.</dd>
+
 	<dt><b><code>height</code></b> (required)</dt>
 	<dd>The height in pixels required to display the HTML.</dd>
+
+	<dt><b><code>min_height</code></b> (optional)</dt>
+	<dd>The minimum height in pixels required to display the HTML, it it's any lower the content will be cut off and not render properly.</dd>
+
+	<dt><b><code>max_height</code></b> (optional)</dt>
+	<dd>The maximum height in pixels required to display the HTML without blank whitespace occuring.</dd>
+
 </dl>
 
 <p>Responses of this type must obey the <code>maxwidth</code> and <code>maxheight</code> request parameters.</p>
