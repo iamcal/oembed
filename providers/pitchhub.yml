@@ -1,0 +1,15 @@
+---
+- provider_name: PitchHub
+  provider_url: https://www.pitchhub.com/
+  endpoints:
+  - schemes:
+    - https://*.pitchhub.com/en/public/player/*
+    url: https://*.pitchhub.com.com/en/public/oembed
+    discovery: true
+    example_urls:
+    - https://player-dev.pitchhub.com/en/public/oembed?url=https://player-dev.pitchhub.com/en/public/player/9330fd8734deb58345c80dd124203b57&format=json
+    - https://player-staging.pitchhub.com/en/public/oembed?url=https://player-staging.pitchhub.com/en/public/player/296599c9ff2a945eb33d403929e92f35&format=json
+    - https://player.pitchhub.com/en/public/oembed?url=https://player.pitchhub.com/en/public/player/296599c9ff2a945eb33d403929e92f35&format=json
+    notes:
+      - 'URL Scheme: `https://*.pitchhub.com.com/*` (where subdomain can be `player`, `player-staging`, `player-dev` )'
+...
