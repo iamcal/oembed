@@ -1,0 +1,14 @@
+---
+- provider_name: Libsyn
+  provider_url: https://www.libsyn.com
+  endpoints:
+  - schemes:
+    - https://oembed.libsyn.com
+    url: https://oembed.libsyn.com/embed
+    example_urls:
+    -
+        https://oembed.libsyn.com/embed?item_id=19971842
+    - http://oembed.libsyn.com?url=https%3A%2F%2Foembed.libsyn.com%2Fembed%3Fitem_id%3D19971842&format=json
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
