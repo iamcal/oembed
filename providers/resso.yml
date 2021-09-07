@@ -1,0 +1,11 @@
+---
+- provider_name: Resso
+  provider_url: https://www.resso.app/
+  endpoints:
+  - schemes:
+    - https://h5.resso.com/*
+    url: https://h5.resso.com/oembed/
+    discovery: true
+    example_urls:
+    - https://h5.resso.app/oembed?url=https%3A%2F%2Fh5.resso.app%2Ftrack%2FRihanna-Eminem%2FLove-The-Way-You-Lie-(Part-II)-6848423588047886337&format=json
+...
