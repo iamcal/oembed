@@ -1,0 +1,13 @@
+---
+- provider_name: Catapult
+  provider_url: https://www.catapult.app/
+  endpoints:
+  - schemes:
+    - https://www-catapult-app.sandbox.hs-sites.com/video-page*
+    - https://www-catapult.app/video-page*
+    url: https://www.catapult.app/_hcms/api/video/oembed
+    discovery: true
+    example_urls:
+    - https://www.catapult.app/_hcms/api/video/oembed?url=https://www-catapult-app.sandbox.hs-sites.com/video-page/540023202
+    - https://www.catapult.app/_hcms/api/video/oembed?url=https://www-catapult.app/video-page/53304333
+...
