@@ -8,6 +8,6 @@
     url: https://replit.com/data/oembed
     docs_url: https://docs.replit.com/hosting/embedding-repls
     example_urls:
-    - https://repl.it/data/oembed/?url=https://replit.com/@replitfaris/python-hello-world
+    - https://replit.com/data/oembed/?url=https://replit.com/@replitfaris/python-hello-world
     discovery: true
 ...
