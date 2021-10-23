@@ -1,12 +1,13 @@
 ---
 - provider_name: Replit
-  provider_url: https://repl.it/
+  provider_url: https://replit.com/
   endpoints:
   - schemes:
     - https://repl.it/@*/*
-    url: https://repl.it/data/oembed
-    docs_url: https://repl.it/site/docs/repls/embed
+    - https://replit.com/@*/*
+    url: https://replit.com/data/oembed
+    docs_url: https://docs.replit.com/hosting/embedding-repls
     example_urls:
-    - https://repl.it/data/oembed/?url=https://repl.it/@timmy_i_chen/flask-boilerplate?lite=1&outputonly=1&format=json
+    - https://replit.com/data/oembed/?url=https://replit.com/@replitfaris/python-hello-world
     discovery: true
 ...
