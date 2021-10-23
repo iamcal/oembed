@@ -23,6 +23,12 @@
       - https://instagr.am/tv/*
       - https://www.instagram.com/tv/*
       - https://www.instagr.am/tv/*
+      - http://www.instagram.com/reel/*
+      - https://www.instagram.com/reel/*
+      - http://instagram.com/reel/*
+      - https://instagram.com/reel/*
+      - http://instagr.am/reel/*
+      - https://instagr.am/reel/*
     url: https://graph.facebook.com/v10.0/instagram_oembed
     docs_url: https://developers.facebook.com/docs/instagram/oembed
     example_urls:
