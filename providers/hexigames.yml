@@ -1,0 +1,11 @@
+---
+- provider_name: HexiGames
+  provider_url: https://www.hexigames.com/
+  endpoints:
+  - schemes:
+    - https://embed.hexigames.com/*
+    url: https://oembed.hexigames.com
+    discovery: true
+    example_urls:
+    - https://oembed.hexigames.com?url=https%3A%2F%2Fembed.hexigames.com%2Fgames%2Fplay21&format=json
+...
