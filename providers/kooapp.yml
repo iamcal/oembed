@@ -1,0 +1,12 @@
+---
+- provider_name: Kooapp
+  provider_url: https://kooapp.com
+  endpoints:
+  - schemes:
+    - https://.kooapp.com/koo/
+    - http://.kooapp.com/koo/
+    url: https://embed-stage.kooapp.com/services/oembed
+    example_urls:
+    - https://embed-stage.kooapp.com/services/oembed?url=https://www.kooapp.com/koo/Dev_Fadnavis/5b9dded4-02ce-47af-a9fc-6ab8272f67d8
+    discovery: true
+...
