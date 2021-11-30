@@ -7,10 +7,12 @@
     - https://*.youtube.com/v/*
     - https://youtu.be/*
     - https://*.youtube.com/playlist?list=*
+    - https://youtube.com/playlist?list=*
     url: https://www.youtube.com/oembed
     discovery: true
     example_urls:
     - https://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiwGFalTRHDA
     - https://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiwGFalTRHDA&format=xml
     - https://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLSL0f2Dh_snCsLgQ3J319RYQyctRlfJFc
+    - https://www.youtube.com/oembed?url=https%3A%2F%2Fyoutube.com%2Fplaylist%3Flist%3DPLpeDXSh4nHjRmry7-h62UHfo86evvMK7E
 ...
