@@ -11,7 +11,7 @@
     - http://*.*.wordpress.com/*
     - https://wp.me/*
     - http://wp.me/*
-  - url: http://public-api.wordpress.com/oembed/
+    url: http://public-api.wordpress.com/oembed/
     docs_url: https://developer.wordpress.com/docs/oembed-provider-api/
     example_urls:
     - https://public-api.wordpress.com/oembed/1.0/?format=json&url=http%3A%2F%2Fmatt.wordpress.com%2F2011%2F07%2F14%2Fclouds-over-new-york%2F&for=oembed.com
