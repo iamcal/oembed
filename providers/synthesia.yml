@@ -4,6 +4,9 @@
   endpoints:
   - schemes:
     - https://share.synthesia.io/*
+    url: https://69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed
+    formats:
+    - json
     discovery: true
     example_urls:
     - https://69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed?url=https%3A%2F%2Fshare.synthesia.io%2Fbcd7bafb-3614-4ab4-8644-75b73bec25de&format=json&maxwidth=3840&maxheight=2160
