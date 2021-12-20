@@ -10,5 +10,6 @@
     url: https://openapi.afreecatv.com/oembed/embedinfo
     example_urls:
     - https://openapi.afreecatv.com/oembed/embedinfo?url=https://vod.afreecatv.com/PLAYER/STATION/71021072&width=640&height=360
+    - https://openapi.afreecatv.com/oembed/embedinfo?url=https://play.afreecatv.com/afstar1/237663862&width=640&height=360
     discovery: true
 ...
