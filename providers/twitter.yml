@@ -3,6 +3,7 @@
   provider_url: http://www.twitter.com/
   endpoints:
   - schemes:
+    - https://twitter.com/*
     - https://twitter.com/*/status/*
     - https://*.twitter.com/*/status/*
     url: https://publish.twitter.com/oembed
