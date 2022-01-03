@@ -1,0 +1,13 @@
+---
+- provider_name: HASH
+  provider_url: https://hash.ai
+  endpoints:
+  - schemes:
+    - https://core.hash.ai/@*
+    url: https://api.hash.ai/oembed
+    example_urls:
+    - https://core.hash.ai/@hash/wildfires-regrowth/stable
+    - https://core.hash.ai/@hash/warehouse-logistics/stable
+    - https://core.hash.ai/@hash/traffic-intersection/stable
+    discovery: false
+...

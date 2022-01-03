@@ -1,0 +1,16 @@
+---
+- provider_name: Raindrop
+  provider_url: https://raindrop.io
+  endpoints:
+  - schemes:
+    - https://raindrop.io/*
+    - https://raindrop.io/*/*
+    - https://raindrop.io/*/*/*
+    - https://raindrop.io/*/*/*/*
+    url: https://pub.raindrop.io/api/oembed
+    example_urls:
+    - https://pub.raindrop.io/api/oembed?url=https://raindrop.io/exentrich/design-66
+    discovery: true
+    formats:
+    - json
+...

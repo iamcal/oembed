@@ -1,0 +1,12 @@
+---
+- provider_name: Insticator Inc
+  provider_url: https://www.insticator.com/
+  endpoints:
+  - schemes:
+    - https://ppa.insticator.com/embed-unit/*
+    url: https://www.insticator.com/oembed
+    discovery: true
+    example_urls:
+    - https://www.insticator.com/oembed?url=https://ppa.insticator.com/embed-unit/b4a63625-f223-4d97-9385-a34f734c98dc&format=json
+    - https://www.insticator.com/oembed?url=https://ppa.insticator.com/embed-unit/6b5eac07-18e8-4ecb-90e1-a76091b56d10&format=json
+...

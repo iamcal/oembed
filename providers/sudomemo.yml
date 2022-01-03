@@ -1,0 +1,15 @@
+---
+- provider_name: Sudomemo
+  provider_url: 'https://www.sudomemo.net/'
+  endpoints:
+  - schemes:
+    - 'https://www.sudomemo.net/watch/*'
+    - 'http://www.sudomemo.net/watch/*'
+    - 'https://flipnot.es/*'
+    - 'http://flipnot.es/*'
+    url: 'https://www.sudomemo.net/oembed'
+    example_urls:
+    - 'https://www.sudomemo.net/oembed?url=https%3A%2F%2Fflipnot.es%2F8UYNV9&format=json'
+    - 'https://www.sudomemo.net/oembed?url=https%3A%2F%2Fwww.sudomemo.net%2Fwatch%2F75D7C9_135509C9F1AA8_000&format=json'
+    discovery: true
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: Omny Studio
+  provider_url: https://omnystudio.com
+  endpoints:
+  - schemes:
+    - https://omny.fm/shows/*
+    url: https://omny.fm/oembed
+    example_urls:
+    - https://omny.fm/oembed?url=https://omny.fm/shows/adapting/derek-guille
+    formats:
+    - json
+...

@@ -1,0 +1,17 @@
+---
+- provider_name: Minerva
+  provider_url: https://www.minervaknows.com
+  endpoints:
+  - schemes:
+    - https://www.minervaknows.com/featured-recipes/*
+    - https://www.minervaknows.com/themes/*
+    - https://www.minervaknows.com/themes/*/recipes/*
+    - https://app.minervaknows.com/recipes/*
+    - https://app.minervaknows.com/recipes/*/follow
+    url: https://oembed.minervaknows.com
+    example_urls:
+    - https://oembed.minervaknows.com/?url=https%3A%2F%2Fapp.minervaknows.com%2Frecipes%2F1d44cafd-946c-4607-b571-26220fd437ee%2Ffollow
+    formats:
+    - json
+    discovery: true
+...
