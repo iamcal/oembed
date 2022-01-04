@@ -5,8 +5,8 @@
   - schemes:
     - https://chainflix.net/video/?*
     - https://chainflix.net/video/embed/?*
-    - https://(m|www).chainflix.net/video/?*
-    - https://(m|www).chainflix.net/video/embed/?*
+    - https://*.chainflix.net/video/?*
+    - https://*.chainflix.net/video/embed/?*
     url: https://www.chainflix.net/video/oembed
     discovery: true
     example_urls:
