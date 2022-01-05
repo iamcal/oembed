@@ -78,6 +78,7 @@
 					if (isset($endpoint['schemes'])){
 					foreach ($endpoint['schemes'] as $scheme){
 
+						# check for people trying to put regexes in the schemes (e.g. "(foo|bar)")
 						if (strpos($scheme, '(') !== false){
 							echo "Scheme contains illegal character '(' in provider file providers/$file\n";
 							print_r($endpoint['schemes']);
@@ -90,28 +91,34 @@
 							exit(1);
 						}
 
+						# check for wildcards in schemes (and that a scheme exists)
 						if (!preg_match('!^([a-z]+):!', $scheme)){
-							echo "Scheme must not contain wildcards in provider file providers/$file\n";
+							echo "Scheme URL must contain a scheme which itself may not contain wildcards in provider file providers/$file\n";
 							print_r($endpoint['schemes']);
 							exit(1);
 						}
 
+						# for HTTP(S) URLs, check for domain wildcards
 						if (preg_match('!^https?://([^/]+)!', $scheme, $m)){
 							$domain = $m[1];
 							$parts = array_reverse(explode('.', $domain));
 
+							# allow 'foo.com' but no 'com'
 							if (count($parts) < 2){
 								echo "Scheme domain must be fully qualified in provider file providers/$file\n";
 								print_r($endpoint['schemes']);
 								exit(1);
 							}
 
+							# '*.foo.com' is ok, but '*.com' is not
 							if ($parts[0] == '*' || $parts[1] == '*'){
 								echo "Scheme domain may not contain a wildcard as the TLD in provider file providers/$file\n";
 								print_r($endpoint['schemes']);
 								exit(1);
 							}
 
+							# domain atoms may either be a wildcard, or a literal match,
+							# so '*.foo.bar.com' is ok, but '*foo.bar.com' is not
 							foreach ($parts as $part){
 								if (strpos($part, '*') !== false && $part !== '*'){
 									echo "Scheme domain wildcards must be for a whole atom TLD in provider file providers/$file\n";
