@@ -1,0 +1,11 @@
+---
+- provider_name: Crumb.sh
+  provider_url: https://crumb.sh
+  endpoints:
+  - schemes:
+    - https://crumb.sh/*
+    url: https://crumb.sh/oembed/
+    docs_url: https://crumb.sh/faq/
+    example_urls:
+    - https://crumb.sh/oembed/?url=https%3A%2F%2Fcrumb.sh%2FQdrfCWZeXKu&format=json
+...
