@@ -96,6 +96,30 @@
 							exit(1);
 						}
 
+						if (preg_match('!^https?://([^/]+)!', $scheme, $m)){
+							$domain = $m[1];
+							$parts = array_reverse(explode('.', $domain));
+
+							if (count($parts) < 2){
+								echo "Scheme domain must be fully qualified in provider file providers/$file\n";
+								print_r($endpoint['schemes']);
+								exit(1);
+							}
+
+							if ($parts[0] == '*' || $parts[1] == '*'){
+								echo "Scheme domain may not contain a wildcard as the TLD in provider file providers/$file\n";
+								print_r($endpoint['schemes']);
+								exit(1);
+							}
+
+							foreach ($parts as $part){
+								if (strpos($part, '*') !== false && $part !== '*'){
+									echo "Scheme domain wildcards must be for a whole atom TLD in provider file providers/$file\n";
+									print_r($endpoint['schemes']);
+									exit(1);
+								}
+							}
+						}
 					}
 					}
 				}
