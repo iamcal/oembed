@@ -74,6 +74,30 @@
 						print_r($endpoint);
 						exit(1);
 					}
+
+					if (isset($endpoint['schemes'])){
+					foreach ($endpoint['schemes'] as $scheme){
+
+						if (strpos($scheme, '(') !== false){
+							echo "Scheme contains illegal character '(' in provider file providers/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						if (strpos($scheme, ')') !== false){
+							echo "Scheme contains illegal character ')' in provider file providers/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						if (!preg_match('!^([a-z]+):!', $scheme)){
+							echo "Scheme must not contain wildcards in provider file providers/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+					}
+					}
 				}
 			}
 		}
