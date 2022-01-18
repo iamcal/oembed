@@ -1,0 +1,11 @@
+---
+- provider_name: GMetri
+  provider_url: https://www.gmetri.com/
+  endpoints:
+  - schemes:
+    - https://view.gmetri.com/*
+    url: https://z5-viewer-socket.us.gmetri.com/oembed/
+    discovery: true
+    example_urls:
+    - https://z5-viewer-socket.us.gmetri.com/oembed/?url=https%3A%2F%2Fview.gmetri.com%2Fv5%2Fgame%2Fsafehands_v2&format=json
+...
