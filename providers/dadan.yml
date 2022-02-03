@@ -3,8 +3,8 @@
   provider_url: https://www.dadan.io
   endpoints:
   - schemes:
-    - https://stage.dadan.io/api/video/oembed
-    url: https://stage.dadan.io/api/video/oembed
+    - https://app.dadan.io/*
+    url: https://app.dadan.io/api/video/oembed
     discovery: true
     example_urls:
     - https://app.dadan.io/api/video/oembed?url=https%3a%2f%2fapp.dadan.io%2fvideo%2fshare%2fN8Hcbu0F1Du3ugmI&format=json
