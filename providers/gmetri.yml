@@ -4,8 +4,9 @@
   endpoints:
   - schemes:
     - https://view.gmetri.com/*
-    url: https://z5-viewer-socket.in.gmetri.com/oembed/
+    - https://*.gmetri.com/*
+    url: https://embed.gmetri.com/oembed/
     discovery: true
     example_urls:
-    - https://z5-viewer-socket.in.gmetri.com/oembed/?url=https%3A%2F%2Fview.gmetri.com%2Fv5%2Fgame%2Fsafehands_v2&format=json
+    - https://embed.gmetri.com/oembed?url=https://game.gmetri.com/safehands_v2&format=json
 ...
