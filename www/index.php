@@ -496,7 +496,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
 </ul>
 <ul>
-	<li><a href="https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
+	<li><a href="https://web.archive.org/web/20150318024249/https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
 	<li><a href="https://blog.leahculver.com/2008/05/announcing-oembed-an-open-standard-for-embedded-content.html">Leah's blog</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
 </ul>

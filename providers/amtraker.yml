@@ -1,0 +1,22 @@
+---
+- provider_name: Amtraker
+  provider_url: https://amtraker.com
+  endpoints:
+  - schemes:
+    - https://amtraker.com/view.html*
+    - https://www.amtraker.com/view.html*
+    - https://beta.amtraker.com/view.html*
+    - https://whereismytrain.us/view.html*
+    - https://www.whereismytrain.us/view.html*
+    - https://whereismyfuckingtrain.com/view.html*
+    - https://www.whereismyfuckingtrain.com/view.html*
+    - https://amtrak.cc/view.html*
+    - https://www.amtrak.cc/view.html*
+    url: https://api.amtrak.cc/v2/oembed
+    docs_url: https://api.amtrak.cc/docs
+    example_urls:
+    - https://api.amtrak.cc/v2/oembed?url=https://amtraker.com/view.html?train=123456
+    - https://api.amtrak.cc/v2/oembed?url=https://whereismyfuckingtrain.com/view.html?train=123456&xml=true
+    discovery: false
+    notes: Provider only supports the 'rich' type. Sample train number may not always work, see docs for details.
+...
