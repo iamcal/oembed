@@ -8,5 +8,5 @@
     url: https://embed.gmetri.com/oembed/
     discovery: true
     example_urls:
-    - https://embed.gmetri.com/oembed?url=https://game.gmetri.com/safehands_v2&format=json
+    - https://embed.gmetri.com/oembed?url=https%3A%2F%2Fgame.gmetri.com%2Fsafehands_v2%26format%3Djson
 ...
