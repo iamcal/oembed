@@ -9,4 +9,5 @@
     discovery: true
     example_urls:
     - https://embed.gmetri.com/oembed?url=https%3A%2F%2Fgame.gmetri.com%2Fsafehands_v2%26format%3Djson
+    - https://embed.gmetri.com/oembed?url=https%3A%2F%2Fview.gmetri.com%2Fv5%2Fijafwv%2Fraji_covid_game
 ...
