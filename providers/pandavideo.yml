@@ -1,0 +1,14 @@
+---
+- provider_name: Panda Video
+  provider_url: https://pandavideo.com/
+  endpoints:
+  - docs_url: https://pandavideo.readme.io/reference/oembed
+    schemes:
+    - https://player-vz-*.tv.pandavideo.com.br/embed/?v=*
+    - https://b-vz-*.tv.pandavideo.com.br/*/playlist.m3u8
+    - https://dashboard.pandavideo.com.br/#/videos/*
+    url: https://api-v2.pandavideo.com.br/oembed
+    example_urls:
+    - https://api-v2.pandavideo.com/oembed?url=https://player-vz-ded14ebd-85a.tv.pandavideo.com.br/embed/?v=3b101f05-84aa-4de0-9b64-71f1855388af
+    discovery: true
+...
