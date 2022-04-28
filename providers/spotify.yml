@@ -5,7 +5,7 @@
   - schemes:
     - https://open.spotify.com/*
     - spotify:*
-    url: https://open.spotify.com/oembed/
+    url: https://open.spotify.com/oembed
     discovery: true
     example_urls:
     - https://open.spotify.com/oembed/?url=https://open.spotify.com/track/2qToAcex0ruZfbEbAy9OhW
