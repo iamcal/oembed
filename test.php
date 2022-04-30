@@ -131,6 +131,11 @@
 					}
 				}
 			}
+		}else if (in_array($file,  ['README.md', '.', '..'])){
+			# these are expected to be here
+		}else{
+			echo "Unexpected file {$file} in providers directory - your file must end in .yml\n";
+			exit(1);
 		}
 	}
 
