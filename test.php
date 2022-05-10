@@ -21,12 +21,26 @@
 		'#/endpoints/#/docs_url'	=> 1,
 	);
 
+#$p1 = yaml_parse_file("providers/vidmount.yml", -1);
+#$p2 = yaml_parse_file("providers/vidyard.yml", -1);
+#echo var_export($p1);
+#echo var_export($p2);
+#exit;
+
 	$dh = opendir('providers');
 	while (($file = readdir($dh)) !== false){
 		if (preg_match('!\.yml$!', $file)){
 			$partial = yaml_parse_file("providers/$file");
 			if (!$partial || !is_array($partial)){
 				echo "Unable to parse provider file providers/$file\n";
+				exit(1);
+			}
+
+			# check if there is more than one document in the file
+			$full = yaml_parse_file("providers/$file", -1);
+			if (count($full) != 1){
+				echo "More than one YAML document specified in providers/$file\n";
+				echo "(The file should end with \"...\", not \"---\")\n";
 				exit(1);
 			}
 
