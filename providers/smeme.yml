@@ -1,0 +1,11 @@
+---
+- provider_name: Smeme
+  provider_url: https://smeme.com
+  endpoints:
+  - schemes:
+    - https://open.smeme.com/*
+    url: https://open.smeme.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://open.smeme.com/api/oembed?url=https%3A%2F%2Fopen.smeme.com%2Fsmeme%2F2ac17338-f447-4c99-b578-bd145c09c60b
+...
