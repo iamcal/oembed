@@ -1,0 +1,12 @@
+---
+- provider_name: Heyzine
+  provider_url: https://heyzine.com
+  endpoints:
+  - schemes:
+    - https://heyzine.com/flip-book/*
+    - https://*.hflip.co/*
+    - https://*.aflip.in/*
+    url: https://heyzine.com/api1/oembed
+    docs_url: https://heyzine.com/developers#oembed
+    discovery: true
+...
