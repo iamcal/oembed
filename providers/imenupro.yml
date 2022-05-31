@@ -8,4 +8,7 @@
     url: https://qr.imenupro.com/api/oembed
     example_urls:
     - https://qr.imenupro.com/api/oembed/?url=https://qr.imenupro.com/4m-h9&format=json
+    formats:
+    - json
+    discovery: true
 ...
