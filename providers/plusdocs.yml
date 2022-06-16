@@ -3,9 +3,9 @@
   provider_url: http://plusdocs.com
   endpoints:
     - schemes:
-        - https://app.plusdocs.com/*/snapshots/*
-        - https://app.plusdocs.com/*/pages/edit/*
-        - https://app.plusdocs.com/*/pages/share/*
+      - https://app.plusdocs.com/*/snapshots/*
+      - https://app.plusdocs.com/*/pages/edit/*
+      - https://app.plusdocs.com/*/pages/share/*
       url: https://app.plusdocs.com/oembed
       discovery: true
       formats:
