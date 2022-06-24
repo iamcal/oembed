@@ -1,0 +1,12 @@
+---
+- provider_name: Picturelfy
+  provider_url: 'https://www.picturelfy.com/'
+  endpoints:
+  - schemes:
+    - 'http://www.picturelfy.com/p/*'
+    - 'https://www.picturelfy.com/p/*'
+    url: 'https://api.picturelfy.com/service/oembed/'
+    example_urls:
+    - 'https://api.picturelfy.com/service/oembed/?url=https%3A%2F%2Fpicturelfy.com%2Fp%2Fb4QFo0MWl2lu1sm'
+    discovery: false
+...
