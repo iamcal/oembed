@@ -1,0 +1,13 @@
+---
+- provider_name: Slate App
+  provider_url: https://slateapp.com
+  endpoints:
+  - schemes:
+    - https://*.slateapp.com/work/*
+    url: https://*.slateapp.com/api/v2/oembed
+    example_urls:
+    - https://alex.slateapp.com/api/v2/oembed?url=https://alex.slateapp.com/work/111
+    - https://alex.slateapp.com/api/v2/oembed?url=https://alex.slateapp.com/work/111/whos-harvey
+    - https://alex.slateapp.com/api/v2/oembed?url=https://alex.slateapp.com/work/whos-harvey
+    discovery: true
+...
