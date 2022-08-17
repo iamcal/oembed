@@ -1,0 +1,16 @@
+---
+- provider_name: Twinmotion
+  provider_url: https://twinmotion.unrealengine.com
+  endpoints:
+  - schemes:
+    - https://twinmotion.unrealengine.com/presentation/*
+    - https://twinmotion.unrealengine.com/panorama/*
+    url: https://twinmotion.unrealengine.com/oembed
+    example_urls:
+    - https://twinmotion.unrealengine.com/oembed?url=https%3A%2F%2Ftwinmotion.unrealengine.com%2Fpresentation%2F0zxkXymuqH5He0mY
+    - https://twinmotion.unrealengine.com/oembed?url=https%3A%2F%2Ftwinmotion.unrealengine.com%2Fpresentation%2FbD5qPeTaDGWhpUUq
+    - https://twinmotion.unrealengine.com/oembed?url=https%3A%2F%2Ftwinmotion.unrealengine.com%2Fpanorama%2FSpp2t_okp3potEeE
+    - https://twinmotion.unrealengine.com/oembed?url=https%3A%2F%2Ftwinmotion.unrealengine.com%2Fpanorama%2F0UDyotn1HfhAbfv0
+    formats:
+    - json
+...
