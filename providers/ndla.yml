@@ -6,7 +6,7 @@
     - https://ndla.no/*
     url: https://ndla.no/oembed
     example_urls:
-    - https://ndla.no/oembed?url=https://ndla.no/subject:13/topic:edd89aba-b208-4caa-bdb0-c8ca0300ce2d/topic:1:184882
+    - https://ndla.no/oembed?url=https://ndla.no/subject:20/topic:1:186732/topic:1:187167/resource:1:176616
     - https://ndla.no/oembed?url=https://ndla.no/article/123
     discovery: false
     notes: Provider only supports the 'rich' type.
