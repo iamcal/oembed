@@ -1,0 +1,11 @@
+- provider_name: Adilo
+  provider_url: https://adilo.bigcommand.com
+  endpoints:
+  - schemes:
+    - https://adilo.bigcommand.com/watch/*
+    url: https://adilo.bigcommand.com/web/oembed
+    example_urls:
+    - https://adilo.bigcommand.com/web/oembed?url=https%3A%2F%2Fadilo.bigcommand.com%2Fwatch%2F7DmeLyjk&format=json
+    discovery: true
+    formats:
+    - json

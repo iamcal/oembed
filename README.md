@@ -2,6 +2,7 @@ oEmbed Spec
 ===========
 
 [![Build Status](https://github.com/iamcal/oembed/actions/workflows/build.yml/badge.svg)](https://github.com/iamcal/oembed/actions)
+<span class="badge-npmversion"><a href="https://npmjs.org/package/oembed-providers" title="View this project on NPM"><img src="https://img.shields.io/npm/v/oembed-providers.svg" alt="NPM version" /></a></span>
 
 This repo represents the current oEmbed spec as seen at 
 <a href="http://oembed.com">http://oembed.com</a> and any drafts, in the `www` directory.

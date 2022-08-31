@@ -1,0 +1,14 @@
+---
+- provider_name: Odysee
+  provider_url: https://odysee.com
+  endpoints:
+  - schemes:
+    - https://odysee.com/*/*
+    - https://odysee.com/*
+    url: https://odysee.com/$/oembed
+    example_urls:
+    - https://odysee.com/$/oembed?url=https://odysee.com/@veritasium:f/we-built-an-unrideable-bike-to-show-how:b
+    - https://odysee.com/$/oembed?url=https://odysee.com/@veritasium:f/we-built-an-unrideable-bike-to-show-how:b&format=json
+    - https://odysee.com/$/oembed?url=https://odysee.com/we-built-an-unrideable-bike-to-show-how:b&format=json
+    discovery: true
+...

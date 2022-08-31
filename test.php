@@ -21,12 +21,26 @@
 		'#/endpoints/#/docs_url'	=> 1,
 	);
 
+#$p1 = yaml_parse_file("providers/vidmount.yml", -1);
+#$p2 = yaml_parse_file("providers/vidyard.yml", -1);
+#echo var_export($p1);
+#echo var_export($p2);
+#exit;
+
 	$dh = opendir('providers');
 	while (($file = readdir($dh)) !== false){
 		if (preg_match('!\.yml$!', $file)){
 			$partial = yaml_parse_file("providers/$file");
 			if (!$partial || !is_array($partial)){
 				echo "Unable to parse provider file providers/$file\n";
+				exit(1);
+			}
+
+			# check if there is more than one document in the file
+			$full = yaml_parse_file("providers/$file", -1);
+			if (count($full) != 1){
+				echo "More than one YAML document specified in providers/$file\n";
+				echo "(The file should end with \"...\", not \"---\")\n";
 				exit(1);
 			}
 
@@ -58,13 +72,15 @@
 				}
 				foreach ($def['endpoints'] as $endpoint){
 
-				# NOTE: this is disabled because it counts e.g. wordpress as broken.
-				# maybe it is?
+					# this test is currently disabled because three providers fail it.
+					# i _believe_ they should be deleted, as they are of no use to consumers.
 
-				#	if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
-				#		echo "Endpoint without schemes found in provider file providers/$file\n";
-				#		print_r($endpoint);
-				#		exit(1);
+				#	if (!isset($endpoint['discovery']) || $endpoint['discovery'] === 0){
+				#		if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
+				#			echo "Endpoint without schemes or discovery found in provider file providers/$file\n";
+				#			print_r($endpoint);
+				#			exit(1);
+				#		}
 				#	}
 
 					if (!isset($endpoint['url'])){
@@ -72,8 +88,68 @@
 						print_r($endpoint);
 						exit(1);
 					}
+
+					if (isset($endpoint['schemes'])){
+					foreach ($endpoint['schemes'] as $scheme){
+
+						# check for people trying to put regexes in the schemes (e.g. "(foo|bar)")
+						if (strpos($scheme, '(') !== false){
+							echo "Scheme contains illegal character '(' in provider file providers/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						if (strpos($scheme, ')') !== false){
+							echo "Scheme contains illegal character ')' in provider file providers/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						# check for wildcards in schemes (and that a scheme exists)
+						if (!preg_match('!^([a-z]+):!', $scheme)){
+							echo "Scheme URL must contain a scheme which itself may not contain wildcards in provider file providers/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						# for HTTP(S) URLs, check for domain wildcards
+						if (preg_match('!^https?://([^/]+)!', $scheme, $m)){
+							$domain = $m[1];
+							$parts = array_reverse(explode('.', $domain));
+
+							# allow 'foo.com' but no 'com'
+							if (count($parts) < 2){
+								echo "Scheme domain must be fully qualified in provider file providers/$file\n";
+								print_r($endpoint['schemes']);
+								exit(1);
+							}
+
+							# '*.foo.com' is ok, but '*.com' is not
+							if ($parts[0] == '*' || $parts[1] == '*'){
+								echo "Scheme domain may not contain a wildcard as the TLD in provider file providers/$file\n";
+								print_r($endpoint['schemes']);
+								exit(1);
+							}
+
+							# domain atoms may either be a wildcard, or a literal match,
+							# so '*.foo.bar.com' is ok, but '*foo.bar.com' is not
+							foreach ($parts as $part){
+								if (strpos($part, '*') !== false && $part !== '*'){
+									echo "Scheme domain wildcards must be for a whole atom TLD in provider file providers/$file\n";
+									print_r($endpoint['schemes']);
+									exit(1);
+								}
+							}
+						}
+					}
+					}
 				}
 			}
+		}else if (in_array($file,  ['README.md', '.', '..'])){
+			# these are expected to be here
+		}else{
+			echo "Unexpected file {$file} in providers directory - your file must end in .yml\n";
+			exit(1);
 		}
 	}
 

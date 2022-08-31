@@ -1,0 +1,16 @@
+---
+- provider_name: SwitcherStudio
+  provider_url: https://www.switcherstudio.com/
+  endpoints:
+  - schemes:
+    - http://player.switcherstudio.com/*
+    - https://player.switcherstudio.com/*
+    url: https://player.switcherstudio.com/oembed
+    example_urls:
+    - https://player.switcherstudio.com/oembed?format=json&projectId=2639bd84-2f61-4c93-bf5e-374c593b8b72
+    - https://player.switcherstudio.com/oembed?format=xml&projectId=2639bd84-2f61-4c93-bf5e-374c593b8b72
+    discovery: true
+    formats:
+    - json
+    - xml
+...

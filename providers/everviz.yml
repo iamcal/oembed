@@ -1,0 +1,13 @@
+---
+- provider_name: everviz
+  provider_url: https://everviz.com
+  endpoints:
+  - schemes:
+    - https://app.everviz.com/embed/*
+    - http://app.everviz.com/embed/*
+    url: https://api.everviz.com/oembed
+    example_urls:
+    - https://api.everviz.com/oembed?url=https://app.everviz.com/embed/R8jhGkYT5
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
