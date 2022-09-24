@@ -1,0 +1,13 @@
+---
+- provider_name: Marvin
+  provider_url: https://app.heymarvin.com/
+  endpoints:
+  - schemes:
+    - https://*.heymarvin.com/*/*/
+    url: https://*.heymarvin.com/*/*/oembed/
+    example_urls:
+    - https://app.heymarvin.com/annotation_tool/share_event/oembed/?url=https%3A//app.heymarvin.com/annotation_tool/event/91068c27-f6d7-4065-98c3-bb78df5b46b8/%3Fis_oembed=True
+    discovery: true
+    formats:
+      - json
+...
