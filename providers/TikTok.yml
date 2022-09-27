@@ -3,10 +3,12 @@
   provider_url: http://www.tiktok.com/
   endpoints:
   - schemes:
+    - https://www.tiktok.com/*
     - https://www.tiktok.com/*/video/*
     url: https://www.tiktok.com/oembed
-    docs_url: https://developers.tiktok.com/doc/Embed
+    docs_url: https://developers.tiktok.com/doc/
     example_urls:
     - https://www.tiktok.com/oembed?url=https://www.tiktok.com/@scout2015/video/6718335390845095173
+    - https://www.tiktok.com/oembed?url=https://www.tiktok.com/@scout2015
 
 ...
