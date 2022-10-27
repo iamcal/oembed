@@ -1,0 +1,13 @@
+---
+- provider_name: QTpi
+  provider_url: https://qtpi.gg/
+  endpoints:
+  - schemes:
+    - https://qtpi.gg/fashion/*
+    url: https://qtpi.gg/fashion/oembed
+    example_urls:
+    - https://qtpi.gg/fashion/oembed?url=https://qtpi.gg/fashion/2b
+    - https://qtpi.gg/fashion/oembed?url=https://qtpi.gg/fashion/test%20saul
+    - https://qtpi.gg/fashion/oembed?url=https://qtpi.gg/fashion/cute%20condi%20virt
+    discovery: true
+...
