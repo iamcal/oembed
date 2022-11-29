@@ -6,9 +6,9 @@
     - https://knowledgepad.co/#/knowledge/*
     url: https://api.spoonacular.com/knowledge/oembed
     example_urls:
-    - https://knowledgepad.co/#/knowledge/1
-    - https://knowledgepad.co/#/knowledge/0
-    - https://knowledgepad.co/#/knowledge/0/183
+    - https://api.spoonacular.com/knowledge/oembed?url=https://knowledgepad.co/#/knowledge/1
+    - https://api.spoonacular.com/knowledge/oembed?url=https://knowledgepad.co/#/knowledge/0
+    - https://api.spoonacular.com/knowledge/oembed?url=https://knowledgepad.co/#/knowledge/0/183
     formats:
     - json
 ...
