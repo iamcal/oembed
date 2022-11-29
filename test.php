@@ -89,6 +89,28 @@
 						exit(1);
 					}
 
+					if (preg_match('!\*!', $endpoint['url'])){
+						echo "Endpoint URL contains a wildcard in provider file providers/$file\n";
+						print_r($endpoint);
+						exit(1);
+					}
+
+					if (isset($endpoint['example_urls']))
+					foreach ($endpoint['example_urls'] as $example){
+
+						if (!preg_match('!^https?://!', $example)){
+							echo "Endpoint example URL does not start with http:// or https:// in provider file providers/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+
+						if (!preg_match('!url=!', $example)){
+							echo "Endpoint example URL does not contain url= param in provider file providers/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+					}
+
 					if (isset($endpoint['schemes'])){
 					foreach ($endpoint['schemes'] as $scheme){
 
