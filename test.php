@@ -75,13 +75,13 @@
 					# this test is currently disabled because three providers fail it.
 					# i _believe_ they should be deleted, as they are of no use to consumers.
 
-				#	if (!isset($endpoint['discovery']) || $endpoint['discovery'] === 0){
-				#		if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
-				#			echo "Endpoint without schemes or discovery found in provider file providers/$file\n";
-				#			print_r($endpoint);
-				#			exit(1);
-				#		}
-				#	}
+					if (!isset($endpoint['discovery']) || $endpoint['discovery'] === 0){
+						if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
+							echo "Endpoint without schemes or discovery found in provider file providers/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+					}
 
 					if (!isset($endpoint['url'])){
 						echo "Endpoint without URL found in provider file providers/$file\n";
