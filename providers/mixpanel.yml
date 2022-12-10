@@ -3,7 +3,7 @@
   provider_url: https://mixpanel.com/
   endpoints:
   - schemes:
-    - https://www.mixpanel.com/*
+    - https://mixpanel.com/*
     url: https://mixpanel.com/api/app/embed/oembed/
     docs_url: https://developer.mixpanel.com/docs
     example_urls:
