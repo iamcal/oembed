@@ -18,6 +18,7 @@
     - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fmovielens-fastai
     - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.ml%2Faakashns%2F01-pytorch-basics%2Fv%2F7
     - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.ai%2Faakashns%2F01-pytorch-basics%2Fv%2F7
+    - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.com%2Faakashns%2F01-pytorch-basics%2Fv%2F7
     discovery: true
     notes: Provider only supports the 'rich' type
 ...
