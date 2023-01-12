@@ -1,0 +1,11 @@
+---
+- provider_name: Lumiere
+  provider_url: https://latd.com
+  endpoints:
+    - schemes:
+        - https://*.lumiere.is/v/*
+      url: https://admin.lumiere.is/api/services/oembed
+      discovery: true
+      example_urls:
+        - https://admin.lumiere.is/api/services/oembed?url=https://p.lumiere.is/v/TQ41w_jVk2&format=json
+...

@@ -1,0 +1,13 @@
+---
+- provider_name: Audiomeans
+  provider_url: https://audiomeans.fr
+  endpoints:
+  - schemes:
+    - https://podcasts.audiomeans.fr/*
+    url: https://podcasts.audiomeans.fr/services/oembed
+    discovery: false
+    example_urls:
+    - http://podcasts.audiomeans.fr/services/oembed?url=https%3A%2F%2Fpodcasts.audiomeans.fr%2Fplayer-v2%2Fanti-brouillard-6340b48dedde%2Fepisodes%2F4e490cb9-41fe-48f2-9781-ee0354917c74%3Fcolor%3D871f78
+    formats:
+    - json
+...

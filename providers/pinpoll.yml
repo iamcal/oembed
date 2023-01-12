@@ -1,0 +1,17 @@
+---
+  - provider_name: Pinpoll
+    provider_url: https://www.pinpoll.com/products/tools
+    endpoints:
+    - schemes:
+      - https://tools.pinpoll.com/embed/*
+      url: https://tools.pinpoll.com/oembed
+      example_urls:
+      - https://tools.pinpoll.com/oembed?url=https://tools.pinpoll.com/embed/1
+      - https://tools.pinpoll.com/oembed?url=https://tools.pinpoll.com/embed/answer/5
+      - https://tools.pinpoll.com/oembed?url=https://tools.pinpoll.com/embed/collection/2
+      - https://tools.pinpoll.com/oembed?url=https://tools.pinpoll.com/embed/quiz/1
+      discovery: true
+      formats:
+      - json
+      - xml
+...

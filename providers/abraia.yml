@@ -1,0 +1,11 @@
+---
+- provider_name: Abraia
+  provider_url: https://abraia.me
+  endpoints:
+  - schemes:
+    - https://store.abraia.me/*
+    url: https://api.abraia.me/oembed
+    example_urls:
+    - https://api.abraia.me/oembed?url=https://store.abraia.me/demo/videos/sample/index.html
+    discovery: true
+...

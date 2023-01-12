@@ -1,0 +1,12 @@
+---
+- provider_name: Vouch
+  provider_url: https://www.vouchfor.com/
+  endpoints:
+  - schemes:
+    - https://*.vouchfor.com/*
+    url: https://embed.vouchfor.com/v1/oembed
+    discovery: true
+    example_urls:
+      - https://embed.vouchfor.com/v1/oembed?url=https%3A%2F%2Fapp.vouchfor.com%2FpBjPDICb83
+      - https://embed.vouchfor.com/v1/oembed?url=https%3A%2F%2Fapp.vouchfor.com%2FpBjPDICb83&amp;&amp;format=json
+...

@@ -3,8 +3,9 @@
   provider_url: http://tvcf.co.kr
   endpoints:
   - schemes:
-    - http://www.tvcf.co.kr/v/*
-    url: http://www.tvcf.co.kr/services/oembed
+    - https://play.tvcf.co.kr/*
+    - https://*.tvcf.co.kr/*
+    url: https://play.tvcf.co.kr/rest/oembed
     example_urls:
-    - http://www.tvcf.co.kr/services/oembed?url=http%3A%2F%2Fwww.tvcf.co.kr%2Fv%2F%3Fidx%3D723215&format=json
+    - https://play.tvcf.co.kr/rest/oembed/?url=https://play.tvcf.co.kr/739477&format=json
 ...

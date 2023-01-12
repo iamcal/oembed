@@ -1,0 +1,17 @@
+---
+- provider_name: rcvis
+  provider_url: https://www.rcvis.com/
+  endpoints:
+  - schemes:
+    - https://www.rcvis.com/v/*
+    - https://www.rcvis.com/visualize=*
+    - https://www.rcvis.com/ve/*
+    - https://www.rcvis.com/visualizeEmbedded=*
+    url: https://animatron.com/oembed
+    docs_url: https://rcvis.readthedocs.io/en/latest/index.html?highlight=oembed#oembed
+    example_urls:
+    - https://rcvis.com/oembed?url=https%3A%2F%2Frcvis.com%2Fvo%2Fmacomb-multiwinner-surplusjson-3%2Fbarchart-interactive
+    - https://rcvis.com/oembed?url=https%3A%2F%2Frcvis.com%2Fvo%2Fopavote2json%2Fbarchart-interactive
+    - https://rcvis.com/oembed?url=https%3A%2F%2Frcvis.com%2Fvo%2F2018_maine_gov_primary_demjson%2Fbarchart-interactive
+    discovery: true
+...

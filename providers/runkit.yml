@@ -1,0 +1,14 @@
+---
+- provider_name: Runkit
+  provider_url: https://runkit.com
+  endpoints:
+  - schemes:
+    - http://embed.runkit.com/*,
+    - https://embed.runkit.com/*,
+    url: https://embed.runkit.com/oembed
+    docs_url: https://runkit.com/docs/embed#oembed
+    example_urls:
+    - https://embed.runkit.com/oembed?url=https://runkit.com/runkit/welcome
+    formats:
+    - json
+...

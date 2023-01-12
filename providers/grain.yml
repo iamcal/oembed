@@ -1,0 +1,13 @@
+---
+- provider_name: Grain
+  provider_url: https://grain.com
+  endpoints:
+  - schemes:
+    - https://grain.co/highlight/*
+    - https://grain.co/share/*
+    - https://grain.com/share/*
+    url: https://api.grain.com/_/api/oembed
+    example_urls:
+    - https://api.grain.com/_/api/oembed?url=https%3A%2F%2Fgrain.com%2Fshare%2Fhighlight%2FtZUKIxcZAPaqa0Gzkgw1glKRfBPjcVo5
+    notes: Only supports json as a return type
+...

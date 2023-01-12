@@ -8,7 +8,6 @@
     discovery: true
     example_urls:
     - https://data.voxsnap.com/oembed?url=https%3A%2F%2Farticle.voxsnap.com%2Fnirandfar%2Fthe-psychology-of-a-billion-dollar-enterprise-app
-    - https://article.voxsnap.com/nirandfar/the-psychology-of-a-billion-dollar-enterprise-app
     formats:
     - json
 ...

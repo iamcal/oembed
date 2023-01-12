@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
                          __                 __     
                         /\ \               /\ \    
@@ -37,6 +38,12 @@
 <html lang="en">
 <head>
 <title>oEmbed</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The oEmbed spec">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 <style>
 
 body, input, textarea, select {
@@ -243,7 +250,7 @@ code {
 
 	<dt><b><code>provider_name</code></b> (optional)</dt>
 	<dd>The name of the resource provider.</dd>
-	
+
 	<dt><b><code>provider_url</code></b> (optional)</dt>
 	<dd>The url of the resource provider.</dd>
 
@@ -342,9 +349,9 @@ code {
 
 <a name="section4" id="section4"><h2>4. Discovery</h2></a>
 
-<p>oEmbed providers can choose to make their oEmbed support discoverable by adding elements to the head of their existing (X)HTML documents.</p>
+<p>oEmbed providers can choose to make their oEmbed support discoverable by adding <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> elements to the head of their existing (X)HTML documents or by setting <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">Link headers</a>.</p>
 
-<p>For example:</p>
+<p>Element example:</p>
 
 <pre>
 &lt;link rel="alternate" type="application/json+oembed"
@@ -355,7 +362,14 @@ code {
   title="Bacon Lollys oEmbed Profile" /&gt;
 </pre>
 
-<p>The URLs contained within the <code>href</code> attribute should be the full oEmbed endpoint plus URL and any needed format parameter. No other request parameters should be included in this URL.</p>
+<p>Header example:</p>
+
+<pre>
+Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=json&gt;; rel="alternate"; type="application/json+oembed"; title="Bacon Lollys oEmbed Profile"
+Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=xml&gt;; rel="alternate"; type="text/xml+oembed"; title="Bacon Lollys oEmbed Profile"
+</pre>
+
+<p>The URLs contained within the <code>href</code> attribute or <code>uri-reference</code> within angle brackets should be the full oEmbed endpoint plus URL and any needed format parameter. No other request parameters should be included in this URL.</p>
 
 <p>The <code>type</code> attribute must contain either <code>application/json+oembed</code> for JSON responses, or <code>text/xml+oembed</code> for XML.</p>
 
@@ -367,7 +381,7 @@ code {
 
 <p>Request:</p>
 
-<pre>http://www.youtube.com/oembed?url=http%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&amp;format=json</pre>
+<pre>https://www.youtube.com/oembed?url=https%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&amp;format=json</pre>
 
 <p>Response:</p>
 
@@ -375,18 +389,18 @@ code {
 	"version": "1.0",
 	"type": "video",
 	"provider_name": "YouTube",
-	"provider_url": "http://youtube.com/",
+	"provider_url": "https://youtube.com/",
 	"width": 425,
 	"height": 344,
 	"title": "Amazing Nintendo Facts",
 	"author_name": "ZackScott",
-	"author_url": "http://www.youtube.com/user/ZackScott",
+	"author_url": "https://www.youtube.com/user/ZackScott",
 	"html":
 		"&lt;object width=\"425\" height=\"344\"&gt;
-			&lt;param name=\"movie\" value=\"http://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"&gt;&lt;/param&gt;
+			&lt;param name=\"movie\" value=\"https://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"&gt;&lt;/param&gt;
 			&lt;param name=\"allowFullScreen\" value=\"true\"&gt;&lt;/param&gt;
 			&lt;param name=\"allowscriptaccess\" value=\"always\"&gt;&lt;/param&gt;
-			&lt;embed src=\"http://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"
+			&lt;embed src=\"https://www.youtube.com/v/M3r2XDceM6A&amp;fs=1\"
 				type=\"application/x-shockwave-flash\" width=\"425\" height=\"344\"
 				allowscriptaccess=\"always\" allowfullscreen=\"true\"&gt;&lt;/embed&gt;
 		&lt;/object&gt;",
@@ -426,7 +440,8 @@ code {
 
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
-<p>Providers are available programatically as a json file: <a href="http://oembed.com/providers.json">http://oembed.com/providers.json</a>.</p>
+<p>Providers are available programatically as a json file: <a href="https://oembed.com/providers.json">https://oembed.com/providers.json</a>.</p>
+
 <p>To add new providers, please fork <a href="https://github.com/iamcal/oembed">this repo</a> on GitHub and add/modify <code>providers/*.yml</code>.</p>
 
 <?php
@@ -440,75 +455,22 @@ code {
 		}
 	}
 
-	usort($data, 'local_sort');
-
-	function local_sort($a, $b){
-		return strcasecmp($a['provider_name'], $b['provider_name']);
-	}
-
-	function format_html($html){
-		return preg_replace('!`(.*?)`!', '<code>$1</code>', $html);
-	}
-
-	foreach ($data as $provider){
+	$count = count($data);
 ?>
-	<p><?php echo HtmlSpecialChars($provider['provider_name']); ?> (<a href="<?php echo HtmlSpecialChars($provider['provider_url']); ?>"><?php echo HtmlSpecialChars($provider['provider_url']); ?></a>)</p>
-	<?php foreach ($provider['endpoints'] as $endpoint){ ?>
-		<ul>
 
-		<?php if (isset($endpoint['schemes']) && is_array($endpoint['schemes'])) foreach ($endpoint['schemes'] as $scheme){ ?>
-			<li> URL scheme: <code><?php echo HtmlSpecialChars($scheme); ?></code> </li>
-		<?php } ?>
+<p>There are currently <i><?php echo number_format($count); ?> providers</i> in the registry.
+	Providers and consumers are <b>strongly encouraged</b> to use the <a href="#section4">discovery mechanism</a>, rather than the registry.</p>
 
-		<?php if (isset($endpoint['url'])){ ?>
-			<li> API endpoint: <code><?php echo HtmlSpecialChars($endpoint['url']); ?></code>
-			<?php if (isset($endpoint['formats']) && count($endpoint['formats'])){ ?>
-				(only supports <code><?php echo HtmlSpecialChars(StrToLower(implode(', ', $endpoint['formats']))); ?></code>)
-			<?php } ?>
-			</li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['docs_url'])){ ?>
-			<li> Documentation: <a href="<?php echo HtmlSpecialChars($endpoint['docs_url']); ?>"><?php echo HtmlSpecialChars($endpoint['docs_url']); ?></a> </li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['example_urls']) && is_array($endpoint['example_urls'])) foreach ($endpoint['example_urls'] as $example_url){ ?>
-			<li> Example: <a href="<?php echo HtmlSpecialChars($example_url); ?>"><?php echo HtmlSpecialChars($example_url); ?></a> </li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['notes']) && is_array($endpoint['notes'])) foreach ($endpoint['notes'] as $note){ ?>
-			<li><?php echo format_html($note); ?></li>
-		<?php } ?>
-
-		<?php if (isset($endpoint['discovery'])){ ?>
-		 	<li> Supports discovery via <code>&lt;link&gt;</code> tags </li>
-		<?php } ?>
-	</ul>
-	<?php } ?>
-<?php } ?>
 
 <a name="section7.2" id="section7.2"><h3>7.2. Consumers</h3></a>
 
-<p>To have a particular consumer display your OEmbed, please contact the consumer with your provider's URL scheme and API endpoint.</p>
+<p>Many services consume oEmbed information to display link information, including WordPress and Slack.</p>
 
-<p>Buckybase (<a href="http://buckybase.appspot.com/">http://buckybase.appspot.com/</a>)</p>
-<ul>
-	<li> Contact: Manuel Simoni (msimoni [at] gmail.com)</li>
-</ul>
+<p>There are also some tools specifically built around managing URL embeds:</p>
 
-<p>280 Slides (<a href="http://280slides.com/">http://280slides.com/</a>)</p>
 <ul>
-	<li> Contact: Ross Boucher (rboucher [at] gmail.com)</li>
-</ul>
-
-<p>Dumble (<a href="http://oohembed.com/dumble/">http://oohembed.com/dumble/</a>)</p>
-<ul>
-	<li> Contact: Deepak Sarda (deepak.sarda [at] gmail.com)</li>
-</ul>
-
-<p>Iframely (<a href="http://iframely.com/">http://iframely.com/</a>)</p>
-<ul>
-	<li> Contact: Ivan Paramonau (i.paramonau [at] gmail.com)</li>
+	<li>Iframely (<a href="http://iframely.com/">http://iframely.com/</a>)</li>
+	<li>OEmbed Link Viewer (<a href="https://oembed.link/">https://oembed.link/</a>)</li>
 </ul>
 
 <a name="section7.3" id="section7.3"><h3>7.3. Libraries</h3></a>
@@ -527,10 +489,9 @@ code {
 	<li>Java: java-oembed (<a href="https://github.com/michael-simons/java-oembed">https://github.com/michael-simons/java-oembed</a>)</li>
 	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
-	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>	
+	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>
 	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
 	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
-	<li>Any: oEmbed API proxy endpoint for open-source projects (<a href="http://oembedapi.com">http://oembedapi.com</a>)</li>
 </ul>
 
 
@@ -542,7 +503,7 @@ code {
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
 </ul>
 <ul>
-	<li><a href="https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
+	<li><a href="https://web.archive.org/web/20150318024249/https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
 	<li><a href="https://blog.leahculver.com/2008/05/announcing-oembed-an-open-standard-for-embedded-content.html">Leah's blog</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
 </ul>

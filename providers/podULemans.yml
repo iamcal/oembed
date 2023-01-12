@@ -1,0 +1,12 @@
+---
+- provider_name: LeMans.Pod
+  provider_url: https://umotion-test.univ-lemans.fr/
+  endpoints:
+  - schemes:
+    - https://umotion-test.univ-lemans.fr/video/*
+    url: https://umotion-test.univ-lemans.fr/oembed
+    discovery: true
+    example_urls:
+    - https://umotion-test.univ-lemans.fr/oembed/?url=https%3A//umotion-test.univ-lemans.fr/video/0001-test-video-1/
+    - https://umotion-test.univ-lemans.fr/oembed/?url=https%3A//umotion-test.univ-lemans.fr/video/0001-test-video-1/&format=xml
+...

@@ -4,9 +4,9 @@
   endpoints:
   - schemes:
     - https://pod.univ-lille.fr/video/*
-    url: https://pod.univ-lille.fr/oembed
+    url: https://pod.univ-lille.fr/video/oembed
     discovery: true
     example_urls:
-    - https://pod.univ-lille.fr/oembed/?url=https%3A//pod.univ-lille.fr/video/0001-clip-pod/
-    - https://pod.univ-lille.fr/oembed/?url=https%3A//pod.univ-lille.fr/video/0001-clip-pod/&format=xml
+    - https://pod.univ-lille.fr/video/oembed/?url=https%3A//pod.univ-lille.fr/video/0001-clip-pod/
+    - https://pod.univ-lille.fr/video/oembed/?url=https%3A//pod.univ-lille.fr/video/0001-clip-pod/&format=xml
 ...

@@ -1,0 +1,17 @@
+---
+- provider_name: Zeplin
+  provider_url: https://zeplin.io
+  endpoints:
+  - schemes:
+    - https://app.zeplin.io/project/*/screen/*
+    - https://app.zeplin.io/project/*/screen/*/version/*
+    - https://app.zeplin.io/project/*/styleguide/components?coid=*
+    - https://app.zeplin.io/styleguide/*/components?coid=*
+    url: https://app.zeplin.io/embed
+    discovery: true
+    example_urls:
+    - https://app.zeplin.io/embed?url=https%3A%2F%2Fapp.zeplin.io%2Fproject%2F5cdb386641eeab347e3f4d06%2Fscreen%2F5cdb3876201cf7684bbeebb9
+    - https://app.zeplin.io/embed?url=https%3A%2F%2Fapp.zeplin.io%2Fproject%2F5cdb386641eeab347e3f4d06%2Fscreen%2F5cdb3876201cf7684bbeebb9%2Fversion%2F5cdb3876201cf7684bbeebba
+    - https://app.zeplin.io/embed?url=https%3A%2F%2Fapp.zeplin.io%2Fproject%2F5cdb386641eeab347e3f4d06%2Fstyleguide%2Fcomponents%3Fcoid%3D5cd3731e20f8ff5736db476b
+    - https://app.zeplin.io/embed?url=https%3A%2F%2Fapp.zeplin.io%2Fstyleguide%2F5cd36efbc6c39a038ad38c79%2Fcomponents%3Fcoid%3D5cd3731e20f8ff5736db476b
+...

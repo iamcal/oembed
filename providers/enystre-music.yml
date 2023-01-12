@@ -1,0 +1,19 @@
+---
+- provider_name: Enystre Music
+  provider_url: https://music.enystre.com
+  endpoints:
+  - schemes:
+    - https://music.enystre.com/lyrics/*
+    url: https://music.enystre.com/oembed
+    example_urls:
+    - https://music.enystre.com/oembed?url=https://music.enystre.com/lyrics/164586
+    - https://music.enystre.com/oembed?url=https%3A%2F%2Fmusic.enystre.com%2Flyrics%2F164586
+    - https://music.enystre.com/oembed?url=https%3A%2F%2Fmusic.enystre.com%2Flyrics%2F164586&format=json
+    - https://music.enystre.com/oembed?url=https%3A%2F%2Fmusic.enystre.com%2Flyrics%2F164586&format=xml
+    docs_url: https://www.notion.so/oEmbed-ad1360b80d9c459b85e026cf99761c70
+    formats:
+    - json
+    - xml
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

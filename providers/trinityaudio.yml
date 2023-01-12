@@ -1,0 +1,12 @@
+---
+- provider_name: Trinity Audio
+  provider_url: https://trinityaudio.ai
+  endpoints:
+    - schemes:
+        - https://trinitymedia.ai/player/*
+        - http://trinitymedia.ai/player/*
+      url: https://trinitymedia.ai/player/trinity-oembed
+      discovery: true
+      example_urls:
+        - https://trinitymedia.ai/player/trinity-oembed?url=ttps%3A%2F%2Ftrinityaudio.ai%2Foembed%3FunitId%3D1%26url%3Dhttps%253A%252F%252Fexample.com
+...
