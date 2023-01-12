@@ -25,5 +25,3 @@ That will install the providers file into `node_modules/oembed-providers/provide
 * `npm login` if you haven't already
 * `npm publish`
 * Check https://www.npmjs.com/package/oembed-providers
-
-test
