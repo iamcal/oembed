@@ -1,0 +1,12 @@
+---
+- provider_name: Beams.fm
+  provider_url: http://beams.fm
+  endpoints:
+  - schemes:
+    - https://beams.fm/*
+    url: https://api.beams.fm/oEmbed
+    docs_url: https://docs.beams.fm/en/collections/3601643-technical-documentation
+    example_urls:
+    - https://api.beams.fm/oEmbed?url=https://beams.fm/chamberlaincoffee/kIxlbOMMQqSaer90DDOYF6w
+    discovery: true
+...
