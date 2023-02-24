@@ -1,0 +1,13 @@
+---
+- provider_name: YUMPU
+  provider_url: https://www.yumpu.com/
+  endpoints:
+  - schemes:
+    - https://www.yumpu.com/*/document/view/*/*
+    url: https://www.yumpu.com/services/oembed
+    example_urls:
+    - https://www.yumpu.com/services/oembed?url=https%3A%2F%2Fwww.yumpu.com%2Fxx%2Fdocument%2Fview%2F59632036%2Fyumpu-jobs&format=xml
+    - https://www.yumpu.com/services/oembed?url=https%3A%2F%2Fwww.yumpu.com%2Fxx%2Fdocument%2Fview%2F59632036%2Fyumpu-jobs&format=json
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
