@@ -1,0 +1,13 @@
+---
+- provider_name: Origits
+  provider_url: https://origits.com/
+  endpoints:
+  - schemes:
+    - https://origits.com/v/*
+    url: https://origits.net/oembed
+    discovery: true
+    example_urls:
+    - https://origits.net/oembed?url=https%3A%2F%2Forigits.com%2Fv%2F2ca6a37b-1036579d
+    - https://origits.net/oembed?url=https%3A%2F%2Forigits.com%2Fv%2F2ca6a37b-1036579d&format=xml
+    - https://origits.net/oembed?url=https%3A%2F%2Forigits.com%2Fv%2F2ca6a37b-1036579d&format=json
+...
