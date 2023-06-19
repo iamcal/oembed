@@ -1,0 +1,15 @@
+---
+- provider_name: AssemblrWorld
+  provider_url: https://assemblrworld.com/
+  endpoints:
+  - schemes:
+    - https://studio.assemblrworld.com/*
+    - https://assemblr.world/*
+    - https://app-edu.assemblrworld.com/*
+    - https://pr-837.d1o2otincy91d.amplifyapp.com/*
+    - https://staging.d1o2otincy91d.amplifyapp.com/*
+    url: https://assemblrworld.com/oembed
+    discovery: true
+    example_urls:
+    - https://assemblrworld.com/oembed/?url=https://editor.assemblrworld.com/Embed/-kyh3ilVPL7qrYxuLzZH?info=false&hideCloseBtn=true
+...
