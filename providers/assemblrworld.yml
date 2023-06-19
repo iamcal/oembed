@@ -8,6 +8,7 @@
     - https://app-edu.assemblrworld.com/*
     - https://pr-837.d1o2otincy91d.amplifyapp.com/*
     - https://staging.d1o2otincy91d.amplifyapp.com/*
+    - https://editor.assemblrworld.com/*
     url: https://assemblrworld.com/oembed
     discovery: true
     example_urls:
