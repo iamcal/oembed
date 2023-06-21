@@ -3,10 +3,10 @@
   provider_url: https://docswell.com
   endpoints:
   - schemes:
-    - http://docswell.com/*/*
-    - https://docswell.com/*/*
-    - http://www.docswell.com/*/*
-    - https://www.docswell.com/*/*
+    - http://docswell.com/s/*/*
+    - https://docswell.com/s/*/*
+    - http://www.docswell.com/s/*/*
+    - https://www.docswell.com/s/*/*
     url: https://www.docswell.com/service/oembed
     example_urls:
     - https://www.docswell.com/service/oembed?url=https%3A%2F%2Fwww.docswell.com%2Fs%2Fku-suke%2FLK7J5V-hello-docswell
