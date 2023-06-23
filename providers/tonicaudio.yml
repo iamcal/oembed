@@ -12,6 +12,6 @@
     example_urls:
     - https://tonicaudio.com/oembed?url=https%3A%2F%2Ftnic.io%2Fsong%2FYsiaUAFouw
     - https://tonicaudio.com/oembed?url=https%3A%2F%2Ftnic.io%2Ftake%2Fh4QIxVnhLL
-  formats:
-    - json
+    formats:
+      - json
 ...
