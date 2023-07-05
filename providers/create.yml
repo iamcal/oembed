@@ -1,0 +1,10 @@
+---
+- provider_name: itemis CREATE
+  provider_url: https://play.itemis.io
+  endpoints:
+  - schemes:
+    - https://play.itemis.io/*
+    url: https://create.storage.api.itemis.io/api/embed
+    example_urls:
+    - https://create.storage.api.itemis.io/api/embed?url=https://play.itemis.io/?model=58efe58d-9fd7-4192-8281-935d28eca7ff
+...
