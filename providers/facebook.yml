@@ -13,24 +13,24 @@
     - https://www.facebook.com/media/set?set=*
     - https://www.facebook.com/questions/*
     - https://www.facebook.com/notes/*/*/*
-    url: https://graph.facebook.com/v10.0/oembed_post
+    url: https://graph.facebook.com/v16.0/oembed_post
     discovery: false
     example_urls:
-    - https://graph.facebook.com/v10.0/oembed_post?url=https%3A%2F%2Fwww.facebook.com%2FCDC&access_token=96481
+    - https://graph.facebook.com/v16.0/oembed_post?url=https%3A%2F%2Fwww.facebook.com%2FCDC&access_token=96481
   - docs_url: https://developers.facebook.com/docs/plugins/oembed
     schemes:
     - https://www.facebook.com/*/videos/*
     - https://www.facebook.com/video.php?id=*
     - https://www.facebook.com/video.php?v=*
-    url: https://graph.facebook.com/v10.0/oembed_video
+    url: https://graph.facebook.com/v16.0/oembed_video
     discovery: false
     example_urls:
-    - https://graph.facebook.com/v10.0/oembed_video?url=https%3A%2F%2Fwww.facebook.com%2FCDC&access_token=96481
+    - https://graph.facebook.com/v16.0/oembed_video?url=https%3A%2F%2Fwww.facebook.com%2FCDC&access_token=96481
   - docs_url: https://developers.facebook.com/docs/plugins/oembed
     schemes:
     - https://www.facebook.com/*
-    url: https://graph.facebook.com/v10.0/oembed_page
+    url: https://graph.facebook.com/v16.0/oembed_page
     discovery: false
     example_urls:
-    - https://graph.facebook.com/v10.0/oembed_page?url=https%3A%2F%2Fwww.facebook.com%2FCDC&access_token=96481
+    - https://graph.facebook.com/v16.0/oembed_page?url=https%3A%2F%2Fwww.facebook.com%2FCDC&access_token=96481
 ...

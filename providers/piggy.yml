@@ -1,0 +1,11 @@
+---
+- provider_name: Piggy
+  provider_url: https://piggy.to
+  endpoints:
+  - schemes:
+    - https://piggy.to/@*/*
+    - https://piggy.to/view/*
+    url: https://piggy.to/oembed
+    example_urls:
+    - https://piggy.to/oembed?url=https://piggy.to/@magic/ldm92f
+...
