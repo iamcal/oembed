@@ -3,10 +3,17 @@
   provider_url: https://assemblrworld.com/
   endpoints:
   - schemes:
-    - https://studio.assemblrworld.com/*
+    - http://*.studio.assemblrworld.com/creation/*
+    - http://studio.assemblrworld.com/creation/*
+    - http://*.app-edu.assemblrworld.com/Creation/*
+    - http://app-edu.assemblrworld.com/Creation/*
+    - http://assemblr.world/*
+    - http://editor.assemblrworld.com/*
+    - https://*.studio.assemblrworld.com/creation/*
+    - https://studio.assemblrworld.com/creation/*
+    - https://*.app-edu.assemblrworld.com/Creation/*
+    - https://app-edu.assemblrworld.com/Creation/*
     - https://assemblr.world/*
-    - https://app-edu.assemblrworld.com/*
-    - https://staging.d1o2otincy91d.amplifyapp.com/*
     - https://editor.assemblrworld.com/*
     url: https://studio.assemblrworld.com/api/oembed
     discovery: true
