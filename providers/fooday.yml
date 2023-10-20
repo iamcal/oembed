@@ -1,0 +1,12 @@
+---
+- provider_name: Fooday
+  provider_url: https://fooday.app
+  endpoints:
+  - schemes:
+    - https://fooday.app/*/reviews/*
+    - https://fooday.app/*/spots/*
+    url: https://fooday.app/oembed
+    example_urls:
+    - https://fooday.app/oembed?format=json&url=https%3A%2F%2Ffooday.app%2Fen%2Freviews%2F229sej9vN5xv9uHYpYJLyF
+    discovery: true
+...
