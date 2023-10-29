@@ -22,6 +22,7 @@
     url: https://api.spyke.social/embed/oembed
     example_urls:
       - https://api.spyke.social/embed/oembed?url=https%3A%2F%2Fspyke.social%2Fp%2F01HDH1QH9RX705JE1YJS2225MW
+    discovery: true
     formats:
       - json
 ...
