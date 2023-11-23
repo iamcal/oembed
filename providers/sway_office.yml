@@ -1,0 +1,11 @@
+---
+- provider_name: Sway Office
+  provider_url: https://sway.office.com
+  endpoints:
+  - schemes:
+    - https://sway.office.com/*
+    url: https://sway.office.com/api/v1.0/oembed
+    example_urls:
+    - https://sway.office.com/api/v1.0/oembed?url=https%3a%2f%2fsway.office.com/ZCftQ83K9iHgOCH0&amp;format=json
+    discovery: true
+...

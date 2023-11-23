@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://giphy.com/gifs/*
+    - https://giphy.com/clips/*
     - http://gph.is/*
     - https://media.giphy.com/media/*/giphy.gif
     url: https://giphy.com/services/oembed

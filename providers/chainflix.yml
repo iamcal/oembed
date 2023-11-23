@@ -10,7 +10,7 @@
     url: https://www.chainflix.net/video/oembed
     discovery: true
     example_urls:
-    - https://www.chainflix.net/video/oembed?format=json&url=https%3A%2F%2Fwww.chainflix.net%2Fvideo%2F%3FcontentId%3D9129&maxwidth=500
-    - https://www.chainflix.net/video/oembed?format=xml&url=https%3A%2F%2Fwww.chainflix.net%2Fvideo%2F%3FcontentId%3D9129&maxwidth=500
-    - https://www.chainflix.net/video/oembed?url=https%3A%2F%2Fwww.chainflix.net%2Fvideo%2F%3FcontentId%3D9129
+    - https://www.chainflix.net/video/oembed?format=json&url=https%3A%2F%2Fwww.chainflix.net%2Fvideo%2F%3FcontentId%3D1310&maxwidth=500
+    - https://www.chainflix.net/video/oembed?format=xml&url=https%3A%2F%2Fwww.chainflix.net%2Fvideo%2F%3FcontentId%3D1310&maxwidth=500
+    - https://www.chainflix.net/video/oembed?url=https%3A%2F%2Fwww.chainflix.net%2Fvideo%2F%3FcontentId%3D1310
 ...

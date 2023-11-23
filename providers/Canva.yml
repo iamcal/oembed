@@ -1,0 +1,13 @@
+---
+- provider_name: Canva
+  provider_url: https://www.canva.com
+  endpoints:
+  - schemes:
+    - https://www.canva.com/design/*/view
+    url: https://www.canva.com/_oembed
+    docs_url: https://www.canva.com/help/embed-designs/
+    example_urls:
+    - https://www.canva.com/_oembed?url=https://www.canva.com/design/DACHZTlgWkU/view
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

@@ -1,0 +1,14 @@
+---
+- provider_name: EchoesHQ
+  provider_url: https://echoeshq.com
+  endpoints:
+    - schemes:
+        - http://app.echoeshq.com/embed/*
+      url: https://api.echoeshq.com/oembed
+      example_urls:
+        - https://api.echoeshq.com/oembed?url=https%3A%2F%2Fapp.echoeshq.com%2Fembed%2Fdelivery%2Fscore-card%3Ftid%3Dc9e1d942-eafd-4496-9849-f964701c8944%26p%3Dr4w&format=xml
+        - https://api.echoeshq.com/oembed?url=https%3A%2F%2Fapp.echoeshq.com%2Fembed%2Fdelivery%2Fscore-card%3Ftid%3Dc9e1d942-eafd-4496-9849-f964701c8944%26p%3Dr4w&format=json
+      formats:
+        - json
+        - xml
+      discovery: true

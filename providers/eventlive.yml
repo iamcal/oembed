@@ -1,0 +1,14 @@
+---
+- provider_name: EventLive
+  provider_url: https://eventlive.pro
+  endpoints:
+  - schemes:
+    - https://evt.live/*
+    - https://evt.live/*/*
+    - https://live.eventlive.pro/*
+    - https://live.eventlive.pro/*/*
+    url: https://evt.live/api/oembed
+    example_urls:
+    - https://evt.live/api/oembed?url=https%3A%2F%2Fevt.live%2Fmail8099%2Fwedding-sample&amp;format=json
+    discovery: true
+...

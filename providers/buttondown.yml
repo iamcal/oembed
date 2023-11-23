@@ -5,7 +5,7 @@
     - https://buttondown.email/*
     url: https://buttondown.email/embed
     example_urls:
-    - https://buttondown.email/jmduke
+    - https://buttondown.email/embed?url=https://buttondown.email/jmduke
     formats:
     - json
     discovery: true

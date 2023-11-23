@@ -23,10 +23,16 @@
       - https://instagr.am/tv/*
       - https://www.instagram.com/tv/*
       - https://www.instagr.am/tv/*
-    url: https://graph.facebook.com/v9.0/instagram_oembed
+      - http://www.instagram.com/reel/*
+      - https://www.instagram.com/reel/*
+      - http://instagram.com/reel/*
+      - https://instagram.com/reel/*
+      - http://instagr.am/reel/*
+      - https://instagr.am/reel/*
+    url: https://graph.facebook.com/v16.0/instagram_oembed
     docs_url: https://developers.facebook.com/docs/instagram/oembed
     example_urls:
-      - https://graph.facebook.com/v9.0/instagram_oembed?url=https%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
+      - https://graph.facebook.com/v16.0/instagram_oembed?url=https%3A%2F%2Finstagram.com%2Fp%2FV8UMy0LjpX%2F
     formats:
       - json
     notes:

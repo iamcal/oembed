@@ -1,0 +1,10 @@
+---
+- provider_name: Line Place
+  provider_url: https://place.line.me
+  endpoints:
+    - schemes:
+        - https://place.line.me/businesses/*
+      url: https://place.line.me/oembed
+      example_urls:
+        - https://place.line.me/oembed?url=https%3A%2F%2Fplace.line.me%2Fbusinesses%2F202385697
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: Framer
+  provider_url: https://www.framer.com
+  endpoints:
+  - schemes:
+    - https://framer.com/share/*
+    - https://framer.com/embed/*
+    url: https://api.framer.com/web/oembed
+    example_urls:
+    - https://api.framer.com/web/oembed?url=https://framer.com/share/Music-Player--s0uS6VxvZ30W2IabDqOC
+    discovery: true
+...

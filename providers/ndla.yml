@@ -1,0 +1,20 @@
+---
+- provider_name: NDLA - Norwegian Digital Learning Arena
+  provider_url: https://ndla.no
+  endpoints:
+  - schemes:
+    - https://ndla.no/*
+    url: https://ndla.no/oembed
+    example_urls:
+    - https://ndla.no/oembed?url=https://ndla.no/subject:20/topic:1:186732/topic:1:187167/resource:1:176616
+    - https://ndla.no/oembed?url=https://ndla.no/article/123
+    discovery: false
+    notes: Provider only supports the 'rich' type.
+  - schemes:
+    - https://liste.ndla.no/*
+    url: https://liste.ndla.no/oembed
+    example_urls:
+    - https://liste.ndla.no/oembed?url=https://liste.ndla.no/?concept=123
+    discovery: false
+    notes: Provider only supports the 'rich' type.
+...
