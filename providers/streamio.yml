@@ -1,0 +1,15 @@
+---
+- provider_name: Streamio
+  provider_url: https://www.streamio.com
+  endpoints:
+  - schemes:
+    - https://s3m.io/*
+    - https://23m.io/*
+    url: https://streamio.com/api/v1/oembed
+    discovery: true
+    example_urls:
+    - https://streamio.com/api/v1/oembed?url=https://23m.io/yDa7W
+    - https://streamio.com/api/v1/oembed?url=https://s3m.io/rCNma
+    - https://streamio.com/api/v1/oembed?url=https://23m.io/HkJfp
+    notes: Provider only supports json
+...

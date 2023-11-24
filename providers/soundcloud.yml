@@ -5,6 +5,7 @@
   - schemes:
     - http://soundcloud.com/*
     - https://soundcloud.com/*
+    - https://on.soundcloud.com/*
     - https://soundcloud.app.goog.gl/*
     url: https://soundcloud.com/oembed
     example_urls:

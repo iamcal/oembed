@@ -1,0 +1,13 @@
+---
+- provider_name: Didacte
+  provider_url: https://www.didacte.com/
+  endpoints:
+  - schemes:
+    - https://*.didacte.com/a/course/*
+    url: https://*.didacte.com/cards/oembed
+    example_urls:
+    - https://finchp.didacte.com/cards/oembed?url=https%3A%2F%2Ffinchp.didacte.com%2Fa%2Fcourse%2F363%3Flocale%3Dfr
+    discovery: true
+    formats:
+    - json
+...

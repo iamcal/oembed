@@ -7,5 +7,5 @@
     url: https://www.tumblr.com/oembed/1.0
     docs_url: https://www.tumblr.com/docs/en/api/v2
     example_urls:
-    - https://staff.tumblr.com/post/619193383820410880/have-a-post-youre-particularly-proud-of
+    - https://www.tumblr.com/oembed/1.0?url=https://staff.tumblr.com/post/619193383820410880/have-a-post-youre-particularly-proud-of
 ...

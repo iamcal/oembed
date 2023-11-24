@@ -1,0 +1,13 @@
+---
+- provider_name: Whimsical
+  provider_url: https://www.whimsical.com
+  endpoints:
+    - schemes:
+        - https://whimsical.com/*
+      url: https://whimsical.com/api/oembed
+      example_urls:
+        - https://whimsical.com/api/oembed?url=https%3A%2F%2Fwhimsical.com%2Fhow-oembed-works-7wvH66hEVUugCDkpPDbcuc&format=json
+        - https://whimsical.com/api/oembed?url=https%3A%2F%2Fwhimsical.com%2Fwine-and-cheese-pairing-mind-map-AFLejp4xXDtAjWLHjVCeyi&format=json
+        - https://whimsical.com/api/oembed?url=https%3A%2F%2Fwhimsical.com%2Fhow-we-built-whimsical-Q5patpyGV3RDvkvkx1f6Ck&format=json
+      discovery: true
+...

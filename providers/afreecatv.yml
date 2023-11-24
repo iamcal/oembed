@@ -1,0 +1,16 @@
+---
+- provider_name: afreecaTV
+  provider_url: https://www.afreecatv.com
+  endpoints:
+  - schemes:
+    - https://vod.afreecatv.com/player/
+    - https://v.afree.ca/ST/
+    - https://vod.afreecatv.com/ST/
+    - https://vod.afreecatv.com/PLAYER/STATION/
+    - https://play.afreecatv.com/
+    url: https://openapi.afreecatv.com/oembed/embedinfo
+    example_urls:
+    - https://openapi.afreecatv.com/oembed/embedinfo?url=https://vod.afreecatv.com/player/71021072&width=640&height=360
+    - https://openapi.afreecatv.com/oembed/embedinfo?url=https://play.afreecatv.com/afstar1/237663862&width=640&height=360
+    discovery: true
+...

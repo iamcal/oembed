@@ -1,5 +1,5 @@
 ---
-- provider_name: Codepen
+- provider_name: CodePen
   provider_url: https://codepen.io
   endpoints:
   - schemes:

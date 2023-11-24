@@ -1,0 +1,12 @@
+---
+- provider_name: UAPod
+  provider_url: https://uapod.univ-antilles.fr/
+  endpoints:
+  - schemes:
+    - https://uapod.univ-antilles.fr/video/*
+    url: https://uapod.univ-antilles.fr/oembed
+    discovery: true
+    example_urls:
+    - https://uapod.univ-antilles.fr/oembed/?url=https%3A//uapod.univ-lille.fr/video/0001-clip-pod/
+    - https://uapod.univ-lille.fr/oembed/?url=https%3A//uapod.univ-lille.fr/video/0001-clip-pod/&format=xml
+...

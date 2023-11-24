@@ -1,0 +1,14 @@
+---
+- provider_name: iMenuPro
+  provider_url: https://imenupro.com
+  endpoints:
+  - schemes:
+    - http://qr.imenupro.com/*
+    - https://qr.imenupro.com/*
+    url: https://qr.imenupro.com/api/oembed
+    example_urls:
+    - https://qr.imenupro.com/api/oembed/?url=https://qr.imenupro.com/4m-h9&format=json
+    formats:
+    - json
+    discovery: true
+...

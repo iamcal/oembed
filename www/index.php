@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
                          __                 __     
                         /\ \               /\ \    
@@ -37,6 +38,12 @@
 <html lang="en">
 <head>
 <title>oEmbed</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The oEmbed spec">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 <style>
 
 body, input, textarea, select {
@@ -55,6 +62,7 @@ pre {
 	border: 1px solid #999;
 	padding: 8px;
 	margin: 0px 20px;
+	overflow: auto;
 }
 
 code {
@@ -452,7 +460,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 ?>
 
 <p>There are currently <i><?php echo number_format($count); ?> providers</i> in the registry.
-	Providers and consumers are <b>strongly encouraged</b> to use the <a href="#section4">discovery mechanism</a>, rather than thne registery.</p>
+	Providers and consumers are <b>strongly encouraged</b> to use the <a href="#section4">discovery mechanism</a>, rather than the registry.</p>
 
 
 <a name="section7.2" id="section7.2"><h3>7.2. Consumers</h3></a>
@@ -485,7 +493,6 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>
 	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
 	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
-	<li>Any: oEmbed API proxy endpoint for open-source projects (<a href="http://oembedapi.com">http://oembedapi.com</a>)</li>
 </ul>
 
 
@@ -497,7 +504,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
 </ul>
 <ul>
-	<li><a href="https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
+	<li><a href="https://web.archive.org/web/20150318024249/https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
 	<li><a href="https://blog.leahculver.com/2008/05/announcing-oembed-an-open-standard-for-embedded-content.html">Leah's blog</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>
 </ul>

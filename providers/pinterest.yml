@@ -1,0 +1,13 @@
+---
+- provider_name: Pinterest
+  provider_url: https://www.pinterest.com
+  endpoints:
+  - schemes:
+    - https://www.pinterest.com/*
+    url: https://www.pinterest.com/oembed.json
+    example_urls:
+    - https://www.pinterest.com/oembed.json?url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F99360735500167749%2F
+    - https://www.pinterest.com/oembed.json?url=https%3A%2F%2Fwww.pinterest.com%2Fkentbrew%2F
+    - https://www.pinterest.com/oembed.json?url=https%3A%2F%2Fwww.pinterest.com%2Fkentbrew%2Fart-i-wish-i-d-made%2F
+    discovery: true
+...

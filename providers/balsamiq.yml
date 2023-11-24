@@ -1,0 +1,12 @@
+---
+- provider_name: Balsamiq Cloud
+  provider_url: https://balsamiq.cloud/
+  endpoints:
+  - schemes:
+    - https://balsamiq.cloud/*
+    url: https://balsamiq.cloud/oembed
+    example_urls:
+    - https://balsamiq.cloud/oembed?format=json&url=https%3A%2F%2Fbalsamiq.cloud%2Fs2ow8jo%2Fpo58uiw
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

@@ -9,8 +9,8 @@
     - http://sta.sh/*
     - https://*.deviantart.com/art/*
     - https://*.deviantart.com/*/art/*
-    - https://sta.sh/*",
-    - https://*.deviantart.com/*#/d*"
+    - https://sta.sh/*
+    - https://*.deviantart.com/*#/d*
     url: http://backend.deviantart.com/oembed
     docs_url: https://www.deviantart.com/developers/oembed
     example_urls:
