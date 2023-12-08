@@ -5,10 +5,13 @@
   - schemes:
     - https://lottiefiles.com/*
     - https://*.lottiefiles.com/*
+    - https://*.lottie.host/*
+    - https://lottie.host/*
     url: https://embed.lottiefiles.com/oembed
     discovery: true
     example_urls:
     - https://embed.lottiefiles.com/oembed?url=https://lottiefiles.com/860-maldives-flag
+    - https://embed.lottiefiles.com/oembed?url=https://lottie.host/embed/34ce41ac-7f9f-4a08-82b2-f86cbf3353a0/lykvZiXpso.json
     formats:
     - json
 ...
