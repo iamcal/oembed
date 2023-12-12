@@ -9,12 +9,14 @@
     - http://app-edu.assemblrworld.com/Creation/*
     - http://assemblr.world/*
     - http://editor.assemblrworld.com/*
+    - http://*.assemblrworld.com/*
     - https://*.studio.assemblrworld.com/creation/*
     - https://studio.assemblrworld.com/creation/*
     - https://*.app-edu.assemblrworld.com/Creation/*
     - https://app-edu.assemblrworld.com/Creation/*
     - https://assemblr.world/*
     - https://editor.assemblrworld.com/*
+    - https://*.assemblrworld.com/*
     url: https://studio.assemblrworld.com/api/oembed
     discovery: true
     example_urls:
