@@ -19,7 +19,6 @@
     - https://editor.assemblrworld.com/*
     - https://*.assemblrworld.com/creation/*
     - https://*.assemblrworld.com/Creation/*
-    - 
     url: https://studio.assemblrworld.com/api/oembed
     discovery: true
     example_urls:
