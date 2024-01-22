@@ -1,0 +1,13 @@
+---
+- provider_name: FlowHubOrg
+  provider_url: https://flows.flowhub.org
+  endpoints:
+  - url: https://flowhub.org/o/embed
+    schemes:
+      - https://flowhub.org/f/*
+      - https://flowhub.org/s/*
+    discovery: true
+    example_urls:
+      - https://flowhub.org/o/embed?url=https%3A//flowhub.org/f/390ee0021ded4910
+      - https://flowhub.org/o/embed?url=https%3A//flowhub.org/f/f21aed28a04a7fd0
+...
