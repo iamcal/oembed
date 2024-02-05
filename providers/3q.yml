@@ -5,7 +5,7 @@
     - schemes:
         - http://img.provider.com/*
         - http://provider.com/post/*
-      url: http://api.provider.com/oembed.json
+      url: https://playout.3qsdn.com/oembed
       docs_url: https://docs.3q.video/en/Player_API/Basic_usage.html
       example_urls:
         - https://playout.3qsdn.com/oembed?url=f03b2c43-fa42-47f6-8106-8f39cbf8661b&format=json
