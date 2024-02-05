@@ -1,13 +1,13 @@
 ---
-- provider_name: 3Q Video
+- provider_name: 3Q
   provider_url: https://3q.video/
   endpoints:
     - schemes:
         - http://img.provider.com/*
         - http://provider.com/post/*
       url: http://api.provider.com/oembed.json
-      docs_url: https://docs.3q.video/
+      docs_url: https://docs.3q.video/en/Player_API/Basic_usage.html
       example_urls:
-        - http://api.provider.com/oembed.json?url=http://provider.com/post/f00ba2
+        - https://playout.3qsdn.com/oembed?url=f03b2c43-fa42-47f6-8106-8f39cbf8661b&format=json
       discovery: true
       notes: Provider only supports the 'rich' type
