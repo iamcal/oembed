@@ -6,7 +6,7 @@
         - http://img.provider.com/*
         - http://provider.com/post/*
       url: http://api.provider.com/oembed.json
-      docs_url: http://dev.provider.com/api/oembed/
+      docs_url: https://docs.3q.video/
       example_urls:
         - http://api.provider.com/oembed.json?url=http://provider.com/post/f00ba2
       discovery: true
