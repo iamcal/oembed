@@ -3,7 +3,7 @@
   provider_url: https://3q.video/
   endpoints:
     - schemes:
-        - https://playout.3qsdn.com/embed/1111c681-0052-4952-b42b-f4b20aae99d5
+        - https://playout.3qsdn.com/embed/*
       url: https://playout.3qsdn.com/oembed
       docs_url: https://docs.3q.video/en/Player_API/Basic_usage.html
       example_urls:
