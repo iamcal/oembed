@@ -1,0 +1,13 @@
+---
+- provider_name: Mixpanel
+  provider_url: https://mixpanel.com/
+  endpoints:
+  - schemes:
+    - https://mixpanel.com/*
+    url: https://mixpanel.com/api/app/embed/oembed/
+    docs_url: https://developer.mixpanel.com/docs
+    example_urls:
+    - https://mixpanel.com/api/app/embed/oembed?url=https%3A%2F%2Fmixpanel.com%2Fs%2F4mEW4a
+    - https://mixpanel.com/api/app/embed/oembed/?url=https%3A%2F%2Fmixpanel.com%2Fproject%2F2195193%2Fview%2F139237%2Fapp%2Fdashboards%23id%3D685944%26editor-card-id%3D%2522report-link-4409611%2522%27
+
+...

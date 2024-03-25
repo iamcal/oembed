@@ -1,0 +1,28 @@
+---
+- provider_name: Spyke
+  provider_url: https://spyke.social
+  endpoints:
+  - schemes:
+      - http://spyke.social/p/*
+      - http://spyke.social/u/*
+      - http://spyke.social/g/*
+      - http://spyke.social/c/*
+      - https://spyke.social/p/*
+      - https://spyke.social/u/*
+      - https://spyke.social/g/*
+      - https://spyke.social/c/*
+      - http://www.spyke.social/p/*
+      - http://www.spyke.social/u/*
+      - http://www.spyke.social/g/*
+      - http://www.spyke.social/c/*
+      - https://www.spyke.social/p/*
+      - https://www.spyke.social/u/*
+      - https://www.spyke.social/g/*
+      - https://www.spyke.social/c/*
+    url: https://api.spyke.social/embed/oembed
+    example_urls:
+      - https://api.spyke.social/embed/oembed?url=https%3A%2F%2Fspyke.social%2Fp%2F01HDH1QH9RX705JE1YJS2225MW
+    discovery: true
+    formats:
+      - json
+...

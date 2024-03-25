@@ -1,0 +1,15 @@
+---
+- provider_name: Kurozora
+  provider_url: https://kurozora.app/
+  endpoints:
+  - schemes:
+    - https://kurozora.app/episodes*
+    - https://kurozora.app/songs*
+    url: https://kurozora.app/oembed
+    discovery: true
+    example_urls:
+    - https://kurozora.app/oembed?url=https%3A%2F%2Fkurozora.app%2Fepisodes%2F1&format=json
+    - https://kurozora.app/oembed?url=https%3A%2F%2Fkurozora.app%2Fepisodes%2F1&format=xml
+    - https://kurozora.app/oembed?url=https%3A%2F%2Fkurozora.app%2Fsongs%2F16779&format=json
+    - https://kurozora.app/oembed?url=https%3A%2F%2Fkurozora.app%2Fsongs%2F16779&format=xml
+...

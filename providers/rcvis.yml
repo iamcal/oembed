@@ -10,8 +10,8 @@
     url: https://animatron.com/oembed
     docs_url: https://rcvis.readthedocs.io/en/latest/index.html?highlight=oembed#oembed
     example_urls:
-    - https://rcvis.com/v/macomb-multiwinner-surplusjson-3
-    - https://rcvis.com/v/opavote2json
-    - https://rcvis.com/v/2018_maine_gov_primary_demjson
+    - https://rcvis.com/oembed?url=https%3A%2F%2Frcvis.com%2Fvo%2Fmacomb-multiwinner-surplusjson-3%2Fbarchart-interactive
+    - https://rcvis.com/oembed?url=https%3A%2F%2Frcvis.com%2Fvo%2Fopavote2json%2Fbarchart-interactive
+    - https://rcvis.com/oembed?url=https%3A%2F%2Frcvis.com%2Fvo%2F2018_maine_gov_primary_demjson%2Fbarchart-interactive
     discovery: true
 ...

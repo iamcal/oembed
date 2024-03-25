@@ -1,0 +1,15 @@
+---
+- provider_name: X
+  provider_url: http://www.x.com/
+  endpoints:
+  - schemes:
+    - https://x.com/*
+    - https://x.com/*/status/*
+    - https://*.x.com/*/status/*
+    url: https://publish.x.com/oembed
+    docs_url: https://developer.x.com/en/docs/twitter-for-websites/oembed-api
+    example_urls:
+    - https://publish.x.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F463440424141459456
+    - https://publish.x.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F463440424141459456
+
+...

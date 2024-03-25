@@ -75,18 +75,40 @@
 					# this test is currently disabled because three providers fail it.
 					# i _believe_ they should be deleted, as they are of no use to consumers.
 
-				#	if (!isset($endpoint['discovery']) || $endpoint['discovery'] === 0){
-				#		if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
-				#			echo "Endpoint without schemes or discovery found in provider file providers/$file\n";
-				#			print_r($endpoint);
-				#			exit(1);
-				#		}
-				#	}
+					if (!isset($endpoint['discovery']) || $endpoint['discovery'] === 0){
+						if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
+							echo "Endpoint without schemes or discovery found in provider file providers/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+					}
 
 					if (!isset($endpoint['url'])){
 						echo "Endpoint without URL found in provider file providers/$file\n";
 						print_r($endpoint);
 						exit(1);
+					}
+
+					if (preg_match('!\*!', $endpoint['url'])){
+						echo "Endpoint URL contains a wildcard in provider file providers/$file\n";
+						print_r($endpoint);
+						exit(1);
+					}
+
+					if (isset($endpoint['example_urls']))
+					foreach ($endpoint['example_urls'] as $example){
+
+						if (!preg_match('!^https?://!', $example)){
+							echo "Endpoint example URL does not start with http:// or https:// in provider file providers/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+
+						if (!preg_match('!url=!', $example)){
+							echo "Endpoint example URL does not contain url= param in provider file providers/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
 					}
 
 					if (isset($endpoint['schemes'])){
