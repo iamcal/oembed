@@ -4,17 +4,19 @@
   endpoints:
   - schemes:
     - https://ndla.no/*
+    - https://ndla.no/article/*
+    - https://ndla.no/audio/*
+    - https://ndla.no/concept/*
+    - https://ndla.no/image/*
+    - https://ndla.no/video/*
     url: https://ndla.no/oembed
     example_urls:
     - https://ndla.no/oembed?url=https://ndla.no/subject:20/topic:1:186732/topic:1:187167/resource:1:176616
     - https://ndla.no/oembed?url=https://ndla.no/article/123
-    discovery: false
-    notes: Provider only supports the 'rich' type.
-  - schemes:
-    - https://liste.ndla.no/*
-    url: https://liste.ndla.no/oembed
-    example_urls:
-    - https://liste.ndla.no/oembed?url=https://liste.ndla.no/?concept=123
+    - https://ndla.no/oembed?url=https://ndla.no/audio/123
+    - https://ndla.no/oembed?url=https://ndla.no/concept/123
+    - https://ndla.no/oembed?url=https://ndla.no/image/123
+    - https://ndla.no/oembed?url=https://ndla.no/video/6289964283001
     discovery: false
     notes: Provider only supports the 'rich' type.
 ...
