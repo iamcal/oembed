@@ -4,7 +4,7 @@
   endpoints:
     - schemes:
         - https://*.neetorecord.com/watch/*
-      url: https://*.neetorecord.com/api/v1/oembed
+      url: https://api.neetorecord.com/api/v1/oembed
       example_urls:
         - https://spinkart.neetorecord.com/api/v1/oembed?format=json&url=https%3A%2F%2Fspinkart.neetorecord.com%2Fwatch%2Fade154fb-bff3-4347-b2fa-be77db58e792
 ...
