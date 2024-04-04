@@ -1,0 +1,13 @@
+---
+- provider_name: Shopshare
+  provider_url: https://shopshare.tv
+  endpoints:
+  - schemes:
+    - https://shopshare.tv/shopboard/*
+    - https://shopshare.tv/shopcast/*
+    url: https://shopshare.tv/api/shopcast/oembed
+    example_urls:
+    - https://shopshare.tv/api/shopcast/oembed?url=https://shopshare.tv/shopcast/U2hvcGNhc3Q6NzExNA==
+    - https://shopshare.tv/api/shopcast/oembed?url=https://shopshare.tv/shopboard/TG9va2Jvb2s6ODQwOQ==
+    discovery: true
+...
