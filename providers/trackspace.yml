@@ -1,0 +1,11 @@
+---
+- provider_name: Trackspace
+  provider_url: http://trackspace.upitup.com/
+  endpoints:
+  - schemes:
+    - http://trackspace.upitup.com/*
+    url: https://trackspace.upitup.com/oembed
+    example_urls:
+    - https://trackspace.upitup.com/oembed?url=https%3A%2F%2Ftrackspace.upitup.com%2Ftrack%2F17
+    - https://trackspace.upitup.com/oembed?url=https%3A%2F%2Ftrackspace.upitup.com%2Ftrack%2F17&format=json
+...
