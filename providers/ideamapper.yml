@@ -1,0 +1,13 @@
+{
+        "provider_name": "Ideamapper",
+        "provider_url": "http://oembed.ideamapper.com",
+        "endpoints": [
+            {
+                "schemes": [
+                    "https://oembed.ideamapper.com/*",
+                ],
+                "url": "https://oembed.ideamapper.com/",
+                "discovery": true
+            }
+        ]
+    },
