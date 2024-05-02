@@ -1,0 +1,12 @@
+---
+- provider_name: Ideamapper
+  provider_url: http://oembed.ideamapper.com
+  endpoints:
+  - schemes:
+    - http://oembed.ideamapper.com/*
+    url: http://oembed.ideamapper.com
+    example_urls:
+    - http://oembed.ideamapper.com/?url=http://provider.com/post/f00ba2
+    discovery: true
+    notes: Provider only supports the 'rich' type and json format
+...
