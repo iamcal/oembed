@@ -1,0 +1,11 @@
+---
+- provider_name: biqnetwork
+  provider_url: https://biqapp.com/
+  endpoints:
+  - schemes:
+    - https://cloud.biqapp.com/*
+    url: https://biqapp.com/api/v1/video/oembed
+    example_urls:
+    - https://biqapp.com/api/v1/video/oembed?url=https://cloud.biqapp.com/387214522072432640/Valorant_03-22-2024_23-3-21-702.mp4&format=json
+    discovery: true
+...
