@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://www.dailymotion.com/video/*
+    - https://geo.dailymotion.com/player.html?video=*
     url: https://www.dailymotion.com/services/oembed
     docs_url: https://developer.dailymotion.com/player#player-oembed
     example_urls:
