@@ -4,7 +4,7 @@
   endpoints:
   - schemes:
     - https://oembed.ideamapper.com/oembed*
-    url: https://oembed.ideamapper.com
+    url: https://oembed.ideamapper.com/oembed
     example_urls:
     - https://oembed.ideamapper.com/oembed?url=http://provider.com/post/f00ba2&format=json  
     - https://oembed.ideamapper.com/oembed?url=http://provider.com/post/f00ba2&format=xml  
