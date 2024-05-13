@@ -1,12 +1,13 @@
 ---
 - provider_name: Ideamapper
-  provider_url: http://oembed.ideamapper.com
+  provider_url: https://oembed.ideamapper.com
   endpoints:
   - schemes:
-    - https://oembed.ideamapper.com/*
+    - https://oembed.ideamapper.com/oembed*
     url: https://oembed.ideamapper.com
     example_urls:
-    - https://oembed.ideamapper.com/?url=http://provider.com/post/f00ba2
+    - https://oembed.ideamapper.com/oembed?url=http://provider.com/post/f00ba2&format=json  
+    - https://oembed.ideamapper.com/oembed?url=http://provider.com/post/f00ba2&format=xml  
     discovery: true
-    notes: Provider only supports the 'rich' type and json format
+    notes: Provider supports the 'photo' type and json and xml format. format must be part of the request 
 ...
