@@ -5,9 +5,6 @@
   - schemes:
     - https://*.ideamapper.com/*
     url: https://oembed.ideamapper.com/oembed
-    example_urls:
-    - https://oembed.ideamapper.com/oembed?url=http://provider.com/post/f00ba2&format=json  
-    - https://oembed.ideamapper.com/oembed?url=http://provider.com/post/f00ba2&format=xml  
     discovery: true
     notes: Provider supports the 'photo' type and json and xml format. format must be part of the request 
 ...
