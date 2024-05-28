@@ -3,6 +3,7 @@
   provider_url: https://www.gumlet.com/
   endpoints:
   - schemes:
+    - https://gumlet.tv/watch/*
     - https://www.gumlet.com/watch/*
     - https://play.gumlet.io/embed/*
     url: https://api.gumlet.com/v1/oembed
