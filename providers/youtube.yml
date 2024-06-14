@@ -9,6 +9,7 @@
     - https://*.youtube.com/playlist?list=*
     - https://youtube.com/playlist?list=*
     - https://*.youtube.com/shorts*
+    - https://youtube.com/shorts*    
     - https://*.youtube.com/embed/*
     url: https://www.youtube.com/oembed
     discovery: true
