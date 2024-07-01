@@ -1,14 +1,12 @@
 ---
-- provider_name: The Provider
-  provider_url: http://www.provider.com
+- provider_name: Itabtech infosys
+  provider_url: https://samay.itabtechinfosys.com/
   endpoints:
   - schemes:
-    - http://img.provider.com/*
-    - http://provider.com/post/*
-    url: http://api.provider.com/oembed.json
-    docs_url: http://dev.provider.com/api/oembed/
+    - https://samay.itabtechinfosys.com/*
+    url: https://samay.itabtechinfosys.com/oembed/
     example_urls:
-    - http://api.provider.com/oembed.json?url=http://provider.com/post/f00ba2
+    - https://samay.itabtechinfosys.com/oembed/?url=https://samay.itabtechinfosys.com/thank-you-image.png
     discovery: true
-    notes: Provider only supports the 'rich' type
+    notes: Provider only supports the 'photo' type
 ...
