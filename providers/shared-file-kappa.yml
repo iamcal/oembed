@@ -1,0 +1,11 @@
+---
+- provider_name: SharedFile
+  provider_url: https://shared-file-kappa.vercel.app/file/
+  endpoints:
+    - schemes:
+        - https://shared-file-kappa.vercel.app/file/*
+      url: https://shared-file-kappa.vercel.app/file/api/oembed
+      discovery: true
+      example_urls:
+        - https://shared-file-kappa.vercel.app/file/api/oembed?url=https://shared-file-kappa.vercel.app/file/oembed/aac97ee0-9d43-43d0-9376-d419b66d544c
+...
