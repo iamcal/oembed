@@ -1,0 +1,15 @@
+---
+- provider_name: MySQL Visual Explain
+  provider_url: https://mysqlexplain.com
+  endpoints:
+  - schemes:
+    - https://mysqlexplain.com/explain/*
+    - https://embed.mysqlexplain.com/explain/*
+    url: https://api.mysqlexplain.com/v2/oembed.json
+    example_urls:
+    - https://api.mysqlexplain.com/v2/oembed.json?url=https%3A%2F%2Fmysqlexplain.com%2Fexplain%2F01j2ef1bj7efr97m5v140rnxyz
+    formats:
+      - json
+    discovery: true
+    notes: Provider only supports the 'rich' type.
+...
