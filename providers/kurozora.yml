@@ -3,8 +3,8 @@
   provider_url: https://kurozora.app/
   endpoints:
   - schemes:
-    - https://kurozora.app/episodes*
-    - https://kurozora.app/songs*
+    - https://kurozora.app/episodes/*
+    - https://kurozora.app/songs/*
     url: https://kurozora.app/oembed
     discovery: true
     example_urls:
