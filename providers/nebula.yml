@@ -1,0 +1,27 @@
+---
+- provider_name: Nebula
+  provider_url: https://nebula.tv
+  endpoints:
+  - url: https://nebula.tv/api/oembed
+    notes: Provider only supports the 'json' format
+    formats:
+    - json
+    schemes:
+    - https://nebula.tv/videos/*
+    example_urls:
+    - https://nebula.tv/api/oembed?url=https%3A%2F%2Fnebula.tv%2Fvideos%2Fjetlag-season-seven-trailer
+    - https://nebula.tv/api/oembed?url=https%3A%2F%2Fnebula.tv%2Fvideos%2Fpatrickhwillems-night-of-the-coconut
+
+- provider_name: Nebula Beta
+  provider_url: https://beta.nebula.tv
+  endpoints:
+  - url: https://beta.nebula.tv/api/oembed
+    notes: Provider only supports the 'json' format
+    formats:
+    - json
+    schemes:
+    - https://beta.nebula.tv/videos/*
+    example_urls:
+    - https://beta.nebula.tv/api/oembed?url=https%3A%2F%2Fbeta.nebula.tv%2Fvideos%2Fjetlag-season-seven-trailer
+    - https://beta.nebula.tv/api/oembed?url=https%3A%2F%2Fbeta.nebula.tv%2Fvideos%2Fpatrickhwillems-night-of-the-coconut
+...
