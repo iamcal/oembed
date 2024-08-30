@@ -1,0 +1,8 @@
+---
+- provider_name: Framatube
+  provider_url: https://framatube.org/
+  endpoints:
+  - schemes:
+    - https://framatube.org/w/*
+    url: https://framatube.org/services/oembed
+...
