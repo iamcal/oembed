@@ -1,6 +1,6 @@
 {
   "name": "oembed-providers",
-  "version": "1.0.20240826",
+  "version": "1.0.20240830",
   "license": "MIT",
   "description": "oEmbed providers",
   "main": "providers.json",
