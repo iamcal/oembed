@@ -1,0 +1,17 @@
+---
+- provider_name: Local Voices Network (LVN)
+  provider_url: https://app.lvn.org/
+  endpoints:
+  - schemes:
+    - https://origin-embed.dev.lvn.org/?hid=*
+    - https://origin-embed.lvn.org/?hid=*
+    - https://embed.dev.lvn.org/?hid=*
+    - https://embed.lvn.org/?hid=*
+  url: https://embed.lvn.org/oembed/
+  docs_url: https://embed.dev.lvn.org/oembed/
+  discovery: true
+  example_urls:
+    - https://embed.lvn.org/oembed/?url=https%3A%2F%2Fembed.lvn.org%2Fwatch%3Fhid%3D3036839
+    - https://origin-embed.lvn.org/oembed/?url=https%3A%2F%2Forigin-embed.lvn.org%2Fwatch%3Fhid%3D3036839
+  formats:
+    - json
