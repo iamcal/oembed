@@ -1,0 +1,15 @@
+---
+- provider_name: sbedit
+  provider_url: https://sbedit.net
+  endpoints:
+  - schemes:
+    - https://sbedit.net/*
+    url: https://sbedit.net/oembed/
+    example_urls:
+    - https://sbedit.net/oembed?url=https://sbedit.net/oembed/2f155fdea48d15b90f9230867a396a501dd24ec2
+    - https://sbedit.net/oembed?url=https://sbedit.net/oembed/2820edac35dd5035904ca2bf60518d1c3a79d359
+    - https://sbedit.net/oembed?url=https://sbedit.net/oembed/073a35f83fc4f16e597f56208573d29b3dbd55ce
+    - https://sbedit.net/oembed?url=https://sbedit.net/oembed/1e64b476676f6f945af94f278a392aba642d135c
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
