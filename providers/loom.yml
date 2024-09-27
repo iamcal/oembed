@@ -1,0 +1,17 @@
+---
+- provider_name: Loom
+  provider_url: https://www.loom.com/
+  endpoints:
+  - schemes:
+    - https://loom.com/i/*
+    - https://loom.com/share/*
+    url: https://www.loom.com/v1/oembed
+    discovery: true
+    example_urls:
+    - https://www.loom.com/v1/oembed?url=https%3A%2F%2Fwww.loom.com%2Fshare%2F123
+    - https://www.loom.com/v1/oembed?url=https%3A%2F%2Fwww.loom.com%2Fshare%2F123&format=json
+    - https://www.loom.com/v1/oembed?url=https%3A%2F%2Fwww.loom.com%2Fshare%2F123&format=xml
+    - https://www.loom.com/v1/oembed?url=https%3A%2F%2Fwww.loom.com%2Fi%2F123
+    - https://www.loom.com/v1/oembed?url=https%3A%2F%2Fwww.loom.com%2Fi%2F123&format=json
+    - https://www.loom.com/v1/oembed?url=https%3A%2F%2Fwww.loom.com%2Fi%2F123&format=xml
+...
