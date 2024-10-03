@@ -1,0 +1,9 @@
+---
+- provider_name: Bitchute
+  provider_url: https://bitchute.com/
+  endpoints:
+  - url: https://api.bitchute.com/oembed/
+    example_urls:
+    - https://api.bitchute.com/oembed/?url=https%3A%2F%2Fwww.bitchute.com%2Fvideo%2FApixlwN8WoA%2F&format=json
+    discovery: true
+...
