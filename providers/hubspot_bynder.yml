@@ -1,0 +1,12 @@
+---
+- provider_name: The DAM consultants
+  provider_url: https://hubspot-media-bridge.thedamconsultants.com/
+  endpoints:
+  - schemes:
+    - https://hubspot-media-bridge.thedamconsultants.com/*
+    url: https://hubspot-media-bridge.thedamconsultants.com/oembed/
+    example_urls:
+    - https://hubspot-media-bridge.thedamconsultants.com/oembed/?url=
+    discovery: true
+    notes: Provider only supports the 'photos, videos and documents' type
+...
