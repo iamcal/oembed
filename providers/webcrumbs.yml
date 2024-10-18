@@ -1,0 +1,10 @@
+- provider_name: Webcrumbs
+  provider_url: https://webcrumbs.org/
+  endpoints:
+  - schemes:
+    - http://share.webcrumbs.org/*
+  url: http://share.webcrumbs.org/
+  discovery: true
+  example_urls:
+    - http://share.webcrumbs.org/Pd6r5O?embed=json
+    - http://share.webcrumbs.org/Pd6r5O?embed=xml
