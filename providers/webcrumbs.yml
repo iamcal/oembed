@@ -9,8 +9,8 @@
     url: http://share.webcrumbs.org/
     docs_url: https://github.com/webcrumbs-community/webcrumbs
     example_urls:
-    - http://share.webcrumbs.org/Pd6r5O?embed=json
-    - http://share.webcrumbs.org/Pd6r5O?embed=xml
+    - http://share.webcrumbs.org/Pd6r5O?url=http://share.webcrumbs.org/Pd6r5O&embed=json
+    - http://share.webcrumbs.org/Pd6r5O?url=http://share.webcrumbs.org/Pd6r5O&embed=xml
     discovery: true
     notes: Provider only supports the 'rich' type
 ...
