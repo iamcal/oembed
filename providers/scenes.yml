@@ -1,0 +1,11 @@
+- provider_name: Scenes
+  provider_url: https://getscenes.com
+  endpoints:
+    - schemes:
+        - https://getscenes.com/e/*
+        - https://getscenes.com/event/*
+      url: https://getscenes.com/oembed
+      example_urls:
+        - https://getscenes.com/oembed?url=https://getscenes.com/e/8a07afbb-0a7c-4314-b027-15a19e25c51a;format=json
+        - https://getscenes.com/oembed?url=https://getscenes.com/event/8a07afbb-0a7c-4314-b027-15a19e25c51a;format=json
+      discovery: true
