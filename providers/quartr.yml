@@ -2,12 +2,12 @@
 - provider_name: Quartr
   provider_url: http://quartr.com
   endpoints:
-    - schemes:
-        - https://quartr.com*
-        - https://web.quartr.com*
-      url: https://web.quartr.com/api/oembed
-      discovery: true
-      example_urls:
-        - https://web.quartr.com/api/oembed?eventId=215125&type=json
-        - https://web.quartr.com/api/oembed?eventId=215125&type=xml
+  - schemes:
+    - https://quartr.com*
+    - https://web.quartr.com*
+    url: https://web.quartr.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://web.quartr.com/api/oembed?eventId=215125&type=json
+    - https://web.quartr.com/api/oembed?eventId=215125&type=xml
 ...
