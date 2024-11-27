@@ -8,6 +8,6 @@
     url: https://web.quartr.com/api/oembed
     discovery: true
     example_urls:
-    - https://web.quartr.com/api/oembed?eventId=215125&type=json
-    - https://web.quartr.com/api/oembed?eventId=215125&type=xml
+    - https://web.quartr.com/api/oembed?url=https%3A%2F%2Fweb.quartr.com%2Fcompanies%2F3706%2Fevents%2F215125%2F&format=xml
+    - https://web.quartr.com/api/oembed?url=https%3A%2F%2Fweb.quartr.com%2Fcompanies%2F3706%2Fevents%2F215125%2F&format=json
 ...
