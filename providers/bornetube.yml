@@ -1,0 +1,13 @@
+---
+- provider_name: Bornetube
+  provider_url: https://www.bornetube.dk/
+  endpoints:
+  - schemes:
+    - https://www.bornetube.dk/media/*
+    - https://www.bornetube.dk/video/*
+    url: https://www.bornetube.dk/media/lasync/oembed/
+    discovery: true
+    example_urls:
+    - https://www.skoletube.dk/media/lasync/oembed/?url=https%3A%2F%2Fwww.bornetube.dk%2Fmedia%2F1345406%2F91hxqgvbcdn32niy9d4hq8r4dxyg8xvb1ebm719f
+    - https://www.skoletube.dk/media/lasync/oembed/?url=https%3A%2F%2Fwww.bornetube.dk%2Fmedia%2F1345406%2F91hxqgvbcdn32niy9d4hq8r4dxyg8xvb1ebm719f&format=xml
+...

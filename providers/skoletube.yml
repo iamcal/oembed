@@ -1,0 +1,15 @@
+---
+- provider_name: Skoletube
+  provider_url: https://www.skoletube.dk/
+  endpoints:
+  - schemes:
+    - https://www.skoletube.dk/media/*
+    - https://www.skoletube.dk/video/*
+    - https://www.studietube.dk/media/*
+    - https://www.studietube.dk/video/*
+    url: https://www.skoletube.dk/media/lasync/oembed/
+    discovery: true
+    example_urls:
+    - https://www.skoletube.dk/media/lasync/oembed/?url=https%3A%2F%2Fwww.skoletube.dk%2Fmedia%2F9488982%2F1gaxieybl2mw5necqt8f0aewjm6n0blctkfi4soz
+    - https://www.skoletube.dk/media/lasync/oembed/?url=https%3A%2F%2Fwww.skoletube.dk%2Fmedia%2F9488982%2F1gaxieybl2mw5necqt8f0aewjm6n0blctkfi4soz&format=xml
+...
