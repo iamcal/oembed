@@ -1,0 +1,12 @@
+---
+- provider_name: ArcGIS Experience Builder
+  provider_url: https://experience.arcgis.com/
+  endpoints:
+  - schemes:
+    - https://experience.arcgis.com/builder/?id=
+    url: https://experience.arcgis.com/oembed
+    example_urls:
+    - https://experience.arcgis.com/builder/?id=6d648052aa6e41df8f300c78e3396f7c
+    - https://experience.arcgis.com/builder/?id=48c2c4987c4d4690b2681021651b78aa
+    discovery: true
+...
