@@ -1,0 +1,6 @@
+- provider_name: "Mono Verification Core"
+  provider_url: "https://mono-verification-core-3ivz9nm75-eishin-team.vercel.app"
+  endpoints:
+    - schemes:
+        - "https://mono-verification-core-3ivz9nm75-eishin-team.vercel.app/*"
+      url: "https://mono-verification-core-3ivz9nm75-eishin-team.vercel.app/api/oembed"
