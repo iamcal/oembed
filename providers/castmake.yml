@@ -1,0 +1,12 @@
+---
+- provider_name: castmake
+  provider_url: https://www.castmake-ai.com
+  endpoints:
+  - schemes:
+    - https://www.castmake-ai.com/c/*/episodes/*
+    url: http://castmake-ai.com/api/embed
+    example_urls:
+    - https://www.castmake-ai.com/api/embed?url=https://www.castmake-ai.com/c/YnEibJ16Y4D4Be5vdmZ5/episodes/N3R5cypdRi6kwRTD86jy
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
