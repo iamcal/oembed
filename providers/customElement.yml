@@ -3,4 +3,4 @@
   endpoints:
     - schemes:
         - "https://mono-verification-core-3ivz9nm75-eishin-team.vercel.app/*"
-      url: "https://mono-verification-core-3ivz9nm75-eishin-team.vercel.app/api/oembed"
+      url: "https://mono-verification-core-3ivz9nm75-eishin-team.vercel.app/api/onEmed/iframe"
