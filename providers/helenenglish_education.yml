@@ -1,0 +1,12 @@
+---
+- provider_name: helenenglish_education
+  provider_url: https://helenenglish.education
+  endpoints:
+    - schemes:
+        - https://helenenglish.education/widget*
+      example_urls:
+        - https://helenenglish.education
+        - https://helenenglish.education/oembed?url=https://helenenglish.education/widget?v=1234
+      discovery: true
+      notes: Provider only supports the 'rich' type
+...
