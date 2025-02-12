@@ -1,9 +1,10 @@
 ---
 - provider_name: helenenglish_education
-  provider_url: https://helenenglish.education
+  provider_url: https://helenenglish.education/
   endpoints:
     - schemes:
         - https://helenenglish.education/widget*
+      url: https://helenenglish.education/oembed
       example_urls:
         - https://helenenglish.education/oembed?url=https://helenenglish.education/widget?v=1234
         - https://helenenglish.education/oembed?url=https://helenenglish.education/widget?v=456789g
