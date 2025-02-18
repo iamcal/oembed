@@ -1,5 +1,5 @@
 <?php
-	header('Content-type: text/plain; charset=utf-8');
+	header('Content-type: application/json; charset=utf-8');
 
 
 	#
