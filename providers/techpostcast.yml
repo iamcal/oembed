@@ -2,10 +2,10 @@
 - provider_name: Tech Post Cast
   provider_url: https://techpostcast.com
   endpoints:
-    - schemes:
-        - https://techpostcast.com/headline-topic-programs/*
-      url: https://techpostcast.com/oembed/
-      example_urls:
-        - https://techpostcast.com/oembed/headline-topic-programs/cm7mginv70000js10hzli74q9.json
-      discovery: true
+  - schemes:
+    - https://techpostcast.com/headline-topic-programs/*
+    url: https://techpostcast.com/oembed/
+    example_urls:
+    - https://techpostcast.com/oembed/headline-topic-programs/cm7mginv70000js10hzli74q9.json
+    discovery: true
 ...
