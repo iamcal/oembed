@@ -1,0 +1,15 @@
+---
+- provider_name: Needle Cloud
+  provider_url: https://cloud.needle.tools
+  endpoints:
+  - schemes:
+    - https://cloud.needle.tools/-/assets/*/file
+    - https://*.needle.run/*
+    url:  https://cloud.needle.tools/oembed
+    example_urls:
+    - https://cloud.needle.tools/oembed?url=Z23hmXBZ1Y5yHp-Z1Y5yHp-world
+    - https://cloud.needle.tools/oembed?url=Z23hmXBZ13e102-Z13e102-product
+    - https://cloud.needle.tools/oembed?url=Z23hmXBZ2dSgFy-Z2dSgFy-optimized
+    formats:
+    - json
+...
