@@ -1,16 +1,8 @@
----
-- provider_name: dadan
-  provider_url: https://www.dadan.io
+- provider_name: Dadan
+  provider_url: https://app.dadan.io
   endpoints:
-  - schemes:
-    - https://app.dadan.io/*
-    - https://stage.dadan.io/*
-    url: https://app.dadan.io/api/video/oembed
-    discovery: true
-    example_urls:
-    - https://app.dadan.io/api/video/oembed?url=https%3a%2f%2fapp.dadan.io%2fvideo%2fshare%2fN8Hcbu0F1Du3ugmI&format=json
-    - https://app.dadan.io/api/video/oembed?url=https%3a%2f%2fapp.dadan.io%2fvideo%2fshare%2fN8Hcbu0F1Du3ugmI&format=xml
-    formats:
-    - json
-    - xml
-...
+    - url: https://app.dadan.io/api/video/oembed
+      formats: [json]
+      schemes:
+        - https://app.dadan.io/video/*
+        - https://stage.dadan.io/video/*
