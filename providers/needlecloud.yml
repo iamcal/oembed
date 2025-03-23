@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://cloud.needle.tools/-/assets/*/file
+    - https://cloud.needle.tools/view?file=*
     - https://*.needle.run/*
     url:  https://cloud.needle.tools/oembed
     example_urls:
