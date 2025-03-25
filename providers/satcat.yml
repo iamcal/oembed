@@ -1,0 +1,12 @@
+---
+- provider_name: Satcat
+  provider_url: https://www.satcat.com/
+  endpoints:
+    - schemes:
+        - https://www.satcat.com/sats/*
+      url: https://www.satcat.com/api/sats/oembed
+      discovery: true
+      example_urls:
+        - https://www.satcat.com/api/sats/oembed?url=https%3A%2F%2Fwww.satcat.com%2Fsats%2F25544
+        - https://www.satcat.com/api/sats/oembed?url=https%3A%2F%2Fwww.satcat.com%2Fsats%2F58651
+        - https://www.satcat.com/api/sats/oembed?url=https%3A%2F%2Fwww.satcat.com%2Fsats%2F62430
