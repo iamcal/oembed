@@ -1,0 +1,21 @@
+---
+- provider_name: Redlof-Medien
+  provider_url: https://redlof-medien.de
+  endpoints:
+  - schemes:
+    - https://redlof-medien.de/*
+    - https://www.redlof-medien.de/*
+    url: https://redlof-medien.de/wp-json/oembed/1.0/embed
+    example_urls:
+    - https://redlof-medien.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fredlof-medien.de%2Fagentur%2F
+    - https://redlof-medien.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fredlof-medien.de%2Fagentur%2F&format=xml
+    discovery: true
+  - schemes:
+    - https://show.wexcreator.com/*
+    - https://showroom.redlof-medien.de/*
+    url: https://api.wexcreator.com/oembed/
+    example_urls:
+    - https://api.wexcreator.com/oembed/?url=https%3A%2F%2Fshow.wexcreator.com%2Fdemo%2F
+    - https://api.wexcreator.com/oembed/?url=https%3A%2F%2Fshow.wexcreator.com%2Fdemo%2F&format=xml
+    discovery: true
+...
