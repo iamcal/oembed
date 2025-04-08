@@ -7,7 +7,7 @@
     url: https://play.viostream.com/oembed
     docs_url: https://help.viostream.com/sharing-your-media/embedding-with-oembed-tags/
     example_urls:
-    - https://play.viostream.com/oembed?url=https://share.viostream.com/nhedxond6q9w41
+    - https://play.viostream.com/oembed?url=https%3A%2F%2Fshare.viostream.com%2Fnhedxond6q9w41
     discovery: true
     formats:
     - json
