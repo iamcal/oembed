@@ -1,0 +1,12 @@
+---
+- provider_name: marimo
+  provider_url: https://marimo.io/
+  endpoints:
+  - schemes:
+    - https://marimo.app/*
+    url: https://marimo.app/oembed
+    discovery: true
+    docs_url: https://docs.marimo.io
+    example_urls:
+    - https://marimo.app/oembed/?url=https://marimo.app/l/d4og6r
+    - https://marimo.app/oembed/?url=https://marimo.app/l/d4og6r?mode=read
