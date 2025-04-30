@@ -1,0 +1,12 @@
+---
+- provider_name: Ignite
+  provider_url: https://ignite.video/
+  endpoints:
+    - schemes:
+        - https://*.videocdn.net/player/*
+        - https://*.euvideocdn.com/player/*
+      url: https://app.ignitevideo.cloud/api/oembed
+      docs_url: https://docs.ignite.video/
+      example_urls:
+        - https://app.ignitevideo.cloud/api/oembed?url=https%3A%2F%2Fvideotest.ignite.video%2Fplayer%2Findex.html%3Fid%3D67e5788d77aa6e48db64d9db&format={format}
+      discovery: true
