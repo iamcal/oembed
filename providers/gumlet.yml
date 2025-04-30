@@ -4,11 +4,10 @@
   endpoints:
   - schemes:
     - https://gumlet.tv/watch/*
-    - https://www.gumlet.com/watch/*
     - https://play.gumlet.io/embed/*
     url: https://api.gumlet.com/v1/oembed
     discovery: true
     example_urls:
-    - https://api.gumlet.com/v1/oembed?url=https://www.gumlet.com/watch/6221db301c8b821b0519fba0&format=json
-    - https://api.gumlet.com/v1/oembed?url=https://www.gumlet.com/watch/6221db301c8b821b0519fba0&format=xml
+    - https://api.gumlet.com/v1/oembed?url=https://gumlet.tv/watch/6221db301c8b821b0519fba0&format=json
+    - https://api.gumlet.com/v1/oembed?url=https://gumlet.tv/watch/6221db301c8b821b0519fba0&format=xml
 ...
