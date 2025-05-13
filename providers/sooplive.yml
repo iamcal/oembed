@@ -1,5 +1,5 @@
 ---
-- provider_name: afreecaTV
+- provider_name: SOOP
   provider_url: https://www.sooplive.co.kr
   endpoints:
   - schemes:
