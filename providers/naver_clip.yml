@@ -1,0 +1,12 @@
+---
+- provider_name: Naver Clip
+  provider_url: https://m.naver.com/shorts
+  endpoints:
+  - schemes:
+    - https://naver.me/*
+    - https://m.naver.com/shorts/*
+    url: https://m.naver.com/shorts/oEmbed
+    example_urls:
+    - https://m.naver.com/shorts/oEmbed?url=https://naver.me/GtUHzqs8
+    discovery: true
+...
