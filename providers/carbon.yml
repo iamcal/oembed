@@ -1,0 +1,14 @@
+---
+- provider_name: Carbon
+  provider_url: https://carbon.music/
+  endpoints:
+  - schemes:
+    - https://carbon.music/*
+    - https://www.carbon.music/*
+    url: https://carbon.music/oembed
+    discovery: true
+    example_urls:
+    - https://carbon.music/oembed?url=https://carbon.music/track/db76bcc5-56e8-407c-bedd-7b74d4e7b066
+    formats:
+    - json
+...
