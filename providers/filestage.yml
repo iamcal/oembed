@@ -1,0 +1,12 @@
+---
+- provider_name: Filestage
+  provider_url: https://filestage.io/
+  endpoints:
+    - schemes:
+        - https://app.filestage.io/step/**
+      url: https://app.filestage.io/oembed
+      discovery: true
+      formats:
+        - json
+        - xml
+...
