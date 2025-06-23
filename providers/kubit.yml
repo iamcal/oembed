@@ -1,0 +1,15 @@
+---
+- provider_name: Kubit
+  provider_url: https://kubit.ai
+  endpoints:
+  - schemes:
+    - https://kubit.ai/*
+    - https://*.kubit.ai/*
+    url: https://kubit.ai/services/oembed
+    docs_url: https://docs.kubit.ai/docs/getting-started
+    discovery: true
+    example_urls:
+    - https://kubit.ai/services/oembed?url=https%3A%2F%2Fkubit.ai
+    - https://kubit.ai/services/oembed?url=https%3A%2F%2Fkubit.kubit.ai&format=json
+    notes: This provider only supports the 'rich' type.
+...
