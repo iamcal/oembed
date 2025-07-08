@@ -1,16 +1,16 @@
 ---
 - provider_name: Webcrumbs
   provider_url: https://webcrumbs.org/
+  docs_url: https://github.com/webcrumbs-community/webcrumbs
   endpoints:
   - schemes:
-    - https://share.webcrumbs.org/*
-    - https://tools.webcrumbs.org/*
-    - https://www.webcrumbs.org/*
-    url: http://share.webcrumbs.org/
-    docs_url: https://github.com/webcrumbs-community/webcrumbs
+      - https://plugins.webcrumbs.dev/*
+    url: https://webcrumbs.dev/oembed
+    formats:
+      - json
+      - xml
     example_urls:
-    - http://share.webcrumbs.org/Pd6r5O?url=http://share.webcrumbs.org/Pd6r5O&embed=json
-    - http://share.webcrumbs.org/Pd6r5O?url=http://share.webcrumbs.org/Pd6r5O&embed=xml
+      - https://plugins.webcrumbs.dev/demo-component
     discovery: true
     notes: Provider only supports the 'rich' type
 ...
