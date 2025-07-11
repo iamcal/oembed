@@ -10,7 +10,8 @@
     - json
     - xml
     example_urls:
-    - https://plugins.webcrumbs.dev/demo-component
+    - https://webcrumbs.dev/oembed?url=https://plugins.webcrumbs.dev/demo-component&format=json
+    - https://webcrumbs.dev/oembed?url=https://plugins.webcrumbs.dev/demo-component&format=xml
     discovery: true
     notes: Provider only supports the 'rich' type
 ...
