@@ -11,7 +11,6 @@
     formats:
     - json
 
-
 - provider_name: Beta QuellenSuche
   provider_url: http://beta.quellensuche.de
   endpoints:
