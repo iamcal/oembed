@@ -1,0 +1,25 @@
+---
+- provider_name: QuellenSuche
+  provider_url: http://quellensuche.de
+  endpoints:
+  - schemes:
+    - http://quellensuche.de/*
+    url: http://quellensuche.de/api/oembed
+    example_urls:
+    - https://quellensuche.de/api/oembed?url=https%3A%2F%2Fquellensuche.de%2Fquelle%2F6868f92ffd285c6f1e3e9f22&format=json
+    discovery: true
+    formats:
+    - json
+
+- provider_name: Beta QuellenSuche
+  provider_url: http://beta.quellensuche.de
+  endpoints:
+  - schemes:
+    - http://beta.quellensuche.de/*
+    url: http://beta.quellensuche.de/api/oembed
+    example_urls:
+    - https://beta.quellensuche.de/api/oembed?url=https%3A%2F%2Fbeta.quellensuche.de%2Fquelle%2F6868f92ffd285c6f1e3e9f22&format=json
+    discovery: true
+    formats:
+    - json
+...
