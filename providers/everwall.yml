@@ -1,0 +1,12 @@
+---
+- provider_name: Everwall
+  provider_url: https://everwall.com
+  endpoints:
+  - schemes:
+    - https://cdn.everwall.com/hubs/iframe/*
+    url: https://cdn.everwall.com/hubs/oembed
+    example_urls:
+    - https://cdn.everwall.com/hubs/oembed?url=https://cdn.everwall.com/hubs/iframe/bkvlmdck/tcruu1cpb9/
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
