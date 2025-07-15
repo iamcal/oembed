@@ -1,13 +1,13 @@
 ---
 - provider_name: Supercut
-  provider_url: https://supercut.video/
+  provider_url: https://supercut.ai/
   endpoints:
   - schemes:
-    - https://supercut.video/share/*
-    url: https://supercut.video/oembed
+    - https://supercut.ai/share/*
+    url: https://supercut.ai/oembed
     discovery: true
     example_urls:
-    - https://supercut.video/oembed?url=https%3A%2F%2Fsupercut.video%2Fshare%2Facmecorp%2FabcDEF-123
-    - https://supercut.video/oembed?url=https%3A%2F%2Fsupercut.video%2Fshare%2Facmecorp%2FabcDEF-123&format=json
-    - https://supercut.video/oembed?url=https%3A%2F%2Fsupercut.video%2Fshare%2Facmecorp%2FabcDEF-123&format=xml
+    - https://supercut.ai/oembed?url=https%3A%2F%2Fsupercut.ai%2Fshare%2Facmecorp%2FabcDEF-123
+    - https://supercut.ai/oembed?url=https%3A%2F%2Fsupercut.ai%2Fshare%2Facmecorp%2FabcDEF-123&format=json
+    - https://supercut.ai/oembed?url=https%3A%2F%2Fsupercut.ai%2Fshare%2Facmecorp%2FabcDEF-123&format=xml
 ...
