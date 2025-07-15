@@ -1,0 +1,13 @@
+---
+- provider_name: GW2 Fashions
+  provider_url: https://gw2fashions.com/
+  endpoints:
+  - schemes:
+    - https://gw2fashions.com/fashion/*
+    url: https://gw2fashions.com/fashion/oembed
+    example_urls:
+    - https://gw2fashions.com/fashion/oembed?url=https://gw2fashions.com/fashion/2b
+    - https://gw2fashions.com/fashion/oembed?url=https://gw2fashions.com/fashion/test%20saul
+    - https://gw2fashions.com/fashion/oembed?url=https://gw2fashions.com/fashion/cute%20condi%20virt
+    discovery: true
+...
