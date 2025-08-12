@@ -1,0 +1,12 @@
+---
+- provider_name: Audius
+  provider_url: https://audius.co
+  endpoints:
+  - schemes:
+    - https://audius.co/*
+    url: https://audius.co/oembed
+    example_urls:
+    - https://audius.co/oembed?url=https%3A%2F%2Faudius.co%2FSkrillex%2Fkliptown-empyrean-98562
+    discovery: true
+    notes: Provider only supports the 'rich' type and JSON format
+...
