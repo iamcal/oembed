@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{THE_REQUEST} \\s/([^/]+)\\.php [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^(.*?)/?$ $1.php [L]
+</IfModule>

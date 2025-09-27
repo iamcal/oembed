@@ -10,7 +10,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node ./build.js providers/*.yml > providers.json",
-    "prepare": "npm run build"
+    "clean": "rm -rf ./www/vendor ./www/css/oembed.css",
+    "copy:fontawesome-css": "mkdir -p ./www/vendor/fontawesome/css && cp -r ./node_modules/@fortawesome/fontawesome-free/css ./www/vendor/fontawesome/",
+    "copy:fontawesome-webfonts": "mkdir -p ./www/vendor/fontawesome/webfonts && cp -r ./node_modules/@fortawesome/fontawesome-free/webfonts ./www/vendor/fontawesome/",
+    "build:tailwind": "tailwindcss -i ./src/input.css -o ./www/css/oembed.css --minify",
+    "watch:tailwind": "tailwindcss -i ./src/input.css -o ./www/css/oembed.css --watch",
+    "build:web": "npm run clean && npm run copy:fontawesome-css && npm run copy:fontawesome-webfonts && npm run build:tailwind",
+    "dev:web": "npm run clean && npm run copy:fontawesome-css && npm run copy:fontawesome-webfonts && npm run watch:tailwind",
+    "prepare": "npm run build && npm run build:web"
   },
   "repository": {
     "type": "git",
@@ -27,6 +34,13 @@
     "url": "https://github.com/iamcal/oembed/issues"
   },
   "devDependencies": {
-    "js-yaml": "^4.0.0"
+    "autoprefixer": "^10.4.21",
+    "js-yaml": "^4.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "@tailwindcss/cli": "^4.1.13"
   }
 }

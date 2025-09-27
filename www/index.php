@@ -1,176 +1,6 @@
-<!DOCTYPE html>
-<!--
-                         __                 __     
-                        /\ \               /\ \    
-  ___      __    ___ ___\ \ \____     __   \_\ \   
- / __`\  /'__`\/' __` __`\ \ '__`\  /'__`\ /'_` \  
-/\ \L\ \/\  __//\ \/\ \/\ \ \ \L\ \/\  __//\ \L\ \ 
-\ \____/\ \____\ \_\ \_\ \_\ \_,__/\ \____\ \___,_\
- \/___/  \/____/\/_/\/_/\/_/\/___/  \/____/\/__,_ /
+<?php require_once('partials/header.php'); ?>
 
- ===== because 'open embed' sounds too dirty =====
-
-
-
- Document history
- ==============================================================
-
- 2008-03-21 - original draft created by cal
- 2008-03-28 - incorporated leah's edits, added security section
- 2008-04-07 - added implicit format for endpoint URLs
-            - clarified format and max(width|height) params
-            - consumers/providers update from leah
- 2008-04-08 - clarified XML value escaping
- 2008-05-09 - added optional thumbnail parameters
- 2008-05-12 - valid JSON would be nice i guess
- 2008-05-29 - and really valid this time?
-            - also fixed urlencoding in request examples
- 2008-07-18 - added discovery section
-            - more providers
- 2009-09-21 - removed pownce
-            - added providers
-            - added a libraries section
-            - updated video example (youtube has real support)
- 2010-10-03 - history is now tracked on GitHub
-            - http://github.com/iamcal/oembed
-
--->
-<html lang="en">
-<head>
-<title>oEmbed</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The oEmbed spec">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-    @layer base {
-      body {
-        @apply bg-gray-900 text-gray-300 font-sans;
-        padding: 20px 50px;
-      }
-      #main {
-        @apply mx-auto max-w-4xl text-left;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        @apply text-white font-bold tracking-tight;
-      }
-      h1 {
-        @apply text-4xl mb-4 border-b border-gray-700 pb-2;
-      }
-      h2 {
-        @apply text-3xl mt-8 mb-4 border-b border-gray-700 pb-2;
-      }
-      h3 {
-        @apply text-2xl mt-6 mb-3;
-      }
-      a {
-        @apply text-blue-400 hover:text-blue-300 hover:underline;
-      }
-      p {
-        @apply mb-4 leading-relaxed;
-      }
-      ul, ol {
-        @apply list-inside mb-4 pl-4;
-      }
-      li {
-        @apply mb-2;
-      }
-      ul {
-        @apply list-disc;
-      }
-      ol {
-        @apply list-decimal;
-      }
-      dl {
-        @apply mb-4;
-      }
-      dt {
-        @apply font-bold text-white;
-      }
-      dd {
-        @apply ml-4 mb-2;
-      }
-      hr {
-          @apply border-gray-700 my-8;
-      }
-      pre {
-        @apply bg-[#1E1E1E] text-gray-300 font-mono text-sm p-4 rounded-lg shadow-lg overflow-x-auto border border-gray-700;
-      }
-      code {
-        @apply bg-gray-700 text-purple-300 font-mono text-sm rounded px-1 py-0.5;
-      }
-      pre code {
-          @apply bg-transparent text-gray-300 p-0;
-      }
-      .nav-link.active {
-        @apply bg-blue-600 text-white;
-      }
-      li > code {
-        word-break: break-all;
-      }
-    }
-</style>
-</head>
-<body>
-
-<nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md shadow-lg">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-            <span class="text-2xl text-white font-bold flex items-center">oEmbed</span>
-            <div class="hidden md:flex items-center space-x-1 text-gray-300">
-                <a href="#section1" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-bolt mr-2"></i>Example</a>
-                <a href="#section2" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-book-open mr-2"></i>Spec</a>
-                <a href="#section3" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-shield-alt mr-2"></i>Security</a>
-                <a href="#section4" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-search mr-2"></i>Discovery</a>
-                <a href="#section5" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-code mr-2"></i>Examples</a>
-                <a href="#section6" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-users mr-2"></i>Authors</a>
-                <a href="#section7" class="nav-link px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 hover:text-white flex items-center"><i class="fas fa-puzzle-piece mr-2"></i>Implementations</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#section1" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-bolt mr-2"></i>Example</a>
-            <a href="#section2" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-book-open mr-2"></i>Spec</a>
-            <a href="#section3" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-shield-alt mr-2"></i>Security</a>
-            <a href="#section4" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-search mr-2"></i>Discovery</a>
-            <a href="#section5" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-code mr-2"></i>Examples</a>
-            <a href="#section6" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-users mr-2"></i>Authors</a>
-            <a href="#section7" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center"><i class="fas fa-puzzle-piece mr-2"></i>Implementations</a>
-        </div>
-    </div>
-</nav>
-
-<header class="text-center py-20 pt-36 bg-gray-900">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h1 class="text-6xl font-extrabold text-white leading-tight mb-4">oEmbed</h1>
-        <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-            oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.
-        </p>
-        <a href="https://github.com/iamcal/oembed" class="inline-flex items-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-all duration-300 ease-in-out text-lg">
-            <i class="fa-brands fa-github mr-2"></i>
-            View on GitHub
-        </a>
-    </div>
-</header>
-
-<div id="main" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+<div id="main" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 pt-24">
 
 <section id="section1" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
     <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-bolt mr-3 text-blue-400"></i>1. Quick Example</h2>
@@ -477,7 +307,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 <p>Request:</p>
 
-<pre>https://www.youtube.com/oembed?url=https%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&amp;format=json</pre>
+<pre>https://www.youtube.com/oembed?url=https%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&format=json</pre>
 
 <p>Response:</p>
 
@@ -506,7 +336,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 <p>Request:</p>
 
-<pre>http://iamcal.com/oembed/?url=http%3A//www.iamcal.com/linklog/1206113631/&amp;format=xml</pre>
+<pre>http://iamcal.com/oembed/?url=http%3A//www.iamcal.com/linklog/1206113631/&format=xml</pre>
 
 <p>Response:</p>
 
@@ -553,7 +383,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 	$dh = opendir(__DIR__.'/../providers');
 	while (($file = readdir($dh)) !== false){
-		if (preg_match('!\.yml$!', $file)){
+		if (preg_match('!\\.yml$!', $file)){
 			$partial = yaml_parse_file(__DIR__."/../providers/$file");
 			foreach ($partial as $row) $data[] = $row;
 		}
@@ -713,89 +543,4 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 </div>
 
-<footer class="bg-gray-900 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div class="md:flex md:items-start md:justify-between">
-            <div class="flex-1 min-w-0">
-                 <h2 class="text-2xl font-bold text-white">oEmbed</h2>
-                <p class="mt-2 text-gray-400 text-base">oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.</p>
-            </div>
-            <div class="mt-8 grid grid-cols-2 gap-8 md:mt-0 md:grid-cols-2 md:ml-12">
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase flex items-center"><i class="fas fa-compass mr-2"></i>Navigation</h3>
-                    <ul role="list" class="mt-4 space-y-4">
-                        <li><a href="#section2" class="text-base text-gray-300 hover:text-white">Full Spec</a></li>
-                        <li><a href="#section3" class="text-base text-gray-300 hover:text-white">Security</a></li>
-                        <li><a href="#section4" class="text-base text-gray-300 hover:text-white">Discovery</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase flex items-center"><i class="fas fa-users mr-2"></i>Community</h3>
-                    <ul role="list" class="mt-4 space-y-4">
-                        <li><a href="#section7" class="text-base text-gray-300 hover:text-white">Implementations</a></li>
-                        <li><a href="#section6" class="text-base text-gray-300 hover:text-white">Authors</a></li>
-                        <li><a href="http://groups.google.com/group/oembed/" class="text-base text-gray-300 hover:text-white">Mailing List</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="mt-8 border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
-            <p class="text-base text-gray-400">&copy; 2008-<?php echo date("Y"); ?> oEmbed All rights reserved.</p>
-            <a href="https://github.com/iamcal/oembed" class="flex items-center text-gray-400 hover:text-white mt-4 md:mt-0">
-                <span class="sr-only">GitHub</span>
-                <i class="fa-brands fa-github mr-2"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-
-<script>
-    const sections = document.querySelectorAll('section[id^="section"]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navHeight = document.querySelector('nav').offsetHeight;
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - navHeight - 20;
-            if (pageYOffset >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-        
-        if (sections.length > 0 && window.pageYOffset < sections[0].offsetTop - navHeight - 20) {
-             navLinks.forEach(link => link.classList.remove('active'));
-        }
-    });
-
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileNavLinks = mobileMenu.querySelectorAll('.nav-link');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-        mobileMenuButton.querySelectorAll('svg').forEach(svg => svg.classList.toggle('hidden'));
-    });
-
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-            mobileMenuButton.querySelectorAll('svg').forEach((svg, index) => {
-                svg.classList.toggle('hidden', index === 1);
-            });
-        });
-    });
-</script>
-</body>
-</html>
+<?php require_once('partials/footer.php'); ?>

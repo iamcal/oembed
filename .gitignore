@@ -3,3 +3,5 @@ node_modules/
 providers.json
 /secrets/cloudflare-api-token
 config.json
+www/vendor
+www/css
