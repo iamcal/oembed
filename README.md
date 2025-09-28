@@ -9,11 +9,11 @@
   <a href="#about"><strong>Explore the docs »</strong></a>
   <br />
   <br />
-  <a href="https://github.com/iamcal/oembed/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
+  <a href="https://github.com/iamcal/oembed/issues/new?template=bug-report.yml">Report a Bug</a>
   ·
-  <a href="https://github.com/iamcal/oembed/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
+  <a href="https://github.com/iamcal/oembed/issues/new?template=feature-request.yml">Request a Feature</a>
   .
-  <a href="https://github.com/iamcal/oembed/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
+  <a href="https://github.com/iamcal/oembed/issues/new?template=provider-request.yml">Request Provider</a>
 </div>
 
 <div align="center">
