@@ -1,0 +1,58 @@
+name: Bug Report
+description: Bug report to help us improve the project
+title: "[Bug]: "
+labels: ["Bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: "Provide a clear and concise description of what the bug is. Include screenshots if possible."
+      placeholder: "A clear and concise description of what the bug is."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: "Please provide the steps to reproduce the behavior."
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: "A clear and concise description of what you expected to happen."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected Area
+      description: "Which part of the project is affected by this bug?"
+      options:
+        - Website (oembed.com)
+        - Provider Validation Script
+        - GitHub Actions Workflow
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: "Add any other context about the problem here (e.g., browser, OS, logs)."

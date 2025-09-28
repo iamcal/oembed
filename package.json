@@ -34,6 +34,7 @@
     "url": "https://github.com/iamcal/oembed/issues"
   },
   "devDependencies": {
+    "@octokit/rest": "^22.0.0",
     "autoprefixer": "^10.4.21",
     "fast-xml-parser": "^5.2.5",
     "js-yaml": "^4.1.0",

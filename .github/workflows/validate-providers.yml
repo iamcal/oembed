@@ -1,9 +1,9 @@
 name: Validate oEmbed providers on the live registry.
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
   pull_request:
     branches:
       - master
