@@ -3,7 +3,7 @@ name: oEmbed Validate Provider PR
 on:
   pull_request:
     # branches:
-    #   - master
+    #   - '**'
     paths:
       - 'providers/**.yml'
 
