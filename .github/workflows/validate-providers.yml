@@ -1,0 +1,63 @@
+name: Validate oEmbed providers on the live registry.
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'providers/**.yml'
+  schedule:
+    - cron: '0 0 */3 * *'
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'Test a single/multiple providers (example provder.yml) or a number of files (example 5)'
+        required: false
+        default: ''
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+      with:
+        # Fetch depth 0 is required to accurately compare changes in PRs
+        fetch-depth: 0
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Get changed files for PRs
+      id: changed-files
+      if: github.event_name == 'pull_request'
+      run: |
+        FILES=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep '^providers/.*\.yml$' | sed 's/providers\///' | xargs)
+        echo "files_to_test=${FILES}" >> $GITHUB_ENV
+        echo "Changed files: $FILES"
+
+    - name: Determine script providers to test
+      id: script-args
+      run: |
+        if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          echo "ARGUMENTS=${{ env.files_to_test }}" >> $GITHUB_ENV
+        elif [[ "${{ github.event.inputs.provider }}" != "" ]]; then
+          echo "ARGUMENTS=${{ github.event.inputs.provider }}" >> $GITHUB_ENV
+        else
+          echo "ARGUMENTS=" >> $GITHUB_ENV
+        fi
+
+    - name: Run validation script
+      run: |
+        echo "Running validation with arguments: ${{ env.ARGUMENTS }}"
+        node scripts/validate-providers.js ${{ env.ARGUMENTS }} >> $GITHUB_STEP_SUMMARY

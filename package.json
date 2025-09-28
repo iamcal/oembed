@@ -35,7 +35,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
-    "js-yaml": "^4.0.0",
+    "fast-xml-parser": "^5.2.5",
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^2.7.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13"
   },
