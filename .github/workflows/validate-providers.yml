@@ -1,0 +1,72 @@
+name: oEmbed Bot
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *'
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'Test a single/multiple providers (example provder.yml) or a number of files (example 5)'
+        required: false
+        default: ''
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: 🌐 Check out repository
+        uses: actions/checkout@v4
+
+      - name: 🌐 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 💽 Install dependencies
+        run: npm install
+
+      - name: 🌐 Determine script providers to test
+        id: script-args
+        run: |
+          if [[ "${{ github.event.inputs.provider }}" != "" ]]; then
+            echo "ARGUMENTS=${{ github.event.inputs.provider }}" >> $GITHUB_ENV
+          else
+            echo "ARGUMENTS=" >> $GITHUB_ENV
+          fi
+
+      - name: 🤖 Run validation and auto clean inactive providers from the live registry.
+        id: validation-script
+        run: |
+          echo "Running validation with arguments: ${{ env.ARGUMENTS }}"
+          node scripts/validate-providers.js ${{ env.ARGUMENTS }} >> $GITHUB_STEP_SUMMARY
+        continue-on-error: true
+
+      - name: 🔌 Create Pull Request if changes were made to any providers.
+        uses: peter-evans/create-pull-request@v7.0.8
+        if: github.event_name == 'schedule'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: Automatically disable unreachable providers"
+          branch: "automated-provider-cleanup"
+          delete-branch: true
+          title: "🤖 Automated Provider Cleanup"
+          body: |
+            The oEmbed validation bot has detected that one or more providers have become unreachable (due to DNS, timeout, expired domain, 403 errors) and has automatically moved them to the `providers-disabled` directory.
+
+            This PR contains the results of this cleanup. Please review the changes and merge if they are acceptable.
+
+            **Assignees:** @ItsWarmaster, @iamcal
+          assignees: |
+            ItsWarmaster
+            iamcal
+          reviewers: |
+            ItsWarmaster
+            iamcal
+          labels: |
+            Maintenance
+            Automated

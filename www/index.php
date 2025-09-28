@@ -1,101 +1,10 @@
-<!DOCTYPE html>
-<!--
-                         __                 __     
-                        /\ \               /\ \    
-  ___      __    ___ ___\ \ \____     __   \_\ \   
- / __`\  /'__`\/' __` __`\ \ '__`\  /'__`\ /'_` \  
-/\ \L\ \/\  __//\ \/\ \/\ \ \ \L\ \/\  __//\ \L\ \ 
-\ \____/\ \____\ \_\ \_\ \_\ \_,__/\ \____\ \___,_\
- \/___/  \/____/\/_/\/_/\/_/\/___/  \/____/\/__,_ /
+<?php require_once('partials/header.php'); ?>
 
- ===== because 'open embed' sounds too dirty =====
+<div id="main" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 pt-24">
 
-
-
- Document history
- ==============================================================
-
- 2008-03-21 - original draft created by cal
- 2008-03-28 - incorporated leah's edits, added security section
- 2008-04-07 - added implicit format for endpoint URLs
-            - clarified format and max(width|height) params
-            - consumers/providers update from leah
- 2008-04-08 - clarified XML value escaping
- 2008-05-09 - added optional thumbnail parameters
- 2008-05-12 - valid JSON would be nice i guess
- 2008-05-29 - and really valid this time?
-            - also fixed urlencoding in request examples
- 2008-07-18 - added discovery section
-            - more providers
- 2009-09-21 - removed pownce
-            - added providers
-            - added a libraries section
-            - updated video example (youtube has real support)
- 2010-10-03 - history is now tracked on GitHub
-            - http://github.com/iamcal/oembed
-
--->
-<html lang="en">
-<head>
-<title>oEmbed</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The oEmbed spec">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<style>
-
-body, input, textarea, select {
-	font-family: Arial,Helvetica,sans-serif;
-	padding: 20px 50px;
-}
-
-#main {
-	margin: 0 auto;
-	max-width: 900px;
-	text-align: left;
-}
-
-pre {
-	background-color: #eee;
-	border: 1px solid #999;
-	padding: 8px;
-	margin: 0px 20px;
-	overflow: auto;
-}
-
-code {
-	background-color: #eee;
-	border: 1px solid #999;
-	padding: 0px 2px;
-}
-
-</style>
-</head>
-<body>
-
-<div id="main">
-
-<h1>oEmbed</h1>
-
-<p>oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.</p>
-
-<p>This document is stored on <a href="https://github.com/iamcal/oembed">GitHub</a>.</p>
-
-<h2>Table Of Contents</h2>
-
-<ol>
-	<li><a href="#section1">Quick Example</a></li>
-	<li><a href="#section2">Full Spec</a></li>
-	<li><a href="#section3">Security considerations</a></li>
-	<li><a href="#section4">Discovery</a></li>
-	<li><a href="#section5">More examples</a></li>
-	<li><a href="#section6">Authors</a></li>
-	<li><a href="#section7">Implementations</a></li>
-</ol>
-
-<a name="section1" id="section1"><h2>1. Quick Example</h2></a>
+<section id="section1" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-bolt mr-3 text-blue-400"></i>1. Quick Example</h2>
+    <div class="mt-6">
 
 <p>A <i>consumer</i> (e.g. <a href="http://codex.wordpress.org/Embeds/">WordPress</a>) makes the following HTTP request:</p>
 
@@ -121,7 +30,11 @@ code {
 <p>This allows the consumer to turn a URL to a Flickr photo page into structured data to allow embedding of that photo in the consumer's website.</p>
 
 
-<a name="section2" id="section2"><h2>2. Full Spec</h2></a>
+</div>
+</section>
+<section id="section2" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-book-open mr-3 text-blue-400"></i>2. Full Spec</h2>
+    <div class="mt-6">
 
 <p>This spec is broken into three parts - configuration, the consumer request and the provider response.</p>
 
@@ -341,14 +254,22 @@ code {
 </dl>
 
 
-<a name="section3" id="section3"><h2>3. Security considerations</h2></a>
+</div>
+</section>
+<section id="section3" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-shield-alt mr-3 text-blue-400"></i>3. Security considerations</h2>
+    <div class="mt-6">
 
 <p>When a consumer displays any URLs, they will probably want to filter the URL scheme to be one of <code>http</code>, <code>https</code> or <code>mailto</code>, although providers are free to specify any valid URL. Without filtering, <code>Javascript:...</code> style URLs could be used for XSS attacks.</p>
 
 <p>When a consumer displays HTML (as with video embeds), there's a vector for XSS attacks from the provider. To avoid this, it is recommended that consumers display the HTML in an <code>iframe</code>, hosted from another domain. This ensures that the HTML cannot access cookies from the consumer domain.</p>
 
 
-<a name="section4" id="section4"><h2>4. Discovery</h2></a>
+</div>
+</section>
+<section id="section4" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-search mr-3 text-blue-400"></i>4. Discovery</h2>
+    <div class="mt-6">
 
 <p>oEmbed providers can choose to make their oEmbed support discoverable by adding <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> elements to the head of their existing (X)HTML documents or by setting <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">Link headers</a>.</p>
 
@@ -376,13 +297,17 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 
 
-<a name="section5" id="section5"><h2>5. More examples</h2></a>
+</div>
+</section>
+<section id="section5" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-code mr-3 text-blue-400"></i>5. More examples</h2>
+    <div class="mt-6">
 
 <a name="section5.1" id="section5.1"><h3>5.1. Video example</h3></a>
 
 <p>Request:</p>
 
-<pre>https://www.youtube.com/oembed?url=https%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&amp;format=json</pre>
+<pre>https://www.youtube.com/oembed?url=https%3A//youtube.com/watch%3Fv%3DM3r2XDceM6A&format=json</pre>
 
 <p>Response:</p>
 
@@ -411,7 +336,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 <p>Request:</p>
 
-<pre>http://iamcal.com/oembed/?url=http%3A//www.iamcal.com/linklog/1206113631/&amp;format=xml</pre>
+<pre>http://iamcal.com/oembed/?url=http%3A//www.iamcal.com/linklog/1206113631/&format=xml</pre>
 
 <p>Response:</p>
 
@@ -427,7 +352,11 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 &lt;/oembed&gt;</pre>
 
 
-<a name="section6" id="section6"><h2>6. Authors</h2></a>
+</div>
+</section>
+<section id="section6" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-users mr-3 text-blue-400"></i>6. Authors</h2>
+    <div class="mt-6">
 
 <ul>
     <li>Cal Henderson (cal [at] iamcal.com)</li>
@@ -437,7 +366,11 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 </ul>
 
 
-<a name="section7" id="section7"><h2>7. Implementations</h2></a>
+</div>
+</section>
+<section id="section7" class="scroll-mt-24 bg-gray-800/50 rounded-2xl p-8 shadow-xl mb-12">
+    <h2 class="!text-3xl !mt-0 !border-b-0 flex items-center"><i class="fas fa-puzzle-piece mr-3 text-blue-400"></i>7. Implementations</h2>
+    <div class="mt-6">
 
 <a name="section7.1" id="section7.1"><h3>7.1. Providers</h3></a>
 
@@ -450,7 +383,7 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 	$dh = opendir(__DIR__.'/../providers');
 	while (($file = readdir($dh)) !== false){
-		if (preg_match('!\.yml$!', $file)){
+		if (preg_match('!\\.yml$!', $file)){
 			$partial = yaml_parse_file(__DIR__."/../providers/$file");
 			foreach ($partial as $row) $data[] = $row;
 		}
@@ -475,31 +408,126 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 </ul>
 
 <a name="section7.3" id="section7.3"><h3>7.3. Libraries</h3></a>
+<p class="text-gray-400 italic mt-4">Disclaimer: These libraries are created and maintained by the community and are not official oEmbed projects.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">PHP: php-oembed</h4>
+            <a href="http://code.google.com/p/php-oembed/" class="text-blue-400 break-all mt-2 inline-block">http://code.google.com/p/php-oembed/</a>
+        </div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">PHP: Services_oEmbed</h4>
+            <a href="http://pear.php.net/package/Services_oEmbed" class="text-blue-400 break-all mt-2 inline-block">http://pear.php.net/package/Services_oEmbed</a>
+        </div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">PHP: Essence</h4>
+            <a href="https://github.com/felixgirault/essence" class="text-blue-400 break-all mt-2 inline-block">https://github.com/felixgirault/essence</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/felixgirault/essence?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/felixgirault/essence" alt="Last commit"><img src="https://img.shields.io/badge/author-felixgirault-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">PHP: Embera</h4>
+            <a href="https://github.com/mpratt/Embera" class="text-blue-400 break-all mt-2 inline-block">https://github.com/mpratt/Embera</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/mpratt/Embera?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/mpratt/Embera" alt="Last commit"><img src="https://img.shields.io/badge/author-mpratt-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Perl: Web-oEmbed</h4>
+            <a href="http://search.cpan.org/~miyagawa/Web-oEmbed/" class="text-blue-400 break-all mt-2 inline-block">http://search.cpan.org/~miyagawa/Web-oEmbed/</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/cpan/v/Web-oEmbed" alt="CPAN Version"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Ruby: oembed_links</h4>
+            <a href="https://github.com/netshade/oembed_links" class="text-blue-400 break-all mt-2 inline-block">https://github.com/netshade/oembed_links</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/netshade/oembed_links?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/netshade/oembed_links" alt="Last commit"><img src="https://img.shields.io/badge/author-netshade-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Python: pyoembed</h4>
+            <a href="https://github.com/rafaelmartins/pyoembed/" class="text-blue-400 break-all mt-2 inline-block">https://github.com/rafaelmartins/pyoembed/</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/rafaelmartins/pyoembed?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/rafaelmartins/pyoembed" alt="Last commit"><img src="https://img.shields.io/badge/author-rafaelmartins-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Python: PyEmbed</h4>
+            <a href="https://github.com/pyembed/pyembed" class="text-blue-400 break-all mt-2 inline-block">https://github.com/pyembed/pyembed</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/pyembed/pyembed?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/pyembed/pyembed" alt="Last commit"><img src="https://img.shields.io/badge/author-pyembed-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Python: python-oembed</h4>
+            <a href="https://github.com/abarmat/python-oembed" class="text-blue-400 break-all mt-2 inline-block">https://github.com/abarmat/python-oembed</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/abarmat/python-oembed?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/abarmat/python-oembed" alt="Last commit"><img src="https://img.shields.io/badge/author-abarmat-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Django: micawber</h4>
+            <a href="https://github.com/coleifer/micawber" class="text-blue-400 break-all mt-2 inline-block">https://github.com/coleifer/micawber</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/coleifer/micawber?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/coleifer/micawber" alt="Last commit"><img src="https://img.shields.io/badge/author-coleifer-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Java: java-oembed</h4>
+            <a href="https://github.com/michael-simons/java-oembed" class="text-blue-400 break-all mt-2 inline-block">https://github.com/michael-simons/java-oembed</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/michael-simons/java-oembed?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/michael-simons/java-oembed" alt="Last commit"><img src="https://img.shields.io/badge/author-michael--simons-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">JQuery: oEmbed API Wrapper</h4>
+            <a href="https://github.com/starfishmod/jquery-oembed-all" class="text-blue-400 break-all mt-2 inline-block">https://github.com/starfishmod/jquery-oembed-all</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/starfishmod/jquery-oembed-all?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/starfishmod/jquery-oembed-all" alt="Last commit"><img src="https://img.shields.io/badge/author-starfishmod-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Node.js: oEmbed API Gateway</h4>
+            <a href="https://github.com/itteco/iframely" class="text-blue-400 break-all mt-2 inline-block">https://github.com/itteco/iframely</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/itteco/iframely?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/itteco/iframely" alt="Last commit"><img src="https://img.shields.io/badge/author-itteco-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Elixir: furlex</h4>
+            <a href="https://github.com/claytongentry/furlex" class="text-blue-400 break-all mt-2 inline-block">https://github.com/claytongentry/furlex</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/claytongentry/furlex?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/claytongentry/furlex" alt="Last commit"><img src="https://img.shields.io/badge/author-claytongentry-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">Elixir: elixir-oembed</h4>
+            <a href="https://github.com/r8/elixir-oembed" class="text-blue-400 break-all mt-2 inline-block">https://github.com/r8/elixir-oembed</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/r8/elixir-oembed?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/r8/elixir-oembed" alt="Last commit"><img src="https://img.shields.io/badge/author-r8-blue" alt="Author"></div>
+    </div>
+    <div class="bg-gray-800/60 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col transition-all duration-300 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
+        <div class="flex-grow">
+            <h4 class="text-lg font-bold text-white">AWS: Serverless oEmbed provider</h4>
+            <a href="https://github.com/aws-samples/sample-serverless-oembed" class="text-blue-400 break-all mt-2 inline-block">https://github.com/aws-samples/sample-serverless-oembed</a>
+        </div>
+        <div class="mt-auto pt-4 flex items-center space-x-2 flex-wrap"><img src="https://img.shields.io/github/stars/aws-samples/sample-serverless-oembed?style=social" alt="GitHub stars"><img src="https://img.shields.io/github/last-commit/aws-samples/sample-serverless-oembed" alt="Last commit"><img src="https://img.shields.io/badge/author-aws--samples-blue" alt="Author"></div>
+    </div>
+</div>
 
-<ul>
-	<li>PHP: php-oembed (<a href="http://code.google.com/p/php-oembed/">http://code.google.com/p/php-oembed/</a>)</li>
-	<li>PHP: Services_oEmbed (<a href="http://pear.php.net/package/Services_oEmbed">http://pear.php.net/package/Services_oEmbed</a>)</li>
-	<li>PHP: Essence (<a href="https://github.com/felixgirault/essence">https://github.com/felixgirault/essence</a>)</li>
-	<li>PHP: Embera (<a href="https://github.com/mpratt/Embera">https://github.com/mpratt/Embera</a>)</li>
-	<li>Perl: Web-oEmbed (<a href="http://search.cpan.org/~miyagawa/Web-oEmbed/">http://search.cpan.org/~miyagawa/Web-oEmbed/</a>)</li>
-	<li>Ruby: oembed_links (<a href="http://github.com/netshade/oembed_links">http://github.com/netshade/oembed_links</a>)</li>
-	<li>Python: pyoembed (<a href="http://github.com/rafaelmartins/pyoembed/">http://github.com/rafaelmartins/pyoembed/</a>)</li>
-	<li>Python: PyEmbed (<a href="http://pyembed.github.io">http://pyembed.github.io</a>)</li>
-	<li>Python: python-oembed (<a href="https://github.com/abarmat/python-oembed">https://github.com/abarmat/python-oembed</a>)</li>
-	<li>Django: micawber (<a href="https://github.com/coleifer/micawber">https://github.com/coleifer/micawber</a>)</li>
-	<li>Java: java-oembed (<a href="https://github.com/michael-simons/java-oembed">https://github.com/michael-simons/java-oembed</a>)</li>
-	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
-	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
-	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>
-	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
-	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
-	<li>AWS: Serverless oEmbed provider (<a href="https://github.com/aws-samples/sample-serverless-oembed">https://github.com/aws-samples/sample-serverless-oembed</a>)</li>
-</ul>
 
-
+</div>
+</section>
 <hr />
 
-<a name="links" id="links"><h3>Press and Links</h3></a>
+<a name="links" id="links"><h3 class="flex items-center"><i class="fas fa-link mr-3 text-blue-400"></i>Press and Links</h3></a>
 
 <ul>
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
@@ -515,5 +543,4 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 </div>
 
-</body>
-</html>
+<?php require_once('partials/footer.php'); ?>
