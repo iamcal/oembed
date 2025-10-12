@@ -1,0 +1,14 @@
+---
+- provider_name: AppForceStudio
+  provider_url: https://appforcestudio.com
+  endpoints:
+  - schemes:
+    - https://appforcestudio.com/playground/*
+    url: https://us-central1-themerax-dev.cloudfunctions.net/playgroundApi/oembed
+    discovery: true
+    formats:
+          - json
+          - xml
+    example_urls:
+    - https://appforcestudio.com/playground/-Oaty4XzTiGzSdRkIRDZ
+...
