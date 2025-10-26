@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "oEmbed Spec Question"
+    url: "https://github.com/iamcal/oembed/discussions"
+    about: "Please ask and answer questions about the oEmbed spec here."
+  - name: "oEmbed Website"
+    url: "https://oembed.com"
+    about: "The oEmbed official website."
