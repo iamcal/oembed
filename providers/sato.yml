@@ -1,0 +1,14 @@
+---
+- provider_name: Sato Video Player
+  provider_url: http://satoplayer.com
+  endpoints:
+  - schemes:
+    - https://api.satoplayer.com/players/embed/*
+    url: https://api.satoplayer.com/players/oembed
+    discovery: true
+    example_urls:
+    - https://api.satoplayer.com/players/oembed?url=https://api.satoplayer.com/players/embed/b462c7f1-ef56-4a49-8183-d10312ad79ab
+    - https://api.satoplayer.com/players/oembed?url=https://api.satoplayer.com/players/embed/d8488f72-e899-4068-bd28-81302f91e554
+
+...
+
