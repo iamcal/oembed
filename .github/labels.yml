@@ -1,0 +1,27 @@
+- name: "Bug"
+  color: "d73a4a"
+  description: "Something isn't working as expected."
+
+- name: "Enhancement"
+  color: "a2eeef"
+  description: "A new feature or request to oembed spec."
+
+- name: "Documentation"
+  color: "0075ca"
+  description: "Improvements or additions to documentation."
+
+- name: "Question"
+  color: "d876e3"
+  description: "Further information is requested."
+
+- name: "Duplicate"
+  color: "cfd3d7"
+  description: "This issue or pull request already exists."
+
+- name: "Postpone"
+  color: "f9d0c4"
+  description: "Do not close this issue due to inactivity."
+
+- name: "Provider"
+  color: "37c45a"
+  description: "Regarding oembed provided either existing or new one."

@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-300 font-sans;
+  }
+  #main {
+    @apply mx-auto max-w-4xl text-left;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl mb-4 border-b border-gray-700 pb-2;
+  }
+  h2 {
+    @apply text-3xl mt-8 mb-4 border-b border-gray-700 pb-2;
+  }
+  h3 {
+    @apply text-2xl mt-6 mb-3;
+  }
+  a {
+    @apply text-blue-400 hover:text-blue-300 hover:underline;
+  }
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+  ul, ol {
+    @apply list-inside mb-4 pl-4;
+  }
+  li {
+    @apply mb-2;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  dl {
+    @apply mb-4;
+  }
+  dt {
+    @apply font-bold text-white;
+  }
+  dd {
+    @apply ml-4 mb-2;
+  }
+  hr {
+      @apply border-gray-700 my-8;
+  }
+  pre {
+    @apply bg-[#1E1E1E] text-gray-300 font-mono text-sm p-4 rounded-lg shadow-lg overflow-x-auto border border-gray-700;
+  }
+  code {
+    @apply bg-gray-700 text-purple-300 font-mono text-sm rounded px-1 py-0.5;
+  }
+  pre code {
+      @apply bg-transparent text-gray-300 p-0;
+  }
+  .nav-link.active {
+    @apply bg-blue-600 text-white;
+  }
+  li > code {
+    word-break: break-all;
+  }
+  .lazy-card {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .lazy-card.loaded {
+    opacity: 1;
+  }
+}

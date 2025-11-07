@@ -1,0 +1,64 @@
+name: oEmbed Validate Provider PR
+
+on:
+  pull_request:
+    # branches:
+    #   - '**'
+    paths:
+      - 'providers/**.yml'
+
+jobs:
+  validate-provider:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Get changed provider files
+        id: changed-files
+        run: |
+          FILES=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep '^providers/.*\.yml$')
+          echo "files_to_test=${FILES}" >> $GITHUB_ENV
+          echo "Changed files: ${FILES}"
+
+      - name: Run validation script
+        id: validation-script
+        run: |
+          # The script's output (the Markdown report) is captured
+          REPORT=$(node .github/scripts/validate-pr-provider.js ${{ env.files_to_test }})
+          echo "report<<EOF" >> $GITHUB_OUTPUT
+          echo "$REPORT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Post validation report to PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const report = `${{ steps.validation-script.outputs.report }}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: report
+            });
+      
+      - name: Fail workflow if validation failed
+        if: steps.validation-script.outcome == 'failure'
+        run: |
+          echo "Provider validation failed. See the PR comment for details."
+          exit 1
