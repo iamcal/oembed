@@ -1,0 +1,12 @@
+---
+- provider_name: Programmingly.dev
+  provider_url: https://programmingly.dev
+  endpoints:
+    - schemes:
+        - https://programmingly.dev/snippet/*
+      url: https://programmingly.dev/api/oembed
+      example_urls:
+        - https://programmingly.dev/snippets/easily-convert-php-arrays-or-associative-arrays-to-downloadable-csv-files-in-seconds-SKbBcUsS
+        - https://programmingly.dev/snippets/effortlessly-download-your-table-or-object-data-as-a-csv-file-in-react-or-nextjs-without-any-server-zaOjC12W
+        - https://programmingly.dev/snippets/easily-convert-php-arrays-or-associative-arrays-to-downloadable-csv-files-in-seconds-SKbBcUsS
+      discovery: true
