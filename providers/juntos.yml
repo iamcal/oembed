@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://play.juntos.live/solo/*
+    - https://play.juntos.live/host/quiz/*
     url: https://play.juntos.live/api/oembed
     example_urls:
     - https://play.juntos.live/api/oembed?url=https%3A%2F%2Fplay.juntos.live%2Fsolo%2F2aAD8q0VdfZhJAoxKZYT
