@@ -1,0 +1,20 @@
+---
+- provider_name: Land of Assets
+  provider_url: https://landofassets.com
+  endpoints:
+  - schemes:
+    - https://landofassets.com/*
+    - https://landofassets.com/*/assets
+    - https://landofassets.com/*/assets/*
+    - https://landofassets.com/*/assets/*/embed
+    url: https://api.landofassets.com/oembed
+    example_urls:
+    - https://api.landofassets.com/oembed?url=https%3A%2F%2Flandofassets.com%2FBenHouston3D&format=json
+    - https://api.landofassets.com/oembed?url=https%3A%2F%2Flandofassets.com%2FBenHouston3D%2FSamples%2Fassets&format=json
+    - https://api.landofassets.com/oembed?url=https%3A%2F%2Flandofassets.com%2FBenHouston3D%2FSamples%2Fassets%2FIridescenceAbalone&format=json
+    - https://api.landofassets.com/oembed?url=https%3A%2F%2Flandofassets.com%2FBenHouston3D%2FSamples%2Fassets%2FIridescenceAbalone%2Fembed&format=json
+    formats:
+    - json
+    discovery: true
+    notes: Supports org, project, and asset URLs. Asset URLs return rich embed type with 3D viewer iframe. Only PUBLIC resources are accessible via oEmbed.
+...
