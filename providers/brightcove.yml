@@ -1,0 +1,13 @@
+---
+- provider_name: Brightcove
+  provider_url: https://www.brightcove.com/
+  endpoints:
+    - schemes:
+        - https://players.brightcove.net/*/index.html?videoId=*
+        - https://players.brightcove.net/*/index.html?playlistId=*
+      url: https://oembed.brightcove.com/
+      discovery: false
+      formats:
+        - json
+      example_urls:
+        - https://oembed.brightcove.com/?format=json&url=https%3A%2F%2Fplayers.brightcove.net%2F1160438696001%2FRUsPQ8qzl_default%2Findex.html%3FvideoId%3D6327763506112
