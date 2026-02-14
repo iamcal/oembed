@@ -9,4 +9,4 @@
     discovery: true
     docs_url: https://trycli.com/docs
     example_urls:
-    - https://trycli.com/e/d7d842ba-7d37-4a8f-928d-8377e6c25cf2
+    - https://trycli.com/api/oembed?url=https://trycli.com/e/d7d842ba-7d37-4a8f-928d-8377e6c25cf2
