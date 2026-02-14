@@ -1,0 +1,12 @@
+---
+- provider_name: TryCLI Studio
+  provider_url: https://trycli.com
+  endpoints:
+  - schemes:
+    - https://trycli.com/e/*
+    - https://trycli.com/*/*
+    url: https://trycli.com/api/oembed
+    discovery: true
+    docs_url: https://trycli.com/docs
+    example_urls:
+    - https://trycli.com/api/oembed?url=https://trycli.com/e/d7d842ba-7d37-4a8f-928d-8377e6c25cf2
