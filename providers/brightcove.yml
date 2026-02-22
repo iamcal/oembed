@@ -3,8 +3,9 @@
   provider_url: https://www.brightcove.com/
   endpoints:
     - schemes:
-        - https://players.brightcove.net/*/index.html?videoId=*
-        - https://players.brightcove.net/*/index.html?playlistId=*
+        - https://players.brightcove.net/*/*/index.html?videoId=*
+        - https://players.brightcove.net/*/*/index.html?playlistId=*
+        - https://bcove.video/*
       url: https://oembed.brightcove.com/
       discovery: false
       formats:
