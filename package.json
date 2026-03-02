@@ -27,6 +27,6 @@
     "url": "https://github.com/iamcal/oembed/issues"
   },
   "devDependencies": {
-    "js-yaml": "^4.0.0"
+    "js-yaml": "^4.1.0"
   }
 }
