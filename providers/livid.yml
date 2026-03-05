@@ -1,0 +1,15 @@
+---
+- provider_name: Livid
+  provider_url: https://livid.com
+  endpoints:
+  - schemes:
+    - https://livid.com/watch/*
+    url: https://livid.com/oembed
+    example_urls:
+    - https://livid.com/oembed?url=https%3A%2F%2Flivid.com%2Fwatch%2FAJPwABnzkTXj&format=json
+    - https://livid.com/oembed?url=https%3A%2F%2Flivid.com%2Fwatch%2FAJPwABnzkTXj&format=xml
+    formats:
+      - json
+      - xml
+    discovery: true
+...
