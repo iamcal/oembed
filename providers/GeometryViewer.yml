@@ -1,0 +1,12 @@
+---
+- provider_name: GeometryViewer
+  provider_url: https://geometryviewer.com
+  endpoints:
+  - schemes:
+    - https://geometryviewer.com/v/*
+    - https://www.geometryviewer.com/v/*
+    url: https://geometryviewer.com/oembed
+    example_urls:
+    - https://geometryviewer.com/oembed?url=https%3A%2F%2Fgeometryviewer.com%2Fv%2Fdemo.stl&format=json
+    discovery: true
+...
