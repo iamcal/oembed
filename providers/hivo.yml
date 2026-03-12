@@ -1,0 +1,21 @@
+---
+- provider_name: Hivo
+  provider_url: https://app.hivo.com.au/
+  endpoints:
+  - schemes:
+    - https://cdn.hivo.com.au/*
+    - https://cdn.digital-assets.uq.edu.au/*
+    - https://cdn.southerndesigngroup.com/*
+    - https://freedom.hivocdn.com/*
+    - https://cdn.cockburn.wa.gov.au/*
+    - https://cdn.somnomed.com/*
+    - https://cdn.snowtunnel.com/*
+    - https://cdn.brenclosures.com.au/*
+    url: https://app.hivo.com.au/api/drupal/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://app.hivo.com.au/api/drupal/oembed?url=https://cdn.hivo.com.au/uploads/k7j3qmq8585wSriTf/original.jpeg&format=json
+...
