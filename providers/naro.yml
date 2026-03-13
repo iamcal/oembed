@@ -1,0 +1,11 @@
+---
+- provider_name: Naro
+  provider_url: https://naro.fm/
+  endpoints:
+    schemes:
+    - https://naro.fm/*/*/
+    url: https://naro.fm/api/oembed/
+    example_urls:
+    - https://naro.fm/api/oembed/?url=https%3A%2F%2Fnaro.fm%2F3d279130b22484%2F3d2944a9688b14%2F&format=json
+    - https://naro.fm/api/oembed/?url=https%3A%2F%2Fnaro.fm%2F3d279130b22484%2F3d2944a9688b14%2F&format=xml
+    discovery: true
