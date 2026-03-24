@@ -1,16 +1,16 @@
 ---
 - provider_name: SOOP
-  provider_url: https://www.sooplive.co.kr
+  provider_url: https://www.sooplive.com
   endpoints:
   - schemes:
-    - https://vod.sooplive.co.kr/player/
+    - https://vod.sooplive.com/player/
     - https://v.afree.ca/ST/
-    - https://vod.sooplive.co.kr/ST/
-    - https://vod.sooplive.co.kr/PLAYER/STATION/
-    - https://play.sooplive.co.kr/
-    url: https://openapi.sooplive.co.kr/oembed/embedinfo
+    - https://vod.sooplive.com/ST/
+    - https://vod.sooplive.com/PLAYER/STATION/
+    - https://play.sooplive.com/
+    url: https://openapi.sooplive.com/oembed/embedinfo
     example_urls:
-    - https://openapi.sooplive.co.kr/oembed/embedinfo?url=https://vod.sooplive.co.kr/player/71021072&width=640&height=360
-    - https://openapi.sooplive.co.kr/oembed/embedinfo?url=https://play.sooplive.co.kr/afstar1/237663862&width=640&height=360
+    - https://openapi.sooplive.com/oembed/embedinfo?url=https://vod.sooplive.com/player/71021072&width=640&height=360
+    - https://openapi.sooplive.com/oembed/embedinfo?url=https://play.sooplive.com/afstar1/237663862&width=640&height=360
     discovery: true
 ...
