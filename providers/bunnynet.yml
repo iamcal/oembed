@@ -1,9 +1,11 @@
 ---
-- provider_name: Bunny
+- provider_name: bunny.net
   provider_url: https://bunny.net/
   endpoints:
-  - docs_url: https://docs.bunny.net/reference/oembed_getoembed
+  - docs_url: https://docs.bunny.net/api-reference/stream/oembed/get-oembed
     schemes:
+    - https://player.mediadelivery.net/*
+    - http://player.mediadelivery.net/*
     - https://iframe.mediadelivery.net/*
     - http://iframe.mediadelivery.net/*
     - https://video.bunnycdn.com/*
