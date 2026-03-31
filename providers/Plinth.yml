@@ -1,0 +1,7 @@
+- provider_name: Plinth
+  provider_url: https://plinth.it
+  endpoints:
+  - schemes:
+    - https://plinth.it/model-viewer/*/*
+    url: https://plinth.it/model-viewer/oembed
+    discovery: true
