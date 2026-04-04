@@ -2,6 +2,6 @@ provider_name: Embases
 provider_url: https://embases.com/
 endpoints:
   - schemes:
-      - https://app.embases.com/e/*
-    url: https://app.embases.com/api/oembed
+      - https://www.embases.com/e/*
+    url: https://www.embases.com/api/oembed
     discovery: true
