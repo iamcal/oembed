@@ -1,0 +1,7 @@
+provider_name: Embases
+provider_url: https://embases.com/
+endpoints:
+  - schemes:
+      - https://www.embases.com/e/*
+    url: https://www.embases.com/api/oembed
+    discovery: true
