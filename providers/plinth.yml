@@ -1,0 +1,13 @@
+- provider_name: Plinth
+  provider_url: https://plinth.it
+  endpoints:
+  - schemes:
+    - https://plinth.it/model-viewer/*/*
+    url: https://plinth.it/model-viewer/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://plinth.it/model-viewer/oembed?url=https%3A%2F%2Fplinth.it%2Fmodel-viewer%2Fs%2FtMZNJk8u
+    notes: Provider supports 3D model and Gaussian splat viewers. Returns the 'rich' type with an iframe embed.
