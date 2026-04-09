@@ -1,0 +1,10 @@
+---
+- provider_name: SHAA
+provider_url: https://www.shaa.it/
+endpoints:
+- url: https://oembed.shaa.it/data
+discovery: true
+example_urls:
+-  https://oembed.shaa.it/data?url=http%3A%2F%2Fdelivery.shaa.it%2Fv2.0%2F00001%2Faccount_id%2F10011%2Fentry_id%2Fe_m43my3g8%2Fconfigui_id%2Ft_5qltvnrg_c_r8tci2vs%2Fwidth%2F720%2Fheight%2F480%2Fsspc%2Ffalse
+-  https://oembed.shaa.it/data?url=http%3A%2F%2Fdelivery.shaa.it%2Fv2.0%2F00001%2Faccount_id%2F10011%2Fentry_id%2Fe_m43my3g8%2Fconfigui_id%2Ft_5qltvnrg_c_r8tci2vs%2Fwidth%2F720%2Fheight%2F480%2Fsspc%2Ffalse&format=xml
+...
