@@ -1,0 +1,18 @@
+---
+- provider_name: Kommodo
+  provider_url: https://kommodo.ai/
+  endpoints:
+  - schemes:
+    - https://kommodo.ai/recordings/*
+    - https://kommodo.ai/guides/*
+    url: https://kommodo.ai/api/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Frecordings%2FabcDEF123
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Fguides%2FabcDEF123
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Frecordings%2FabcDEF123&format=json
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Fguides%2FabcDEF123&format=xml
+...
