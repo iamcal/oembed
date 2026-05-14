@@ -1,0 +1,10 @@
+- provider_name: FazenHaus
+  provider_url: https://haus.fazen.co/
+  endpoints:
+  - schemes:
+    - https://haus.fazen.co/embed/music/*
+    url: https://haus.fazen.co/api/oembed
+    discovery: true
+    example_urls:
+    - https://haus.fazen.co/api/oembed?url=https%3A%2F%2Fhaus.fazen.co%2Fembed%2Fmusic%2F0cc8fd6654d0&format=json
+    
