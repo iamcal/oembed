@@ -1,10 +1,10 @@
 - provider_name: Wewtalk
-    provider_url: https://www.wewtalk.com/
-    endpoints:
-    - schemes:
-      - https://www.wewtalk.com/voice/*
-      - https://wewtalk.com/voice/*
-      url: https://www.wewtalk.com/api/oembed
-      discovery: true
-      example_urls:
-      - https://www.wewtalk.com/api/oembed?url=https%3A%2F%2Fwww.wewtalk.com%2Fvoice%2Fabc123&format=json
+  provider_url: https://www.wewtalk.com/
+  endpoints:
+  - schemes:
+    - https://www.wewtalk.com/voice/*
+    - https://wewtalk.com/voice/*
+    url: https://www.wewtalk.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://www.wewtalk.com/api/oembed?url=https%3A%2F%2Fwww.wewtalk.com%2Fvoice%2F83f691ab-2953-4103-845b-9159ba006f78&format=json
