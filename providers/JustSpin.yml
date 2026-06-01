@@ -1,0 +1,13 @@
+---
+- provider_name: JustSpin
+  provider_url: https://www.justspin.cc/
+  endpoints:
+  - schemes:
+    - https://www.justspin.cc/workouts/*
+    url: https://www.justspin.cc/api/oembed
+    example_urls:
+    - https://www.justspin.cc/api/oembed?url=https%3A%2F%2Fwww.justspin.cc%2Fworkouts%2FAAABSWEs
+    discovery: true
+    formats:
+    - json
+...
