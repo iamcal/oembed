@@ -1,0 +1,16 @@
+---
+- provider_name: World Cup 2026 Tour
+  provider_url: https://ay-worldcup2026.zeabur.app
+  endpoints:
+  - schemes:
+    - https://ay-worldcup2026.zeabur.app/
+    - https://ay-worldcup2026.zeabur.app/widget
+    - https://ay-worldcup2026.zeabur.app/badge
+    - https://ay-worldcup2026.zeabur.app/developers
+    url: https://ay-worldcup2026.zeabur.app/oembed
+    example_urls:
+    - https://ay-worldcup2026.zeabur.app/oembed?url=https%3A%2F%2Fay-worldcup2026.zeabur.app%2Fwidget&format=json
+    discovery: true
+    formats:
+    - json
+...
