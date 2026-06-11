@@ -1,0 +1,12 @@
+---
+- provider_name: Fader
+  provider_url: https://app.getfader.com
+  endpoints:
+  - schemes:
+    - https://app.getfader.com/projects/*/publish
+    url: https://app.getfader.com/api/oembed
+    example_urls:
+    - http://app.getfader.com/api/oembed?url=https%3A%2F%2Fapp.getfader.com%2Fprojects%2F89a73dd0-4926-4f05-a9a8-6896a0a07a71%2Fpublish&format=json
+    formats:
+    - json
+...

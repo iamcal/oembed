@@ -1,0 +1,15 @@
+---
+- provider_name: Namchey
+  provider_url: https://namchey.com
+  endpoints:
+  - schemes:
+    - https://namchey.com/embeds/*
+    url: https://namchey.com/api/oembed
+    docs_url: https://help.namchey.com/app/oembed
+    example_urls:
+    - https://namchey.com/api/oembed?url=https%3A%2F%2Fnamchey.com%2Fitineraries%2Ftilicho&amp;format=json
+    formats:
+    - json
+    - xml
+    discovery: true
+...

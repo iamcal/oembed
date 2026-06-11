@@ -1,0 +1,9 @@
+---
+- provider_name: GloriaTV
+  provider_url: https://gloria.tv/
+  endpoints:
+  - url: https://gloria.tv/oembed/
+    discovery: true
+    example_urls:
+    - https://gloria.tv/oembed/?url=https%3A%2F%2Fgloria.tv%2Fvideo%2FFRqEWoz7GfGt1pfhD4krcgyqC
+...

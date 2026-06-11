@@ -1,0 +1,12 @@
+---
+- provider_name: Risky Business
+  provider_url: https://risky.biz/
+  endpoints:
+    - schemes:
+        - https://risky.biz/*
+      url: https://risky.biz/oembed
+      discovery: true
+      formats:
+        - json
+      example_urls:
+        - https://risky.biz/oembed?url=https://risky.biz/RBNEWS560/&format=json

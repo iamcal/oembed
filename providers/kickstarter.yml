@@ -1,0 +1,10 @@
+---
+- provider_name: Kickstarter
+  provider_url: http://www.kickstarter.com
+  endpoints:
+  - schemes:
+    - http://www.kickstarter.com/projects/*
+    url: http://www.kickstarter.com/services/oembed
+    example_urls:
+    - http://www.kickstarter.com/services/oembed?url=http%3A%2F%2Fwww.kickstarter.com%2Fprojects%2F1115015686%2Fhelp-support-the-kiggins-theatre-to-go-digital
+...

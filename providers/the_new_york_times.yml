@@ -1,0 +1,14 @@
+---
+- provider_name: The New York Times
+  provider_url: https://www.nytimes.com
+  endpoints:
+  - schemes:
+    - https://www.nytimes.com/svc/oembed
+    - https://nytimes.com/*
+    - https://*.nytimes.com/*
+    url: https://www.nytimes.com/svc/oembed/json/
+    example_urls:
+    - https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwww.nytimes.com%2F2016%2F03%2F10%2Fus%2Fpolitics%2Fhow-to-watch-democratic-debate.html
+    - https://www.nytimes.com/svc/oembed/json/?url=https://www.nytimes.com/2017/02/14/business/dealbook/bundling-online-services.html
+    discovery: true
+...

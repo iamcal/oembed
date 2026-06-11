@@ -1,0 +1,13 @@
+---
+- provider_name: Cardinal Blue
+  provider_url: https://minesweeper.today/
+  endpoints:
+  - schemes:
+    - http://minesweeper.today/*
+    - https://minesweeper.today/*
+    url: https://minesweeper.today/api/oembed
+    example_urls:
+    - https://minesweeper.today/api/oembed?url=https%3A%2F%2Fminesweeper.today%2F&format=json
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

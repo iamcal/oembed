@@ -1,0 +1,12 @@
+---
+- provider_name: Blackfire.io
+  provider_url: https://blackfire.io
+  endpoints:
+  - schemes:
+    - https://blackfire.io/profiles/*/graph
+    - https://blackfire.io/profiles/compare/*/graph
+    url: https://blackfire.io/oembed
+    example_urls:
+    - https://blackfire.io/oembed?url=https%3A//blackfire.io/profiles/ffcffdc1-50db-42bc-bcbb-dcfe86758e26/graph&format=json
+    discovery: true
+...

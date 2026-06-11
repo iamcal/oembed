@@ -1,0 +1,12 @@
+---
+- provider_name: Injurymap
+  provider_url: https://www.injurymap.com/
+  endpoints:
+  - schemes:
+    - https://www.injurymap.com/exercises/*
+    url: https://www.injurymap.com/services/oembed
+    discovery: true
+    example_urls:
+    - https://www.injurymap.com/services/oembed?format=json&url=https%3A//injurymap.com/exercises/ZHSJKssCjIDF
+    - https://www.injurymap.com/services/oembed?format=xml&url=https%3A//injurymap.com/exercises/ZHSJKssCjIDF
+...

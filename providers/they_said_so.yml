@@ -1,0 +1,11 @@
+---
+- provider_name: They Said So
+  provider_url: https://theysaidso.com/
+  endpoints:
+  - schemes:
+    - https://theysaidso.com/image/*
+    url: https://theysaidso.com/extensions/oembed/
+    example_urls:
+    - https://theysaidso.com/extensions/oembed?url=https%3A%2F%2Ftheysaidso.com%2Fi%2F13IGilhK08STqiDI5xGk_geF&format=json
+    discovery: true
+...

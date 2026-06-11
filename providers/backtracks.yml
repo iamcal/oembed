@@ -1,0 +1,16 @@
+---
+- provider_name: Backtracks
+  provider_url: https://backtracks.fm
+  endpoints:
+  - schemes:
+    - https://backtracks.fm/*/*/e/*
+    - https://backtracks.fm/*/s/*/*
+    - https://backtracks.fm/*/*/*/*/e/*/*
+    - https://backtracks.fm/*
+    - http://backtracks.fm/*
+    url: https://backtracks.fm/oembed
+    example_urls:
+    - https://backtracks.fm/oembed?url=https%3A%2F%2Fbacktracks.fm%2Fycombinator%2Fycombinator%2Fe%2F4-elon-musk-on-how-to-build-the-future&format=json
+    - https://backtracks.fm/oembed?url=https%3A%2F%2Fbacktracks.fm%2Fdiscover%2Fs%2Fthe-joe-rogan-experience%2F6b8581415e041967%2Fe%2F1411-robert-downey-jr%2F77d2d79586e78c01%3Foref%3Dbtdatadir&format=json
+    discovery: true
+...

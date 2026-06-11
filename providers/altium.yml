@@ -1,0 +1,13 @@
+---
+- provider_name: Altium LLC
+  provider_url: https://altium.com
+  endpoints:
+  - schemes:
+    - https://altium.com/viewer/*
+    url: https://viewer.altium.com/shell/oembed
+    formats:
+    - json
+    example_urls:
+    - https://viewer.altium.com/shell/oembed?url=https%3A%2F%2Faltium.com%2Fviewer%2FvN8in6nli06imztWoTol4w%3D%3D
+    notes: Provider only supports the 'rich' type
+...

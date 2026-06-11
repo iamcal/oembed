@@ -1,0 +1,11 @@
+---
+- provider_name: Waltrack
+  provider_url: https://waltrack/net
+  endpoints:
+  - schemes:
+    - https://waltrack.net/product/*
+    url: https://waltrack.net/oembed
+    example_urls:
+    - https://waltrack.net/oembed?url=https://waltrack.net/product/532025814
+    discovery: true
+...

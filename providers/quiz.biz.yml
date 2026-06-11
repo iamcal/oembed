@@ -1,0 +1,22 @@
+---
+- provider_name: Quiz.biz
+  provider_url: http://www.quiz.biz/
+  endpoints:
+  - schemes:
+    - http://www.quiz.biz/quizz-*.html
+    url: http://www.quiz.biz/api/oembed
+    docs_url: http://www.quiz.biz/aide-oembed.php
+    example_urls:
+    - http://www.quiz.biz/api/oembed?url=http%3A%2F%2Fwww.quiz.biz%2Fquizz-182015.html&format=json
+    discovery: true
+- provider_name: Quizz.biz
+  provider_url: http://www.quizz.biz/
+  endpoints:
+  - schemes:
+    - http://www.quizz.biz/quizz-*.html
+    url: http://www.quizz.biz/api/oembed
+    docs_url: http://www.quizz.biz/aide-oembed.php
+    example_urls:
+    - http://www.quizz.biz/api/oembed?url=http%3A%2F%2Fwww.quizz.biz%2Fquizz-339842.html&format=json
+    discovery: true
+...

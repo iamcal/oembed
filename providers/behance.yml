@@ -1,0 +1,14 @@
+---
+- provider_name: Behance
+  provider_url: https://www.behance.net
+  endpoints:
+  - schemes:
+    - https://www.behance.net/gallery/*/*
+    - https://www.behance.net/*/services/*/*
+    url: https://www.behance.net/services/oembed
+    example_urls:
+    - https://www.behance.net/services/oembed?url=https%3A%2F%2Fwww.behance.net%2Fgallery%2F183422265%2Fydhy
+    - https://www.behance.net/services/oembed?url=https%3A%2F%2Fwww.behance.net%2Fimjessicatr%2Fservices%2F63797%2FI-will-design-your-brand-s-social-media
+    formats:
+    - json
+...

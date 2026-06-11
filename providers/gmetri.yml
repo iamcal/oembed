@@ -1,0 +1,13 @@
+---
+- provider_name: GMetri
+  provider_url: https://www.gmetri.com/
+  endpoints:
+  - schemes:
+    - https://view.gmetri.com/*
+    - https://*.gmetri.com/*
+    url: https://embed.gmetri.com/oembed/
+    discovery: true
+    example_urls:
+    - https://embed.gmetri.com/oembed?url=https%3A%2F%2Fgame.gmetri.com%2Fsafehands_v2%26format%3Djson
+    - https://embed.gmetri.com/oembed?url=https%3A%2F%2Fview.gmetri.com%2Fv5%2Fijafwv%2Fraji_covid_game
+...

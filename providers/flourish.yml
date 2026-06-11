@@ -1,0 +1,12 @@
+---
+- provider_name: Flourish
+  provider_url: https://flourish.studio/
+  endpoints:
+  - schemes:
+    - https://public.flourish.studio/visualisation/*
+    - https://public.flourish.studio/story/*
+    url: https://app.flourish.studio/api/v1/oembed
+    example_urls:
+    - https://app.flourish.studio/api/v1/oembed?url=https%3A%2F%2Fpublic.flourish.studio%2Fvisualisation%2F47988%2F
+    discovery: true
+...

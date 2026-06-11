@@ -1,0 +1,12 @@
+---
+- provider_name: Parta.io
+  provider_url: https://parta.io/
+  endpoints:
+  - schemes:
+    - https://app.parta.io/core/embed/*
+    - https://*.parta.io/core/embed/*
+    url: https://app.parta.io/core/oembed
+    example_urls:
+    - https://app.parta.io/core/oembed?url=https%3A%2F%2Fapp.parta.io%2Fcore%2Fembed%2F64aa2e0b-fa85-4681-a2ce-662e856c2b97
+    discovery: true
+    notes: Provider only supports the 'rich' type for e-learning courses

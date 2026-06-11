@@ -1,0 +1,12 @@
+---
+- provider_name: DTube
+  provider_url: https://d.tube/
+  endpoints:
+  - schemes:
+    - https://d.tube/v/*
+    url: https://api.d.tube/oembed
+    discovery: true
+    example_urls:
+    - https://api.d.tube/oembed?url=https://d.tube/v/benswann/zqd630em
+    - https://api.d.tube/oembed?format=xml&url=https://d.tube/v/marketingmonk/t0fj6eip
+...

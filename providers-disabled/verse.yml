@@ -1,0 +1,9 @@
+---
+- provider_name: Verse
+  provider_url: http://verse.com/
+  endpoints:
+  - url: http://verse.com/services/oembed/
+    example_urls:
+    - http://verse.com/services/oembed/?url=http%3A%2F%2Fverse.com%2Fembed%2F%23%2Fstories%2F112-connected-to-the-top
+    - http://verse.com/services/oembed/?url=http%3A%2F%2Fverse.com%2Fembed%2F%23%2Fstories%2F112-connected-to-the-top&format=xml
+...

@@ -1,0 +1,11 @@
+---
+- provider_name: CodePen
+  provider_url: https://codepen.io
+  endpoints:
+  - schemes:
+    - http://codepen.io/*
+    - https://codepen.io/*
+    url: https://codepen.io/api/oembed
+    example_urls:
+    - http://codepen.io/api/oembed?url=https://codepen.io/gingerdude/pen/JXwgdK&format=json
+...

@@ -1,0 +1,13 @@
+---
+- provider_name: Overflow
+  provider_url: https://overflow.io
+  endpoints:
+  - schemes:
+    - https://overflow.io/s/*
+    - https://overflow.io/embed/*
+    url: https://overflow.io/services/oembed
+    example_urls:
+    - https://overflow.io/services/oembed?url=https%3A%2F%2Foverflow.io%2Fs%2F9ST7SX%2F&format=json
+    - https://overflow.io/services/oembed?url=https%3A%2F%2Foverflow.io%2Fembed%2F9ST7SX%2F&format=json
+    discovery: true
+...

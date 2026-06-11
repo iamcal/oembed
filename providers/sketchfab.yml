@@ -1,0 +1,16 @@
+---
+- provider_name: Sketchfab
+  provider_url: http://sketchfab.com
+  endpoints:
+  - schemes:
+    - http://sketchfab.com/*models/*
+    - https://sketchfab.com/*models/*
+    - https://sketchfab.com/*/folders/*
+    url: http://sketchfab.com/oembed
+    example_urls:
+    - http://sketchfab.com/oembed?url=https%3A%2F%2Fsketchfab.com%2Fmodels%2Fe7995659092c4d8c92031b0a03887cfa
+    - http://sketchfab.com/oembed?url=https%3A%2F%2Fsketchfab.com%2Fsketchfab%2Ffolders%2F5ae73138e4a1477fb87b6f48d2bfccbe
+    - https://sketchfab.com/oembed?url=https%3A%2F%2Fsketchfab.com%2F3d-models%2Floring-tweet-power-line-9a48434e545f44d08801c8ce2a72e41b
+    formats:
+    - json
+...

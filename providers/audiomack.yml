@@ -1,0 +1,13 @@
+---
+- provider_name: Audiomack
+  provider_url: https://audiomack.com
+  endpoints:
+  - schemes:
+    - https://audiomack.com/*/song/*
+    - https://audiomack.com/*/album/*
+    - https://audiomack.com/*/playlist/*
+    url: https://audiomack.com/oembed
+    example_urls:
+    - https://www.audiomack.com/oembed?url=https%3A%2F%2Faudiomack.com%2Faudiomack%2Fplaylist%2Fjust-chillin&format=json
+    discovery: true
+...

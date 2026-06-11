@@ -1,0 +1,17 @@
+---
+- provider_name: Pixdor
+  provider_url: http://www.pixdor.com/
+  endpoints:
+  - schemes:
+    - https://store.pixdor.com/place-marker-widget/*/show
+    - https://store.pixdor.com/map/*/show
+    url: https://store.pixdor.com/oembed
+    example_urls:
+    - https://store.pixdor.com/oembed?url=https://store.pixdor.com/place-marker-widget/20/show
+    - https://store.pixdor.com/oembed?url=https://store.pixdor.com/map/25/show
+    - https://store.pixdor.com/oembed.xml?url=https://store.pixdor.com/map/10/show
+    formats:
+    - json
+    - xml
+    discovery: true
+...

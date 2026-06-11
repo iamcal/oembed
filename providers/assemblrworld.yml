@@ -1,0 +1,26 @@
+---
+- provider_name: AssemblrWorld
+  provider_url: https://assemblrworld.com/
+  endpoints:
+  - schemes:
+    - http://*.studio.assemblrworld.com/creation/*
+    - http://studio.assemblrworld.com/creation/*
+    - http://*.app-edu.assemblrworld.com/Creation/*
+    - http://app-edu.assemblrworld.com/Creation/*
+    - http://assemblr.world/*
+    - http://editor.assemblrworld.com/*
+    - http://*.assemblrworld.com/creation/*
+    - http://*.assemblrworld.com/Creation/*
+    - https://*.studio.assemblrworld.com/creation/*
+    - https://studio.assemblrworld.com/creation/*
+    - https://*.app-edu.assemblrworld.com/Creation/*
+    - https://app-edu.assemblrworld.com/Creation/*
+    - https://assemblr.world/*
+    - https://editor.assemblrworld.com/*
+    - https://*.assemblrworld.com/creation/*
+    - https://*.assemblrworld.com/Creation/*
+    url: https://studio.assemblrworld.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://studio.assemblrworld.com/api/oembed/?url=https%3A%2F%2Flocalhost%3A3003%2FEmbed%2F-9ZYparJxjTEbQZwxYXU%3Finfo%3Dfalse%26hideCloseBtn%3Dtrue
+...

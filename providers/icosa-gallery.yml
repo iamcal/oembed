@@ -1,0 +1,11 @@
+---
+- provider_name: Icosa Gallery
+  provider_url: https://icosa.gallery
+  endpoints:
+  - schemes:
+    - https://icosa.gallery/view/*
+    url: https://api.icosa.gallery/v1/oembed
+    example_urls:
+    - https://api.icosa.gallery/v1/oembed?url=/view/9L2Lt-sxzdp/embed&format=json
+    discovery: true
+...

@@ -1,0 +1,19 @@
+---
+- provider_name: bunny.net
+  provider_url: https://bunny.net/
+  endpoints:
+  - docs_url: https://docs.bunny.net/api-reference/stream/oembed/get-oembed
+    schemes:
+    - https://player.mediadelivery.net/*
+    - http://player.mediadelivery.net/*
+    - https://iframe.mediadelivery.net/*
+    - http://iframe.mediadelivery.net/*
+    - https://video.bunnycdn.com/*
+    - http://video.bunnycdn.com/*
+    url: https://video.bunnycdn.com/OEmbed
+    example_urls:
+    - https://video.bunnycdn.com/OEmbed?url=https%3A%2F%2Fiframe.mediadelivery.net%2Fembed%2F51808%2F68d791f4-510a-4928-9f5a-4526e82d1336
+    formats:
+    - json
+    discovery: true
+...

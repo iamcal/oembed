@@ -1,0 +1,13 @@
+---
+- provider_name: Poll Daddy
+  provider_url: http://polldaddy.com
+  endpoints:
+  - schemes:
+    - http://*.polldaddy.com/s/*
+    - http://*.polldaddy.com/poll/*
+    - http://*.polldaddy.com/ratings/*
+    url: http://polldaddy.com/oembed/
+    docs_url: http://support.polldaddy.com/oembed/
+    example_urls:
+    - http://polldaddy.com/oembed/?url=http%3A%2F%2Fpolldaddy.com%2Fratings%2F39%2F&format=xml
+...

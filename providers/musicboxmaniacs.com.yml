@@ -1,0 +1,14 @@
+---
+- provider_name: Music Box Maniacs
+  provider_url: https://musicboxmaniacs.com/
+  endpoints:
+  - schemes:
+    - https://musicboxmaniacs.com/explore/melody/*
+    url: https://musicboxmaniacs.com/embed/
+    example_urls:
+    - https://musicboxmaniacs.com/embed/?url=https%3A%2F%2Fmusicboxmaniacs.com%2Fexplore%2Fmelody%2Fcandyman-ost-music-box_1%2F 
+    formats:
+    - json
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

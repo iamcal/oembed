@@ -1,0 +1,14 @@
+---
+- provider_name: TED
+  provider_url: https://www.ted.com
+  endpoints:
+  - schemes:
+    - http://ted.com/talks/*
+    - https://ted.com/talks/*
+    - https://www.ted.com/talks/*
+    url: https://www.ted.com/services/v1/oembed.{format}
+    example_urls:
+    - https://www.ted.com/services/v1/oembed.xml?url=https%3A%2F%2Fwww.ted.com%2Ftalks%2Fjill_bolte_taylor_s_powerful_stroke_of_insight
+    - https://www.ted.com/services/v1/oembed.json?url=https%3A%2F%2Fwww.ted.com%2Ftalks%2Fjill_bolte_taylor_s_powerful_stroke_of_insight
+    discovery: true
+...

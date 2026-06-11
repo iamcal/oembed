@@ -1,0 +1,14 @@
+---
+- provider_name: DocumentCloud
+  provider_url: https://www.documentcloud.org
+  endpoints:
+  - schemes:
+    - https://www.documentcloud.org/documents/*
+    url: https://api.www.documentcloud.org/api/oembed
+    docs_url: https://api.www.documentcloud.org/api/schema/redoc/#tag/oembed
+    example_urls:
+    - https://api.www.documentcloud.org/api/oembed/?url=https://www.documentcloud.org/documents/23988640-gpo-j6-doc-ctrl0000917052_00001-azure/
+    - https://api.www.documentcloud.org/api/oembed/?url=https://www.documentcloud.org/documents/23993225-me01a-preface-azure/%23document/p2
+    - https://api.www.documentcloud.org/api/oembed/?url=https://www.documentcloud.org/documents/23465973-20tif01614030tif_8_oakn_street_1/%23document/p1/a2804375
+    discovery: true
+...

@@ -1,0 +1,15 @@
+---
+- provider_name: Box Office Buz
+  provider_url: https://boxofficebuz.com
+  endpoints:
+    - schemes:
+        - https://boxofficebuz.com/embed/video/*
+      url: https://api.boxofficebuz.com/v2/oembed
+      discovery: true
+      formats:
+        - json
+        - xml
+      example_urls:
+        - https://api.boxofficebuz.com/v2/oembed?url=https://boxofficebuz.com/embed/video/jack-reacher-never-go-back-tv-spot-hunting&format=json
+        - https://api.boxofficebuz.com/v2/oembed?url=https://boxofficebuz.com/embed/video/ghost-in-the-shell-trailer-teaser-5&format=xml
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: Upec.Pod
+  provider_url: https://pod.u-pec.fr/
+  endpoints:
+  - schemes:
+    - https://pod.u-pec.fr/video/*
+    url: https://pod.u-pec.fr/oembed
+    discovery: true
+    example_urls:
+    - https://pod.u-pec.fr/oembed/?url=https%3A//pod.u-pec.fr/video/0268-prammics-presentation/
+    - https://pod.u-pec.fr/oembed/?url=https%3A//pod.u-pec.fr/video/0268-prammics-presentation/&format=xml
+...

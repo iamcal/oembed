@@ -1,0 +1,11 @@
+---
+- provider_name: Cacoo
+  provider_url: https://cacoo.com
+  endpoints:
+  - schemes:
+    - https://cacoo.com/diagrams/*
+    url: http://cacoo.com/oembed.{format}
+    docs_url: https://cacoo.com/lang/en/api_oembed
+    example_urls:
+    - http://cacoo.com/oembed.xml?url=http%3A%2F%2Fcacoo.com%2Fdiagrams%2Fm9uZtizE5I2GkFR6
+...

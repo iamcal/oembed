@@ -1,0 +1,13 @@
+---
+- provider_name: VLIVE
+  provider_url: https://www.vlive.tv
+  endpoints:
+  - url: https://www.vlive.tv/oembed
+    schemes:
+    - https://www.vlive.tv/video/*
+    example_urls:
+    - https://www.vlive.tv/oembed?url=https%3A%2F%2Fwww.vlive.tv%2Fvideo%2F81492
+    formats:
+    - json
+    notes: Provider only supports the 'video' type
+...

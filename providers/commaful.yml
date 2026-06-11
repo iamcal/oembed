@@ -1,0 +1,10 @@
+---
+- provider_name: Commaful
+  provider_url: https://commaful.com
+  endpoints:
+  - schemes:
+    - https://commaful.com/play/*
+    url: https://commaful.com/api/oembed/
+    example_urls:
+    - https://commaful.com/api/oembed/?url=%2F%2Fcommaful.com%2Fplay%2Fwillyoumaryme%2Fthe-stars-in-us%2F
+...

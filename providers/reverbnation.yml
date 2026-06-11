@@ -1,0 +1,15 @@
+---
+- provider_name: ReverbNation
+  provider_url: https://www.reverbnation.com/
+  endpoints:
+  - schemes:
+    - https://www.reverbnation.com/*
+    - https://www.reverbnation.com/*/songs/*
+    url: https://www.reverbnation.com/oembed
+    example_urls:
+    - https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones
+    - https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones&format=json
+    - https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones%2Fsong%2F4290057-rising-sand
+    - https://www.reverbnation.com/oembed?url=https%3A%2F%2Fwww.reverbnation.com%2Fcoralbones%2Fsong%2F4290057-rising-sand&format=json
+    discovery: true
+...

@@ -1,0 +1,11 @@
+---
+- provider_name: Shoudio
+  provider_url: http://shoudio.com
+  endpoints:
+  - schemes:
+    - http://shoudio.com/*
+    - http://shoud.io/*
+    url: http://shoudio.com/api/oembed
+    example_urls:
+    - http://shoudio.com/api/oembed?format=xml&url=http%3A%2F%2Fshoudio.com%2Fuser%2Fshoister%2Fstatus%2F8122
+...

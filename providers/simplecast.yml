@@ -1,0 +1,12 @@
+---
+- provider_name: Simplecast
+  provider_url: https://simplecast.com
+  endpoints:
+  - schemes:
+    - https://simplecast.com/s/*
+    url: https://simplecast.com/oembed
+    example_urls:
+    - https://simplecast.com/oembed?url=https%3A%2F%2Fsimplecast.com%2Fs%2F7fe152f4
+    formats:
+    - json
+...

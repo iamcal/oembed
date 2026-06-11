@@ -1,0 +1,13 @@
+---
+- provider_name: Demofly
+  provider_url: https://demofly.ai/
+  endpoints:
+  - schemes:
+    - https://app.demofly.ai/s/*
+    - https://demofly.ai/s/*
+    url: https://app.demofly.ai/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://app.demofly.ai/api/oembed?url=https%3A%2F%2Fapp.demofly.ai%2Fs%2F7wv44vnac2&format=json

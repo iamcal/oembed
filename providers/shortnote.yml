@@ -1,0 +1,11 @@
+---
+- provider_name: ShortNote
+  provider_url: https://www.shortnote.jp/
+  endpoints:
+  - schemes:
+    - https://www.shortnote.jp/view/notes/*
+    url: https://www.shortnote.jp/oembed/
+    example_urls:
+    - https://www.shortnote.jp/oembed/?url=https%3A%2F%2Fwww.shortnote.jp%2Fview%2Fnotes%2FATImFCFE
+    discovery: true
+...

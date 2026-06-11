@@ -1,0 +1,19 @@
+---
+- provider_name: Kommodo
+  provider_url: https://kommodo.ai/
+  endpoints:
+  - schemes:
+    - https://kommodo.ai/recordings/*
+    - https://kommodo.ai/guides/*
+    url: https://kommodo.ai/api/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Frecordings%2FuzTHxzcd2IjpKkbPbmt2
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Fguides%2F7EL2huRx4PBjqLvsG4vF
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Frecordings%2FuzTHxzcd2IjpKkbPbmt2&format=json
+    - https://kommodo.ai/api/oembed?url=https%3A%2F%2Fkommodo.ai%2Fguides%2F7EL2huRx4PBjqLvsG4vF&format=xml
+    notes: Returns 'video' for recordings (or 'rich' when bundled with a step-by-step guide) and 'rich' for guides. Guides default to an article-style HTML embed; ?view=interactive in the source URL returns the slideshow variant.
+...

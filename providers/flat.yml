@@ -1,0 +1,13 @@
+---
+- provider_name: Flat
+  provider_url: https://flat.io
+  endpoints:
+  - schemes:
+    - https://flat.io/score/*
+    - https://*.flat.io/score/*
+    url: https://flat.io/services/oembed
+    docs_url: https://flat.io/developers/docs/embed/oembed.html
+    example_urls:
+    - https://flat.io/services/oembed?url=https%3A%2F%2Fflat.io%2Fscore%2F56ae21579a127715a02901a6
+    discovery: true
+...

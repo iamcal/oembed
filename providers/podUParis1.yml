@@ -1,0 +1,12 @@
+---
+- provider_name: UnivParis1.Pod
+  provider_url: https://mediatheque.univ-paris1.fr/
+  endpoints:
+  - schemes:
+    - https://mediatheque.univ-paris1.fr/video/*
+    url: https://mediatheque.univ-paris1.fr/oembed
+    discovery: true
+    example_urls:
+    - https://mediatheque.univ-paris1.fr/oembed/?url=https%3A//mediatheque.univ-paris1.fr/video/1839-revue-1257-n1-eclairages-sur-le-cinema/
+    - https://mediatheque.univ-paris1.fr/oembed/?url=https%3A//mediatheque.univ-paris1.fr/video/1839-revue-1257-n1-eclairages-sur-le-cinema/&format=xml
+...

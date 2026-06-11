@@ -1,0 +1,13 @@
+---
+- provider_name: HippoVideo
+  provider_url: https://hippovideo.io
+  endpoints:
+  - schemes:
+    - http://*.hippovideo.io/*
+    - https://*.hippovideo.io/*
+    url: https://www.hippovideo.io/services/oembed
+    docs_url: https://documenter.getpostman.com/view/5278433/Tz5naxpW#75c633eb-1eec-4662-a8a3-c5e90a4c3588
+    example_urls:
+    - https://www.hippovideo.io/services/oembed?url=https://www.hippovideo.io/video/play/jzzYRcktQ6JP8xP_49jaaw&width=1280&height=720&format=json
+    discovery: true
+...

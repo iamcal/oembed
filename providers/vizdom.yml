@@ -1,0 +1,19 @@
+---
+- provider_name: Vizdom
+  provider_url: https://vizdom.dev
+  endpoints:
+    - schemes:
+        - https://vizdom.dev/link/*
+      url: https://vizdom.dev/api/v1/oembed
+      discovery: true
+      formats:
+        - xml
+        - json
+      example_urls:
+        - https://vizdom.dev/api/v1/oembed?format=xml&url=https%3A%2F%2Fvizdom.dev%2Flink%2F9ec12219-93a6-4c01-a6bb-c0b48d1ef505
+        - https://vizdom.dev/api/v1/oembed?format=json&url=https%3A%2F%2Fvizdom.dev%2Flink%2F9ec12219-93a6-4c01-a6bb-c0b48d1ef505
+        - https://vizdom.dev/api/v1/oembed?format=xml&url=https%3A%2F%2Fvizdom.dev%2Flink%2Fc8bb315c-55e8-433a-905d-e438318d90ca
+        - https://vizdom.dev/api/v1/oembed?format=json&url=https%3A%2F%2Fvizdom.dev%2Flink%2Fc8bb315c-55e8-433a-905d-e438318d90ca
+        - https://vizdom.dev/api/v1/oembed?format=xml&url=https%3A%2F%2Fvizdom.dev%2Flink%2Fce8e27a2-cf41-48c2-a110-e860950ca277
+        - https://vizdom.dev/api/v1/oembed?format=json&url=https%3A%2F%2Fvizdom.dev%2Flink%2Fce8e27a2-cf41-48c2-a110-e860950ca277
+      notes: Provider only supports the 'rich' type.

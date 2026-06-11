@@ -1,0 +1,14 @@
+---
+- provider_name: Pikasso
+  provider_url: https://builder.pikasso.xyz
+  endpoints:
+  - schemes:
+    - https://*.builder.pikasso.xyz/embed/*
+    url: https://builder.pikasso.xyz/api/oembed
+    discovery: true
+    example_urls:
+    - https://builder.pikasso.xyz/api/oembed?url=https://builder.pikasso.xyz/embed/button/5f5c5b5b-1b1a-4b1a-9b1a-5b5b5b5b5b5b
+    formats:
+      - json
+    notes: Provider only supports json
+...

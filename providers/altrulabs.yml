@@ -1,0 +1,14 @@
+---
+- provider_name: Altru
+  provider_url: https://www.altrulabs.com
+  endpoints:
+  - schemes:
+    - https://app.altrulabs.com/*/*?answer_id=*
+    - https://app.altrulabs.com/player/*
+    url: https://api.altrulabs.com/api/v1/social/oembed
+    example_urls:
+    - https://api.altrulabs.com/api/v1/social/oembed?url=https%3A%2F%2Fapp.altrulabs.com%2Ftalentbrand%2Ffeed%3Fanswer_id%3D2059
+    - https://api.altrulabs.com/api/v1/social/oembed?url=https%3A%2F%2Fapp.altrulabs.com%2Fplayer%2F41329
+    formats:
+    - json
+...

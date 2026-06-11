@@ -1,0 +1,17 @@
+---
+- provider_name: Tonic Audio
+  provider_url: https://tonicaudio.com/
+  endpoints:
+  - schemes:
+    - https://tonicaudio.com/take/*
+    - https://tonicaudio.com/song/*
+    - https://tnic.io/song/*
+    - https://tnic.io/take/*
+    url: https://tonicaudio.com/oembed
+    discovery: true
+    example_urls:
+    - https://tonicaudio.com/oembed?url=https%3A%2F%2Ftnic.io%2Fsong%2FYsiaUAFouw
+    - https://tonicaudio.com/oembed?url=https%3A%2F%2Ftnic.io%2Ftake%2Fh4QIxVnhLL
+    formats:
+      - json
+...

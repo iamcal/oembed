@@ -1,0 +1,16 @@
+---
+- provider_name: Show by Animaker
+  provider_url: https://getshow.io/
+  endpoints:
+  - docs_url: https://getshow.io/support/oembed
+    schemes: 
+    - https://app.getshow.io/iframe/*
+    - https://*.getshow.io/share/*
+    url: https://api.getshow.io/oembed.{format}
+    example_urls:
+    - https://api.getshow.io/oembed.xml?url=https%3A%2F%2Fpresent.getshow.io%2Fshare%2FMcm3a3YBgj8xrtrWURYz
+    - https://api.getshow.io/oembed.json?url=https%3A%2F%2Fpresent.getshow.io%2Fshare%2FMcm3a3YBgj8xrtrWURYz
+    - https://api.getshow.io/oembed.xml?url=https%3A%2F%2Fapp.getshow.io%2Fembed%2Fiframe%2F%3Fmedia%3DMcm3a3YBgj8xrtrWURYz
+    - https://api.getshow.io/oembed.json?url=https%3A%2F%2Fapp.getshow.io%2Fembed%2Fiframe%2F%3Fmedia%3DMcm3a3YBgj8xrtrWURYz
+    discovery: true
+...

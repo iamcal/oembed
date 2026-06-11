@@ -1,0 +1,12 @@
+---
+- provider_name: Show the Way, actionable location info
+  provider_url: https://showtheway.io
+  endpoints:
+  - schemes:
+    - https://showtheway.io/to/*
+    url: https://showtheway.io/oembed
+    example_urls:
+    - https://showtheway.io/oembed?format=json&url=https%3A%2F%2Fshowtheway.io%2Fto%2F48.85837%2C2.294481%3Fname%3DEiffel%2520Tower
+    - https://showtheway.io/oembed?format=xml&url=https%3A%2F%2Fshowtheway.io%2Fto%2F48.85837%2C2.294481%3Fname%3DEiffel%2520Tower
+    discovery: true
+...

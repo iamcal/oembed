@@ -1,0 +1,17 @@
+---
+- provider_name: audio.com
+  provider_url: https://audio.com/
+  endpoints:
+  - schemes:
+    - https://audio.com/*
+    - https://www.audio.com/*
+    - http://audio.com/*
+    - http://www.audio.com/*
+    url: https://api.audio.com/oembed
+    discovery: true
+    docs_url: https://audio.com/oembed-docs/
+    example_urls:
+    - https://api.audio.com/oembed?url=https%3A%2F%2Faudio.com%2Fembed%2Faudio%2F1760622602932096%3Ftheme%3Dimage
+    - https://api.audio.com/oembed?url=https%3A%2F%2Faudio.com%2Faudio-com%2Fcollections%2Fambient-focus&format=xml
+    notes: Provider only supports the 'rich' type
+...

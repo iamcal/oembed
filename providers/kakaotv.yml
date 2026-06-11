@@ -1,0 +1,18 @@
+---
+- provider_name: KakaoTv
+  provider_url: https://tv.kakao.com/
+  endpoints:
+  - schemes:
+    - https://tv.kakao.com/channel/*/cliplink/*
+    - https://tv.kakao.com/m/channel/*/cliplink/*
+    - https://tv.kakao.com/channel/v/*
+    - https://tv.kakao.com/channel/*/livelink/*
+    - https://tv.kakao.com/m/channel/*/livelink/*
+    - https://tv.kakao.com/channel/l/*
+    url: https://tv.kakao.com/oembed
+    example_urls:
+    - https://tv.kakao.com/oembed?url=https%3A%2F%2Ftv.kakao.com%2Fchannel%2F2658101%2Fcliplink%2F300605724
+    - https://tv.kakao.com/oembed?url=https%3A%2F%2Ftv.kakao.com%2Fchannel%2F2658101%2Fcliplink%2F300605724&format=xml
+    discovery: true
+    notes: Provider only supports the 'video' type
+...

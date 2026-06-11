@@ -1,0 +1,11 @@
+---
+- provider_name: ZnipeTV
+  provider_url: https://www.znipe.tv/
+  endpoints:
+  - schemes:
+    - https://*.znipe.tv/*
+    url: https://api.znipe.tv/v3/oembed/
+    example_urls:
+    - https://api.znipe.tv/v3/oembed?url=https%3A%2F%2Fbeta.znipe.tv%2Fesl-genting-2018%2Fstage%3Fv%3D-L8UwcDwy8BFKXR6lLdj
+    discovery: true
+...

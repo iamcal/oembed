@@ -1,0 +1,12 @@
+---
+- provider_name: Streamable
+  provider_url: https://streamable.com/
+  endpoints:
+  - schemes:
+    - http://streamable.com/*
+    - https://streamable.com/*
+    url: https://api.streamable.com/oembed.json
+    discovery: true
+    example_urls:
+    - https://api.streamable.com/oembed.json?url=http%3A%2F%2Fstreamable.com%2Fifjh
+...

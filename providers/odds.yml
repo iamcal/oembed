@@ -1,0 +1,11 @@
+---
+- provider_name: Odds.com.au
+  provider_url: https://www.odds.com.au
+  endpoints:
+  - schemes:
+    - https://www.odds.com.au/*
+    - https://odds.com.au/*
+    url: https://www.odds.com.au/api/oembed/
+    example_urls:
+    - https://www.odds.com.au/api/oembed/?format=json&url=https://www.odds.com.au/odds/rugby-league/nrl/
+...

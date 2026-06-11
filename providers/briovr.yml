@@ -1,0 +1,10 @@
+---
+- provider_name: BrioVR
+  provider_url: https://view.briovr.com/
+  endpoints:
+  - schemes:
+    - https://view.briovr.com/api/v1/worlds/oembed/*
+    url: https://view.briovr.com/api/v1/worlds/oembed/
+    example_urls:
+    - https://view.briovr.com/api/v1/worlds/oembed/?url=https%3A//view.briovr.com/90487725-89bf-4acf-b8d2-0cbf0f560f7d/&format=json
+...

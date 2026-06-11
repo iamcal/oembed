@@ -1,0 +1,14 @@
+---
+- provider_name: Form-Data
+  provider_url: https://form-data.com
+  endpoints:
+  - docs_url: https://form-data.com/pages/docs/developers/embed
+    schemes:
+    - https://forms.form-data.com/*
+    url: https://forms.form-data.com/api/oembed
+    example_urls:
+    - https://forms.form-data.com/api/oembed?url=https%3A%2F%2Fforms.form-data.com%2Fkzunrnvqj61zmnru2wz6b
+    formats:
+    - json
+    discovery: true
+...

@@ -1,0 +1,10 @@
+---
+- provider_name: Screenr
+  provider_url: http://www.screenr.com/
+  endpoints:
+  - schemes:
+    - http://www.screenr.com/*/
+    url: http://www.screenr.com/api/oembed.{format}
+    example_urls:
+    - http://www.screenr.com/api/oembed.xml?url=http%3A%2F%2Fscreenr.com%2F3jns
+...

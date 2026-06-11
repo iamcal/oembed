@@ -1,0 +1,12 @@
+---
+- provider_name: wecandeo
+  provider_url: https://www.wecandeo.com/
+  endpoints:
+  - schemes:
+    - https://play.wecandeo.com/video/v/*
+    url: https://play.wecandeo.com/oembed/
+    discovery: true
+    example_urls:
+    - https://play.wecandeo.com/oembed/?url=https%3A%2F%2Fplay.wecandeo.com%2Fvideo%2Fv%2F%3Fkey%3DBOKNS9AQWrHDOWXC7DUr6tHd023xknvmIii8SOulPCMtAT1KxqmfHySho4pqLKNis4ZCy4IG7kZTQ431147TteoAieie
+    - https://play.wecandeo.com/oembed/?url=https%3A%2F%2Fplay.wecandeo.com%2Fvideo%2Fv%2F%3Fkey%3DBOKNS9AQWrHDOWXC7DUr6tHd023xknvmIii8SOulPCMtAT1KxqmfHySho4pqLKNis4ZCy4IG7kZTQ431147TteoAieie&format=json
+...

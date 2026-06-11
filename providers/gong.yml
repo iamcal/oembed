@@ -1,0 +1,12 @@
+---
+- provider_name: Gong
+  provider_url: https://www.gong.io/
+  endpoints:
+  - schemes:
+    - https://app.gong.io/call?id=*
+    url: https://app.gong.io/oembed
+    example_urls:
+    - https://app.gong.io/oembed?url=https%3A%2F%2Fapp.gong.io%3A8080%2Fcall%3Fid%3D1111111111111111111
+    formats:
+    - json
+...

@@ -1,0 +1,11 @@
+- provider_name: Curated
+  provider_url: https://curated.co/
+  endpoints:
+  - schemes:
+    - https://*.curated.co/*
+    url: https://api.curated.co/oembed
+    example_urls:
+    - https://api.curated.co/oembed?url=https://optinweekly.curated.co
+    formats:
+    - json
+    discovery: true

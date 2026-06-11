@@ -1,0 +1,13 @@
+---
+- provider_name: Kit
+  provider_url: https://kit.co/
+  endpoints:
+  - schemes:
+    - http://kit.co/*/*
+    - https://kit.co/*/*
+    url: https://embed.kit.co/oembed
+    discovery: true
+    example_urls:
+    - https://embed.kit.co/oembed?url=https://kit.co/MKBHD/video-gear
+    - https://embed.kit.co/oembed?url=https://kit.co/YARNutopia/nintendo-nes-controller-pixel-blanket-crochet-supplies-kit
+...

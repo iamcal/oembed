@@ -1,0 +1,12 @@
+---
+- provider_name: FrameBuzz
+  provider_url: https://framebuzz.com/
+  endpoints:
+  - schemes:
+    - http://framebuzz.com/v/*
+    - https://framebuzz.com/v/*
+    url: https://framebuzz.com/oembed/
+    example_urls:
+    - https://framebuzz.com/oembed/?url=https%3A%2F%2Fframebuzz.com%2Fv%2FtJjtJ3rN1usuqAeY%2F
+    discovery: true
+...

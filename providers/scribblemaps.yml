@@ -1,0 +1,15 @@
+---
+- provider_name: ScribbleMaps
+  provider_url: https://scribblemaps.com
+  endpoints:
+  - schemes:
+    - http://www.scribblemaps.com/maps/view/*
+    - https://www.scribblemaps.com/maps/view/*
+    - http://scribblemaps.com/maps/view/*
+    - https://scribblemaps.com/maps/view/*
+    url: https://scribblemaps.com/api/services/oembed.{format}
+    example_urls:
+    - https://scribblemaps.com/api/services/oembed.xml?url=https%3A%2F%2Fscribblemaps.com%2Fmaps%2Fview%2FSaigon%2FJkFLCgwlGt
+    - https://scribblemaps.com/api/services/oembed.json?url=https%3A%2F%2Fscribblemaps.com%2Fmaps%2Fview%2FSaigon%2FJkFLCgwlGt
+    discovery: true
+...

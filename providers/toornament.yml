@@ -1,0 +1,18 @@
+---
+- provider_name: Toornament
+  provider_url: https://www.toornament.com/
+  endpoints:
+  - schemes:
+    - https://www.toornament.com/tournaments/*/information
+    - https://www.toornament.com/tournaments/*/registration/
+    - https://www.toornament.com/tournaments/*/matches/schedule
+    - https://www.toornament.com/tournaments/*/stages/*/
+    url: https://widget.toornament.com/oembed
+    example_urls:
+    - https://widget.toornament.com/oembed?url=https%3A%2F%2Fwww.toornament.com%2Ftournaments%2F435927046347886201%2Finformation
+    discovery: true
+    formats:
+    - json
+    - xml
+
+...

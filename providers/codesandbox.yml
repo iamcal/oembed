@@ -1,0 +1,11 @@
+---
+- provider_name: CodeSandbox
+  provider_url: https://codesandbox.io
+  endpoints:
+  - schemes:
+    - https://codesandbox.io/s/*
+    - https://codesandbox.io/embed/*
+    url: https://codesandbox.io/oembed
+    example_urls:
+    - https://codesandbox.io/oembed?url=https://codesandbox.io/s/new&format=json
+...

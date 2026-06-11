@@ -1,0 +1,11 @@
+---
+- provider_name: iFixit
+  provider_url: http://www.iFixit.com
+  endpoints:
+  - schemes:
+    - http://www.ifixit.com/Guide/View/*
+    url: http://www.ifixit.com/Embed
+    docs_url: http://www.ifixit.com/api/doc/embed
+    example_urls:
+    - http://www.ifixit.com/Embed?url=http%3A%2F%2Fwww.ifixit.com%2FTeardown%2FiPhone-4-Teardown%2F3130%2F1&format=json
+...

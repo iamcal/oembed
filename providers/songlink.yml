@@ -1,0 +1,23 @@
+
+---
+- provider_name: Odesli (formerly Songlink)
+  provider_url: https://odesli.co
+  endpoints:
+  - schemes:
+    - https://song.link/*
+    - https://album.link/*
+    - https://artist.link/*
+    - https://playlist.link/*
+    - https://pods.link/*
+    - https://mylink.page/*
+    - https://odesli.co/*
+    url: https://song.link/oembed
+    formats:
+    - json
+    discovery: true
+    example_urls:
+    - https://song.link/oembed?url=https%3A%2F%2Fsong.link%2Fus%2Fi%2F1182062656&format=json
+    - https://song.link/oembed?url=https%3A%2F%2Fsong.link%2Fdpmo&format=json
+    - https://song.link/oembed?url=https%3A%2F%2Fsong.link%2Falbum%2Fs%2F0K4pIOOsfJ9lK8OjrZfXzd&format=json
+    - https://song.link/oembed?url=https%3A%2F%2Fartist.link%2Fmars&format=json
+...

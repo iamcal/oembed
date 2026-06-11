@@ -1,0 +1,11 @@
+---
+- provider_name: CircuitLab
+  provider_url: https://www.circuitlab.com/
+  endpoints:
+  - schemes:
+    - https://www.circuitlab.com/circuit/*
+    url: https://www.circuitlab.com/circuit/oembed/
+    example_urls:
+    - https://www.circuitlab.com/circuit/oembed/?format=json&url=https%3A%2F%2Fwww.circuitlab.com%2Fcircuit%2Fe38756%2F555-timer-as-astable-multivibrator-oscillator%2F
+    discovery: true
+...

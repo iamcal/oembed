@@ -1,0 +1,13 @@
+---
+- provider_name: Ludus
+  provider_url: https://ludus.one
+  endpoints:
+  - schemes:
+    - https://app.ludus.one/*
+    url: https://app.ludus.one/oembed
+    discovery: true
+    example_urls:
+    - https://app.ludus.one/oembed?url=https%3A%2F%2Fapp.ludus.one%2Ffd01598e-5ed7-4edb-8d0e-cf75a36e0a07
+    formats:
+    - json
+...

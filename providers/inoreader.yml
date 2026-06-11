@@ -1,0 +1,13 @@
+---
+- provider_name: Inoreader
+  provider_url: https://www.inoreader.com
+  endpoints:
+  - schemes:
+    - https://www.inoreader.com/oembed/
+    url: https://www.inoreader.com/oembed/api/
+    docs_url: https://www.inoreader.com/developers/oembed
+    example_urls:
+    - https://www.inoreader.com/oembed/api/article?url=http%3A%2F%2Fwww.inoreader.com%2Farticle%2F3a9c6e7f31414b1c-how-to-prevent-spotify-from-wasting-disk-space&format=json
+    - https://www.inoreader.com/oembed/api/article?url=http%3A%2F%2Fwww.inoreader.com%2Farticle%2F3a9c6e7f31414b1c-how-to-prevent-spotify-from-wasting-disk-space&format=xml
+    discovery: true
+...

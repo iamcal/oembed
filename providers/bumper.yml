@@ -1,0 +1,12 @@
+---
+- provider_name: Bumper
+  provider_url: http://www.bumper.com
+  endpoints:
+  - schemes:
+    - https://www.bumper.com/oembed/bumper
+    - https://www.bumper.com/oembed-s/bumper
+    url: https://www.bumper.com/oembed/bumper
+    discovery: true
+    example_urls:
+    - http://www.bumper.com/oembed-s/bumper?url=https%3A%2F%2Fwww.bumper.com%2Fmarketplace-s%2Fpr-286%2Findexhtml%23%2Flisting%2F222618920&format=json
+...

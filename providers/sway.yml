@@ -1,0 +1,13 @@
+---
+- provider_name: Sway
+  provider_url: https://www.sway.com
+  endpoints:
+  - schemes:
+    - https://sway.com/*
+    - https://www.sway.com/*
+    url: https://sway.com/api/v1.0/oembed
+    example_urls:
+    - https://sway.com/api/v1.0/oembed?url=https%3a%2f%2fsway.com%2fmaking_of_wildcat_sculpture&amp;format=json
+    - https://sway.com/api/v1.0/oembed?url=https%3a%2f%2fsway.com%2fnLa7rrYhdCmzRyQd&amp;format=json
+    discovery: true
+...

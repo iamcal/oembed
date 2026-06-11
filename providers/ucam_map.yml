@@ -1,0 +1,11 @@
+---
+- provider_name: University of Cambridge Map
+  provider_url: https://map.cam.ac.uk
+  endpoints:
+  - schemes:
+    - https://map.cam.ac.uk/*
+    url: https://map.cam.ac.uk/oembed/
+    docs_url: https://wiki.cam.ac.uk/university-map/The_Embedding_API
+    example_urls:
+    - https://map.cam.ac.uk/oembed/?url=https://map.cam.ac.uk/Department%2Bof%2BGeography
+...

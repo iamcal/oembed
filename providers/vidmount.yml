@@ -1,0 +1,13 @@
+---
+- provider_name: VidMount
+  provider_url: https://vidmount.com/
+  endpoints:
+    - docs_url: https://vidmount.com/oembed
+      schemes:
+        - https://vidmount.com/*
+      url: https://vidmount.com/oembed
+      example_urls:
+        - https://vidmount.com/oembed?url=https%3A%2F%2Fvidmount.com%2Fwatch%2F16186fb990298f&format=xml
+        - https://vidmount.com/oembed?url=https%3A%2F%2Fvidmount.com%2Fwatch%2F16186fb990298f&format=json
+      discovery: true
+...

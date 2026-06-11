@@ -1,0 +1,11 @@
+---
+- provider_name: Dream Broker
+  provider_url: https://dreambroker.com
+  endpoints:
+  - schemes:
+    - https://www.dreambroker.com/channel/*/*
+    url: https://dreambroker.com/channel/oembed
+    discovery: true
+    example_urls:
+    - http://www.dreambroker.com/channel/oembed?url=https%3A%2F%2Fwww.dreambroker.com%2Fchannel%2Flelk6szy%2Fpt429u1j
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: Kidoju
+  provider_url: https://www.kidoju.com/
+  endpoints:
+  - schemes:
+    - https://www.kidoju.com/en/x/*/*
+    - https://www.kidoju.com/fr/x/*/*
+    url: https://www.kidoju.com/api/oembed
+    example_urls:
+    - https://www.kidoju.com/api/oembed?url=https://www.kidoju.com/en/x/57c1c06430c6681900538352/57c1c06530c6681900538353&format=json
+    - https://www.kidoju.com/api/oembed?url=https://www.kidoju.com/en/x/57c1c06430c6681900538352/57c1c06530c6681900538353&format=xml
+...  

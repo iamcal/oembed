@@ -1,0 +1,13 @@
+---
+- provider_name: Acast
+  provider_url: https://embed.acast.com
+  endpoints:
+  - schemes:
+    - https://play.acast.com/s/*
+    url: https://oembed.acast.com/v1/embed-player
+    discovery: true
+    example_urls:
+    - https://oembed.acast.com/v1/embed-player?url=https://play.acast.com/s/go-off-sis/keepthatsameenergyfeat.kekepalmer
+    formats:
+    - json
+...

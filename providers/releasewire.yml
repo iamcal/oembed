@@ -1,0 +1,12 @@
+---
+- provider_name: ReleaseWire
+  provider_url: http://www.releasewire.com/
+  endpoints:
+  - schemes:
+    - http://rwire.com/*
+    url: http://publisher.releasewire.com/oembed/
+    docs_url: http://publisher.releasewire.com/docs/oembed/
+    example_urls:
+    - http://publisher.releasewire.com/oembed/?url=http%3A%2F%2Frwire.com%2F600742&format=json
+    discovery: true
+...

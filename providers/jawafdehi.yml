@@ -1,0 +1,12 @@
+---
+- provider_name: Jawafdehi
+  provider_url: https://jawafdehi.org
+  endpoints:
+  - schemes:
+    - https://jawafdehi.org/case/*
+    url: https://api.jawafdehi.org/oembed/
+    discovery: true
+    formats:
+    - json
+    - xml
+...

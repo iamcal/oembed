@@ -1,0 +1,14 @@
+---
+- provider_name: Digiteka
+  provider_url: https://www.ultimedia.com/
+  endpoints:
+  - schemes:
+    - https://www.ultimedia.com/central/video/edit/id/*/topic_id/*/
+    - https://www.ultimedia.com/default/index/videogeneric/id/*/showtitle/1/viewnc/1
+    - https://www.ultimedia.com/default/index/videogeneric/id/*
+    url: https://www.ultimedia.com/api/search/oembed
+    example_urls:
+    - https://www.ultimedia.com/api/search/oembed?url=https%3A%2F%2Fwww.ultimedia.com%2Fdefault%2Findex%2Fvideogeneric%2Fid%2Fsmxuxm&format=json
+    - https://www.ultimedia.com/api/search/oembed?url=https%3A%2F%2Fwww.ultimedia.com%2Fdefault%2Findex%2Fvideogeneric%2Fid%2Fsmxuxm&format=xml
+    discovery: true
+...  

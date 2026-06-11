@@ -1,0 +1,13 @@
+---
+- provider_name: Animatron
+  provider_url: https://www.animatron.com/
+  endpoints:
+  - schemes:
+    - https://www.animatron.com/project/*
+    - https://animatron.com/project/*
+    url: https://animatron.com/oembed/json
+    example_urls:
+    - https://animatron.com/oembed/json?url=https%3A%2F%2Fwww.animatron.com%2Fproject%2F6487dd52e5835971c6bec25d
+    - https://animatron.com/oembed/xml?url=https%3A%2F%2Fwww.animatron.com%2Fproject%2F6487dd52e5835971c6bec25d
+    discovery: true
+...

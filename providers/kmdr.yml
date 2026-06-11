@@ -1,0 +1,11 @@
+---
+- provider_name: kmdr
+  provider_url: https://kmdr.sh
+  endpoints:
+  - schemes:
+    - https://app.kmdr.sh/h/*
+    - https://app.kmdr.sh/history/*
+    url: https://api.kmdr.sh/services/oembed
+    example_urls:
+    - https://api.kmdr.sh/services/oembed?url=https://app.kmdr.sh/history/7f3df902-129d-4af0-bc20-b0f0bc5869dd&format=json 
+...

@@ -1,0 +1,12 @@
+---
+- provider_name: NoPaste
+  provider_url: https://nopaste.ml
+  endpoints:
+  - schemes:
+    - https://nopaste.ml/*
+    url: https://oembed.nopaste.ml
+    example_urls:
+    - https://oembed.nopaste.ml/?url=https://nopaste.ml/?l=js%23XQAAAQAfAAAAAAAAAAAfCAjn2eXL/EQkHNwvz5ZUMLv7U6V3VDuE5C733AY6VA17Vf//8KnAAA==
+    discovery: false
+    notes: Provider only supports the 'rich' type and 'json' format
+...

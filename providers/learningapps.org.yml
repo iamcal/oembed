@@ -1,0 +1,11 @@
+---
+- provider_name: LearningApps.org
+  provider_url: http://learningapps.org/
+  endpoints:
+  - schemes:
+    - http://learningapps.org/*
+    url: http://learningapps.org/oembed.php
+    example_urls:
+    - http://learningapps.org/oembed.php?format=json&url=http%3A%2F%2FLearningApps.org%2F259
+    discovery: true
+...

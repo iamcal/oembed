@@ -1,0 +1,11 @@
+---
+- provider_name: Knacki
+  provider_url: http://jdr.knacki.info
+  endpoints:
+  - schemes:
+    - http://jdr.knacki.info/meuh/*
+    - https://jdr.knacki.info/meuh/*
+    url: https://jdr.knacki.info/oembed
+    example_urls:
+    - https://jdr.knacki.info/oembed?url=https://jdr.knacki.info/meuh/desole;format=json
+...

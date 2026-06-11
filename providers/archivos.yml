@@ -1,0 +1,10 @@
+---
+- provider_name: Archivos
+  provider_url: https://app.archivos.digital
+  endpoints:
+  - schemes:
+    - https://app.archivos.digital/app/view/*
+    url: https://app.archivos.digital/oembed/
+    example_urls:
+    - https://app.archivos.digital/oembed/?url=https%3A%2F%2Fapp.archivos.digital%2Fapp%2Fview%2F709%2F%3Fembed
+...

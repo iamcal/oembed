@@ -1,0 +1,11 @@
+---
+- provider_name: chirbit.com
+  provider_url: http://www.chirbit.com/
+  endpoints:
+  - schemes:
+    - http://chirb.it/*
+    url: http://chirb.it/oembed.{format}
+    example_urls:
+    - http://chirb.it/oembed.json?url=http%3A%2F%2Fchirb.it%2FOBnAr1
+    discovery: true
+...

@@ -1,0 +1,10 @@
+---
+- provider_name: HuffDuffer
+  provider_url: http://huffduffer.com
+  endpoints:
+  - schemes:
+    - http://huffduffer.com/*/*
+    url: http://huffduffer.com/oembed
+    example_urls:
+    - http://huffduffer.com/oembed?url=http%3A%2F%2Fhuffduffer.com%2Fjxpx777%2F125342&format=xml
+...

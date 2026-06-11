@@ -1,0 +1,12 @@
+---
+- provider_name: Podbean
+  provider_url: http://podbean.com
+  endpoints:
+  - schemes:
+    - https://*.podbean.com/e/*
+    - http://*.podbean.com/e/*
+    url: https://api.podbean.com/v1/oembed
+    docs_url: https://developers.podbean.com/podbean-api-docs/#api-Embed-oEmbed
+    example_urls:
+    - https://api.podbean.com/v1/oembed?url=https://podcast.podbean.com/e/jen-and-vernon-chat-podcast-resolutions-twitter-advice-and-predictions-for-2019/
+...

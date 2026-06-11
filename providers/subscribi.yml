@@ -1,0 +1,11 @@
+---
+- provider_name: Subscribi
+  provider_url: https://subscribi.io/
+  endpoints:
+  - schemes:
+    - https://subscribi.io/api/oembed*
+    url: https://subscribi.io/api/oembed
+    discovery: true
+    example_urls:
+    - https://subscribi.io/api/oembed?url=https://subscribi.io/subscribe/5f63b2b306cb71c069272c47
+...

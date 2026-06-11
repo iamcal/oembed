@@ -1,0 +1,13 @@
+---
+- provider_name: Sutori
+  provider_url: https://www.sutori.com/
+  endpoints:
+  - schemes:
+    - https://www.sutori.com/story/*
+    url: https://www.sutori.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://www.sutori.com/api/oembed?url=https%3A%2F%2Fwww.sutori.com%2Fstory%2Four-story-8362
+    formats:
+    - json
+...
