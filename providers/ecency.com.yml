@@ -1,0 +1,11 @@
+---
+- provider_name: Ecency
+  provider_url: https://ecency.com/
+  endpoints:
+  - schemes:
+    - https://ecency.com/@*/*
+    - https://ecency.com/*/@*/*
+    url: https://ecency.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://ecency.com/api/oembed?url=https%3A%2F%2Fecency.com%2F%40ecency%2Fsearch-on-ecency-just-got&format=json
