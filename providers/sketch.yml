@@ -1,0 +1,13 @@
+---
+- provider_name: Sketch
+  provider_url: https://www.sketch.com
+  endpoints:
+    - schemes:
+        - https://www.sketch.com/s/*
+        - https://www.sketch.com/preview/*
+      url: https://graphql.sketch.cloud/embed/oembed
+      docs_url: https://www.sketch.com/docs/sharing-and-collaborating/sharing-and-viewing-documents/embedding-sketch-documents/
+      example_urls:
+        - https://graphql.sketch.cloud/embed/oembed?url=https://www.sketch.com/s/480ce571-514e-4631-8357-5b7ca4b7773e
+      discovery: true
+      notes: Provider only supports the 'rich' type

@@ -1,0 +1,11 @@
+---
+- provider_name: Apple Podcasts
+  provider_url: https://podcasts.apple.com
+  endpoints:
+  - schemes:
+    - https://podcasts.apple.com/*
+    url: https://podcasts.apple.com/api/oembed
+    discovery: true
+    formats:
+    - json
+...

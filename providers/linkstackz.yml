@@ -1,0 +1,13 @@
+---
+- provider_name: Linkstackz
+  provider_url: https://www.linkstackz.com/
+  endpoints:
+  - schemes:
+    - https://linkstackz.com/irf/*
+    - https://linkstackz.com/post/*
+    url: https://api.linkstackz.com/oembed
+    discovery: true
+    example_urls:
+    - https://api.linkstackz.com/oembed?url=https%3A%2F%2Flinkstackz.com%2Firf%2F26.mp4&format=json&format=json
+    - https://api.linkstackz.com/oembed?url=https%3A%2F%2Flinkstackz.com%2Firf%2F26.mp4&format=json&format=xml
+...

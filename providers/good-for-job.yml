@@ -1,0 +1,14 @@
+---
+- provider_name: GOOD FOR JOB
+  provider_url: https://www.good-for-job.jp
+  endpoints:
+  - schemes:
+    - https://www.good-for-job.jp/slides/*
+    url: https://www.good-for-job.jp/api/oembed
+    example_urls:
+    - https://www.good-for-job.jp/api/oembed?url=https%3A%2F%2Fwww.good-for-job.jp%2Fslides%2F0e81c8f7-1e21-478f-9fe8-e60076cc8f61
+    - https://www.good-for-job.jp/api/oembed?url=https%3A%2F%2Fwww.good-for-job.jp%2Fslides%2F31d3ccd1-e6e2-4903-90ca-ab73a57a98c7
+    discovery: true
+    formats:
+    - json
+...

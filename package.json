@@ -1,6 +1,6 @@
 {
   "name": "oembed-providers",
-  "version": "1.0.20240122",
+  "version": "1.0.20260604",
   "license": "MIT",
   "description": "oEmbed providers",
   "main": "providers.json",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamcal/oembed.git"
+    "url": "git+https://github.com/iamcal/oembed.git"
   },
   "keywords": [
     "oembed",

@@ -1,0 +1,16 @@
+---
+- provider_name: CircleZeroEight
+  provider_url: https://www.circlezeroeight.com
+  endpoints:
+  - schemes:
+    - https://www.circlezeroeight.com/features/*
+    - https://www.circlezeroeight.com/news/*
+    - https://www.circlezeroeight.com/sport/*
+    - https://www.circlezeroeight.com/style/*
+    - https://www.circlezeroeight.com/culture/*
+    url: https://www.circlezeroeight.com/api/oembed
+    example_urls:
+    - https://www.circlezeroeight.com/api/oembed?url=https%3A%2F%2Fwww.circlezeroeight.com%2Ffeatures%2Fjamal-musiala
+    discovery: true
+    notes: Provider only supports the 'link' type
+...

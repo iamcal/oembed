@@ -1,0 +1,12 @@
+- provider_name: biqapp
+  provider_url: https://biqapp.net/
+  endpoints:
+  - schemes:
+    - https://biqapp.net/f/*
+    - https://www.biqapp.net/f/*
+    url: https://biqapp.net/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://biqapp.net/api/oembed?url=https%3A%2F%2Fbiqapp.net%2Ff%2F703388913507757431&format=json

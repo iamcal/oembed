@@ -1,0 +1,11 @@
+- provider_name: Celero
+  provider_url: https://www.celero.io
+  endpoints:
+  - schemes:
+    - https://embeds.celero.io/*
+    url: https://api.celero.io/api/oembed
+    example_urls:
+    - https://api.celero.io/api/oembed?url=https%3A%2F%2Fembeds.celero.io%2Fs%2F7b9ee071&format=json
+    discovery: true
+    formats:
+    - json

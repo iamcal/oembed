@@ -4,6 +4,12 @@
   endpoints:
   - schemes:
     - https://www.figma.com/file/*
+    - https://www.figma.com/design/*
+    - https://www.figma.com/board/*
+    - https://www.figma.com/slides/*
+    - https://www.figma.com/buzz/*
+    - https://www.figma.com/site/*
+    - https://www.figma.com/make/*
     url: https://www.figma.com/api/oembed
     example_urls:
     - https://www.figma.com/api/oembed?url=https://www.figma.com/file/2oGA2ADNXOYWnlBI47UN3R/Safe-Return-(Community)

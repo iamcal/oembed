@@ -1,0 +1,12 @@
+- provider_name: tksn-me
+  provider_url: https://tksn.me
+  endpoints:
+  - schemes:
+    - https://tksn.me/*
+    - https://*.tksn.me/*
+    url: https://tksn.me/api/oembed/
+    example_urls:
+    - https://tksn.me/api/oembed?url=https%3A//tksn.me/oembed-sample/
+    - https://tksn.me/api/oembed?url=https%3A//tksn.me/oembed-sample/&format=json
+    - https://tksn.me/api/oembed?url=https%3A//tksn.me/oembed-sample/&format=xml
+    discovery: true

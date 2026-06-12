@@ -1,0 +1,11 @@
+---
+- provider_name: Hopvue
+  provider_url: https://www.hopvue.com
+  endpoints:
+  - schemes:
+    - https://*.hopvue.com/*
+    url: https://portal.hopvue.com/api/oembed/
+    example_urls:
+    - https://portal.hopvue.com/api/oembed/?url=https://www.hopvue.com/videos/robots/44c66c71-7735-4e34-c25f-08d8eff1659e
+    discovery: true
+...

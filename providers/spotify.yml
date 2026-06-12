@@ -5,6 +5,7 @@
   - schemes:
     - https://open.spotify.com/*
     - spotify:*
+    - https://spotify.link/*
     url: https://open.spotify.com/oembed
     discovery: true
     docs_url: https://developer.spotify.com/documentation/embeds/reference/oembed

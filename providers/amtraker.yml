@@ -4,14 +4,16 @@
   endpoints:
   - schemes:
     - https://amtraker.com/trains/*
-    - https://beta.amtraker.com/trains/*
-    url: https://api.amtraker.com/v2/oembed
+    - https://amtraker.com/trains/*/*
+    - https://*.amtraker.com/trains/*
+    - https://*.amtraker.com/trains/*/*
+    url: https://api.amtraker.com/v3/oembed
     docs_url: https://api.amtraker.com/docs
     example_urls:
-    - https://api.amtraker.com/v2/oembed?url=https://amtraker.com/trains/9999
-    - https://api.amtraker.com/v2/oembed?url=https://amtraker.com/trains/9999?d=1
-    - https://api.amtraker.com/v2/oembed?url=https://amtraker.com/trains/9999?d=1&xml=true
-    - https://api.amtraker.com/v2/oembed?url=https://amtraker.com/trains/9999?d=1&xml=false
-    discovery: false
-    notes: Provider only supports the 'rich' type. Sample train number may not always work, see docs for details.
+    - https://api.amtraker.com/v3/oembed?url=https://amtraker.com/trains/9999
+    - https://api.amtraker.com/v3/oembed?url=https://amtraker.com/trains/9999/22
+    - https://api.amtraker.com/v3/oembed?url=https://amtraker.com/trains/9999&format=xml
+    - https://api.amtraker.com/v3/oembed?url=https://amtraker.com/trains/9999/22&format=xml
+    discovery: true
+    notes: Provider only supports the 'rich' type. 
 ...

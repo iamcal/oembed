@@ -5,8 +5,10 @@
   - schemes:
     - http://*.flickr.com/photos/*
     - http://flic.kr/p/*
+    - http://flic.kr/s/*
     - https://*.flickr.com/photos/*
     - https://flic.kr/p/*
+    - https://flic.kr/s/*
     - https://*.*.flickr.com/*/*
     - http://*.*.flickr.com/*/*
     url: https://www.flickr.com/services/oembed/

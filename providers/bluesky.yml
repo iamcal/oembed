@@ -1,0 +1,12 @@
+---
+- provider_name: Bluesky Social
+  provider_url: https://bsky.app
+  endpoints:
+    - schemes:
+        - https://bsky.app/profile/*/post/*
+      url: https://embed.bsky.app/oembed
+      example_urls:
+        - https://embed.bsky.app/oembed?format=json&url=https%3A%2F%2Fbsky.app%2Fprofile%2Fdid%3Aplc%3Avjug55kidv6sye7ykr5faxxn%2Fpost%2F3jzn6g7ixgq2y
+        - https://embed.bsky.app/oembed?format=json&url=https%3A%2F%2Fbsky.app%2Fprofile%2Femilyliu.me%2Fpost%2F3jzn6g7ixgq2y
+      discovery: true
+...
