@@ -1,0 +1,51 @@
+name: Audit Providers
+
+on:
+  schedule:
+    # Weekly, Mondays 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: lts/*
+
+    - run: npm install --ignore-scripts
+
+    # Audits providers/ and providers-disabled/, moves confirmed-broken
+    # providers out and recovered ones back, and refreshes AUDIT.md.
+    - name: Audit and sync providers
+      run: npm run audit:sync
+
+    # Enabled set may have changed, so rebuild the published registry.
+    - name: Rebuild providers.json
+      run: npm run build
+
+    - name: Open pull request
+      uses: peter-evans/create-pull-request@v7
+      with:
+        branch: chore/audit-sync
+        title: 'chore: sync provider registry from audit'
+        commit-message: 'chore: sync provider registry from audit'
+        body: |
+          Automated weekly audit run.
+
+          - Confirmed-broken providers moved to `providers-disabled/`.
+          - Recovered providers moved back to `providers/`.
+          - `AUDIT.md` and `providers.json` refreshed.
+
+          Review the moved files before merging — `INCONCLUSIVE` providers are left untouched.
+        labels: automation
+        delete-branch: true
