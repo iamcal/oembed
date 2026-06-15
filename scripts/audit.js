@@ -5,7 +5,9 @@ const reachableUrl = require('reachable-url')
 const { isReachable } = reachableUrl
 
 const CONCURRENCY = 10
-const PROVIDERS_DIR = path.join(__dirname, '..', 'providers')
+const ENABLED_DIR = process.env.OEMBED_ENABLED_DIR || path.join(__dirname, '..', 'providers')
+const DISABLED_DIR = process.env.OEMBED_DISABLED_DIR || path.join(__dirname, '..', 'providers-disabled')
+const PROVIDERS_DIR = ENABLED_DIR
 
 const OPTS = {
   timeout: { request: 15_000 },
@@ -82,8 +84,8 @@ async function checkEndpoint (endpoint) {
   return { url: endpoint.url, verdict: 'fail', endpointCheck, via: 'all_dead' }
 }
 
-async function auditProvider (file) {
-  const content = fs.readFileSync(path.join(PROVIDERS_DIR, file), 'utf8')
+async function auditProvider (file, baseDir = PROVIDERS_DIR) {
+  const content = fs.readFileSync(path.join(baseDir, file), 'utf8')
   const entries = yaml.load(content)
   const results = []
 
@@ -105,6 +107,7 @@ async function auditProvider (file) {
 
     results.push({
       file,
+      baseDir,
       name: entry.provider_name,
       providerUrl: entry.provider_url,
       endpoints: endpointResults,
@@ -198,7 +201,78 @@ function markdownTable (results) {
   return lines.join('\n')
 }
 
+function auditDir (baseDir) {
+  const files = fs.readdirSync(baseDir).filter(f => f.endsWith('.yml'))
+  return files.map(file => () => auditProvider(file, baseDir))
+}
+
+// A file may hold several provider entries; collapse them to one verdict.
+// FAIL wins (any broken endpoint), otherwise OK only when everything is OK,
+// otherwise INCONCLUSIVE.
+function fileVerdicts (results) {
+  const byFile = new Map()
+  for (const r of results) {
+    if (!byFile.has(r.file)) byFile.set(r.file, [])
+    byFile.get(r.file).push(r.verdict)
+  }
+  const out = new Map()
+  for (const [file, verdicts] of byFile) {
+    let verdict
+    if (verdicts.includes('FAIL')) verdict = 'FAIL'
+    else if (verdicts.every(v => v === 'OK')) verdict = 'OK'
+    else verdict = 'INCONCLUSIVE'
+    out.set(file, verdict)
+  }
+  return out
+}
+
+// Audit both directories and move files across the enabled/disabled line:
+// confirmed-broken providers get disabled, recovered ones get re-enabled.
+// INCONCLUSIVE never moves. Returns the list of moves performed.
+async function sync () {
+  console.error('Auditing enabled providers...\n')
+  const enabled = await runWithConcurrency(auditDir(ENABLED_DIR), CONCURRENCY)
+  console.error('\n\nAuditing disabled providers...\n')
+  const disabled = await runWithConcurrency(auditDir(DISABLED_DIR), CONCURRENCY)
+  console.error('\n')
+
+  const moves = []
+
+  for (const [file, verdict] of fileVerdicts(enabled)) {
+    if (verdict === 'FAIL') {
+      fs.renameSync(path.join(ENABLED_DIR, file), path.join(DISABLED_DIR, file))
+      moves.push({ file, action: 'disabled' })
+    }
+  }
+
+  for (const [file, verdict] of fileVerdicts(disabled)) {
+    if (verdict === 'OK') {
+      fs.renameSync(path.join(DISABLED_DIR, file), path.join(ENABLED_DIR, file))
+      moves.push({ file, action: 'enabled' })
+    }
+  }
+
+  // Report against the full set so AUDIT.md documents everything we checked.
+  console.log(markdownTable([...enabled, ...disabled]))
+
+  if (moves.length === 0) {
+    console.error('No provider moves required.')
+  } else {
+    console.error(`\nMoved ${moves.length} provider file(s):`)
+    for (const m of moves) console.error(`  ${m.action === 'disabled' ? '→ disabled' : '← enabled '} ${m.file}`)
+  }
+
+  return moves
+}
+
 async function main () {
+  const args = process.argv.slice(2)
+
+  if (args.includes('--sync')) {
+    await sync()
+    return
+  }
+
   const files = getFilesToAudit()
 
   if (files.length === 0) {
