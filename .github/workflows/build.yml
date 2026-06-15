@@ -22,3 +22,29 @@ jobs:
 
     - name: Run tests
       run: php test.php
+
+  audit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: lts/*
+
+    - run: npm install --ignore-scripts
+
+    - name: Get changed provider files
+      id: changed
+      run: |
+        FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep '^providers/' || true)
+        echo "files=$FILES" >> "$GITHUB_OUTPUT"
+      env:
+        GH_TOKEN: ${{ github.token }}
+
+    - name: Audit changed providers
+      if: steps.changed.outputs.files != ''
+      run: node scripts/audit.js ${{ steps.changed.outputs.files }}
