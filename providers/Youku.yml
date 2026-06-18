@@ -1,0 +1,12 @@
+---
+- provider_name: Youku
+  provider_url: https://www.youku.com/
+  endpoints:
+  - schemes:
+    - http://*.youku.com/v_show/id_*.html
+    - https://*.youku.com/v_show/id_*.html
+    url: https://player.youku.com/oembed
+    example_urls:
+    - https://player.youku.com/oembed?url=https%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XMzgxNzY3NTU2.html
+    discovery: true
+...
