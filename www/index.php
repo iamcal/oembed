@@ -472,28 +472,28 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 <ul>
 	<li>Iframely (<a href="http://iframely.com/">http://iframely.com/</a>)</li>
 	<li>OEmbed Link Viewer (<a href="https://oembed.link/">https://oembed.link/</a>)</li>
+	<li>Microlink Embed (<a href="https://microlink.io/embed">https://microlink.io/embed</a>)</li>
 </ul>
 
 <a name="section7.3" id="section7.3"><h3>7.3. Libraries</h3></a>
 
 <ul>
-	<li>PHP: php-oembed (<a href="http://code.google.com/p/php-oembed/">http://code.google.com/p/php-oembed/</a>)</li>
 	<li>PHP: Services_oEmbed (<a href="http://pear.php.net/package/Services_oEmbed">http://pear.php.net/package/Services_oEmbed</a>)</li>
 	<li>PHP: Essence (<a href="https://github.com/felixgirault/essence">https://github.com/felixgirault/essence</a>)</li>
 	<li>PHP: Embera (<a href="https://github.com/mpratt/Embera">https://github.com/mpratt/Embera</a>)</li>
-	<li>Perl: Web-oEmbed (<a href="http://search.cpan.org/~miyagawa/Web-oEmbed/">http://search.cpan.org/~miyagawa/Web-oEmbed/</a>)</li>
+	<li>Perl: Web-oEmbed (<a href="https://metacpan.org/release/Web-oEmbed">https://metacpan.org/release/Web-oEmbed</a>)</li>
 	<li>Ruby: oembed_links (<a href="http://github.com/netshade/oembed_links">http://github.com/netshade/oembed_links</a>)</li>
 	<li>Python: pyoembed (<a href="http://github.com/rafaelmartins/pyoembed/">http://github.com/rafaelmartins/pyoembed/</a>)</li>
 	<li>Python: PyEmbed (<a href="http://pyembed.github.io">http://pyembed.github.io</a>)</li>
 	<li>Python: python-oembed (<a href="https://github.com/abarmat/python-oembed">https://github.com/abarmat/python-oembed</a>)</li>
 	<li>Django: micawber (<a href="https://github.com/coleifer/micawber">https://github.com/coleifer/micawber</a>)</li>
 	<li>Java: java-oembed (<a href="https://github.com/michael-simons/java-oembed">https://github.com/michael-simons/java-oembed</a>)</li>
-	<li>.Net: oEmbed API Wrapper (<a href="http://oembed.codeplex.com/">http://oembed.codeplex.com/</a>)</li>
 	<li>JQuery: oEmbed API Wrapper (<a href="https://github.com/starfishmod/jquery-oembed-all">https://github.com/starfishmod/jquery-oembed-all</a>)</li>
 	<li>Node.js: oEmbed API Gateway (<a href="https://github.com/itteco/iframely">https://github.com/itteco/iframely</a>)</li>
 	<li>Elixir: furlex (<a href="https://github.com/claytongentry/furlex">https://github.com/claytongentry/furlex</a>)</li>
 	<li>Elixir: elixir-oembed (<a href="https://github.com/r8/elixir-oembed">https://github.com/r8/elixir-oembed</a>)</li>
 	<li>AWS: Serverless oEmbed provider (<a href="https://github.com/aws-samples/sample-serverless-oembed">https://github.com/aws-samples/sample-serverless-oembed</a>)</li>
+	<li>Node.js: oembed-spec (<a href="https://github.com/microlinkhq/oembed-spec">https://github.com/microlinkhq/oembed-spec</a>)</li>
 </ul>
 
 
@@ -503,8 +503,6 @@ Link: &lt;http://flickr.com/services/oembed?url=http%3A%2F%2Fflickr.com%2Fphotos
 
 <ul>
 	<li><a href="http://groups.google.com/group/oembed/">The official oEmbed mailing list</a></li>
-</ul>
-<ul>
 	<li><a href="https://web.archive.org/web/20150318024249/https://www.wired.com/2010/02/get_started_with_oembed/">Webmonkey tutorial</a></li>
 	<li><a href="https://blog.leahculver.com/2008/05/announcing-oembed-an-open-standard-for-embedded-content.html">Leah's blog</a></li>
 	<li><a href="http://ajaxian.com/archives/oembed-makes-embedding-third-party-videos-and-images-a-breeze">ajaxian</a></li>

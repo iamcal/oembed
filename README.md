@@ -19,6 +19,21 @@ If you need to use the provider registry directly, you can install this package 
 That will install the providers file into `node_modules/oembed-providers/providers.json`, where you can ingest it directly.
 
 
+## Development
+
+The website (`www/index.php`) is rendered by PHP and uses the [`yaml`](https://www.php.net/manual/en/book.yaml.php) extension to count the providers in the registry. The included `Dockerfile` provides a PHP runtime with that extension already set up, so you don't need to install anything locally.
+
+Build the image once:
+
+    docker build -t oembed-site .
+
+Then run it, mounting the repo so edits are picked up live:
+
+    docker run --rm -p 8000:8000 -v "$PWD":/var/www/html oembed-site
+
+Open <http://localhost:8000> to see the site. Editing `www/index.php` and refreshing the page is enough — no rebuild required.
+
+
 ## Maintainers: Publishing to NPM
 
 * Update version in `package.json` to today's date
