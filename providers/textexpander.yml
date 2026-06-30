@@ -1,0 +1,13 @@
+---
+- provider_name: TextExpander
+  provider_url: https://textexpander.com
+  endpoints:
+  - schemes:
+    - https://rest-prod.tenet.textexpander.com/share/*
+    url: https://rest-prod.tenet.textexpander.com/oembed
+    example_urls:
+    - https://rest-prod.tenet.textexpander.com/oembed?format=json&url=https%3A%2F%2Frest-prod.tenet.textexpander.com%2Fshare%2FlhrNSr7UzQw
+    discovery: true
+    formats:
+    - json
+...
