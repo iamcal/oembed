@@ -1,0 +1,10 @@
+---
+- provider_name: TLexDR
+  provider_url: https://tlexdr.com/
+  endpoints:
+  - schemes:
+    - https://tlexdr.com/episode/*
+    url: https://tlexdr.com/oembed
+    discovery: true
+    example_urls:
+    - https://tlexdr.com/oembed?url=https%3A%2F%2Ftlexdr.com%2Fepisode%2F498
