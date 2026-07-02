@@ -1,0 +1,15 @@
+---
+- provider_name: SynthCamp
+  provider_url: https://synthcamp.net/
+  endpoints:
+  - schemes:
+    - https://synthcamp.net/r/*
+    url: https://synthcamp.net/api/oembed
+    example_urls:
+    - https://synthcamp.net/api/oembed?url=https%3A%2F%2Fsynthcamp.net%2Fr%2Faxi-warrior-realm-1
+    - https://synthcamp.net/api/oembed?url=https%3A%2F%2Fsynthcamp.net%2Fr%2Faxi-warrior-realm-1&format=json
+    discovery: true
+    formats:
+    - json
+    - xml
+    notes: Provider only supports the 'rich' type (audio release player)
