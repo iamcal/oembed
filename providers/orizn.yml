@@ -1,0 +1,16 @@
+---
+- provider_name: Orizn Widgets
+  provider_url: https://embed.orizn.app
+  endpoints:
+  - schemes:
+    - https://embed.orizn.app/frame/*
+    - https://embed.orizn.app/widgets/*
+    url: https://embed.orizn.app/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://embed.orizn.app/api/oembed?url=https%3A%2F%2Fembed.orizn.app%2Fwidgets%2Fvisa&format=json
+    - https://embed.orizn.app/api/oembed?url=https%3A%2F%2Fembed.orizn.app%2Fframe%2Fbudget%3Fdestination%3DVNM&format=json
+    notes: Provider only supports the 'rich' type (interactive travel widgets)
+...
