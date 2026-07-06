@@ -1,0 +1,21 @@
+---
+- provider_name: LiveCodes
+  provider_url: https://livecodes.io/
+  endpoints:
+  - schemes:
+    - https://livecodes.io/
+    - https://livecodes.io/?*
+    - https://*.livecodes.io/
+    - https://*.livecodes.io/?*
+    url: https://livecodes.io/oembed
+    example_urls:
+    - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Ftemplate%3Dreact
+    - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Ftemplate%3Dvue&format=json
+    - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Ftemplate%3Druby&maxwidth=700&maxheight=300
+    - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Fx%3Did%2Fnvpsgtwr6em
+    - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Fjs%3Dconsole.log(%2527hello%2520LiveCodes!%2527)%26console%3Dopen
+    discovery: true
+    formats:
+    - json
+    notes: Provider only supports the 'rich' type
+...
