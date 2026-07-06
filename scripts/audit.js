@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const { spawnSync } = require('child_process')
 const yaml = require('js-yaml')
 const reachableUrl = require('reachable-url')
 const { isReachable } = reachableUrl
@@ -8,6 +9,7 @@ const CONCURRENCY = 10
 const ENABLED_DIR = process.env.OEMBED_ENABLED_DIR || path.join(__dirname, '..', 'providers')
 const DISABLED_DIR = process.env.OEMBED_DISABLED_DIR || path.join(__dirname, '..', 'providers-disabled')
 const PROVIDERS_DIR = ENABLED_DIR
+const TEST_PHP = process.env.OEMBED_TEST_PHP || path.join(__dirname, '..', 'test.php')
 
 const OPTS = {
   timeout: { request: 15_000 },
@@ -226,6 +228,45 @@ function fileVerdicts (results) {
   return out
 }
 
+// Reachability only proves the endpoint answers — the build gate (test.php)
+// still enforces the provider schema. A file can be reachable yet invalid (e.g.
+// a wildcard in the endpoint url), so re-enabling it on reachability alone would
+// break the build. Run the same gate over the enabled dir and revert any file
+// this sync just enabled that fails it. test.php exits non-zero on the first
+// offending file and names it, so loop until the gate passes. Returns the files
+// reverted back to disabled.
+function revertRecoveredFailures (enabledFiles) {
+  const reverted = []
+
+  while (enabledFiles.size > 0) {
+    const res = spawnSync('php', [TEST_PHP, ENABLED_DIR], { encoding: 'utf8' })
+
+    if (res.error) {
+      throw new Error(`Could not run schema gate (${TEST_PHP}): ${res.error.message}`)
+    }
+    if (res.status === 0) break
+
+    const out = `${res.stdout || ''}${res.stderr || ''}`
+    const match = out.match(/\/([^/\s]+\.yml)\b/)
+    if (!match) {
+      throw new Error(`Schema gate failed but named no provider file:\n${out}`)
+    }
+
+    const file = match[1]
+    if (!enabledFiles.has(file)) {
+      // A pre-existing enabled provider is failing the gate — not ours to
+      // revert. Surface it instead of silently touching another file.
+      throw new Error(`Schema gate failed on ${file}, which this sync did not enable:\n${out}`)
+    }
+
+    fs.renameSync(path.join(ENABLED_DIR, file), path.join(DISABLED_DIR, file))
+    enabledFiles.delete(file)
+    reverted.push(file)
+  }
+
+  return reverted
+}
+
 // Audit both directories and move files across the enabled/disabled line:
 // confirmed-broken providers get disabled, recovered ones get re-enabled.
 // INCONCLUSIVE never moves. Returns the list of moves performed.
@@ -252,17 +293,27 @@ async function sync () {
     }
   }
 
+  // Gate recoveries on the build's schema validator, reverting any that fail.
+  const enabledNow = new Set(moves.filter(m => m.action === 'enabled').map(m => m.file))
+  const reverted = new Set(revertRecoveredFailures(enabledNow))
+  const applied = moves.filter(m => !(m.action === 'enabled' && reverted.has(m.file)))
+
   // Report against the full set so AUDIT.md documents everything we checked.
   console.log(markdownTable([...enabled, ...disabled]))
 
-  if (moves.length === 0) {
-    console.error('No provider moves required.')
-  } else {
-    console.error(`\nMoved ${moves.length} provider file(s):`)
-    for (const m of moves) console.error(`  ${m.action === 'disabled' ? '→ disabled' : '← enabled '} ${m.file}`)
+  if (reverted.size > 0) {
+    console.error(`\nKept ${reverted.size} reachable provider(s) disabled — they fail the schema gate:`)
+    for (const file of reverted) console.error(`  ✗ rejected  ${file}`)
   }
 
-  return moves
+  if (applied.length === 0) {
+    console.error('\nNo provider moves required.')
+  } else {
+    console.error(`\nMoved ${applied.length} provider file(s):`)
+    for (const m of applied) console.error(`  ${m.action === 'disabled' ? '→ disabled' : '← enabled '} ${m.file}`)
+  }
+
+  return applied
 }
 
 async function main () {
@@ -296,7 +347,11 @@ async function main () {
   }
 }
 
-main().catch(err => {
-  console.error(err)
-  process.exit(1)
-})
+if (require.main === module) {
+  main().catch(err => {
+    console.error(err)
+    process.exit(1)
+  })
+}
+
+module.exports = { revertRecoveredFailures, ENABLED_DIR, DISABLED_DIR, TEST_PHP }
