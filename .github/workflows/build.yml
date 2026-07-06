@@ -61,4 +61,9 @@ jobs:
 
     - name: Audit changed providers
       if: steps.changed.outputs.files != ''
-      run: node scripts/audit.js ${{ steps.changed.outputs.files }}
+      # Pass the (newline-separated) file list via env, not inline: expanding a
+      # multiline value into the run script would execute every line after the
+      # first as its own command. Unquoted $FILES word-splits into node args.
+      run: node scripts/audit.js $FILES
+      env:
+        FILES: ${{ steps.changed.outputs.files }}
