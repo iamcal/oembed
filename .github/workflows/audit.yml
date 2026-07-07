@@ -40,7 +40,22 @@ jobs:
     - name: Rebuild providers.json
       run: npm run build
 
+    # A run that moves nothing still rewrites AUDIT.md to the runner's vantage
+    # (a datacenter IP can't see past Cloudflare, so counts wobble). That diff is
+    # noise, so only open a PR when a provider .yml actually crossed the
+    # enabled/disabled line — a rename shows up as a delete + an untracked add.
+    - name: Detect provider moves
+      id: moves
+      run: |
+        if [ -n "$(git status --porcelain -- providers providers-disabled | grep -E '\.yml$')" ]; then
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        else
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          echo "No provider moves — skipping PR."
+        fi
+
     - name: Open pull request
+      if: steps.moves.outputs.changed == 'true'
       uses: peter-evans/create-pull-request@v7
       with:
         branch: chore/audit-sync
