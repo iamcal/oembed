@@ -18,7 +18,7 @@ const disabledDir = fs.mkdtempSync(path.join(os.tmpdir(), 'oembed-disabled-'))
 process.env.OEMBED_ENABLED_DIR = enabledDir
 process.env.OEMBED_DISABLED_DIR = disabledDir
 
-const { revertRecoveredFailures, checkEndpoint } = require('./audit.js')
+const { revertRecoveredFailures, checkEndpoint, isOembedBody } = require('./audit.js')
 
 // The gate shells out to `php test.php`; skip cleanly where php/yaml is absent
 // so a dev box without the extension does not report a false failure. CI (build
@@ -94,19 +94,26 @@ test('throws when the failing file is not one it enabled', { skip: !phpReady && 
   assert.ok(fs.existsSync(path.join(enabledDir, 'preexisting.yml')))
 })
 
-// --- Endpoint liveness classification (no network: global.fetch is stubbed) ---
+// --- Endpoint verification classification (no network: global.fetch stubbed) ---
 //
-// An oEmbed endpoint is an API that legitimately answers 4xx. These tests lock
-// in the rule that decides enable/disable: any HTTP response => ok (live), a
-// DNS/connection error => fail (gone), anything else (TLS, timeout) =>
-// inconclusive (never disabled). Regression guard for iamcal/oembed#904, where
-// live providers like Vimeo were disabled because the old audit read a 4xx (and
-// a soft-404 on stale example content) as "endpoint broken".
+// The audit enables/keeps a provider only when an example returns a valid oEmbed
+// document (`ok`), disables only on a DNS/connection death (`fail`), and leaves
+// everything else — alive-but-unverified: WAF 403, stale example, parked 200 —
+// as `inconclusive`, never moved. Regression guard for iamcal/oembed#904 (live
+// providers like Vimeo were disabled for a soft-404 on a stale example) and its
+// follow-up (dead services that still serve a 200 page must not read as OK).
 
+const OEMBED_JSON = '{"version":"1.0","type":"video","html":"<iframe></iframe>"}'
+const OEMBED_XML = '<?xml version="1.0"?><oembed><type>video</type><version>1.0</version></oembed>'
 const realFetch = global.fetch
 
-function stubFetchStatus (status) {
-  global.fetch = async () => ({ status })
+// Stub fetch with a body-aware Response so probe()'s res.text()/headers work.
+function stubFetch (status, body = '', contentType = 'application/json') {
+  global.fetch = async () => ({
+    status,
+    headers: { get: () => contentType },
+    text: async () => body
+  })
 }
 
 function stubFetchThrow (code) {
@@ -117,14 +124,43 @@ function stubFetchThrow (code) {
   }
 }
 
+const EP = { url: 'https://p.example/oembed', example_urls: ['https://p.example/oembed?url=https://p.example/x'] }
+
 test.afterEach(() => { global.fetch = realFetch })
 
-for (const status of [200, 301, 400, 401, 403, 404]) {
-  test(`endpoint answering HTTP ${status} is ok (alive)`, async () => {
-    stubFetchStatus(status)
-    const res = await checkEndpoint({ url: 'https://vimeo.com/api/oembed.{format}' })
-    assert.strictEqual(res.verdict, 'ok')
-    assert.strictEqual(res.statusCode, status)
+// isOembedBody unit table.
+for (const [label, status, body, ct, expected] of [
+  ['valid JSON oembed', 200, OEMBED_JSON, 'application/json', true],
+  ['valid XML oembed', 200, OEMBED_XML, 'text/xml', true],
+  ['version-less oembed (Reddit-style)', 200, '{"type":"rich","html":"<blockquote></blockquote>","author_name":"x"}', 'application/json', true],
+  ['photo oembed no version (GIPHY-style)', 200, '{"type":"photo","url":"https://x/g.gif","width":1,"height":1}', 'application/json', true],
+  ['JSON error blob', 200, '{"error":"Recording not found"}', 'application/json', false],
+  ['JSON result code', 200, '{"result":-1400,"msg":"does not exist"}', 'application/json', false],
+  ['parked HTML page', 200, '<!DOCTYPE html><html><title>service ended</title>', 'text/html', false],
+  ['oembed body but 404', 404, OEMBED_JSON, 'application/json', false]
+]) {
+  test(`isOembedBody: ${label} => ${expected}`, () => {
+    assert.strictEqual(isOembedBody(status, ct, body), expected)
+  })
+}
+
+test('an example returning valid oEmbed is ok (verified)', async () => {
+  stubFetch(200, OEMBED_JSON)
+  const res = await checkEndpoint(EP)
+  assert.strictEqual(res.verdict, 'ok')
+  assert.strictEqual(res.via, 'verified')
+})
+
+for (const [label, status, body, ct] of [
+  ['200 parked HTML page', 200, '<!DOCTYPE html><html>gone</html>', 'text/html'],
+  ['403 WAF challenge', 403, 'Just a moment...', 'text/html'],
+  ['200 JSON error blob', 200, '{"error":"not found"}', 'application/json']
+]) {
+  test(`alive but ${label} is inconclusive (never disabled)`, async () => {
+    stubFetch(status, body, ct)
+    const res = await checkEndpoint(EP)
+    assert.strictEqual(res.verdict, 'inconclusive')
+    assert.strictEqual(res.via, 'unverified')
   })
 }
 
@@ -154,9 +190,9 @@ test('a transient throw is retried once before giving up', async () => {
       err.cause = { code: 'ECONNRESET' }
       throw err
     }
-    return { status: 200 }
+    return { status: 200, headers: { get: () => 'application/json' }, text: async () => OEMBED_JSON }
   }
-  const res = await checkEndpoint({ url: 'https://flaky.example/oembed' })
+  const res = await checkEndpoint({ url: 'https://flaky.example/oembed', example_urls: ['https://flaky.example/oembed?url=https://flaky.example/x'] })
   assert.strictEqual(res.verdict, 'ok')
   assert.strictEqual(calls, 2)
 })

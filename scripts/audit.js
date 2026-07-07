@@ -10,7 +10,10 @@ const PROVIDERS_DIR = ENABLED_DIR
 const TEST_PHP = process.env.OEMBED_TEST_PHP || path.join(__dirname, '..', 'test.php')
 
 const TIMEOUT_MS = Number(process.env.OEMBED_PROBE_TIMEOUT || 12_000)
-const USER_AGENT = 'Slackbot 1.0 (+https://api.slack.com/robots)'
+// A real browser UA, so verification sees the oEmbed a normal embedding client
+// would get. (Cloudflare-style challenges 403 regardless of UA; those stay
+// "unverified", never disabled.)
+const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
 
 // An oEmbed endpoint is an API, not a web page. It legitimately answers 4xx
 // (400 missing/bad url, 401/403 auth, 404 unknown/deleted content) while being
@@ -20,10 +23,42 @@ const USER_AGENT = 'Slackbot 1.0 (+https://api.slack.com/robots)'
 // listening. These are the DNS/connection errors we treat as a confident death.
 const DEAD_CODES = new Set(['ENOTFOUND', 'EAI_AGAIN', 'ECONNREFUSED'])
 
+// A valid oEmbed response is a 200 whose body is an oEmbed document. The
+// reliable signal is the `type` field (photo/video/link/rich) with its matching
+// payload — many live providers (Reddit, GIPHY) omit the spec's `version`, so we
+// don't require it; a `version` + payload is accepted as a fallback. Error blobs
+// that happen to return 200 ({"error":"not found"}, {"result":-1400}, a parked
+// HTML page) carry no oEmbed type and do not verify.
+const OEMBED_TYPES = new Set(['photo', 'video', 'link', 'rich'])
+
+function isOembedBody (statusCode, contentType, body) {
+  if (statusCode !== 200 || !body) return false
+  const head = body.slice(0, 4000)
+  const ct = contentType || ''
+
+  if (/json/i.test(ct) || /^﻿?\s*[{[]/.test(head)) {
+    try {
+      const obj = JSON.parse(body)
+      if (!obj || typeof obj !== 'object') return false
+      const payload = ['html', 'url', 'thumbnail_url', 'title'].some(k => k in obj)
+      const typedOembed = typeof obj.type === 'string' && OEMBED_TYPES.has(obj.type.toLowerCase()) && payload
+      const versionedOembed = 'version' in obj && payload
+      return typedOembed || versionedOembed
+    } catch {
+      return /"type"\s*:\s*"(photo|video|link|rich)"/i.test(head)
+    }
+  }
+
+  if (/xml/i.test(ct) || /<\?xml|<oembed/i.test(head)) return /<oembed[\s>]/i.test(head)
+
+  return false
+}
+
 // Probe a single URL. Substitutes the {format} placeholder so the endpoint is a
 // real URL, follows redirects, and retries once to ride out a transient blip.
-// Returns { responded } true when any HTTP response came back (any status), or
-// the network error `code` when it did not.
+// Returns { responded } (any HTTP response came back), the `statusCode`, whether
+// the body is a valid `oembed` document, and — when nothing answered — the
+// network error `code`.
 async function probe (url, attempt = 0) {
   const target = url.replace('{format}', 'json')
   const controller = new AbortController()
@@ -35,33 +70,52 @@ async function probe (url, attempt = 0) {
       headers: { 'user-agent': USER_AGENT },
       signal: controller.signal
     })
+    let body = ''
+    try { body = await res.text() } catch {}
     clearTimeout(timer)
-    return { responded: true, statusCode: res.status }
+    // Retry a rate-limit or server error once — under audit concurrency these
+    // are usually transient (a real oEmbed 200 answers on the second try).
+    if ((res.status === 429 || res.status >= 500) && attempt < 1) return probe(url, attempt + 1)
+    return {
+      responded: true,
+      statusCode: res.status,
+      oembed: isOembedBody(res.status, res.headers.get('content-type'), body)
+    }
   } catch (err) {
     clearTimeout(timer)
     if (attempt < 1) return probe(url, attempt + 1)
     const code = err.cause?.code || err.code || err.name
-    return { responded: false, statusCode: null, code }
+    return { responded: false, statusCode: null, oembed: false, code }
   }
 }
 
-// A provider endpoint is:
-//   ok           — the host answered HTTP (any status): the API is live.
-//   fail         — the host is gone (DNS/connection error): confident death.
-//   inconclusive — everything else (TLS error, timeout, unparseable URL): the
-//                  host may exist, so we never disable on this — leave as-is.
+// Classify a provider endpoint:
+//   ok           — an example URL returned a valid oEmbed document. Verified.
+//   fail         — the endpoint host is gone (DNS/connection error). Confident
+//                  death; the only case we auto-disable on.
+//   inconclusive — the endpoint answers HTTP but no example verified (WAF 403,
+//                  stale example, parked 200 page), or a TLS/timeout error. We
+//                  cannot tell a live-but-stale provider from a dead one here,
+//                  so we never move it — it is surfaced for manual review.
 async function checkEndpoint (endpoint) {
-  const result = await probe(endpoint.url)
-
-  if (result.responded) {
-    return { url: endpoint.url, verdict: 'ok', via: 'endpoint', statusCode: result.statusCode }
+  // Positive proof first: does any advertised example return real oEmbed?
+  for (const exampleUrl of endpoint.example_urls || []) {
+    if (!/[?&]url=/.test(exampleUrl)) continue
+    const ex = await probe(exampleUrl)
+    if (ex.oembed) {
+      return { url: endpoint.url, verdict: 'ok', via: 'verified', statusCode: ex.statusCode, verifiedUrl: exampleUrl }
+    }
   }
 
-  if (DEAD_CODES.has(result.code)) {
-    return { url: endpoint.url, verdict: 'fail', via: 'dead', code: result.code }
+  // No verification — fall back to endpoint liveness to tell dead from unproven.
+  const ep = await probe(endpoint.url)
+  if (ep.responded) {
+    return { url: endpoint.url, verdict: 'inconclusive', via: 'unverified', statusCode: ep.statusCode }
   }
-
-  return { url: endpoint.url, verdict: 'inconclusive', via: 'unverified', code: result.code }
+  if (DEAD_CODES.has(ep.code)) {
+    return { url: endpoint.url, verdict: 'fail', via: 'dead', code: ep.code }
+  }
+  return { url: endpoint.url, verdict: 'inconclusive', via: 'unreachable', code: ep.code }
 }
 
 async function auditProvider (file, baseDir = PROVIDERS_DIR) {
@@ -151,15 +205,17 @@ function markdownTable (results) {
 
   if (inconclusive.length > 0) {
     lines.push('')
-    lines.push(`### Inconclusive (${inconclusive.length})`)
+    lines.push(`### Unverified (${inconclusive.length})`)
     lines.push('')
-    lines.push('Could not verify — TLS error, timeout, or unparseable endpoint. Left as-is.')
+    lines.push('Endpoint answers but no example returned a valid oEmbed document — a stale')
+    lines.push('example, a WAF/Cloudflare block, or a dead service that still serves a 200')
+    lines.push('page. Never auto-moved; needs a fresh example URL or a manual call.')
     lines.push('')
-    lines.push('| Provider | Endpoint | Reason |')
+    lines.push('| Provider | Endpoint | Endpoint status |')
     lines.push('| --- | --- | --- |')
     for (const r of inconclusive) {
       for (const ep of r.endpoints.filter(e => e.verdict === 'inconclusive')) {
-        lines.push(`| ${r.name} | ${ep.url} | ${ep.code || ep.via} |`)
+        lines.push(`| ${r.name} | ${ep.url} | ${ep.statusCode ?? ep.code ?? ep.via} |`)
       }
     }
   }
@@ -169,9 +225,9 @@ function markdownTable (results) {
   lines.push('')
   lines.push(`| Status | Count |`)
   lines.push(`| --- | --- |`)
-  lines.push(`| OK | ${ok.length} |`)
+  lines.push(`| Verified | ${ok.length} |`)
+  lines.push(`| Unverified | ${inconclusive.length} |`)
   lines.push(`| Failed | ${fail.length} |`)
-  lines.push(`| Inconclusive | ${inconclusive.length} |`)
   lines.push(`| **Total** | **${results.length}** |`)
 
   return lines.join('\n')
@@ -328,4 +384,4 @@ if (require.main === module) {
   })
 }
 
-module.exports = { probe, checkEndpoint, revertRecoveredFailures, ENABLED_DIR, DISABLED_DIR, TEST_PHP }
+module.exports = { probe, checkEndpoint, isOembedBody, revertRecoveredFailures, ENABLED_DIR, DISABLED_DIR, TEST_PHP }
