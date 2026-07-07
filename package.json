@@ -30,8 +30,5 @@
   },
   "devDependencies": {
     "js-yaml": "~4.2.0"
-  },
-  "dependencies": {
-    "reachable-url": "~1.8.3"
   }
 }

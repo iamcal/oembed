@@ -2,8 +2,6 @@ const fs = require('fs')
 const path = require('path')
 const { spawnSync } = require('child_process')
 const yaml = require('js-yaml')
-const reachableUrl = require('reachable-url')
-const { isReachable } = reachableUrl
 
 const CONCURRENCY = 10
 const ENABLED_DIR = process.env.OEMBED_ENABLED_DIR || path.join(__dirname, '..', 'providers')
@@ -11,79 +9,59 @@ const DISABLED_DIR = process.env.OEMBED_DISABLED_DIR || path.join(__dirname, '..
 const PROVIDERS_DIR = ENABLED_DIR
 const TEST_PHP = process.env.OEMBED_TEST_PHP || path.join(__dirname, '..', 'test.php')
 
-const OPTS = {
-  timeout: { request: 15_000 },
-  headers: { 'user-agent': 'Slackbot 1.0 (+https://api.slack.com/robots)' }
-}
+const TIMEOUT_MS = Number(process.env.OEMBED_PROBE_TIMEOUT || 12_000)
+const USER_AGENT = 'Slackbot 1.0 (+https://api.slack.com/robots)'
 
-async function checkUrl (url) {
+// An oEmbed endpoint is an API, not a web page. It legitimately answers 4xx
+// (400 missing/bad url, 401/403 auth, 404 unknown/deleted content) while being
+// perfectly alive — so status code says nothing about whether the provider
+// still exists. The only thing that proves a provider is gone is the request
+// failing at the network layer: the hostname no longer resolves, or nothing is
+// listening. These are the DNS/connection errors we treat as a confident death.
+const DEAD_CODES = new Set(['ENOTFOUND', 'EAI_AGAIN', 'ECONNREFUSED'])
+
+// Probe a single URL. Substitutes the {format} placeholder so the endpoint is a
+// real URL, follows redirects, and retries once to ride out a transient blip.
+// Returns { responded } true when any HTTP response came back (any status), or
+// the network error `code` when it did not.
+async function probe (url, attempt = 0) {
+  const target = url.replace('{format}', 'json')
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
   try {
-    const res = await reachableUrl(url, OPTS)
-    return { statusCode: res.statusCode, reachable: isReachable(res) }
-  } catch {
-    return { statusCode: null, reachable: false }
+    const res = await fetch(target, {
+      method: 'GET',
+      redirect: 'follow',
+      headers: { 'user-agent': USER_AGENT },
+      signal: controller.signal
+    })
+    clearTimeout(timer)
+    return { responded: true, statusCode: res.status }
+  } catch (err) {
+    clearTimeout(timer)
+    if (attempt < 1) return probe(url, attempt + 1)
+    const code = err.cause?.code || err.code || err.name
+    return { responded: false, statusCode: null, code }
   }
 }
 
-function extractContentUrl (exampleUrl) {
-  try {
-    const parsed = new URL(exampleUrl)
-    const encoded = parsed.searchParams.get('url')
-    if (!encoded) return null
-    return decodeURIComponent(encoded)
-  } catch {
-    return null
-  }
-}
-
+// A provider endpoint is:
+//   ok           — the host answered HTTP (any status): the API is live.
+//   fail         — the host is gone (DNS/connection error): confident death.
+//   inconclusive — everything else (TLS error, timeout, unparseable URL): the
+//                  host may exist, so we never disable on this — leave as-is.
 async function checkEndpoint (endpoint) {
-  const endpointCheck = await checkUrl(endpoint.url)
-  if (endpointCheck.reachable) {
-    return { url: endpoint.url, verdict: 'ok', endpointCheck, via: 'endpoint' }
+  const result = await probe(endpoint.url)
+
+  if (result.responded) {
+    return { url: endpoint.url, verdict: 'ok', via: 'endpoint', statusCode: result.statusCode }
   }
 
-  const examples = endpoint.example_urls || []
-  let hasExamples = false
-
-  for (const exampleUrl of examples) {
-    const contentUrl = extractContentUrl(exampleUrl)
-    if (!contentUrl) continue
-
-    hasExamples = true
-    const contentCheck = await checkUrl(contentUrl)
-    if (!contentCheck.reachable) continue
-
-    const exampleCheck = await checkUrl(exampleUrl)
-    if (exampleCheck.reachable) {
-      return {
-        url: endpoint.url,
-        verdict: 'ok',
-        endpointCheck,
-        via: 'example',
-        contentUrl,
-        contentCheck,
-        exampleUrl,
-        exampleCheck
-      }
-    }
-
-    return {
-      url: endpoint.url,
-      verdict: 'fail',
-      endpointCheck,
-      via: 'example',
-      contentUrl,
-      contentCheck,
-      exampleUrl,
-      exampleCheck
-    }
+  if (DEAD_CODES.has(result.code)) {
+    return { url: endpoint.url, verdict: 'fail', via: 'dead', code: result.code }
   }
 
-  if (!hasExamples) {
-    return { url: endpoint.url, verdict: 'inconclusive', endpointCheck, via: 'none' }
-  }
-
-  return { url: endpoint.url, verdict: 'fail', endpointCheck, via: 'all_dead' }
+  return { url: endpoint.url, verdict: 'inconclusive', via: 'unverified', code: result.code }
 }
 
 async function auditProvider (file, baseDir = PROVIDERS_DIR) {
@@ -160,16 +138,13 @@ function markdownTable (results) {
   if (fail.length > 0) {
     lines.push(`### Failed (${fail.length})`)
     lines.push('')
-    lines.push('oEmbed endpoint is confirmed broken.')
+    lines.push('Endpoint host is gone — the domain no longer resolves or refuses connections.')
     lines.push('')
-    lines.push('| Provider | Endpoint | Status | Reason |')
-    lines.push('| --- | --- | --- | --- |')
+    lines.push('| Provider | Endpoint | Reason |')
+    lines.push('| --- | --- | --- |')
     for (const r of fail) {
       for (const ep of r.endpoints.filter(e => e.verdict === 'fail')) {
-        const reason = ep.via === 'all_dead'
-          ? 'endpoint, content, and oEmbed URLs all unreachable'
-          : `content ${ep.contentCheck.statusCode} → oEmbed ${ep.exampleCheck.statusCode}`
-        lines.push(`| ${r.name} | ${ep.url} | ${ep.endpointCheck.statusCode} | ${reason} |`)
+        lines.push(`| ${r.name} | ${ep.url} | network error (${ep.code}) |`)
       }
     }
   }
@@ -178,14 +153,13 @@ function markdownTable (results) {
     lines.push('')
     lines.push(`### Inconclusive (${inconclusive.length})`)
     lines.push('')
-    lines.push('Could not verify — example content is stale, missing, or blocked.')
+    lines.push('Could not verify — TLS error, timeout, or unparseable endpoint. Left as-is.')
     lines.push('')
-    lines.push('| Provider | Endpoint | Status | Reason |')
-    lines.push('| --- | --- | --- | --- |')
+    lines.push('| Provider | Endpoint | Reason |')
+    lines.push('| --- | --- | --- |')
     for (const r of inconclusive) {
-      for (const ep of r.endpoints) {
-        const reason = !ep.endpointCheck.reachable && ep.via === 'none' ? 'no verifiable examples' : ep.via
-        lines.push(`| ${r.name} | ${ep.url} | ${ep.endpointCheck.statusCode} | ${reason} |`)
+      for (const ep of r.endpoints.filter(e => e.verdict === 'inconclusive')) {
+        lines.push(`| ${r.name} | ${ep.url} | ${ep.code || ep.via} |`)
       }
     }
   }
@@ -354,4 +328,4 @@ if (require.main === module) {
   })
 }
 
-module.exports = { revertRecoveredFailures, ENABLED_DIR, DISABLED_DIR, TEST_PHP }
+module.exports = { probe, checkEndpoint, revertRecoveredFailures, ENABLED_DIR, DISABLED_DIR, TEST_PHP }

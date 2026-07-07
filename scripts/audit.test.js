@@ -18,7 +18,7 @@ const disabledDir = fs.mkdtempSync(path.join(os.tmpdir(), 'oembed-disabled-'))
 process.env.OEMBED_ENABLED_DIR = enabledDir
 process.env.OEMBED_DISABLED_DIR = disabledDir
 
-const { revertRecoveredFailures } = require('./audit.js')
+const { revertRecoveredFailures, checkEndpoint } = require('./audit.js')
 
 // The gate shells out to `php test.php`; skip cleanly where php/yaml is absent
 // so a dev box without the extension does not report a false failure. CI (build
@@ -92,6 +92,73 @@ test('throws when the failing file is not one it enabled', { skip: !phpReady && 
   )
   // Must not touch a file outside its own recovery set.
   assert.ok(fs.existsSync(path.join(enabledDir, 'preexisting.yml')))
+})
+
+// --- Endpoint liveness classification (no network: global.fetch is stubbed) ---
+//
+// An oEmbed endpoint is an API that legitimately answers 4xx. These tests lock
+// in the rule that decides enable/disable: any HTTP response => ok (live), a
+// DNS/connection error => fail (gone), anything else (TLS, timeout) =>
+// inconclusive (never disabled). Regression guard for iamcal/oembed#904, where
+// live providers like Vimeo were disabled because the old audit read a 4xx (and
+// a soft-404 on stale example content) as "endpoint broken".
+
+const realFetch = global.fetch
+
+function stubFetchStatus (status) {
+  global.fetch = async () => ({ status })
+}
+
+function stubFetchThrow (code) {
+  global.fetch = async () => {
+    const err = new Error(`stub network error ${code}`)
+    err.cause = { code }
+    throw err
+  }
+}
+
+test.afterEach(() => { global.fetch = realFetch })
+
+for (const status of [200, 301, 400, 401, 403, 404]) {
+  test(`endpoint answering HTTP ${status} is ok (alive)`, async () => {
+    stubFetchStatus(status)
+    const res = await checkEndpoint({ url: 'https://vimeo.com/api/oembed.{format}' })
+    assert.strictEqual(res.verdict, 'ok')
+    assert.strictEqual(res.statusCode, status)
+  })
+}
+
+for (const code of ['ENOTFOUND', 'EAI_AGAIN', 'ECONNREFUSED']) {
+  test(`endpoint with ${code} is fail (gone)`, async () => {
+    stubFetchThrow(code)
+    const res = await checkEndpoint({ url: 'https://gone.example/oembed' })
+    assert.strictEqual(res.verdict, 'fail')
+    assert.strictEqual(res.code, code)
+  })
+}
+
+for (const code of ['CERT_HAS_EXPIRED', 'ERR_TLS_CERT_ALTNAME_INVALID', 'UND_ERR_CONNECT_TIMEOUT']) {
+  test(`endpoint with ${code} is inconclusive (never disabled)`, async () => {
+    stubFetchThrow(code)
+    const res = await checkEndpoint({ url: 'https://weird.example/oembed' })
+    assert.strictEqual(res.verdict, 'inconclusive')
+  })
+}
+
+test('a transient throw is retried once before giving up', async () => {
+  let calls = 0
+  global.fetch = async () => {
+    calls++
+    if (calls === 1) {
+      const err = new Error('transient')
+      err.cause = { code: 'ECONNRESET' }
+      throw err
+    }
+    return { status: 200 }
+  }
+  const res = await checkEndpoint({ url: 'https://flaky.example/oembed' })
+  assert.strictEqual(res.verdict, 'ok')
+  assert.strictEqual(calls, 2)
 })
 
 test.after(() => {
