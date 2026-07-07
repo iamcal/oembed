@@ -8,6 +8,7 @@
     - https://*.livecodes.io/
     - https://*.livecodes.io/?*
     url: https://livecodes.io/oembed
+    docs_url: https://livecodes.io/docs/features/embeds
     example_urls:
     - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Ftemplate%3Dreact
     - https://livecodes.io/oembed?url=https%3A%2F%2Flivecodes.io%2F%3Ftemplate%3Dvue&format=json
