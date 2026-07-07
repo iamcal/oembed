@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-up0date:
+  run-update:
     runs-on: ubuntu-latest
     steps:
       - name: Call update URL
