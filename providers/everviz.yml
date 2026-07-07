@@ -7,7 +7,7 @@
     - http://app.everviz.com/embed/*
     url: https://api.everviz.com/oembed
     example_urls:
-    - https://api.everviz.com/oembed?url=https://app.everviz.com/embed/R8jhGkYT5
+    - https://api.everviz.com/oembed?url=https://app.everviz.com/embed/R8jhGkYT5&format=json
     discovery: true
     notes: Provider only supports the 'rich' type
 ...
