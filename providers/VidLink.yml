@@ -1,0 +1,12 @@
+- provider_name: VidLink
+  provider_url: https://vidlink.it
+  endpoints:
+  - schemes:
+    - https://vidlink.it/videos/*
+    - https://www.vidlink.it/videos/*
+    url: https://www.vidlink.it/api/oembed
+    example_urls:
+    - https://www.vidlink.it/api/oembed?url=https%3A%2F%2Fvidlink.it%2Fvideos%2Fwidows-bay&format=json
+    discovery: true
+    formats:
+    - json
