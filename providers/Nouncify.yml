@@ -1,0 +1,16 @@
+---
+- provider_name: Nouncify
+  provider_url: https://nouncify.com/
+  endpoints:
+  - schemes:
+    - https://nouncify.com/i/*
+    - https://nouncify.com/brand/*
+    - https://nouncify.com/e/*
+    - https://sandbox.nouncify.com/i/*
+    - https://sandbox.nouncify.com/brand/*
+    - https://sandbox.nouncify.com/e/*
+    url: https://nouncify.com/api/oembed
+    formats:
+    - json
+    discovery: true
+...
