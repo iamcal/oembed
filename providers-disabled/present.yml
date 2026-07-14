@@ -1,0 +1,15 @@
+---
+- provider_name: Present
+  provider_url: https://present.do
+  endpoints:
+  - schemes:
+    - https://present.do/decks/*
+    url: https://gateway.cobalt.run/present/decks/oembed
+    example_urls:
+    - https://gateway.cobalt.run/present/decks/oembed?url=https%3A%2F%2Fpresent.do%2Fdecks%2F60d20b8dffff3c06649f7a18
+    - https://gateway.cobalt.run/present/decks/oembed?url=https%3A%2F%2Fpresent.do%2Fdecks%2F60c560548ae5e6673633c424
+    - https://gateway.cobalt.run/present/decks/oembed?url=https%3A%2F%2Fpresent.do%2Fdecks%2F60e2a2203a59f57771f15789
+    discovery: true
+    formats:
+    - json
+...

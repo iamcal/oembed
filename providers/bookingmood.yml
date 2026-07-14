@@ -1,0 +1,13 @@
+---
+- provider_name: Bookingmood
+  provider_url: https://www.bookingmood.com
+  endpoints:
+  - schemes:
+    - https://www.bookingmood.com/embed/*/*
+    url: https://bookingmood.com/api/oembed
+    example_urls:
+    - https://www.bookingmood.com/api/oembed?url=https%3A%2F%2Fwww.bookingmood.com%2Fembed%2Fsearch%2Fcb8ea5f0-c766-4dd4-913e-fa2ec0db4dee&format=json
+    - https://www.bookingmood.com/api/oembed?url=https%3A%2F%2Fwww.bookingmood.com%2Fembed%2Fsearch%2Fcb8ea5f0-c766-4dd4-913e-fa2ec0db4dee&format=xml
+    formats:
+    - json
+    - xml

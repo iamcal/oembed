@@ -1,0 +1,15 @@
+---
+- provider_name: Mediastream
+  provider_url: https://mdstrm.com/
+  endpoints:
+  - schemes:
+    - https://mdstrm.com/embed/*
+    - https://mdstrm.com/live-stream/*
+    - https://mdstrm.com/image/*
+    url: https://mdstrm.com/oembed
+    discovery: true
+    example_urls:
+    - https://mdstrm.com/oembed?url=https%3A%2F%2Fmdstrm.com%2Fembed%2F6266eda4a18ad20185e0d3b4
+    - https://mdstrm.com/oembed?url=https%3A%2F%2Fmdstrm.com%2Flive-stream%2F630e029aef211f08502f0815
+    - https://mdstrm.com/oembed?url=https%3A%2F%2Fmdstrm.com%2Fimage%2F62c30bd7cace843827c6f6c7
+...

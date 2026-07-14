@@ -1,0 +1,15 @@
+---
+- provider_name: Viously
+  provider_url: https://www.viously.com
+  endpoints:
+  - schemes:
+    - https://www.viously.com/*/*
+    url: https://www.viously.com/oembed
+    example_urls:
+    - https://www.viously.com/oembed?url=https%3A%2F%2Fwww.viously.com%2Fpositivr%2Fgw2jTFu7Lsr&format=json
+    - https://www.viously.com/oembed?url=https%3A%2F%2Fwww.viously.com%2Fpositivr%2Fgw2jTFu7Lsr&format=xml
+    discovery: true
+    formats:
+    - json
+    - xml
+...

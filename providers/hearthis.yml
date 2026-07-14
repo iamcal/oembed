@@ -4,7 +4,8 @@
   endpoints:
   - schemes:
     - https://hearthis.at/*/*/
-    url: https://hearthis.at/oembed/
+    - https://hearthis.at/*/set/*/
+    url: https://hearthis.at/oembed/?format=json
     docs_url: TBD
     example_urls:
     - https://hearthis.at/oembed/?url=https://hearthis.at/gdsfm/20180922-motherland-soundsystem-im-sender/&format=json

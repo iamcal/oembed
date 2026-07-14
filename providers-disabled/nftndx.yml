@@ -1,0 +1,12 @@
+---
+- provider_name: NFTNDX.IO
+  provider_url: https://www.nftndx.io/
+  endpoints:
+  - url: https://www.nftndx.io/oembed
+    formats:
+    - json
+    example_urls:
+      - https://nftndx.io/oembed?url=https%3A%2F%2Fnftndx.io%2Ftoken%2F0x2A46f2fFD99e19a89476E2f62270e0a35bBf0756-40913
+      - https://nftndx.io/oembed?url=https%3A%2F%2Fnftndx.io%2Ftoken%2F0x7Bd29408f11D2bFC23c34f18275bBf23bB716Bc7-19954
+      - https://www.nftndx.io/oembed?url=https%3A%2F%2Fnftndx.io%2Ftoken%2F0x2A46f2fFD99e19a89476E2f62270e0a35bBf0756-40913&maxwidth=700
+...

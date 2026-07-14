@@ -1,4 +1,8 @@
 <?php
+	# Directory to validate. Defaults to "providers"; pass a path to validate
+	# another directory (used by the audit sync to gate recovered providers).
+	$dir = isset($argv[1]) ? rtrim($argv[1], '/') : 'providers';
+
 	$num_files = 0;
 	$num_entries = 0;
 
@@ -21,12 +25,26 @@
 		'#/endpoints/#/docs_url'	=> 1,
 	);
 
-	$dh = opendir('providers');
+#$p1 = yaml_parse_file("providers/vidmount.yml", -1);
+#$p2 = yaml_parse_file("providers/vidyard.yml", -1);
+#echo var_export($p1);
+#echo var_export($p2);
+#exit;
+
+	$dh = opendir($dir);
 	while (($file = readdir($dh)) !== false){
 		if (preg_match('!\.yml$!', $file)){
-			$partial = yaml_parse_file("providers/$file");
+			$partial = yaml_parse_file("$dir/$file");
 			if (!$partial || !is_array($partial)){
-				echo "Unable to parse provider file providers/$file\n";
+				echo "Unable to parse provider file $dir/$file\n";
+				exit(1);
+			}
+
+			# check if there is more than one document in the file
+			$full = yaml_parse_file("$dir/$file", -1);
+			if (count($full) != 1){
+				echo "More than one YAML document specified in $dir/$file\n";
+				echo "(The file should end with \"...\", not \"---\")\n";
 				exit(1);
 			}
 
@@ -41,7 +59,7 @@
 			$keys = check_keys($partial);
 			foreach ($keys as $k){
 				if (!isset($expected_keys[$k])){
-					echo "Unexpected key {$k} in provider file providers/$file\n";
+					echo "Unexpected key {$k} in provider file $dir/$file\n";
 					exit(1);
 				}
 			}
@@ -53,27 +71,111 @@
 
 			foreach ($partial as $def){
 				if (!isset($def['endpoints']) || !count($def['endpoints'])){
-					echo "No endpoints defined in provider file providers/$file\n";
+					echo "No endpoints defined in provider file $dir/$file\n";
 					exit(1);
 				}
 				foreach ($def['endpoints'] as $endpoint){
 
-				# NOTE: this is disabled because it counts e.g. wordpress as broken.
-				# maybe it is?
+					# this test is currently disabled because three providers fail it.
+					# i _believe_ they should be deleted, as they are of no use to consumers.
 
-				#	if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
-				#		echo "Endpoint without schemes found in provider file providers/$file\n";
-				#		print_r($endpoint);
-				#		exit(1);
-				#	}
+					if (!isset($endpoint['discovery']) || $endpoint['discovery'] === 0){
+						if (!isset($endpoint['schemes']) || !count($endpoint['schemes'])){
+							echo "Endpoint without schemes or discovery found in provider file $dir/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+					}
 
 					if (!isset($endpoint['url'])){
-						echo "Endpoint without URL found in provider file providers/$file\n";
+						echo "Endpoint without URL found in provider file $dir/$file\n";
 						print_r($endpoint);
 						exit(1);
 					}
+
+					if (preg_match('!\*!', $endpoint['url'])){
+						echo "Endpoint URL contains a wildcard in provider file $dir/$file\n";
+						print_r($endpoint);
+						exit(1);
+					}
+
+					if (isset($endpoint['example_urls']))
+					foreach ($endpoint['example_urls'] as $example){
+
+						if (!preg_match('!^https?://!', $example)){
+							echo "Endpoint example URL does not start with http:// or https:// in provider file $dir/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+
+						if (!preg_match('!url=!', $example)){
+							echo "Endpoint example URL does not contain url= param in provider file $dir/$file\n";
+							print_r($endpoint);
+							exit(1);
+						}
+					}
+
+					if (isset($endpoint['schemes'])){
+					foreach ($endpoint['schemes'] as $scheme){
+
+						# check for people trying to put regexes in the schemes (e.g. "(foo|bar)")
+						if (strpos($scheme, '(') !== false){
+							echo "Scheme contains illegal character '(' in provider file $dir/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						if (strpos($scheme, ')') !== false){
+							echo "Scheme contains illegal character ')' in provider file $dir/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						# check for wildcards in schemes (and that a scheme exists)
+						if (!preg_match('!^([a-z]+):!', $scheme)){
+							echo "Scheme URL must contain a scheme which itself may not contain wildcards in provider file $dir/$file\n";
+							print_r($endpoint['schemes']);
+							exit(1);
+						}
+
+						# for HTTP(S) URLs, check for domain wildcards
+						if (preg_match('!^https?://([^/]+)!', $scheme, $m)){
+							$domain = $m[1];
+							$parts = array_reverse(explode('.', $domain));
+
+							# allow 'foo.com' but no 'com'
+							if (count($parts) < 2){
+								echo "Scheme domain must be fully qualified in provider file $dir/$file\n";
+								print_r($endpoint['schemes']);
+								exit(1);
+							}
+
+							# '*.foo.com' is ok, but '*.com' is not
+							if ($parts[0] == '*' || $parts[1] == '*'){
+								echo "Scheme domain may not contain a wildcard as the TLD in provider file $dir/$file\n";
+								print_r($endpoint['schemes']);
+								exit(1);
+							}
+
+							# domain atoms may either be a wildcard, or a literal match,
+							# so '*.foo.bar.com' is ok, but '*foo.bar.com' is not
+							foreach ($parts as $part){
+								if (strpos($part, '*') !== false && $part !== '*'){
+									echo "Scheme domain wildcards must be for a whole atom TLD in provider file $dir/$file\n";
+									print_r($endpoint['schemes']);
+									exit(1);
+								}
+							}
+						}
+					}
+					}
 				}
 			}
+		}else if (in_array($file,  ['README.md', '.', '..'])){
+			# these are expected to be here
+		}else{
+			echo "Unexpected file {$file} in {$dir} directory - your file must end in .yml\n";
+			exit(1);
 		}
 	}
 

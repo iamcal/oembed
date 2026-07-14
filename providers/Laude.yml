@@ -1,0 +1,17 @@
+---
+- provider_name: Laude
+  provider_url: https://laude.org
+  endpoints:
+  - schemes:
+    - https://laude.org/impact/*
+    - https://laude.org/im/*
+    url: http://laude.org/api/oembed
+    example_urls:
+    - http://laude.org/api/oembed?url=https%3A%2F%2Flaude.org%2Fimpact/andy-konwinski
+    - http://laude.org/api/oembed?url=https%3A%2F%2Flaude.org%2Fim/andy-konwinski
+    - http://laude.org/api/oembed?url=https%3A%2F%2Flaude.org%2Fimpact/david-patterson
+    - http://laude.org/api/oembed?url=https%3A%2F%2Flaude.org%2Fim/david-patterson
+    discovery: true
+    formats:
+    - json
+...

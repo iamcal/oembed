@@ -1,0 +1,13 @@
+---
+- provider_name: hihaho
+  provider_url: https://www.hihaho.com
+  endpoints:
+  - schemes:
+    - https://player.hihaho.com/*
+    url: https://player.hihaho.com/services/oembed
+    example_urls:
+    - https://player.hihaho.com/services/oembed?format=json&url=https://player.hihaho.com/448f6b34-7c12-48f5-952f-23316f93ec5c
+    formats:
+    - json
+    - xml
+...

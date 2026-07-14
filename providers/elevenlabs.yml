@@ -1,0 +1,10 @@
+- provider_name: ElevenLabs
+  provider_url: https://elevenlabs.io/
+  endpoints:
+  - schemes:
+    - https://elevenlabs.io/*
+    url: https://elevenlabs.io/next/oembed
+    discovery: true
+    example_urls:
+    - https://elevenlabs.io/next/oembed?url=https%3A%2F%2Felevenlabs.io%2Fmusic%2Fsongs%2Ficz6HAmzkcw2dHMdzaAC
+    - https://elevenlabs.io/next/oembed?url=https%3A%2F%2Felevenlabs.io%2Fmusic%2Fsongs%2FFGuqsn7mM2ZeFec4uBpp

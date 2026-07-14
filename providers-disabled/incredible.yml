@@ -1,0 +1,13 @@
+---
+- provider_name: Incredible
+  provider_url: https://incredible.dev
+  endpoints:
+  - schemes:
+    - https://incredible.dev/watch/*
+    url: https://oembed.incredible.dev/oembed
+    example_urls:
+    - https://oembed.incredible.dev/oembed?url=https://incredible.dev/watch/md-to-video
+    discovery: true
+    formats:
+      - json
+...

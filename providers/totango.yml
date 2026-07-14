@@ -1,0 +1,9 @@
+---
+- provider_name: Totango
+  provider_url: https://totango.com
+  endpoints:
+  - schemes:
+    - https://app-test.totango.com/*
+    url: https://app-test.totango.com/oembed
+    discovery: true
+...

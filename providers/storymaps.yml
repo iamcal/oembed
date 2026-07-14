@@ -1,0 +1,12 @@
+---
+- provider_name: ArcGIS StoryMaps
+  provider_url: https://storymaps.arcgis.com
+  endpoints:
+  - schemes:
+    - https://storymaps.arcgis.com/stories/*
+    url: https://storymaps.arcgis.com/oembed
+    example_urls:
+    - https://storymaps.arcgis.com/oembed?url=https://storymaps.arcgis.com/stories/ffdd1f0589434e8c8cf0dddbb1edd364&format=json
+    - https://storymaps.arcgis.com/oembed?url=https://storymaps.arcgis.com/stories/ffdd1f0589434e8c8cf0dddbb1edd364&format=xml
+    discovery: true
+...

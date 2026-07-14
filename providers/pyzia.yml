@@ -1,0 +1,17 @@
+---
+- provider_name: Pyzia
+  provider_url: https://www.pyzia.app/
+  endpoints:
+  - schemes:
+    - https://www.pyzia.app/dashboard?*
+    - https://pyzia.app/dashboard?*
+    - https://www.pyzia.app/embed/chart?*
+    - https://pyzia.app/embed/chart?*
+    url: https://www.pyzia.app/api/oembed
+    example_urls:
+    - https://www.pyzia.app/api/oembed?url=https%3A%2F%2Fwww.pyzia.app%2Fdashboard%3Find%3DMAC_ECON_GDP_PCAP%26entities%3Dunited-states%2Cchina%26start%3D2000%26end%3D2024
+    discovery: true
+    formats:
+    - json
+    notes: Provider only supports the 'rich' type
+...

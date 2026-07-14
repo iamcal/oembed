@@ -1,0 +1,10 @@
+---
+- provider_name: Typlog
+  provider_url: https://typlog.com
+  endpoints:
+  - url: https://typlog.com/oembed
+    example_urls:
+    - https://typlog.com/oembed?url=https%3A//fourgifts.typlog.io/episodes/11
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

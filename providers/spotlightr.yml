@@ -1,0 +1,16 @@
+---
+- provider_name: Spotlightr
+  provider_url: https://spotlightr.com
+  endpoints:
+  - docs_url: https://docs.spotlightr.com/en/articles/3107055-oembed-protocol
+    schemes:
+    - https://*.spotlightr.com/watch/*
+    - https://*.spotlightr.com/publish/*
+    - https://*.cdn.spotlightr.com/watch/*
+    - https://*.cdn.spotlightr.com/publish/*
+    url: https://api.spotlightr.com/getOEmbed
+    example_urls:
+    - https://api.spotlightr.com/getOEmbed?url=https%3A%2F%2F0.cdn.spotlightr.com%2Fwatch%2FMTI4NTg5MA%3D%3D&format=json
+    - https://api.spotlightr.com/getOEmbed?url=https%3A%2F%2F0.cdn.spotlightr.com%2Fwatch%2FMTI4NTg5MA%3D%3D&format=xml
+    discovery: true
+...

@@ -4,8 +4,10 @@
   endpoints:
   - schemes:
     - https://tv.kakao.com/channel/*/cliplink/*
+    - https://tv.kakao.com/m/channel/*/cliplink/*
     - https://tv.kakao.com/channel/v/*
     - https://tv.kakao.com/channel/*/livelink/*
+    - https://tv.kakao.com/m/channel/*/livelink/*
     - https://tv.kakao.com/channel/l/*
     url: https://tv.kakao.com/oembed
     example_urls:

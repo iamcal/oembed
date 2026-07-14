@@ -1,0 +1,13 @@
+---
+- provider_name: Smrthi
+  provider_url: https://www.smrthi.com
+  endpoints:
+  - schemes:
+    - https://www.smrthi.com/book/*
+    url: https://www.smrthi.com/api/oembed
+    example_urls:
+    - https://www.smrthi.com/api/oembed?url=https%3A%2F%2Fwww.smrthi.com%2Fbook%2FRigVeda%2F1.1.1
+    - https://www.smrthi.com/api/oembed?url=https%3A%2F%2Fwww.smrthi.com%2Fbook%2FRigVeda%2F1.5.3
+    formats:
+    - json
+...

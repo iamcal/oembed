@@ -10,9 +10,10 @@
     - https://vimeo.com/groups/*/videos/*
     - https://vimeo.com/ondemand/*/*
     - https://player.vimeo.com/video/*
+    - https://vimeo.com/event/*/*
     url: https://vimeo.com/api/oembed.{format}
     example_urls:
-    - https://vimeo.com/api/oembed.xml?url=http%3A%2F%2Fvimeo.com%2F76979871
-    - https://vimeo.com/api/oembed.json?url=http%3A%2F%2Fvimeo.com%2F76979871
+    - https://vimeo.com/api/oembed.xml?url=https%3A%2F%2Fvimeo.com%2F7073899
+    - https://vimeo.com/api/oembed.json?url=https%3A%2F%2Fvimeo.com%2F7073899
     discovery: true
 ...

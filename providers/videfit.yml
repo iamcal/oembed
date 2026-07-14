@@ -1,0 +1,11 @@
+---
+- provider_name: Videfit
+  provider_url: 'https://videfit.com/'
+  endpoints:
+    - schemes:
+        - 'https://videfit.com/videos/*'
+      url: 'https://videfit.com/oembed'
+      example_urls:
+        - 'https://videfit.com/oembed?url=https://videfit.com/videos/651'
+      discovery: false
+...

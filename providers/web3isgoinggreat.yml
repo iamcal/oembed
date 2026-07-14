@@ -1,0 +1,17 @@
+---
+- provider_name: Web3 is Going Just Great
+  provider_url: https://www.web3isgoinggreat.com/
+  endpoints:
+  - schemes:
+    - https://www.web3isgoinggreat.com/?id=*
+    - https://www.web3isgoinggreat.com/single/*
+    - https://www.web3isgoinggreat.com/embed/*
+    url: https://www.web3isgoinggreat.com/api/oembed
+    example_urls:
+      - https://www.web3isgoinggreat.com/api/oembed?url=https://www.web3isgoinggreat.com/single/2023-11-21-1
+      - https://www.web3isgoinggreat.com/api/oembed?format=xml&url=https://www.web3isgoinggreat.com/single/2023-11-21-1
+      - https://www.web3isgoinggreat.com/api/oembed?url=https://www.web3isgoinggreat.com/single/binance-legal-action
+      - https://www.web3isgoinggreat.com/api/oembed?url=https://www.web3isgoinggreat.com/?id=binance-legal-action
+      - https://www.web3isgoinggreat.com/api/oembed?url=https://www.web3isgoinggreat.com/embed/binance-legal-action
+    discovery: true
+...

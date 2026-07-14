@@ -1,0 +1,12 @@
+---
+- provider_name: Carbon Voice
+  provider_url: https://carbonvoice.app/
+  endpoints:
+  - schemes:
+    - https://carbonvoice.app/s/*
+    - https://carbonvoice.app/m/*
+    - https://carbonvoice.app/c/*
+    url: https://carbonvoice.app/api/oembed
+    discovery: true
+    example_urls:
+    - https://carbonvoice.app/api/oembed?url=https%3A%2F%2Fcarbonvoice.app%2Fs%2F9DZPZUKtFnaBhlkR

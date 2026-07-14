@@ -1,0 +1,12 @@
+---
+- provider_name: DALEXNI
+  provider_url: https://dalexni.com/
+  endpoints:
+  - schemes:
+    - https://dalexni.com/i/*
+    url: https://dalexni.com/oembed/
+    example_urls:
+    - https://dalexni.com/oembed/?url=https%3A%2F%2Fdalexni.com%2Fi%2Fcosta-rica.DT0&format=json
+    - https://dalexni.com/oembed/?url=https%3A%2F%2Fdalexni.com%2Fi%2Fcosta-rica.DT0&format=xml
+    discovery: true
+...

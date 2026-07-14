@@ -1,5 +1,6 @@
 <?php
-	header('Content-type: text/plain; charset=utf-8');
+	header('Content-type: application/json; charset=utf-8');
+	header('Access-Control-Allow-Origin: *');
 
 
 	#
@@ -40,4 +41,4 @@
 		return strcasecmp($a['provider_name'], $b['provider_name']);
 	}
 
-	echo json_encode($data, JSON_PRETTY_PRINT);
+	echo json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);

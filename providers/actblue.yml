@@ -1,0 +1,10 @@
+---
+- provider_name: ActBlue
+  provider_url: https://secure.actblue.com
+  endpoints:
+  - schemes:
+    - https://secure.actblue.com/donate/*
+    url: https://secure.actblue.com/cf/oembed
+    example_urls:
+    - https://secure.actblue.com/cf/oembed?url=https%3A%2F%2Fsecure.actblue.com%2Fdonate%2Factblue-1-embed
+...

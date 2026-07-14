@@ -1,0 +1,31 @@
+name: Stale Issues Management
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Mark and close stale issues
+        uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          stale-issue-message: >
+            This issue has been automatically marked as stale because it has not had
+            recent activity. It will be closed if no further activity occurs within 7 days of this post.
+
+          stale-issue-label: 'stale'
+
+          days-before-stale: 7
+
+          days-before-close: 7
+
+          exempt-issue-labels: 'Postpone'

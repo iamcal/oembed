@@ -1,0 +1,13 @@
+---
+- provider_name: Sagenverse
+  provider_url: https://sagenverse.com
+  endpoints:
+  - schemes:
+    - https://app2.sagenverse.com/embed/*
+    url: https://app2.sagenverse.com/oembed
+    discovery: true
+    example_urls:
+    - https://app2.sagenverse.com/oembed?url=https%3A%2F%2Fapp2.sagenverse.com%2Fembed%2F3f6ddc5a-c8aa-47b4-86e4-05bbdb20b56c&format=json
+    formats:
+    - json
+...

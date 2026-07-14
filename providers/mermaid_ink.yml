@@ -1,0 +1,12 @@
+---
+- provider_name: Mermaid Ink
+  provider_url: https://mermaid.ink
+  endpoints:
+  - schemes:
+    - https://mermaid.ink/img/*
+    - https://mermaid.ink/svg/*
+    url: https://mermaid.ink/services/oembed
+    example_urls:
+    - https://mermaid.ink/services/oembed?url=https%3A%2F%2Fmermaid.ink%2Fimg%2FeyJjb2RlIjoiZ3JhcGggVERcbiAgQVtBXSAtLT4gQihCKVxuXHRcdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19
+    discovery: true
+...

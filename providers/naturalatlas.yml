@@ -1,0 +1,16 @@
+---
+- provider_name: Natural Atlas
+  provider_url: https://naturalatlas.com/
+  endpoints:
+  - schemes:
+    - https://naturalatlas.com/*
+    - https://naturalatlas.com/*/*
+    - https://naturalatlas.com/*/*/*
+    - https://naturalatlas.com/*/*/*/*
+    url: https://naturalatlas.com/oembed.{format}
+    example_urls:
+    - https://naturalatlas.com/oembed.json?url=https%3A%2F%2Fnaturalatlas.com%2Fwaterfalls%2Flower-falls-of-the-yellowstone-river-1004042
+    discovery: true
+    formats:
+    - json
+...

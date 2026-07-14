@@ -1,0 +1,22 @@
+---
+- provider_name: NDLA - Norwegian Digital Learning Arena
+  provider_url: https://ndla.no
+  endpoints:
+  - schemes:
+    - https://ndla.no/*
+    - https://ndla.no/article/*
+    - https://ndla.no/audio/*
+    - https://ndla.no/concept/*
+    - https://ndla.no/image/*
+    - https://ndla.no/video/*
+    url: https://ndla.no/oembed
+    example_urls:
+    - https://ndla.no/oembed?url=https://ndla.no/r/samfunnskunnskap/aret-2030---valget-er-ditt/cbcd117d3c
+    - https://ndla.no/oembed?url=https://ndla.no/article/123
+    - https://ndla.no/oembed?url=https://ndla.no/audio/123
+    - https://ndla.no/oembed?url=https://ndla.no/concept/123
+    - https://ndla.no/oembed?url=https://ndla.no/image/123
+    - https://ndla.no/oembed?url=https://ndla.no/video/6289964283001
+    discovery: false
+    notes: Provider only supports the 'rich' type.
+...

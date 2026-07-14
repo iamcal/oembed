@@ -1,0 +1,12 @@
+- provider_name: Fritube
+  provider_url: https://fritube.ch
+  endpoints:
+  - schemes:
+    - https://fritube.ch/v/*
+    url: https://fritube.ch/services/oembed
+    example_urls:
+    - https://fritube.ch/services/oembed?url=https%3A%2F%2Ffritube.ch%2Fv%2F18dt2g&format=json
+    discovery: true
+    formats:
+    - json
+    - xml

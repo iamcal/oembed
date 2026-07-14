@@ -1,0 +1,12 @@
+---
+- provider_name: Parler
+  provider_url: https://app.parler.com/
+  endpoints:
+  - schemes:
+    - https://app.parler.com/post/*
+    - https://app.parler.com/b/*
+    url: https://app.parler.com/oembed
+    example_urls:
+    - https://app.parler.com/oembed?url=https://app.parler.com/post/01kvqsje5b1fhwcv7s02hfx16k
+    - https://app.parler.com/oembed?url=https://app.parler.com/b/01kvv92fk5xzn20azxg0z297cf
+    discovery: true

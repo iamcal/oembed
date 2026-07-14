@@ -1,0 +1,11 @@
+---
+- provider_name: Clueso
+  provider_url: https://clueso.io
+  endpoints:
+  - schemes:
+    - https://clueso.site/*
+    url: https://clueso.site/api/oembed
+    discovery: true
+    example_urls:
+    - https://clueso.site/api/oembed?url=https%3A%2F%2Fclueso.site%2Fembed%2Fn87s4o44cfdz09bs&format=json
+...

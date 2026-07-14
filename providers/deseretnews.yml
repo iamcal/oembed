@@ -1,10 +1,10 @@
 ---
-- provider_name: Deseretnews.com
-  provider_url: https://www.deseretnews.com
+- provider_name: Deseret News
+  provider_url: https://www.deseret.com
   endpoints:
     - schemes:
-        - https://*.deseretnews.com/*
-      url: https://embed.deseretnews.com/
+        - https://*.deseret.com/*
+      url: https://embed.deseret.com/
       example_urls:
-        - https://embed.deseretnews.com/?url=https://graphics.deseretnews.com/american-family-survey/becoming-an-adult&format=json
+        - https://embed.deseret.com/?url=https://graphics.deseret.com/american-family-survey/becoming-an-adult&format=json
 ...

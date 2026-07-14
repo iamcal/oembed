@@ -1,0 +1,12 @@
+---
+- provider_name: Itabtech infosys
+  provider_url: https://samay.itabtechinfosys.com/
+  endpoints:
+  - schemes:
+    - https://samay.itabtechinfosys.com/*
+    url: https://samay.itabtechinfosys.com/oembed/
+    example_urls:
+    - https://samay.itabtechinfosys.com/oembed/?url=https://samay.itabtechinfosys.com/thank-you-image.png
+    discovery: true
+    notes: Provider only supports the 'photo' type
+...

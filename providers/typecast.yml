@@ -1,0 +1,13 @@
+---
+- provider_name: TypeCast
+  provider_url: https://typecast.ai
+  endpoints:
+  - schemes:
+    - https://play.typecast.ai/s/*
+    - https://play.typecast.ai/e/*
+    - https://play.typecast.ai/*
+    url: https://play.typecast.ai/oembed
+    example_urls:
+    - https://play.typecast.ai/oembed?url=https%3A%2F%2Fplay.typecast.ai%2Fs%2F5cdd8da6f3a83a0007b80b17&amp;format=json
+    - https://play.typecast.ai/oembed?url=https%3A%2F%2Fplay.typecast.ai%2Fs%2F5cdd8da6f3a83a0007b80b17&amp;format=xml
+...

@@ -1,0 +1,11 @@
+---
+- provider_name: Insight Timer
+  provider_url: https://insighttimer.com/
+  endpoints:
+  - schemes:
+    - https://insighttimer.com/*
+    url: https://widgets.insighttimer.com/services/oembed
+    discovery: true
+    example_urls:
+    - https://widgets.insighttimer.com/services/oembed?url=https://insighttimer.com/davidji/guided-meditations/deep-healing&maxwidth=300&maxheight=300
+...

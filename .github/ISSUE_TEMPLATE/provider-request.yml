@@ -1,0 +1,68 @@
+name: Add a New oEmbed Provider
+description: Request to add a new oEmbed provider to the registry
+title: "Add Provider: [Provider Name]"
+labels: ["Provider"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to the oEmbed provider registry! Please fill out the following fields as accurately as possible.
+
+  - type: input
+    id: provider-name
+    attributes:
+      label: Provider Name
+      description: "The official name of the service."
+      placeholder: "eg Example"
+    validations:
+      required: true
+
+  - type: input
+    id: provider-url
+    attributes:
+      label: Provider URL
+      description: "The main homepage for the service."
+      placeholder: "https://www.example.com/"
+    validations:
+      required: true
+
+  - type: textarea
+    id: schemes
+    attributes:
+      label: URL Schemes
+      description: "A list of URL schemes that the oEmbed endpoint should match. Use a wildcard (*) for variable parts. Please list one scheme per line."
+      placeholder: |
+        https://*.example.com/watch*
+        https://example.net/*
+    validations:
+      required: true
+
+  - type: input
+    id: endpoint-url
+    attributes:
+      label: oEmbed Endpoint URL
+      description: "The URL for the oEmbed API endpoint."
+      placeholder: "https://www.example.com/oembed"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: discovery
+    attributes:
+      label: Discovery Support
+      description: "Does the provider support oEmbed discovery via <link> tags in their HTML?"
+      options:
+        - "Yes"
+        - "No"
+        - "I don't know"
+    validations:
+      required: true
+
+  - type: textarea
+    id: example-urls
+    attributes:
+      label: Example URLs
+      description: "Please provide at least one full, working oEmbed API URL to a valid resource that we can use for testing."
+      placeholder: "https://www.example.com/oembed?url=https%3A%2F%2Fwww.example.com%2Fwatch%3Fv%3DiwGFalTRHDA"
+    validations:
+      required: true

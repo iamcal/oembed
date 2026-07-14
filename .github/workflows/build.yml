@@ -1,0 +1,69 @@
+name: Build
+
+on:
+  push:
+    branches: ['master', 'main']
+  pull_request:
+    branches: ['master', 'main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Setup PHP with PECL extension
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        extensions: yaml
+
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: lts/*
+
+    - run: npm install --ignore-scripts
+
+    - name: Run schema tests
+      run: php test.php
+
+    - name: Run audit unit tests
+      run: npm test
+
+  audit:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: lts/*
+
+    - run: npm install --ignore-scripts
+
+    - name: Get changed provider files
+      id: changed
+      run: |
+        FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep '^providers/' || true)
+        {
+          echo "files<<EOF"
+          echo "$FILES"
+          echo "EOF"
+        } >> "$GITHUB_OUTPUT"
+      env:
+        GH_TOKEN: ${{ github.token }}
+
+    - name: Audit changed providers
+      if: steps.changed.outputs.files != ''
+      # Pass the (newline-separated) file list via env, not inline: expanding a
+      # multiline value into the run script would execute every line after the
+      # first as its own command. Unquoted $FILES word-splits into node args.
+      run: node scripts/audit.js $FILES
+      env:
+        FILES: ${{ steps.changed.outputs.files }}

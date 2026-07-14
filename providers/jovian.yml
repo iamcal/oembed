@@ -1,0 +1,24 @@
+---
+- provider_name: Jovian
+  provider_url: https://jovian.com/
+  endpoints:
+  - schemes:
+    - https://jovian.ml/*
+    - https://jovian.ml/viewer*
+    - https://*.jovian.ml/*
+    - https://jovian.ai/*
+    - https://jovian.ai/viewer*
+    - https://*.jovian.ai/*
+    - https://jovian.com/*
+    - https://jovian.com/viewer*
+    - https://*.jovian.com/*
+    url: https://api.jovian.com/oembed.json
+    docs_url: https://jovian.com/docs/api-reference/oembed.html
+    example_urls:
+    - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fmovielens-fastai
+    - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.ml%2Faakashns%2F01-pytorch-basics%2Fv%2F7
+    - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.ai%2Faakashns%2F01-pytorch-basics%2Fv%2F7
+    - https://api.jovian.com/oembed.json?url=https%3A%2F%2Fjovian.com%2Faakashns%2F01-pytorch-basics%2Fv%2F7
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...

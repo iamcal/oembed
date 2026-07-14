@@ -1,0 +1,19 @@
+---
+- provider_name: Miro
+  provider_url: https://miro.com/
+  endpoints:
+  - schemes:
+    - https://miro.com/app/board/*
+    url: https://miro.com/api/v1/oembed
+    discovery: true
+    example_urls:
+    - https://miro.com/api/v1/oembed?url=https://miro.com/app/board/uXjVPZH3NrA=/
+    notes: This provider only supports the 'rich' type.
+  - schemes:
+    - https://miro.com/video-player/*
+    url: https://miro.com/video-player/oembed
+    discovery: true
+    example_urls:
+    - https://miro.com/video-player/oembed?url=https://miro.com/video-player/1234567890
+    notes: This provider only supports the 'video' type.
+...

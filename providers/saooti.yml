@@ -1,0 +1,10 @@
+---
+- provider_name: Saooti
+  provider_url: https://octopus.saooti.com
+  endpoints:
+  - schemes:
+    - https://octopus.saooti.com/main/pub/podcast/*
+    url: https://octopus.saooti.com/oembed
+    example_urls:
+    - https://octopus.saooti.com/oembed?url=https://octopus.saooti.com/main/pub/podcast/2525
+...

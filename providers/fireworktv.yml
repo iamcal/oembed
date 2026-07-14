@@ -1,0 +1,13 @@
+---
+- provider_name: Firework
+  provider_url: https://fireworktv.com/
+  endpoints:
+  - schemes:
+    - https://*.fireworktv.com/*
+    - https://*.fireworktv.com/embed/*/v/*
+    url: https://www.fireworktv.com/oembed
+    discovery: true
+    example_urls:
+    - https://www.fireworktv.com/oembed?url=http%3A%2F%2Fwww.fireworktv.com%2Fembed%2FLoA05R%2Fv%2Fvr2Oee
+    - https://www.fireworktv.com/oembed?url=http%3A%2F%2Fwww.fireworktv.com%2Fembed%2FLoA05R%2Fv%2Fvr2Oee&format=xml
+...

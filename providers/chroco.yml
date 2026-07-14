@@ -1,0 +1,12 @@
+---
+- provider_name: CHROCO
+  provider_url: https://chroco.ooo/
+  endpoints:
+  - schemes:
+    - https://chroco.ooo/mypage/*
+    - https://chroco.ooo/story/*
+    url: https://chroco.ooo/embed
+    example_urls:
+    - https://chroco.ooo/embed?url=https%3A%2F%2Fchroco.ooo%2Fstory%2Fee261faa-2127-4a30-bd12-8656bb0786f0
+    discovery: true
+...
