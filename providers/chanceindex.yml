@@ -1,0 +1,10 @@
+provider_name: ChanceIndex
+provider_url: https://chanceindex.com
+endpoints:
+  - schemes:
+      - https://chanceindex.com/odds/*
+    url: https://chanceindex.com/api/oembed
+    discovery: true
+    formats:
+      - json
+      - xml
