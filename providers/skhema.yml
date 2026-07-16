@@ -1,0 +1,12 @@
+- provider_name: Skhema
+  provider_url: https://skhema.com/
+  endpoints:
+  - schemes:
+    - https://skhema.com/embed/e/*
+    - https://skhema.com/embed/c/*
+    url: https://skhema.com/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://skhema.com/api/oembed?url=https%3A%2F%2Fskhema.com%2Fembed%2Fe%2F529c569c-1a5e-4189-b93d-ff5f7753a9a5&format=json
