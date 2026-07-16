@@ -1,10 +1,11 @@
-provider_name: ChanceIndex
-provider_url: https://chanceindex.com
-endpoints:
-  - schemes:
-      - https://chanceindex.com/odds/*
-    url: https://chanceindex.com/api/oembed
-    discovery: true
-    formats:
-      - json
-      - xml
+---
+- provider_name: ChanceIndex
+  provider_url: https://chanceindex.com
+  endpoints:
+    - schemes:
+        - https://chanceindex.com/odds/*
+      url: https://chanceindex.com/api/oembed
+      example_urls:
+        - https://chanceindex.com/api/oembed?url=https%3A%2F%2Fchanceindex.com%2Fodds%2Fputin-out-before-2027
+      discovery: true
+...
