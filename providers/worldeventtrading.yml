@@ -1,0 +1,11 @@
+---
+- provider_name: World Event Trading
+  provider_url: https://www.worldeventtrading.com/
+  endpoints:
+  - schemes:
+    - https://worldeventtrading.com/predictions/*
+    - https://www.worldeventtrading.com/predictions/*
+    url: https://www.worldeventtrading.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://www.worldeventtrading.com/api/oembed?url=https%3A%2F%2Fwww.worldeventtrading.com%2Fpredictions%2Fwhich-party-will-win-the-senate-in-2026-odds-2026-11-03
