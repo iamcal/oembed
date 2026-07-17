@@ -1,0 +1,13 @@
+---
+- provider_name: Clipform
+  provider_url: https://clipform.io/
+  endpoints:
+  - schemes:
+    - https://clipform.io/*
+    url: https://api.clipform.io/v1/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://api.clipform.io/v1/oembed?url=https%3A%2F%2Fclipform.io%2Fc4479d620
+    - https://api.clipform.io/v1/oembed?url=https%3A%2F%2Fclipform.io%2Fc4479d620&format=json
