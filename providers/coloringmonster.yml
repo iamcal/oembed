@@ -1,0 +1,15 @@
+---
+- provider_name: Coloring Monster
+  provider_url: https://coloringmonster.com
+  endpoints:
+  - schemes:
+    - https://coloringmonster.com/coloring-page/*
+    - https://coloringmonster.com/monsterpieces/*
+    url: https://coloringmonster.com/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://coloringmonster.com/oembed?url=https%3A%2F%2Fcoloringmonster.com%2Fcoloring-page%2Fa-dragon-in-a-meadow-5dfc159b&format=json
+...
