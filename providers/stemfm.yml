@@ -1,0 +1,19 @@
+---
+- provider_name: StemFM
+  provider_url: https://stem.fm
+  endpoints:
+  - schemes:
+    - https://stem.fm/session/*
+    - https://www.stem.fm/session/*
+    - https://stem.fm/s/*
+    - https://www.stem.fm/s/*
+    url: https://www.stem.fm/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://www.stem.fm/oembed?url=https%3A%2F%2Fwww.stem.fm%2Fsession%2F11111sgfyXg2tB26gBoTy6
+    - https://www.stem.fm/oembed?url=https%3A%2F%2Fwww.stem.fm%2Fsession%2F11111sgfyXg2tB26gBoTy6&format=json
+    - https://www.stem.fm/oembed?url=https%3A%2F%2Fwww.stem.fm%2Fsession%2F11111sgfyXg2tB26gBoTy6&format=xml
+...
