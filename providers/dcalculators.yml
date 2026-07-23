@@ -1,0 +1,12 @@
+- provider_name: d.calculators
+  provider_url: https://dcalculators.com/
+  endpoints:
+  - schemes:
+    - https://dcalculators.com/*/*/*/
+    url: https://dcalculators.com/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://dcalculators.com/oembed?url=https%3A%2F%2Fdcalculators.com%2Fen%2Fhealth%2Fbmi-calculator%2F
+    - https://dcalculators.com/oembed?url=https%3A%2F%2Fdcalculators.com%2Fen%2Ffinance%2Famortization-calculator%2F
