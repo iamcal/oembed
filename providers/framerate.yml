@@ -1,0 +1,13 @@
+---
+- provider_name: FrameRate
+  provider_url: https://framerate.tv/
+  endpoints:
+    - schemes:
+        - https://framerate.tv/watch/*
+      url: https://framerate.tv/api/oembed
+      discovery: true
+      formats:
+        - json
+        - xml
+      example_urls:
+        - https://framerate.tv/api/oembed?url=https://framerate.tv/watch/52e6a94a-6985-4611-ab4a-b1e7e047ef22
