@@ -1,0 +1,13 @@
+---
+- provider_name: Typecel
+  provider_url: https://app.typecel.io
+  endpoints:
+  - schemes:
+    - https://app.typecel.io/*/*
+    - https://app.typecel.io/embed/*/*
+    url: https://app.typecel.io/api/oembed
+    example_urls:
+    - https://app.typecel.io/api/oembed?url=https://app.typecel.io/shrivaas/(MSFT)%20Microsoft%20Corporation
+    discovery: false
+    notes: Provider only supports the 'rich' type
+...
