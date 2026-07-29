@@ -1,0 +1,19 @@
+- provider_name: Atlantis Data Solutions
+  provider_url: https://atlantisdatasolutions.com/
+  endpoints:
+    - schemes:
+        - https://atlantisdatasolutions.com/*/*
+        - https://atlantisdatasolutions.com/embed/chart/*/*
+        - https://atlantisdatasolutions.com/yield-curves
+        - https://atlantisdatasolutions.com/sovereign-yield-curves
+        - https://atlantisdatasolutions.com/screener
+        - https://atlantisdatasolutions.com/bubble-chart-screener
+        - https://atlantisdatasolutions.com/embed/yield-curve
+        - https://atlantisdatasolutions.com/embed/sovereign-curve
+        - https://atlantisdatasolutions.com/embed/screener
+        - https://atlantisdatasolutions.com/embed/europe-screener
+        - https://atlantisdatasolutions.com/embed/rankings/*
+      url: https://atlantisdatasolutions.com/oembed
+      discovery: true
+      formats:
+        - json
