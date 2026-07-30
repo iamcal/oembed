@@ -1,0 +1,17 @@
+---
+- provider_name: Tegula
+  provider_url: https://tegula.io
+  endpoints:
+  - schemes:
+    - https://tegula.io/m/*
+    - https://www.tegula.io/m/*
+    - https://tegula.io/cat.html?model=*
+    - https://www.tegula.io/cat.html?model=*
+    url: https://tegula.io/api/oembed/
+    discovery: true
+    example_urls:
+    - https://tegula.io/api/oembed/?format=json&url=https%3A%2F%2Ftegula.io%2Fm%2F11
+    - https://tegula.io/api/oembed/?format=json&url=https%3A%2F%2Ftegula.io%2Fcat.html%3Fmodel%3D11
+    formats:
+    - json
+...
