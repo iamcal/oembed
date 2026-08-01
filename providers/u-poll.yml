@@ -4,6 +4,8 @@
   - schemes:
     - https://u-poll.com/p/*
     url: https://u-poll.com/oembed
-    discovery: true
+    docs_url: https://u-poll.com/faq
     example_urls:
     - https://u-poll.com/oembed?url=https://u-poll.com/p/nvidia-enters-windows-laptop-market-taking-on-intel-and-amd-who-will-lead-7uunsx&format=json
+    discovery: true
+    notes: Provider only supports the 'rich' type
