@@ -1,0 +1,9 @@
+- provider_name: u-poll
+  provider_url: https://u-poll.com
+  endpoints:
+  - schemes:
+    - https://u-poll.com/p/*
+    url: https://u-poll.com/oembed
+    discovery: true
+    example_urls:
+    - https://u-poll.com/oembed?url=https://u-poll.com/p/nvidia-enters-windows-laptop-market-taking-on-intel-and-amd-who-will-lead-7uunsx&format=json
