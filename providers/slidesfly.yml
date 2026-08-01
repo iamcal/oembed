@@ -1,0 +1,15 @@
+---
+- provider_name: Slidesfly
+  provider_url: https://slidesfly.com
+  endpoints:
+  - schemes:
+    - https://slidesfly.xyz/d/*
+    url: https://slidesfly.com/api/oembed
+    docs_url: https://slidesfly.com/docs/embed
+    example_urls:
+    - https://slidesfly.com/api/oembed?url=https%3A%2F%2Fslidesfly.xyz%2Fd%2FnlTgWEixO2Ik0wYT9KsLDg&format=json
+    discovery: true
+    formats:
+    - json
+    notes: Provider supports public decks and the rich response type
+...
