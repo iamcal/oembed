@@ -10,7 +10,7 @@
     - https://mirame360.com/user/*/media/*
     url: https://mirame360.com/api/oembed/
     example_urls:
-    - https://mirame360.com/api/oembed/?url=https%3A%2F%2Fmirame360.com%2Ftour%2Ftest-tour%2F&format=json
+    - https://mirame360.com/api/oembed/?url=https%3A%2F%2Fmirame360.com%2Fvideo%2Furl%2Ftorres-de-serranos%2F&format=json
     discovery: true
     formats:
     - json
