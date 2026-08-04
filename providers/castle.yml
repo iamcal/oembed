@@ -1,0 +1,13 @@
+---
+- provider_name: Castle
+  provider_url: https://castle.xyz
+  endpoints:
+  - schemes:
+    - https://castle.xyz/d/*
+    url: https://castle.xyz/api/oembed
+    example_urls:
+    - https://castle.xyz/api/oembed?url=https://castle.xyz/d/004Sk5AZz7wY&format=json
+    discovery: true
+    formats:
+    - json
+...
