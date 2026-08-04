@@ -1,0 +1,17 @@
+---
+- provider_name: Mirame360
+  provider_url: https://mirame360.com
+  endpoints:
+  - schemes:
+    - https://mirame360.com/embed/*
+    - https://mirame360.com/embed/tour/*
+    - https://mirame360.com/video/url/*
+    - https://mirame360.com/tour/*
+    - https://mirame360.com/user/*/media/*
+    url: https://mirame360.com/api/oembed/
+    example_urls:
+    - https://mirame360.com/api/oembed/?url=https%3A%2F%2Fmirame360.com%2Fvideo%2Furl%2Ftorres-de-serranos%2F&format=json
+    discovery: true
+    formats:
+    - json
+...
