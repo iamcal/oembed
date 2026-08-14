@@ -1,0 +1,10 @@
+- provider_name: Keystone Practice
+  provider_url: https://keystonepractice.co
+  endpoints:
+  - schemes:
+    - https://keystonepractice.co/tools/*
+    - https://keystonepractice.co/embed/*
+    url: https://keystonepractice.co/api/oembed
+    discovery: true
+    example_urls:
+    - https://keystonepractice.co/api/oembed?url=https://keystonepractice.co/tools/clinician-net&format=json
