@@ -1,12 +1,15 @@
 ---
-- provider_name: amCharts Live Editor
-  provider_url: https://live.amcharts.com/
+- provider_name: amCharts
+  provider_url: https://www.amcharts.com/
   endpoints:
   - schemes:
-    - http://live.amcharts.com/*
-    - https://live.amcharts.com/*
-    url: https://live.amcharts.com/oembed
+    - https://chart.amcharts.com/*/*
+    url: https://live.amcharts.com/api/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
     example_urls:
-    - https://live.amcharts.com/oembed/?url=http%3A%2F%2Flive.amcharts.com%2FczNjJ%2F&format=json
-    - https://live.amcharts.com/oembed/?url=http%3A%2F%2Flive.amcharts.com%2FczNjJ%2F&format=xml
+    - https://live.amcharts.com/api/oembed?url=https%3A%2F%2Fchart.amcharts.com%2F<handle>%2F<slug>&format=json
+    - https://live.amcharts.com/api/oembed?url=https%3A%2F%2Fchart.amcharts.com%2F<handle>%2F<slug>&format=xml
 ...
