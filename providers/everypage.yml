@@ -1,0 +1,11 @@
+- provider_name: EveryPage
+  provider_url: https://everypage.co
+  endpoints:
+  - schemes:
+    - https://everypage.co/*
+    url: https://everypage.co/oembed
+    docs_url: https://everypage.co/developers
+    example_urls:
+    - https://everypage.co/oembed?url=https://everypage.co/dtbWJZUeUlv5
+    discovery: true
+    notes: Provider only supports the 'rich' type and format=json
