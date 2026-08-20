@@ -1,0 +1,21 @@
+---
+- provider_name: Scibly
+  provider_url: https://www.scibly.com/
+  endpoints:
+  - schemes:
+    - https://app.scibly.com/public/courses/*
+    - https://app.scibly.com/embed/courses/*
+    - https://app.scibly.com/en/public/courses/*
+    - https://app.scibly.com/en/embed/courses/*
+    - https://app.scibly.com/de/public/courses/*
+    - https://app.scibly.com/de/embed/courses/*
+    url: https://app.scibly.com/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://app.scibly.com/api/oembed?url=https%3A%2F%2Fapp.scibly.com%2Fpublic%2Fcourses%2Fcms498ant000104jodpv63tys
+    - https://app.scibly.com/api/oembed?url=https%3A%2F%2Fapp.scibly.com%2Fembed%2Fcourses%2Fcms498ant000104jodpv63tys
+    - https://app.scibly.com/api/oembed?url=https%3A%2F%2Fapp.scibly.com%2Fen%2Fpublic%2Fcourses%2Fcms498ant000104jodpv63tys&maxwidth=480&maxheight=400
+    notes: Provider only supports the 'rich' type
+...
