@@ -1,0 +1,18 @@
+---
+- provider_name: Wikitólica
+  provider_url: https://www.wikitolica.com
+  endpoints:
+  - schemes:
+    - https://www.wikitolica.com/*/*/
+    url: https://www.wikitolica.com/oembed
+    example_urls:
+    - https://www.wikitolica.com/oembed?url=https%3A%2F%2Fwww.wikitolica.com%2Fa%2Famor%2F&format=json
+    - https://www.wikitolica.com/oembed?url=https%3A%2F%2Fwww.wikitolica.com%2Fa%2Famor%2F&format=xml
+    - https://www.wikitolica.com/oembed?url=https%3A%2F%2Fwww.wikitolica.com%2Fj%2Fjesucristo%2F&format=json
+    - https://www.wikitolica.com/oembed?url=https%3A%2F%2Fwww.wikitolica.com%2Fj%2Fjesucristo%2F&format=xml
+    discovery: true
+    formats:
+    - json
+    - xml
+    notes: Provider only supports the 'link' type
+...
