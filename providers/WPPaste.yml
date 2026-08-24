@@ -1,0 +1,16 @@
+---
+- provider_name: WPPaste
+  provider_url: https://wppaste.com
+  endpoints:
+  - schemes:
+    - https://wppaste.com/p/*
+    url: https://wppaste.com/api/oembed
+    docs_url: https://wppaste.com/about
+    example_urls:
+    - https://wppaste.com/api/oembed?url=https://wppaste.com/p/yya8hfnf
+    discovery: true
+    formats:
+    - json
+    - xml
+    notes: Rich embeds of shared WordPress PHP snippets, runnable in an in-browser WordPress sandbox.
+...
