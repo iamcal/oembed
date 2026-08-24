@@ -1,0 +1,14 @@
+---
+- provider_name: Marbella Wire
+  provider_url: https://marbellawire.com
+  endpoints:
+  - schemes:
+    - https://marbellawire.com/*
+    url: https://api.marbellawire.com/oembed
+    formats:
+    - json
+    example_urls:
+    - https://api.marbellawire.com/oembed?url=https%3A%2F%2Fmarbellawire.com%2Fnews%2Fbiodegradable-sea-burials-offered-in-fuengirola-and%2F
+    discovery: true
+    notes: Provider only supports the 'rich' type and JSON format
+...
