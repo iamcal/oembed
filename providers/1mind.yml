@@ -7,8 +7,8 @@
     - https://app.1mind.com/embed/*/*
     - https://app.dev.1mind.com/embed/*
     - https://app.dev.1mind.com/embed/*/*
-    url: https://app.1mind.com/embed
-    discovery: false
+    url: https://app.1mind.com/oembed
+    discovery: true
     formats:
     - json
     notes: Supports public, full-page Superhuman deployments embedded in third-party sites.
