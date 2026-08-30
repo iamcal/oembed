@@ -1,0 +1,11 @@
+---
+- provider_name: WATCHPEOPLEFIGHT
+  provider_url: https://watchpeoplefight.com/
+  endpoints:
+  - schemes:
+    - https://watchpeoplefight.com/watch/*
+    url: https://watchpeoplefight.com/api/oembed
+    discovery: true
+    example_urls:
+    - https://watchpeoplefight.com/api/oembed?url=https%3A%2F%2Fwatchpeoplefight.com%2Fwatch%2Fwsh-234028
+...
