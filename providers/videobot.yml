@@ -1,0 +1,10 @@
+---
+- provider_name: Videobot
+  provider_url: https://videobot.com/
+  endpoints:
+  - schemes:
+    - https://videobot.com/embed/*
+    url: https://videobot.com/embed/oembed
+    discovery: true
+    example_urls:
+    - https://videobot.com/embed/oembed?url=https%3A%2F%2Fvideobot.com%2Fembed%2FTNg59a5i
