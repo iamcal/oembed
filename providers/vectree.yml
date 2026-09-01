@@ -1,0 +1,16 @@
+---
+- provider_name: Vectree
+  provider_url: https://vectree.io/
+  endpoints:
+    - schemes:
+        - https://vectree.io/c/*
+        - http://vectree.io/c/*
+      url: https://vectree.io/api/oembed
+      discovery: true
+      formats:
+        - json
+      example_urls:
+        - https://vectree.io/api/oembed?url=https%3A%2F%2Fvectree.io%2Fc%2Fphotosynthesis
+        - https://vectree.io/api/oembed?url=https%3A%2F%2Fvectree.io%2Fc%2Fbauhaus
+        - https://vectree.io/api/oembed?url=https%3A%2F%2Fvectree.io%2Fc%2Fblack-hole
+...
