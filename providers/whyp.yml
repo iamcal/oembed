@@ -1,0 +1,15 @@
+---
+- provider_name: Whyp
+  provider_url: https://whyp.it/
+  endpoints:
+  - schemes:
+    - https://whyp.it/tracks/*
+    - https://whyp.it/collections/*
+    - https://www.whyp.it/tracks/*
+    - https://www.whyp.it/collections/*
+    url: https://api.whyp.it/api/oembed
+    example_urls:
+    - https://api.whyp.it/api/oembed?url=https%3A%2F%2Fwhyp.it%2Ftracks%2Fexample-track-HPuZgly3yViP
+    - https://api.whyp.it/api/oembed?url=https%3A%2F%2Fwhyp.it%2Fcollections%2Fexample-collection-hNdBmugKbF85
+    discovery: true
+...
