@@ -1,0 +1,13 @@
+---
+- provider_name: frequencing
+  provider_url: https://frequencing.com/
+  endpoints:
+    - schemes:
+        - https://frequencing.com/track/*
+        - https://frequencing.com/post/*
+        - https://frequencing.com/user/*/playlists/*
+      url: https://frequencing.com/api/oembed
+      example_urls:
+        - https://frequencing.com/api/oembed?url=https%3A%2F%2Ffrequencing.com%2Ftrack%2Ffriends-beyond-my-street-demo-636b93af&format=json
+      discovery: true
+...
