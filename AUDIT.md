@@ -1,10 +1,10 @@
-### Failed (33)
+### Failed (35)
 
 Endpoint host is gone — the domain no longer resolves or refuses connections.
 
 | Provider | Endpoint | Reason |
 | --- | --- | --- |
-| Kit | https://embed.kit.co/oembed | network error (ENOTFOUND) |
+| Waltrack | https://waltrack.net/oembed | network error (ENOTFOUND) |
 | Hopvue | https://portal.hopvue.com/api/oembed/ | network error (ENOTFOUND) |
 | Archivos | https://app.archivos.digital/oembed/ | network error (ENOTFOUND) |
 | Beams.fm | https://api.beams.fm/oEmbed | network error (ENOTFOUND) |
@@ -19,9 +19,11 @@ Endpoint host is gone — the domain no longer resolves or refuses connections.
 | helenenglish_education | https://helenenglish.education/embed | network error (ENOTFOUND) |
 | Incredible | https://oembed.incredible.dev/oembed | network error (ENOTFOUND) |
 | Kidoju | https://www.kidoju.com/api/oembed | network error (ENOTFOUND) |
+| Kit | https://embed.kit.co/oembed | network error (ENOTFOUND) |
 | kmdr | https://api.kmdr.sh/services/oembed | network error (ENOTFOUND) |
 | Knacki | https://jdr.knacki.info/oembed | network error (ENOTFOUND) |
 | Kooapp | https://embed.kooapp.com/services/oembed | network error (ENOTFOUND) |
+| Minerva | https://oembed.minervaknows.com | network error (EAI_AGAIN) |
 | Cardinal Blue | https://minesweeper.today/api/oembed | network error (ENOTFOUND) |
 | NoPaste | https://oembed.nopaste.ml | network error (ENOTFOUND) |
 | OZ | https://core.oz.com/oembed | network error (ENOTFOUND) |
@@ -48,13 +50,12 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 | Provider | Endpoint | Endpoint status |
 | --- | --- | --- |
 | 1mind | https://app.1mind.com/oembed | 400 |
-| 23HQ | http://www.23hq.com/23/oembed | 404 |
+| 23HQ | http://www.23hq.com/23/oembed | 503 |
 | Infoveave | https://infoveave.net/services/oembed/ | 20 |
 | Injurymap | https://www.injurymap.com/services/oembed | 404 |
 | JustSpin | https://www.justspin.cc/api/oembed | 400 |
-| Nouncify | https://nouncify.com/api/oembed | 404 |
+| Nouncify | https://nouncify.com/api/oembed | 400 |
 | WPPaste | https://wppaste.com/api/oembed | 400 |
-| Waltrack | https://waltrack.net/oembed | 404 |
 | Abraia | https://api.abraia.me/oembed | 400 |
 | afreecaTV | https://openapi.afreecatv.com/oembed/embedinfo | 200 |
 | Altium LLC | https://viewer.altium.com/shell/oembed | 404 |
@@ -63,13 +64,13 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 | Animoto | http://animoto.com/oembeds/create | 400 |
 | AnnieMusic | https://api.anniemusic.app/api/v1/oembed | 404 |
 | Apple Podcasts | https://podcasts.apple.com/api/oembed | 500 |
-| Atlantis Data Solutions | https://atlantisdatasolutions.com/oembed | 404 |
+| Atlantis Data Solutions | https://atlantisdatasolutions.com/oembed | 403 |
 | AudioClip | https://audioclip.naver.com/oembed | 400 |
 | Backtracks | https://backtracks.fm/oembed | 404 |
 | Beautiful.AI | https://www.beautiful.ai/api/oembed | 400 |
 | Blogcast | https://blogcast.host/oembed | 200 |
 | Bornetube | https://www.bornetube.dk/media/lasync/oembed/ | 200 |
-| Byzart Project | https://cmc.byzart.eu/oembed/ | 405 |
+| Byzart Project | https://cmc.byzart.eu/oembed/ | 200 |
 | Cacoo | http://cacoo.com/oembed.{format} | TypeError |
 | CatBoat | http://img.catbo.at/oembed.json | 200 |
 | ChartBlocks | http://embed.chartblocks.com/1.0/oembed | 403 |
@@ -115,6 +116,7 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 | Idomoo | https://oembed.idomoo.com/oembed | 404 |
 | IFTTT | http://www.ifttt.com/oembed/ | 200 |
 | Ignite | https://app.ignitevideo.cloud/api/oembed | 404 |
+| iHeartRadio | https://www.iheart.com/oembed | 404 |
 | iMenuPro | https://qr.imenupro.com/api/oembed | 405 |
 | Indaco | https://player.indacolive.com/services/oembed | 200 |
 | Inoreader | https://www.inoreader.com/oembed/api/ | 404 |
@@ -190,13 +192,14 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 | Sway Office | https://sway.office.com/api/v1.0/oembed | 400 |
 | Synthesia | https://69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed | 404 |
 | Tella | https://www.tella.tv/api/oembed | 400 |
+| TextExpander | https://rest-prod.tenet.textexpander.com/oembed | 400 |
 | They Said So | https://theysaidso.com/extensions/oembed/ | 403 |
 | Tonic Audio | https://tonicaudio.com/oembed | 200 |
 | Toornament | https://widget.toornament.com/oembed | 200 |
 | Topy | http://www.topy.se/oembed/ | 500 |
 | Totango | https://app-test.totango.com/oembed | 401 |
 | Trackspace | https://trackspace.upitup.com/oembed | 404 |
-| TryCLI Studio | https://trycli.com/api/oembed | 400 |
+| TryCLI Studio | https://trycli.com/api/oembed | UND_ERR_CONNECT_TIMEOUT |
 | TypeCast | https://play.typecast.ai/oembed | 404 |
 | Typlog | https://typlog.com/oembed | 404 |
 | u-poll | https://u-poll.com/oembed | 403 |
@@ -204,8 +207,8 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 | Ustream | http://www.ustream.tv/oembed | 404 |
 | VEVO | https://www.vevo.com/oembed | 404 |
 | VLIVE | https://www.vlive.tv/oembed | 404 |
+| Wolfram Cloud | https://www.wolframcloud.com/oembed | 503 |
 | WordPress.com | http://public-api.wordpress.com/oembed/ | 501 |
-| YUMPU | https://www.yumpu.com/services/oembed | 403 |
 | ZnipeTV | https://api.znipe.tv/v3/oembed/ | 502 |
 | chirbit.com | http://chirb.it/oembed.{format} | UND_ERR_CONNECT_TIMEOUT |
 | CoCo Corp | https://app.ilovecoco.video/api/oembed.{format} | ECONNRESET |
@@ -217,7 +220,6 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 | Geograph Britain and Ireland | http://api.geograph.org.uk/api/oembed | 403 |
 | Geograph Germany | http://geo.hlipp.de/restapi.php/api/oembed | 403 |
 | MediaLab | https://*.medialab.(co|app)/api/oembed/ | ERR_INVALID_URL |
-| Minerva | https://oembed.minervaknows.com | UND_ERR_CONNECT_TIMEOUT |
 | NFTNDX.IO | https://www.nftndx.io/oembed | 404 |
 | LeMans.Pod | https://umotion-test.univ-lemans.fr/oembed | UND_ERR_CONNECT_TIMEOUT |
 | Runkit | https://embed.runkit.com/oembed | CERT_HAS_EXPIRED |
@@ -230,7 +232,7 @@ page. Never auto-moved; needs a fresh example URL or a manual call.
 
 | Status | Count |
 | --- | --- |
-| Verified | 222 |
+| Verified | 224 |
 | Unverified | 174 |
-| Failed | 33 |
-| **Total** | **429** |
+| Failed | 35 |
+| **Total** | **433** |
