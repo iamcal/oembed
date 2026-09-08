@@ -1,0 +1,16 @@
+---
+- provider_name: BudgetPixel
+  provider_url: https://budgetpixel.com
+  endpoints:
+  - schemes:
+    - https://budgetpixel.com/p/*
+    - https://budgetpixel.com/sfx/*
+    - https://budgetpixel.com/background-music/*
+    url: https://budgetpixel.com/oembed
+    example_urls:
+    - https://budgetpixel.com/oembed?url=https%3A%2F%2Fbudgetpixel.com%2Fp%2F80503
+    - https://budgetpixel.com/oembed?url=https%3A%2F%2Fbudgetpixel.com%2Fsfx%2Fpressure-cooker-whistle-build-a0f32544
+    discovery: true
+    formats:
+    - json
+...
