@@ -1,0 +1,13 @@
+---
+- provider_name: YouPickBest
+  provider_url: https://youpick.best
+  endpoints:
+  - schemes:
+    - https://youpick.best/ranking/*
+    url: https://youpick.best/api/oembed
+    docs_url: https://youpick.best/add-rankings-to-your-site
+    example_urls:
+    - https://youpick.best/api/oembed?url=https%3A%2F%2Fyoupick.best%2Franking%2Fwhat-is-the-greatest-documentary-film
+    discovery: true
+    notes: Provider only supports the 'rich' type and the 'json' format
+...
