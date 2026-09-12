@@ -1,0 +1,14 @@
+---
+- provider_name: Elupedia
+  provider_url: https://www.elupedia.fr
+  endpoints:
+  - schemes:
+    - https://www.elupedia.fr/elus/*
+    - https://www.elupedia.fr/scrutins/*
+    url: https://www.elupedia.fr/api/oembed
+    docs_url: https://www.elupedia.fr/docs/oembed
+    example_urls:
+    - https://www.elupedia.fr/api/oembed?url=https%3A%2F%2Fwww.elupedia.fr%2Felus%2Fmanuel-bompard&format=json
+    discovery: true
+    notes: Provider supports 'rich' type for French elected officials and ballots
+...
