@@ -1,0 +1,29 @@
+---
+- provider_name: Vizzlo
+  provider_url: https://vizzlo.com/
+  endpoints:
+  - schemes:
+    - https://vizzlo.com/d/*
+    - https://vizzlo.com/share/*
+    - https://vizzlo.com/embed/*
+    url: https://vizzlo.com/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://vizzlo.com/oembed?url=https%3A%2F%2Fvizzlo.com%2Fd%2Ff4PJg6Y8R4uDjhy-HyqzOg&format=json
+    notes: Provider only supports the 'rich' type
+  - schemes:
+    - https://eu.vizzlo.com/d/*
+    - https://eu.vizzlo.com/share/*
+    - https://eu.vizzlo.com/embed/*
+    url: https://eu.vizzlo.com/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://eu.vizzlo.com/oembed?url=https%3A%2F%2Feu.vizzlo.com%2Fd%2FSeBfOMKfTK-AenPxoCA6-g&format=json
+    notes: Sovereign EU region of the same service, with its own accounts and documents. Each region's endpoint only describes URLs of its own domain. Provider only supports the 'rich' type
+...
