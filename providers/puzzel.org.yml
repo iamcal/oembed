@@ -1,0 +1,14 @@
+---
+- provider_name: Puzzel.org
+  provider_url: https://puzzel.org/
+  endpoints:
+  - schemes:
+    - https://puzzel.org/*/*/play?p=*
+    - https://puzzel.org/*/*/embed?p=*
+    url: https://puzzel.org/api/oembed
+    example_urls:
+    - https://puzzel.org/api/oembed?format=json&url=https%3A%2F%2Fpuzzel.org%2Fen%2Fword-scramble%2Fplay%3Fp%3D-OGdxqOFm4zFK7hctIHB
+    formats:
+    - json
+    discovery: true
+...
