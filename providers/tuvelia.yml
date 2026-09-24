@@ -1,0 +1,13 @@
+---
+- provider_name: Tuvelia
+  provider_url: https://tuvelia.com/
+  endpoints:
+  - schemes:
+    - https://tuvelia.com/embed/*
+    - https://www.tuvelia.com/embed/*
+    url: https://tuvelia.com/oembed
+    example_urls:
+    - https://tuvelia.com/oembed?url=https%3A%2F%2Ftuvelia.com%2Fembed%2F-qanoD1KgFmv
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
