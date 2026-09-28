@@ -1,0 +1,14 @@
+{
+    "provider_name": "AudioSFX",
+    "provider_url": "https://audiosfx.org",
+    "endpoints": [
+        {
+            "schemes": [
+                "https://audiosfx.org/audio/*",
+                "https://audiosfx.org/playlist/*"
+            ],
+            "url": "https://audiosfx.org/api/oembed",
+            "discovery": true
+        }
+    ]
+}
