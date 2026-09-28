@@ -1,0 +1,13 @@
+---
+- provider_name: GigNGo
+  provider_url: https://gigngo.org/
+  endpoints:
+  - schemes:
+    - https://gigngo.org/watch/*
+    - https://gigngo.org/embed/*
+    url: https://gigngo.org/oembed
+    example_urls:
+    - https://gigngo.org/oembed?url=https%3A%2F%2Fgigngo.org%2Fwatch%2Faa93ff17fd3e5c2268fedb5a0170f113&format=json
+    discovery: true
+    notes: Only supports JSON and the 'video' type. Only clips confirmed to show someone doing the work are embeddable; other URLs return 404.
+...
