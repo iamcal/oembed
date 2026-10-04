@@ -1,0 +1,16 @@
+---
+- provider_name: Election Tracker
+  provider_url: https://electiontracker.eu
+  endpoints:
+  - schemes:
+    - https://electiontracker.eu/*
+    url: https://electiontracker.eu/oembed
+    docs_url: https://electiontracker.eu/en/newsrooms#team
+    example_urls:
+    - https://electiontracker.eu/oembed?url=https%3A%2F%2Felectiontracker.eu%2Fen%2F&format=json
+    - https://electiontracker.eu/oembed?url=https%3A%2F%2Felectiontracker.eu%2Fen%2Fevent%2Fnext-french-presidential-election&format=json
+    discovery: true
+    formats:
+    - json
+    notes: Provider only supports the 'rich' type
+...
