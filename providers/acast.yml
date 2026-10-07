@@ -4,10 +4,12 @@
   endpoints:
   - schemes:
     - https://play.acast.com/s/*
+    - https://shows.acast.com/*/episodes/*
     url: https://oembed.acast.com/v1/embed-player
     discovery: true
     example_urls:
     - https://oembed.acast.com/v1/embed-player?url=https://play.acast.com/s/go-off-sis/keepthatsameenergyfeat.kekepalmer
+    - https://oembed.acast.com/v1/embed-player?url=https://shows.acast.com/go-off-sis/episodes/keepthatsameenergyfeat.kekepalmer
     formats:
     - json
 ...
