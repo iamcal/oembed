@@ -1,0 +1,14 @@
+---
+- provider_name: MemeStack
+  provider_url: https://memestack.ai/
+  endpoints:
+  - schemes:
+    - https://memestack.ai/gallery/*
+    url: https://api.memestack.ai/v1/oembed
+    example_urls:
+    - https://api.memestack.ai/v1/oembed?url=https%3A%2F%2Fmemestack.ai%2Fgallery%2F61e6113b-c0e6-436a-ad7e-26a6885ccda9&format=json
+    discovery: true
+    formats:
+    - json
+    notes: Returns the 'rich' type (the image linked to its page, with a credit line). XML is not supported (501).
+...
