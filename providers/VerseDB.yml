@@ -1,0 +1,20 @@
+---
+- provider_name: VerseDB
+  provider_url: https://versedb.com
+  endpoints:
+  - schemes:
+    - https://versedb.com/title/*
+    - https://versedb.com/series/*
+    - https://versedb.com/issue/*
+    - https://versedb.com/event/*
+    - https://versedb.com/creator/*
+    url: https://versedb.com/oembed
+    example_urls:
+    - https://versedb.com/oembed?url=https%3A%2F%2Fversedb.com%2Ftitle%2F147199&format=json
+    - https://versedb.com/oembed?url=https%3A%2F%2Fversedb.com%2Fseries%2F1205&format=json
+    - https://versedb.com/oembed?url=https%3A%2F%2Fversedb.com%2Fissue%2F59&format=json
+    - https://versedb.com/oembed?url=https%3A%2F%2Fversedb.com%2Fevent%2F1&format=json
+    - https://versedb.com/oembed?url=https%3A%2F%2Fversedb.com%2Fcreator%2F1&format=json
+    discovery: true
+    notes: Provider only supports the 'rich' type and JSON. XML is not offered.
+...
