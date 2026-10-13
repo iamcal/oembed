@@ -1,0 +1,13 @@
+---
+- provider_name: CalGet
+  provider_url: https://calget.com/
+  endpoints:
+  - schemes:
+    - https://calget.com/calendar-embed/*
+    url: https://calget.com/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://calget.com/oembed?url=https%3A%2F%2Fcalget.com%2Fcalendar-embed%2Faygwtfdd&format=json
+...
