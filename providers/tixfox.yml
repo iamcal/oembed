@@ -1,0 +1,15 @@
+---
+- provider_name: TixFox
+  provider_url: https://tixfox.co/
+  endpoints:
+  - schemes:
+    - https://tixfox.co/e/*
+    - https://tixfox.co/o/*
+    url: https://tixfox.co/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://tixfox.co/api/oembed?url=https%3A%2F%2Ftixfox.co%2Fe%2FHwDlQ5LA0A
+    - https://tixfox.co/api/oembed?url=https%3A%2F%2Ftixfox.co%2Fo%2Fexample-inc-dont-edit
+...
