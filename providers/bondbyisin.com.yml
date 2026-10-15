@@ -1,0 +1,21 @@
+---
+- provider_name: BondByIsin
+  provider_url: https://bondbyisin.com
+  endpoints:
+  - schemes:
+    - https://bondbyisin.com/bond/*
+    - https://bondbyisin.com/swap-curves*
+    - https://bondbyisin.com/embed/bond-price/*
+    - https://bondbyisin.com/embed/swap-curve*
+    - https://www.bondbyisin.com/bond/*
+    - https://www.bondbyisin.com/swap-curves*
+    - https://www.bondbyisin.com/embed/bond-price/*
+    - https://www.bondbyisin.com/embed/swap-curve*
+    url: https://bondbyisin.com/oembed
+    docs_url: https://bondbyisin.com/api#widgets
+    example_urls:
+    - https://bondbyisin.com/oembed?url=https%3A%2F%2Fbondbyisin.com%2Fbond%2FUS68389XBU81&format=json
+    - https://bondbyisin.com/oembed?url=https%3A%2F%2Fbondbyisin.com%2Fswap-curves%3Fcurrency%3DUSD&format=json
+    discovery: true
+    notes: Only the rich type and JSON responses are supported. Widgets require no authentication.
+...
