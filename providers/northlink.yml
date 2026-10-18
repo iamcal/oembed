@@ -1,0 +1,15 @@
+---
+- provider_name: Northwest Falls
+  provider_url: https://northwestfalls.com/
+  endpoints:
+  - schemes:
+    - https://northlink.cc/t/*
+    - https://northlink.cc/r/*
+    - https://northlink.cc/@*
+    url: https://northlink.cc/oembed
+    formats:
+    - json
+    example_urls:
+    - https://northlink.cc/oembed?url=https%3A%2F%2Fnorthlink.cc%2Ft%2Fwgcjgvbsht9gt&format=json
+    - https://northlink.cc/oembed?url=https%3A%2F%2Fnorthlink.cc%2Fr%2Fqrjhpgjnk2pnx&format=json
+    - https://northlink.cc/oembed?url=https%3A%2F%2Fnorthlink.cc%2F%40noctyrn&format=json
