@@ -1,0 +1,17 @@
+---
+- provider_name: 3Speak
+  provider_url: https://3speak.tv/
+  endpoints:
+  - schemes:
+    - https://3speak.tv/watch?v=*
+    - https://www.3speak.tv/watch?v=*
+    - https://3speak.tv/shorts?v=*
+    - https://www.3speak.tv/shorts?v=*
+    url: https://3speak.tv/oembed
+    formats:
+    - json
+    discovery: true
+    example_urls:
+    - https://3speak.tv/oembed?url=https%3A%2F%2F3speak.tv%2Fwatch%3Fv%3Dseckorama%2Fsumski-vinodol
+    - https://3speak.tv/oembed?url=https%3A%2F%2F3speak.tv%2Fshorts%3Fv%3Dbossdebz%2Ffgdfx1ao
+...
