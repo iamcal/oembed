@@ -1,0 +1,16 @@
+---
+- provider_name: Debatr
+  provider_url: https://debatr.tv/
+  endpoints:
+  - schemes:
+    - https://debatr.tv/d/*
+    - https://debatr.tv/t/*
+    - https://debatr.tv/embed/*
+    url: https://debatr.tv/api/oembed
+    formats:
+    - json
+    discovery: true
+    example_urls:
+    - https://debatr.tv/api/oembed?url=https%3A%2F%2Fdebatr.tv%2Fd%2Fvv7hfvgy86%2Fshould-tech-companies-be-allowed-to-use-public-user-content
+    - https://debatr.tv/api/oembed?url=https%3A%2F%2Fdebatr.tv%2Fembed%2Fvv7hfvgy86%3Fformat%3Dshort
+...
