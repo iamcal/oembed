@@ -1,0 +1,19 @@
+---
+- provider_name: LeagueMakerApp
+  provider_url: https://leaguemakerapp.com/
+  endpoints:
+  - schemes:
+    - https://leaguemakerapp.com/competitions/*
+    - https://leaguemakerapp.com/*/competitions/*
+    - https://leaguemakerapp.com/c/*
+    - https://www.leaguemakerapp.com/competitions/*
+    - https://www.leaguemakerapp.com/*/competitions/*
+    - https://www.leaguemakerapp.com/c/*
+    url: https://leaguemakerapp.com/oembed
+    docs_url: https://leaguemakerapp.com/documentation/widget-embebible
+    example_urls:
+    - https://leaguemakerapp.com/oembed?url=https%3A%2F%2Fleaguemakerapp.com%2Fcompetitions%2Fla-liga-2024-25
+    - https://leaguemakerapp.com/oembed?url=https%3A%2F%2Fleaguemakerapp.com%2Fes%2Fcompetitions%2Fla-liga-2024-25%2Fstandings
+    discovery: true
+    notes: Only supports the 'rich' type and the JSON format. Public competitions only (private ones return 401).
+...
