@@ -4,6 +4,22 @@
 
 
 	#
+	# CORS preflight: answer it without building the list, and let the
+	# browser cache the answer so it stops asking on every fetch
+	#
+
+	if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+		header('Access-Control-Allow-Methods: GET, HEAD, OPTIONS');
+		if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'])){
+			header('Access-Control-Allow-Headers: '.$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']);
+		}
+		header('Access-Control-Max-Age: 86400');
+		http_response_code(204);
+		exit;
+	}
+
+
+	#
 	# gather providers from the various files
 	#
 
