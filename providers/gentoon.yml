@@ -1,0 +1,23 @@
+---
+- provider_name: GenToon
+  provider_url: https://www.gentoon.ai
+  endpoints:
+  - schemes:
+    - https://www.gentoon.ai/community/posts/*
+    - https://www.gentoon.ai/*/community/posts/*
+    - https://gentoon.ai/community/posts/*
+    - https://gentoon.ai/*/community/posts/*
+    - https://www.gentoon.ai/embed/post/*
+    url: https://www.gentoon.ai/api/oembed
+    docs_url: https://www.gentoon.ai/en/help/embed
+    discovery: true
+    formats:
+    - json
+    - xml
+    example_urls:
+    - https://www.gentoon.ai/api/oembed?url=https%3A%2F%2Fwww.gentoon.ai%2Fcommunity%2Fposts%2F9fa0016a-1192-4a72-afa8-d0ffad90c315
+    - https://www.gentoon.ai/api/oembed?url=https%3A%2F%2Fwww.gentoon.ai%2Fcommunity%2Fposts%2F9fa0016a-1192-4a72-afa8-d0ffad90c315&format=xml
+    - https://www.gentoon.ai/api/oembed?url=https%3A%2F%2Fwww.gentoon.ai%2Fen%2Fcommunity%2Fposts%2F9fa0016a-1192-4a72-afa8-d0ffad90c315
+    notes:
+    - Returns the 'rich' type, an iframe player for a webtoon post (a swipeable set of image cuts). The player sets no cookies.
+...
