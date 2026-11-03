@@ -4,6 +4,7 @@
   endpoints:
   - schemes:
     - https://livid.com/watch/*
+    - https://livid.com/showcase/*
     url: https://livid.com/oembed
     example_urls:
     - https://livid.com/oembed?url=https%3A%2F%2Flivid.com%2Fwatch%2FAJPwABnzkTXj&format=json
