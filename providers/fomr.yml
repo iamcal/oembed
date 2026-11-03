@@ -1,0 +1,16 @@
+---
+- provider_name: Fomr
+  provider_url: https://fomr.io
+  endpoints:
+  - docs_url: https://fomr.io/help/guides/embed-a-form
+    schemes:
+    - https://fomr.io/s/*
+    - https://www.fomr.io/s/*
+    url: https://api.fomr.io/public/oembed
+    example_urls:
+    - https://api.fomr.io/public/oembed?url=https%3A%2F%2Ffomr.io%2Fs%2FXS6d35tOon
+    - https://api.fomr.io/public/oembed?url=https%3A%2F%2Ffomr.io%2Fs%2FXS6d35tOon&maxwidth=400&maxheight=300
+    formats:
+    - json
+    discovery: true
+...
