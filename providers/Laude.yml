@@ -3,7 +3,9 @@
   provider_url: https://laude.org
   endpoints:
   - schemes:
+    - https://www.laude.org/impact/*
     - https://laude.org/impact/*
+    - https://www.laude.org/im/*
     - https://laude.org/im/*
     url: http://laude.org/api/oembed
     example_urls:
