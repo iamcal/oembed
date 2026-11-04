@@ -1,0 +1,15 @@
+---
+- provider_name: HDRSHOW
+  provider_url: https://hdr.show/
+  endpoints:
+  - schemes:
+    - https://hdr.show/view/*
+    url: https://hdr.show/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://hdr.show/api/oembed?url=https%3A%2F%2Fhdr.show%2Fview%2Fdemo
+    - https://hdr.show/api/oembed?url=https%3A%2F%2Fhdr.show%2Fview%2Fdemo-2
+    notes: Supports rich iframe embeds for interactive HDR images with SDR/HDR comparison.
+...
