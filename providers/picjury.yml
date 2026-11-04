@@ -1,0 +1,13 @@
+---
+- provider_name: PicJury
+  provider_url: https://picjury.app
+  endpoints:
+  - schemes:
+    - https://picjury.app/p/*
+    url: https://picjury.app/oembed
+    example_urls:
+    - https://picjury.app/oembed?url=https%3A%2F%2Fpicjury.app%2Fp%2FPRBVCus0zx&format=json
+    discovery: true
+    formats:
+    - json
+...
