@@ -1,0 +1,14 @@
+---
+- provider_name: Podcast Pizza
+  provider_url: https://podcast.pizza/
+  endpoints:
+  - schemes:
+    - https://podcast.pizza/shows/*
+    - https://www.podcast.pizza/shows/*
+    url: https://podcast.pizza/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://podcast.pizza/oembed?url=https://podcast.pizza/shows/spirit-of-the-midwest
+...
