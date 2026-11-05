@@ -1,0 +1,15 @@
+---
+- provider_name: theprototype.app
+  provider_url: https://theprototype.app/
+  endpoints:
+  - schemes:
+    - https://theprototype.app/s/*
+    - https://theprototype.app/e/*
+    - https://theprototype.app/p/*
+    url: https://theprototype.app/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://theprototype.app/oembed?url=https%3A%2F%2Ftheprototype.app%2Fs%2Fqehnjx9tc9mkvuk&format=json
+...
