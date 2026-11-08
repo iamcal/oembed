@@ -1,0 +1,13 @@
+---
+- provider_name: Canvastera
+  provider_url: https://canvastera.com
+  endpoints:
+  - schemes:
+    - https://canvastera.com/s/*
+    - https://www.canvastera.com/s/*
+    url: https://canvastera.com/oembed
+    discovery: true
+    formats:
+    - json
+    - xml
+...
