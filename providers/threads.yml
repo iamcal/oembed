@@ -1,0 +1,18 @@
+---
+- provider_name: Threads
+  provider_url: https://www.threads.com/
+  endpoints:
+  - schemes:
+    - https://www.threads.com/*/post/*
+    - https://threads.com/*/post/*
+    - https://www.threads.com/t/*
+    - https://threads.com/t/*
+    url: https://graph.threads.com/v1.0/oembed
+    docs_url: https://developers.facebook.com/documentation/threads/tools-and-resources/embed-a-threads-post
+    discovery: true
+    example_urls:
+    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.com%2F@threads%2Fpost%2FDd9MZF_EcBJ
+    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.com%2Ft%2FDd9MZF_EcBJ
+    formats:
+      - json
+...
