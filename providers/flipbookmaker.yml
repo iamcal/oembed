@@ -1,0 +1,9 @@
+---
+- provider_name: FlipbookMaker
+  provider_url: https://flipbookmaker.co
+  endpoints:
+  - schemes:
+    - https://flipbookmaker.co/v/*
+    url: https://flipbookmaker.co/oembed
+    discovery: true
+...
