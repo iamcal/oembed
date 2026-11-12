@@ -1,6 +1,6 @@
 ---
 - provider_name: Ignite
-  provider_url: https://ignite.video/
+  provider_url: https://www.ignite.video/
   endpoints:
     - schemes:
         - https://*.videocdn.net/player/*
