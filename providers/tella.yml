@@ -1,12 +1,15 @@
 ---
 - provider_name: Tella
-  provider_url: https://www.tella.tv/
+  provider_url: https://www.tella.com/
   endpoints:
   - schemes:
+    - https://www.tella.com/video/*
+    - https://tella.com/video/*
     - https://www.tella.tv/video/*
     - https://tella.video/*
     url: https://www.tella.tv/api/oembed
     discovery: true
     example_urls:
-    - https://www.tella.tv/api/oembed?url=https%3A%2F%2Fwww.tella.tv%2Fvideo%2Fabc123%2Fview
+    - https://www.tella.tv/api/oembed?url=https%3A%2F%2Fwww.tella.com%2Fvideo%2Fcmd8smb6p002w0bl87ghw7ndy%2Fview
+    - https://www.tella.tv/api/oembed?url=https%3A%2F%2Fwww.tella.tv%2Fvideo%2Fcmd8smb6p002w0bl87ghw7ndy%2Fview
 ...
