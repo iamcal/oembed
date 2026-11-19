@@ -4,8 +4,8 @@
   endpoints:
   - schemes:
     - https://streetartcities.com/markers/*
-    url: https://oembed.streetartcities.com/oembed
+    url: https://streetartcities.com/oembed
     example_urls:
-    - https://oembed.streetartcities.com/oembed?url=https://streetartcities.com/markers/72036965-cea9-48e4-a4b3-5612585a8f6f
+    - https://streetartcities.com/oembed?url=https://streetartcities.com/markers/72036965-cea9-48e4-a4b3-5612585a8f6f
 
 ...
