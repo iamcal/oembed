@@ -4,6 +4,8 @@
   endpoints:
   - schemes:
     - https://www.tella.tv/video/*
+    - https://www.tella.com/video/*
+    - https://tella.com/video/*
     - https://tella.video/*
     url: https://www.tella.tv/api/oembed
     discovery: true
