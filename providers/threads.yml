@@ -7,12 +7,17 @@
     - https://threads.com/*/post/*
     - https://www.threads.com/t/*
     - https://threads.com/t/*
+    - https://www.threads.net/*/post/*
+    - https://threads.net/*/post/*
+    - https://www.threads.net/t/*
+    - https://threads.net/t/*
     url: https://graph.threads.com/v1.0/oembed
     docs_url: https://developers.facebook.com/documentation/threads/tools-and-resources/embed-a-threads-post
     discovery: true
     example_urls:
-    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.com%2F@threads%2Fpost%2FDd9MZF_EcBJ
-    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.com%2Ft%2FDd9MZF_EcBJ
+    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.com%2F%40zuck%2Fpost%2FCuP48CiS5sx
+    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.com%2Ft%2FCuP48CiS5sx
+    - https://graph.threads.com/v1.0/oembed?url=https%3A%2F%2Fwww.threads.net%2F%40zuck%2Fpost%2FCuP48CiS5sx
     formats:
       - json
 ...
