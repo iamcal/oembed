@@ -1,12 +1,19 @@
 ---
 - provider_name: Ignite
-  provider_url: https://ignite.video/
+  provider_url: https://www.ignite.video/
   endpoints:
     - schemes:
         - https://*.videocdn.net/player/*
+        - https://*.videocdn.net/watch/video/*
+        - https://*.videocdn.net/watch/live/*
         - https://*.euvideocdn.com/player/*
+        - https://*.euvideocdn.com/watch/video/*
+        - https://*.euvideocdn.com/watch/live/*
       url: https://app.ignitevideo.cloud/api/oembed
       docs_url: https://docs.ignite.video/
       example_urls:
-        - https://app.ignitevideo.cloud/api/oembed?url=https%3A%2F%2Fvideotest.ignite.video%2Fplayer%2Findex.html%3Fid%3D67e5788d77aa6e48db64d9db&format={format}
+        - https://app.ignitevideo.cloud/api/oembed?url=https%3A%2F%2Fignite.euvideocdn.com%2Fplayer%2Findex.html%3Fid%3D673b224ef9ce0fa529d3ecf1&format=json
+        - https://app.ignitevideo.cloud/api/oembed?url=https%3A%2F%2Fignite.euvideocdn.com%2Fplayer%2Findex.html%3Fid%3D673b224ef9ce0fa529d3ecf1&format=xml
+        - https://app.ignitevideo.cloud/api/oembed?url=https%3A%2F%2Fignite.euvideocdn.com%2Fwatch%2Fvideo%2F673b224ef9ce0fa529d3ecf1&format=json
+        - https://app.ignitevideo.cloud/api/oembed?url=https%3A%2F%2Fignite.euvideocdn.com%2Fwatch%2Fvideo%2F673b224ef9ce0fa529d3ecf1&format=xml
       discovery: true
