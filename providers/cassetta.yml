@@ -1,0 +1,14 @@
+---
+- provider_name: Cassetta
+  provider_url: https://www.cassetta.fm
+  endpoints:
+  - schemes:
+    - https://www.cassetta.fm/post/*
+    - https://cassetta.fm/post/*
+    url: https://www.cassetta.fm/api/oembed
+    docs_url: https://www.cassetta.fm/developers/embed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://www.cassetta.fm/api/oembed?url=https%3A%2F%2Fwww.cassetta.fm%2Fpost%2FWke7fkETj4hN5MVfDdik
