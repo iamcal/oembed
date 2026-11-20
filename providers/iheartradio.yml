@@ -3,12 +3,19 @@
   provider_url: https://www.iheart.com
   endpoints:
   - schemes:
-    - https://www.iheart.com/podcast/*/*
+    - https://www.iheart.com/podcast/*
+    - https://www.iheart.com/live/*
+    - https://www.iheart.com/artist/*
+    - https://www.iheart.com/playlist/*
+    - https://www.iheart.com/favorites/*
     url: https://www.iheart.com/oembed
     example_urls:
     - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2F&format=json
     - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2F&format=xml
     - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2Fepisode%2Fshort-stuff-why-does-time-speed-54953593%2F&format=json
     - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fpodcast%2F105-stuff-you-should-know-26940277%2Fepisode%2Fshort-stuff-why-does-time-speed-54953593%2F&format=xml
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Flive%2Fz100-1469%2F&format=json
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fartist%2Ftaylor-swift-33221%2F&format=json
+    - https://www.iheart.com/oembed?url=https%3A%2F%2Fwww.iheart.com%2Fplaylist%2F90s-hits-312064750-6rCuiif43N2JK3Zze2jN5a%2F&format=json
     discovery: true
 ...
