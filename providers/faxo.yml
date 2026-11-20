@@ -1,0 +1,11 @@
+---
+- provider_name: Faxo
+  provider_url: https://faxo.com/
+  endpoints:
+  - schemes:
+    - https://faxo.com/*
+    url: https://faxo.com/oembed
+    example_urls:
+    - https://faxo.com/oembed?url=https%3A%2F%2Ffaxo.com%2Fsome-post-4415946
+    discovery: true
+...
