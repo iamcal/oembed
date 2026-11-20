@@ -1,0 +1,16 @@
+---
+- provider_name: AssistLoop
+  provider_url: https://assistloop.ai
+  endpoints:
+  - schemes:
+    - https://assistloop.ai/embed/canva/*
+    url: https://assistloop.ai/api/oembed
+    docs_url: https://assistloop.ai/help/embed-chat
+    example_urls:
+    - https://assistloop.ai/api/oembed?format=json&url=https%3A%2F%2Fassistloop.ai%2Fembed%2Fcanva%2F2d6e6a62-51f1-4e27-b7bc-1c4fa964cad1
+    - https://assistloop.ai/api/oembed?format=json&url=https%3A%2F%2Fassistloop.ai%2Fembed%2Fcanva%2Fff230439-0b2c-4f5b-bd3d-ac748ba2415b
+    formats:
+    - json
+    discovery: true
+    notes: Rich type only. Each URL is an AI chat a business placed on its website; the html is an iframe of the chat page.
+...
