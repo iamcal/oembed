@@ -1,0 +1,17 @@
+---
+- provider_name: Long Play
+  provider_url: https://longplayplatform.com/
+  endpoints:
+  - docs_url: https://longplayplatform.com/help/player-and-playback/embedding-your-video
+    schemes:
+    - https://longplayplatform.com/browse/*
+    - https://longplayplatform.com/embed/*
+    - https://longplayplatform.com/u/*/c/*
+    url: https://longplayplatform.com/oembed
+    example_urls:
+    - https://longplayplatform.com/oembed?format=json&url=https%3A%2F%2Flongplayplatform.com%2Fbrowse%2FM3P3YA9VH
+    - https://longplayplatform.com/oembed?format=json&url=https%3A%2F%2Flongplayplatform.com%2Fu%2Flong-play-tutorials%2Fc%2Flong-play-tutorials
+    formats:
+      - json
+    discovery: true
+...
