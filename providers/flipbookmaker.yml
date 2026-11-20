@@ -1,0 +1,12 @@
+---
+- provider_name: FlipbookMaker
+  provider_url: https://flipbookmaker.co
+  endpoints:
+  - schemes:
+    - https://flipbookmaker.co/v/*
+    url: https://flipbookmaker.co/oembed
+    example_urls:
+    - https://flipbookmaker.co/oembed?url=https%3A%2F%2Fflipbookmaker.co%2Fv%2Fsample-magazine&format=json
+    - https://flipbookmaker.co/oembed?url=https%3A%2F%2Fflipbookmaker.co%2Fv%2Fsample-catalog&format=json
+    discovery: true
+...
