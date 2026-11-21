@@ -1,0 +1,16 @@
+---
+- provider_name: SocialCast
+  provider_url: https://socialcast.se/
+  endpoints:
+  - schemes:
+    - https://*.socialcast.se/b/*
+    - https://*.socialcast.se/embed/*
+    url: https://api.socialcast.se/v2/public/oembed
+    example_urls:
+    - https://api.socialcast.se/v2/public/oembed?url=https%3A%2F%2Fsandbox.socialcast.se%2Fembed%2Ff1b45e51-afb1-46d3-9d08-b661841374ca&format=json
+    discovery: true
+    formats:
+    - json
+    notes:
+    - Web TVs on a customer's own domain are found by discovery; each public media page links its oEmbed answer.
+...
