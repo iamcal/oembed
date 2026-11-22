@@ -7,7 +7,7 @@
     - https://*.socialcast.se/embed/*
     url: https://api.socialcast.se/v2/public/oembed
     example_urls:
-    - https://api.socialcast.se/v2/public/oembed?url=https%3A%2F%2Fsandbox.socialcast.se%2Fembed%2Ff1b45e51-afb1-46d3-9d08-b661841374ca&format=json
+    - https://api.socialcast.se/v2/public/oembed?url=https%3A%2F%2Fsandbox.socialcast.se%2Fb%2Ff1b45e51-afb1-46d3-9d08-b661841374ca&format=json
     discovery: true
     formats:
     - json
