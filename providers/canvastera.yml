@@ -1,0 +1,16 @@
+---
+- provider_name: Canvastera
+  provider_url: https://canvastera.com
+  endpoints:
+  - schemes:
+    - https://canvastera.com/s/*
+    - https://www.canvastera.com/s/*
+    url: https://canvastera.com/oembed
+    discovery: true
+    example_urls:
+    - https://canvastera.com/oembed?url=https%3A%2F%2Fcanvastera.com%2Fs%2FhEafDEZFB
+    formats:
+    - json
+    - xml
+    notes: Provider only supports embeding posters that are public and user has paid subscription.
+...
