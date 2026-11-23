@@ -1,0 +1,16 @@
+---
+- provider_name: Moob
+  provider_url: https://moob.app
+  endpoints:
+  - schemes:
+    - https://moob.app/p/*
+    url: https://moob.app/api/oembed
+    docs_url: https://moob.app/badges
+    example_urls:
+    - https://moob.app/api/oembed?url=https%3A%2F%2Fmoob.app%2Fp%2F7e2nagb7%2Fmoob-for-web-beta-is-now-live
+    discovery: true
+    formats:
+    - json
+    notes:
+    - Posts answer as type 'rich'. The height is nominal; the embed script sizes the frame to the post.
+...
