@@ -1,0 +1,18 @@
+---
+- provider_name: WIMSTA
+  provider_url: https://wimsta.com/
+  endpoints:
+  - schemes:
+    - https://wimsta.com/*-calculator/
+    - https://wimsta.com/*-formula/
+    - https://wimsta.com/220-minus-age/
+    - https://wimsta.com/max-heart-rate-women/
+    - https://wimsta.com/embed/*/
+    url: https://wimsta.com/oembed
+    docs_url: https://wimsta.com/embed/
+    example_urls:
+    - https://wimsta.com/oembed?url=https%3A%2F%2Fwimsta.com%2Fbmi-calculator%2F
+    - https://wimsta.com/oembed?url=https%3A%2F%2Fwimsta.com%2Fembed%2Ftdee%2F
+    formats:
+    - json
+...
