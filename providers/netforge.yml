@@ -1,0 +1,17 @@
+---
+- provider_name: Netforge.ai
+  provider_url: https://netforge.ai
+  endpoints:
+  - docs_url: https://netforge.ai/docs/collaboration/embed
+    schemes:
+    - https://netforge.ai/b/*
+    - https://www.netforge.ai/b/*
+    url: https://netforge.ai/oembed
+    example_urls:
+    - https://netforge.ai/oembed?url=https%3A%2F%2Fnetforge.ai%2Fb%2Fexample-arista-spine-leaf-data-center-mwzbbk
+    - https://netforge.ai/oembed?url=https%3A%2F%2Fnetforge.ai%2Fb%2Fexample-arista-spine-leaf-data-center-mwzbbk&maxwidth=640
+    formats:
+    - json
+    discovery: true
+    notes: Provider only supports the 'rich' type
+...
