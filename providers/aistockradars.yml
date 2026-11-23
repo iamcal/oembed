@@ -1,0 +1,14 @@
+---
+- provider_name: AIStockRadars
+  provider_url: https://www.aistockradars.com/
+  endpoints:
+  - schemes:
+    - https://www.aistockradars.com/company/*
+    - https://aistockradars.com/company/*
+    url: https://www.aistockradars.com/api/oembed
+    discovery: true
+    formats:
+    - json
+    example_urls:
+    - https://www.aistockradars.com/api/oembed?url=https%3A%2F%2Fwww.aistockradars.com%2Fcompany%2Fusar&format=json
+...
