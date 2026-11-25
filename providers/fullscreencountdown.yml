@@ -1,0 +1,26 @@
+---
+- provider_name: FullScreenCountdown
+  provider_url: https://fullscreencountdown.com
+  endpoints:
+  - schemes:
+    - https://fullscreencountdown.com/*
+    - https://www.fullscreencountdown.com/*
+    url: https://fullscreencountdown.com/oembed
+    example_urls:
+    - https://fullscreencountdown.com/oembed?url=https%3A%2F%2Ffullscreencountdown.com%2F%3Fdays%3D1&format=json
+    - https://fullscreencountdown.com/oembed?url=https%3A%2F%2Ffullscreencountdown.com%2F%3Fdays%3D1&format=xml
+    discovery: true
+...
+
+
+
+
+
+
+
+
+
+
+
+
+
