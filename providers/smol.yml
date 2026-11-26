@@ -1,0 +1,13 @@
+---
+- provider_name: SMOL
+  provider_url: https://smol.xyz/
+  endpoints:
+  - schemes:
+    - https://smol.xyz/*
+    url: https://smol.xyz/oembed
+    discovery: true
+    example_urls:
+    - https://smol.xyz/oembed?url=https%3A%2F%2Fsmol.xyz%2F025d00727202437e4a2cba22ed3e0b9a5e39daaa09ed7fc550e6b0ff742f00eb
+    formats:
+    - json
+...
