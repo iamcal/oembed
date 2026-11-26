@@ -1,0 +1,20 @@
+- provider_name: 11+
+  provider_url: https://11plus.co/
+  endpoints:
+  - schemes:
+    - https://11plus.co/posts/*
+    - https://11plus.co/fan-arena/*
+    - https://11plus.co/rules/*
+    - https://11plus.co/notices/*
+    - https://11plus.co/embed/posts/*
+    - https://www.11plus.co/posts/*
+    - https://www.11plus.co/fan-arena/*
+    - https://www.11plus.co/rules/*
+    - https://www.11plus.co/notices/*
+    - https://www.11plus.co/embed/posts/*
+    url: https://11plus.co/oembed
+    discovery: true
+    example_urls:
+    - https://11plus.co/oembed?url=https%3A%2F%2F11plus.co%2Ffan-arena%2FT4QBUHG9W&format=json
+    - https://11plus.co/oembed?url=https%3A%2F%2F11plus.co%2Ffan-arena%2FT4QBYKZWO&format=json
+    notes: Only posts with an uploaded video return the 'video' type (iframe player); other posts return 404. JSON only.
